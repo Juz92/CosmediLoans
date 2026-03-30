@@ -112,6 +112,14 @@ export default function ProcedurePage({
           name: procedure.title,
           description: procedure.heroDescription,
           url: `https://cosmedloans.com.au/procedures/${procedure.slug}`,
+          procedureType: "http://schema.org/NoninvasiveProcedure",
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "AUD",
+            lowPrice: procedure.avgCostRange.split("–")[0]?.replace(/[^0-9]/g, "") || "2000",
+            highPrice: procedure.avgCostRange.split("–")[1]?.replace(/[^0-9]/g, "") || "100000",
+            offerCount: "20",
+          },
         }}
       />
 
