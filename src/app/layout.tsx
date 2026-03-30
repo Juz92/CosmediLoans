@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { UTMCapture } from "@/components/analytics/UTMCapture";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+        <UTMCapture />
         <Navbar />
         <main id="main-content" className="pb-20 md:pb-0">{children}</main>
         <Footer />
