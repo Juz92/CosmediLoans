@@ -24,13 +24,16 @@ const sizes: Record<ButtonSize, string> = {
   lg: "px-8 py-4 text-lg",
 };
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "primary", size = "md", as, className = "", children, ...props }, ref) => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const ButtonInner = forwardRef<HTMLButtonElement, ButtonProps<any>>(
+  function ButtonInner({ variant = "primary", size = "md", as, className = "", children, ...props }, ref) {
     const Component = as || "button";
+    const v = variant as ButtonVariant;
+    const s = size as ButtonSize;
     return (
       <Component
         ref={ref}
-        className={`inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-primary-light focus-visible:ring-offset-2 ${variants[variant]} ${sizes[size]} ${className}`}
+        className={`inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-primary-light focus-visible:ring-offset-2 ${variants[v]} ${sizes[s]} ${className}`}
         {...props}
       >
         {children}
@@ -39,6 +42,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = "Button";
+ButtonInner.displayName = "Button";
+
+const Button = ButtonInner as unknown as <T extends ElementType = "button">(
+  props: ButtonProps<T>
+) => React.ReactElement;
+
 export { Button };
 export type { ButtonProps };
