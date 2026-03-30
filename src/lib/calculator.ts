@@ -18,11 +18,11 @@ export function calculateRepayment(
   annualRate: number,
   termYears: number
 ): CalculationResult {
-  if (principal <= 0 || termYears <= 0) {
+  if (principal <= 0 || termYears <= 0 || annualRate < 0) {
     return { monthlyPayment: 0, totalRepayment: 0, totalInterest: 0, schedule: [] };
   }
 
-  const numPayments = termYears * 12;
+  const numPayments = Math.round(termYears * 12);
 
   // Handle 0% interest rate
   if (annualRate === 0) {

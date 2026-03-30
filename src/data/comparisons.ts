@@ -36,7 +36,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Afterpay",
     competitorType: "bnpl",
     h1: "CosmodiLoans vs Afterpay: Which Is Better for Medical Financing?",
-    metaTitle: "CosmodiLoans vs Afterpay (2026) | Medical Financing Compared",
+    metaTitle: "CosmodiLoans vs Afterpay | Medical Financing Compared",
     metaDescription:
       "Compare CosmodiLoans broker-matched medical loans vs Afterpay BNPL. See which is better for dental, IVF, cosmetic surgery & more.",
     verdict:
@@ -108,7 +108,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Zip Pay",
     competitorType: "bnpl",
     h1: "CosmodiLoans vs Zip Pay: Medical Financing Comparison",
-    metaTitle: "CosmodiLoans vs Zip Pay (2026) | Medical Loan Comparison",
+    metaTitle: "CosmodiLoans vs Zip Pay | Medical Loan Comparison",
     metaDescription:
       "Compare CosmodiLoans broker-matched medical loans with Zip Pay. Detailed breakdown of rates, limits, and which suits your medical procedure.",
     verdict:
@@ -180,7 +180,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Humm",
     competitorType: "bnpl",
     h1: "CosmodiLoans vs Humm: Which Is Best for Medical Financing?",
-    metaTitle: "CosmodiLoans vs Humm (2026) | Medical Financing Compared",
+    metaTitle: "CosmodiLoans vs Humm | Medical Financing Compared",
     metaDescription:
       "CosmodiLoans vs Humm — compare broker-matched medical loans with Humm's interest-free plans. See rates, limits, and the best fit for your procedure.",
     verdict:
@@ -256,7 +256,7 @@ export const comparisons: Comparison[] = [
     competitorName: "CareCredit",
     competitorType: "lender",
     h1: "CosmodiLoans vs CareCredit: Medical Financing in Australia",
-    metaTitle: "CosmodiLoans vs CareCredit (2026) | Medical Finance Comparison",
+    metaTitle: "CosmodiLoans vs CareCredit | Medical Finance Comparison",
     metaDescription:
       "Compare CosmodiLoans and CareCredit for medical financing in Australia. See rates, terms, and which offers better value for your procedure.",
     verdict:
@@ -328,7 +328,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Latitude Financial",
     competitorType: "lender",
     h1: "CosmodiLoans vs Latitude Financial: Medical Loan Comparison",
-    metaTitle: "CosmodiLoans vs Latitude Financial (2026) | Medical Loans Compared",
+    metaTitle: "CosmodiLoans vs Latitude | Medical Loans Compared",
     metaDescription:
       "Compare CosmodiLoans broker-matched loans with Latitude Financial personal loans. Rates, terms, and which is better for medical procedures.",
     verdict:
@@ -400,7 +400,7 @@ export const comparisons: Comparison[] = [
     competitorName: "MoneyMe",
     competitorType: "lender",
     h1: "CosmodiLoans vs MoneyMe: Medical Financing Compared",
-    metaTitle: "CosmodiLoans vs MoneyMe (2026) | Medical Loan Comparison",
+    metaTitle: "CosmodiLoans vs MoneyMe | Medical Loan Comparison",
     metaDescription:
       "Compare CosmodiLoans broker-matched medical loans with MoneyMe personal loans. Rates, speed, and which is better for medical procedure financing.",
     verdict:
@@ -472,7 +472,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Plenti",
     competitorType: "lender",
     h1: "CosmodiLoans vs Plenti: Medical Loan Comparison",
-    metaTitle: "CosmodiLoans vs Plenti (2026) | Medical Financing Compared",
+    metaTitle: "CosmodiLoans vs Plenti | Medical Financing Compared",
     metaDescription:
       "Compare CosmodiLoans broker-matched medical loans with Plenti personal loans. Rates, terms, fees, and which is the best fit for your medical procedure.",
     verdict:
@@ -544,7 +544,7 @@ export const comparisons: Comparison[] = [
     competitorName: "SocietyOne",
     competitorType: "lender",
     h1: "CosmodiLoans vs SocietyOne: Medical Loan Comparison",
-    metaTitle: "CosmodiLoans vs SocietyOne (2026) | Medical Financing Compared",
+    metaTitle: "CosmodiLoans vs SocietyOne | Medical Financing Compared",
     metaDescription:
       "Compare CosmodiLoans broker-matched medical loans with SocietyOne personal loans. Rates, terms, and which suits your medical procedure financing needs.",
     verdict:
@@ -620,9 +620,9 @@ export const comparisons: Comparison[] = [
     competitorName: "Personal Loan",
     competitorType: "generic",
     h1: "Medical Loan vs Personal Loan: What's the Difference?",
-    metaTitle: "Medical Loan vs Personal Loan (2026) | Key Differences Explained",
+    metaTitle: "Medical Loan vs Personal Loan | Key Differences",
     metaDescription:
-      "Is a medical loan better than a personal loan for your procedure? Compare rates, terms, and features to find the best way to finance medical treatment in Australia.",
+      "Is a medical loan better than a personal loan? Compare rates, terms, and features to find the best way to finance your procedure.",
     verdict:
       "A medical loan is a personal loan specifically marketed for healthcare expenses — the underlying product is the same type of unsecured fixed-rate loan. The key difference is that medical loan brokers (like CosmodiLoans) specialise in healthcare financing and understand procedure costs, clinic payment timelines, and medical-specific lender policies. A generic personal loan from your bank works fine too, but you may miss out on lower rates from specialist lenders or the convenience of broker support. For most patients, using a medical finance broker delivers a better rate and experience than applying to a single bank.",
     features: [
@@ -692,7 +692,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Credit Card",
     competitorType: "generic",
     h1: "Medical Loan vs Credit Card: Which Is Better for Medical Expenses?",
-    metaTitle: "Medical Loan vs Credit Card (2026) | Best Way to Pay for Medical Bills",
+    metaTitle: "Medical Loan vs Credit Card | Best Way to Pay",
     metaDescription:
       "Should you use a medical loan or credit card for your procedure? Compare interest rates, limits, and total cost to make the smartest financing decision.",
     verdict:
@@ -764,7 +764,7 @@ export const comparisons: Comparison[] = [
     competitorName: "Buy Now Pay Later",
     competitorType: "generic",
     h1: "Medical Loan vs Buy Now Pay Later: Which Should You Choose?",
-    metaTitle: "Medical Loan vs BNPL (2026) | Medical Financing Options Compared",
+    metaTitle: "Medical Loan vs BNPL | Financing Options Compared",
     metaDescription:
       "Compare medical loans with buy now pay later services like Afterpay, Zip, and Humm for medical procedures. Find out which option costs less for your treatment.",
     verdict:

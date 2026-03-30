@@ -39,7 +39,7 @@ export const procedures: Procedure[] = [
     slug: "dental-loans",
     title: "Dental Loans",
     h1: "Dental Loan Financing Australia",
-    metaTitle: "Dental Loans Australia | Finance From 6.99% | CosmodiLoans",
+    metaTitle: "Dental Loans Australia | Finance From 6.99%",
     metaDescription:
       "Compare dental loan rates from 20+ lenders. Finance implants, veneers, crowns & more. Free quotes in 60 seconds. No credit impact.",
     heroDescription:
@@ -131,7 +131,7 @@ export const procedures: Procedure[] = [
     slug: "veneers-financing",
     title: "Veneers Financing",
     h1: "Dental Veneers Financing Australia",
-    metaTitle: "Veneers Financing Australia | Payment Plans From 6.99% | CosmodiLoans",
+    metaTitle: "Veneers Financing Australia | From 6.99% p.a.",
     metaDescription:
       "Finance porcelain or composite veneers with rates from 6.99% p.a. Compare 20+ lenders in 60 seconds. Get the smile you want — pay over time.",
     heroDescription:
@@ -223,7 +223,7 @@ export const procedures: Procedure[] = [
     slug: "invisalign-financing",
     title: "Invisalign Financing",
     h1: "Invisalign Financing Australia",
-    metaTitle: "Invisalign Financing Australia | Payment Plans From 6.99% | CosmodiLoans",
+    metaTitle: "Invisalign Financing Australia | From 6.99% p.a.",
     metaDescription:
       "Finance Invisalign clear aligners in Australia from 6.99%. Compare 20+ lenders instantly. Straighten your teeth now, pay over time with fixed repayments.",
     heroDescription:
@@ -237,6 +237,7 @@ export const procedures: Procedure[] = [
       { subProcedure: "Invisalign Full (comprehensive)", costRange: "$6,000 – $9,500" },
       { subProcedure: "Invisalign Teen", costRange: "$4,500 – $8,500" },
       { subProcedure: "Vivera Retainers (post-treatment)", costRange: "$600 – $1,200" },
+      { subProcedure: "ClearCorrect Aligners", costRange: "$3,500 – $6,500" },
     ],
     repaymentExamples: [
       { amount: 5000, rate: 6.99, term: 2 },
@@ -314,7 +315,7 @@ export const procedures: Procedure[] = [
     slug: "ivf-financing",
     title: "IVF Financing",
     h1: "IVF & Fertility Financing Australia",
-    metaTitle: "IVF Financing Australia | Fertility Loans From 6.99% | CosmodiLoans",
+    metaTitle: "IVF Financing Australia | From 6.99% p.a.",
     metaDescription:
       "Finance your IVF treatment with rates from 6.99%. Compare 20+ lenders in 60 seconds. No credit impact. Loans from $5,000 to $100,000.",
     heroDescription:
@@ -407,7 +408,7 @@ export const procedures: Procedure[] = [
     slug: "fertility-treatment-loans",
     title: "Fertility Treatment Loans",
     h1: "Fertility Treatment Loans Australia",
-    metaTitle: "Fertility Treatment Loans Australia | From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Fertility Treatment Loans Australia | From 6.99%",
     metaDescription:
       "Compare fertility loan rates from 20+ lenders in Australia. Finance IUI, egg freezing, donor programs & more. No credit impact. Free quotes in 60 seconds.",
     heroDescription:
@@ -499,7 +500,7 @@ export const procedures: Procedure[] = [
     slug: "breast-augmentation-loans",
     title: "Breast Augmentation Loans",
     h1: "Breast Augmentation Financing Australia",
-    metaTitle: "Breast Augmentation Loans Australia | From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Breast Augmentation Loans Australia | From 6.99%",
     metaDescription:
       "Finance breast augmentation surgery in Australia from 6.99%. Compare 20+ lenders. Implants, lifts & reductions covered. Free quotes in 60 seconds.",
     heroDescription:
@@ -591,7 +592,7 @@ export const procedures: Procedure[] = [
     slug: "rhinoplasty-financing",
     title: "Rhinoplasty Financing",
     h1: "Rhinoplasty Financing Australia",
-    metaTitle: "Rhinoplasty Financing Australia | Nose Job Loans From 6.99% | CosmodiLoans",
+    metaTitle: "Rhinoplasty Financing Australia | From 6.99% p.a.",
     metaDescription:
       "Finance rhinoplasty (nose job) surgery in Australia with rates from 6.99%. Compare 20+ lenders instantly. No credit impact. Free quotes in 60 seconds.",
     heroDescription:
@@ -683,7 +684,7 @@ export const procedures: Procedure[] = [
     slug: "tummy-tuck-loans",
     title: "Tummy Tuck Loans",
     h1: "Tummy Tuck Financing Australia",
-    metaTitle: "Tummy Tuck Loans Australia | Abdominoplasty Finance From 6.99% | CosmodiLoans",
+    metaTitle: "Tummy Tuck Loans Australia | Finance From 6.99%",
     metaDescription:
       "Finance your tummy tuck (abdominoplasty) in Australia from 6.99%. Compare 20+ lenders. Full & mini tummy tucks covered. Free quotes in 60 seconds.",
     heroDescription:
@@ -775,7 +776,7 @@ export const procedures: Procedure[] = [
     slug: "liposuction-financing",
     title: "Liposuction Financing",
     h1: "Liposuction Financing Australia",
-    metaTitle: "Liposuction Financing Australia | Loans From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Liposuction Financing Australia | From 6.99% p.a.",
     metaDescription:
       "Finance liposuction in Australia with rates from 6.99%. Compare 20+ lenders. VASER, tumescent & surgical lipo covered. Free quotes in 60 seconds.",
     heroDescription:
@@ -867,7 +868,7 @@ export const procedures: Procedure[] = [
     slug: "facelift-financing",
     title: "Facelift Financing",
     h1: "Facelift Financing Australia",
-    metaTitle: "Facelift Financing Australia | Loans From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Facelift Financing Australia | From 6.99% p.a.",
     metaDescription:
       "Finance your facelift surgery in Australia from 6.99%. Compare 20+ lenders. Full facelifts, mini lifts & neck lifts covered. Free quotes in 60 seconds.",
     heroDescription:
@@ -959,7 +960,7 @@ export const procedures: Procedure[] = [
     slug: "lasik-loans",
     title: "LASIK Loans",
     h1: "LASIK Eye Surgery Financing Australia",
-    metaTitle: "LASIK Loans Australia | Eye Surgery Finance From 6.99% | CosmodiLoans",
+    metaTitle: "LASIK Loans Australia | Eye Surgery From 6.99%",
     metaDescription:
       "Finance LASIK eye surgery in Australia from 6.99%. Compare 20+ lenders. LASIK, SMILE & PRK covered. Free quotes in 60 seconds. No credit impact.",
     heroDescription:
@@ -1051,7 +1052,7 @@ export const procedures: Procedure[] = [
     slug: "bariatric-surgery-loans",
     title: "Bariatric Surgery Loans",
     h1: "Bariatric Surgery Financing Australia",
-    metaTitle: "Bariatric Surgery Loans Australia | From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Bariatric Surgery Loans Australia | From 6.99%",
     metaDescription:
       "Finance bariatric surgery in Australia from 6.99%. Gastric sleeve, bypass & lap band loans. Compare 20+ lenders. Free quotes in 60 seconds.",
     heroDescription:
@@ -1143,7 +1144,7 @@ export const procedures: Procedure[] = [
     slug: "weight-loss-surgery-loans",
     title: "Weight Loss Surgery Loans",
     h1: "Weight Loss Surgery Financing Australia",
-    metaTitle: "Weight Loss Surgery Loans Australia | Finance From 6.99% | CosmodiLoans",
+    metaTitle: "Weight Loss Surgery Loans Australia | From 6.99%",
     metaDescription:
       "Finance weight loss surgery in Australia from 6.99%. Gastric sleeve, bypass, balloon & non-surgical options. Compare 20+ lenders. Free quotes in 60s.",
     heroDescription:
@@ -1157,6 +1158,7 @@ export const procedures: Procedure[] = [
       { subProcedure: "Gastric Bypass", costRange: "$15,000 – $25,000" },
       { subProcedure: "Gastric Balloon (non-surgical)", costRange: "$3,500 – $7,000" },
       { subProcedure: "Endoscopic Sleeve Gastroplasty", costRange: "$8,000 – $14,000" },
+      { subProcedure: "Lap Band Surgery", costRange: "$8,000 – $14,000" },
     ],
     repaymentExamples: [
       { amount: 7000, rate: 6.99, term: 3 },
@@ -1234,7 +1236,7 @@ export const procedures: Procedure[] = [
     slug: "hair-transplant-loans",
     title: "Hair Transplant Loans",
     h1: "Hair Transplant Financing Australia",
-    metaTitle: "Hair Transplant Loans Australia | Finance From 6.99% | CosmodiLoans",
+    metaTitle: "Hair Transplant Loans Australia | From 6.99%",
     metaDescription:
       "Finance your hair transplant in Australia from 6.99%. FUE, FUT & eyebrow transplants covered. Compare 20+ lenders. Free quotes in 60 seconds.",
     heroDescription:
@@ -1326,7 +1328,7 @@ export const procedures: Procedure[] = [
     slug: "orthopedic-surgery-loans",
     title: "Orthopedic Surgery Loans",
     h1: "Orthopedic Surgery Financing Australia",
-    metaTitle: "Orthopedic Surgery Loans Australia | From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Orthopedic Surgery Loans Australia | From 6.99%",
     metaDescription:
       "Finance orthopedic surgery in Australia from 6.99%. Knee, hip, shoulder & spine procedures covered. Compare 20+ lenders. Free quotes in 60 seconds.",
     heroDescription:
@@ -1418,7 +1420,7 @@ export const procedures: Procedure[] = [
     slug: "dermatology-financing",
     title: "Dermatology Financing",
     h1: "Dermatology Treatment Financing Australia",
-    metaTitle: "Dermatology Financing Australia | Skin Treatment Loans From 6.99% | CosmodiLoans",
+    metaTitle: "Dermatology Financing Australia | From 6.99%",
     metaDescription:
       "Finance dermatology treatments in Australia from 6.99%. Skin cancer, acne, laser & cosmetic dermatology covered. Compare 20+ lenders. Free quotes.",
     heroDescription:
@@ -1510,7 +1512,7 @@ export const procedures: Procedure[] = [
     slug: "mommy-makeover-financing",
     title: "Mommy Makeover Financing",
     h1: "Mommy Makeover Financing Australia",
-    metaTitle: "Mommy Makeover Financing Australia | From 6.99% p.a. | CosmodiLoans",
+    metaTitle: "Mommy Makeover Financing Australia | From 6.99%",
     metaDescription:
       "Finance your mommy makeover in Australia from 6.99%. Tummy tuck, breast lift, liposuction & more in one loan. Compare 20+ lenders. Free quotes.",
     heroDescription:
@@ -1602,7 +1604,7 @@ export const procedures: Procedure[] = [
     slug: "medical-loan",
     title: "Medical Loans",
     h1: "Medical Loan Financing Australia",
-    metaTitle: "Medical Loans Australia | Any Procedure From 6.99% | CosmodiLoans",
+    metaTitle: "Medical Loans Australia | Any Procedure From 6.99%",
     metaDescription:
       "Finance any medical procedure in Australia from 6.99%. Compare 20+ lenders in 60 seconds. Dental, cosmetic, fertility, surgical & more. No credit impact.",
     heroDescription:
