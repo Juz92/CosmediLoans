@@ -16,7 +16,7 @@ const navLinks: NavLink[] = [
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border">
+    <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4 md:px-section-x">
         <Link href="/" className="text-[22px] font-bold text-primary">
           Cosmedi<span className="text-primary-light">Loans</span>
@@ -53,7 +53,7 @@ export function Navbar() {
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-black/20 z-50" />
-            <Dialog.Content className="fixed top-0 right-0 h-full w-[280px] bg-white z-50 shadow-xl p-6">
+            <Dialog.Content className="fixed top-0 right-0 h-full w-[280px] bg-white z-50 shadow-xl p-6 overflow-y-auto">
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" className="text-[22px] font-bold text-primary">
                   Cosmedi<span className="text-primary-light">Loans</span>
