@@ -31,6 +31,8 @@ const config: Config = {
         "hero-h1": ["48px", { lineHeight: "1.15", fontWeight: "700", letterSpacing: "-0.5px" }],
         "section-h2": ["36px", { lineHeight: "1.2", fontWeight: "700" }],
         "card-h4": ["16px", { lineHeight: "1.4", fontWeight: "600" }],
+        "body": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+        "small": ["14px", { lineHeight: "1.5", fontWeight: "500" }],
       },
       boxShadow: {
         card: "0 4px 24px rgba(0,0,0,0.06)",
@@ -44,6 +46,7 @@ const config: Config = {
       spacing: {
         "section-x": "60px",
         "section-y": "80px",
+        "card": "28px",
       },
       keyframes: {
         "accordion-down": {

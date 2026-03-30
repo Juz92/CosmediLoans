@@ -1,12 +1,16 @@
-import { forwardRef, type ButtonHTMLAttributes } from "react";
+import { forwardRef, type ElementType, type ComponentPropsWithRef } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonOwnProps<T extends ElementType = "button"> = {
   variant?: ButtonVariant;
   size?: ButtonSize;
-}
+  as?: T;
+};
+
+type ButtonProps<T extends ElementType = "button"> = ButtonOwnProps<T> &
+  Omit<ComponentPropsWithRef<T>, keyof ButtonOwnProps<T>>;
 
 const variants: Record<ButtonVariant, string> = {
   primary: "bg-primary text-white hover:bg-primary/90 shadow-sm",
@@ -21,15 +25,16 @@ const sizes: Record<ButtonSize, string> = {
 };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "primary", size = "md", className = "", children, ...props }, ref) => {
+  ({ variant = "primary", size = "md", as, className = "", children, ...props }, ref) => {
+    const Component = as || "button";
     return (
-      <button
+      <Component
         ref={ref}
-        className={`inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${variants[variant]} ${sizes[size]} ${className}`}
+        className={`inline-flex items-center justify-center font-semibold rounded-button transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-primary-light focus-visible:ring-offset-2 ${variants[variant]} ${sizes[size]} ${className}`}
         {...props}
       >
         {children}
-      </button>
+      </Component>
     );
   }
 );

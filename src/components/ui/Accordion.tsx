@@ -2,20 +2,27 @@
 
 import * as RadixAccordion from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
+import type { ReactNode } from "react";
 
 interface AccordionItem {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }
 
 interface AccordionProps {
   items: AccordionItem[];
+  type?: "single" | "multiple";
   className?: string;
 }
 
-export function Accordion({ items, className = "" }: AccordionProps) {
+export function Accordion({ items, type = "multiple", className = "" }: AccordionProps) {
+  const rootProps =
+    type === "single"
+      ? { type: "single" as const, collapsible: true }
+      : { type: "multiple" as const };
+
   return (
-    <RadixAccordion.Root type="multiple" className={className}>
+    <RadixAccordion.Root {...rootProps} className={className}>
       {items.map((item, i) => (
         <RadixAccordion.Item
           key={i}
@@ -29,9 +36,9 @@ export function Accordion({ items, className = "" }: AccordionProps) {
             </RadixAccordion.Trigger>
           </RadixAccordion.Header>
           <RadixAccordion.Content className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
-            <p className="pb-5 text-text-body leading-relaxed">
+            <div className="pb-5 text-text-body leading-relaxed">
               {item.answer}
-            </p>
+            </div>
           </RadixAccordion.Content>
         </RadixAccordion.Item>
       ))}
