@@ -1,147 +1,189 @@
-# CosmodiLoans Hero Scroll Animation — Video Prompts
+# CosmodiLoans Hero Video — "Dream It. Fund It."
 
 ## Workflow Overview
 
-**Goal:** A tear-down style scroll animation for the homepage hero section. As the user scrolls, a cinematic video plays showing the emotional journey from "I need this procedure but can't afford it" to "I'm approved, I'm confident, I'm going ahead."
+**Goal:** A scroll/autoplay animation for the homepage hero section telling the story of someone who can't afford their medical procedure, discovers CosmodiLoans, gets approved, and suddenly all their medical dreams become possible.
+
+**Style:** Soft 2D character illustration — think Headspace app meets premium fintech explainer. Rounded character design, gentle expressions, pastel palette with brand blue accents. NOT realistic — warm, approachable, slightly stylised.
 
 **Pipeline:**
-1. **Whisk (or Midjourney/Flux)** — Generate the FIRST FRAME and LAST FRAME as still images
-2. **Google Veo3** — Generate the video that transitions between the two frames
+1. **Whisk / Midjourney / Flux** — Generate FIRST FRAME and LAST FRAME as still images
+2. **Google Veo3** — Generate the 8-second animated video between the two frames
 
-**Placement:** Homepage hero background, autoplaying behind/beside the lead form. Plays on scroll or loops on autoplay.
-
-**Aspect ratio:** 16:9 (desktop hero) with 9:16 vertical crop also needed for mobile
-
-**Duration target:** 6-8 seconds
-
-**Brand palette:** Deep blue #1e40af, Light blue #3b82f6, Blue wash #eff6ff, White, Warm skin tones
+**Placement:** Homepage hero section, autoplay loop or scroll-triggered
+**Aspect ratio:** 16:9 (desktop) + 9:16 (mobile/social)
+**Duration:** 8 seconds
+**Brand palette:** Deep blue #1e40af, Light blue #3b82f6, Blue wash #eff6ff, Green #22c55e, Red (for negative balance), White
 
 ---
 
-## Deep-Dive: The Brand's Visual World
+## Character Design: "Mel"
 
-**The Physical Reality:**
-CosmodiLoans doesn't touch patients directly — it's the bridge between worry and relief. The physical moment is: someone sitting at their kitchen table late at night, stressed about how to pay for a procedure... then the shift to sitting in the waiting room of a beautiful clinic, calm and ready.
-
-**The Sensory Signature:**
-The ONE texture is the **glow of a phone screen on a face in soft light** — that's the moment the approval comes through. The most satisfying moment is seeing "Approved" on a screen.
-
-**The Emotional Journey:**
-- BEFORE: Anxious, uncertain, researching late at night, overwhelmed by costs
-- AFTER: Calm, confident, sitting in a bright medical space, smiling, approved
-
-**The Single Moment:** The shift from a worried face illuminated by a phone screen to a confident smile in bright clinical daylight.
+- Woman, late 20s, brown hair in a ponytail
+- Soft rounded 2D illustration style (Headspace/Slack/Notion illustration aesthetic)
+- Casual clothing: teal t-shirt and jeans in the "before" state, smart casual white blouse in the "after" state
+- Expressive face — big eyes, clear emotions readable at thumbnail size
+- Could become a recurring brand character across the site, socials, and ads
 
 ---
 
-## CONCEPT: "From Worry to Walking In" (PRIMARY)
+## Scene-by-Scene Breakdown (8 seconds, 5 beats)
 
-The hero video tells the story of the emotional transformation in one seamless shot. We start in the anxiety of researching costs alone, and transition into the confidence of walking into your procedure — financed, approved, ready.
+### BEAT 1 (0–1.5s): "The Problem"
 
----
+Mel stands centre frame with a closed-mouth sheepish smile — clearly self-conscious about her teeth. Slightly hunched posture. Simple flat lavender-grey background.
 
-### WHISK / IMAGE GENERATION PROMPTS
+A single white thought bubble floats up to her upper-right containing an illustration of **crooked/gap teeth** (lighthearted, not gross — just clearly imperfect).
 
-#### FIRST FRAME (START)
-
-**SUBJECT:** A woman in her early 30s sitting at a kitchen table at night, looking down at her phone with a concerned, thoughtful expression. Her face is softly illuminated by the cool blue-white glow of the phone screen. One hand rests on her cheek.
-
-**SCENE:** Dimly lit modern kitchen. Warm pendant light in the far background creates depth but the foreground is mostly lit by the phone. A laptop is open on the table showing a medical procedure cost page (blurred). A coffee mug sits nearby. The mood is quiet, contemplative, slightly anxious. 70% of the frame is in soft shadow.
-
-**STYLE:** Cinematic lifestyle photography. Full-frame camera with 35mm lens, f/1.8 aperture. Cool blue tone from phone mixed with warm amber from background pendant. Shallow depth of field on the subject's face. Intimate, documentary feel — like a scene from a Netflix drama. Aspect ratio 16:9.
-
-**COMBINED PROMPT:**
-> A woman in her early 30s sitting at a kitchen table at night, looking down at her phone with a concerned expression. Her face is softly illuminated by the cool blue-white glow of the phone screen, one hand resting on her cheek. Dimly lit modern kitchen with a warm pendant light in the far background creating depth. A laptop open on the table showing a blurred cost page. Coffee mug nearby. 70% of the frame in soft shadow. Cinematic lifestyle photography, full-frame 35mm lens, f/1.8, cool blue phone glow mixed with warm amber background. Shallow depth of field on face. Intimate documentary mood like a Netflix drama scene. Aspect ratio 16:9. No text overlay.
+**Mood:** Relatable, sympathetic, "yeah, I've been there"
 
 ---
 
-#### LAST FRAME (END)
+### BEAT 2 (1.5–3s): "The Dream vs The Reality"
 
-**SUBJECT:** The same woman, now smiling warmly and confidently, walking through the entrance of a bright, modern medical clinic. She's wearing a casual but polished outfit (white blouse, carrying a small bag). Her expression is calm, assured, and slightly excited.
+Two thought bubbles appear simultaneously on either side of her head:
 
-**SCENE:** Bright, airy medical clinic lobby flooded with natural daylight from floor-to-ceiling windows. Clean white walls with subtle blue accent details (#1e40af). Indoor plants in the background. A reception desk is softly blurred behind her. The space feels premium and welcoming. 90% of the frame is bright and well-lit.
+- **LEFT bubble:** A beautiful pearly white Hollywood smile — bright, gleaming, sparkle effects
+- **RIGHT bubble:** Bold red text reading **"-$127.43"** — her bank balance. Tiny empty wallet icon below it.
 
-**STYLE:** Cinematic lifestyle photography. Full-frame camera with 35mm lens, f/2.0 aperture. Warm natural daylight with soft shadows. The colour palette shifts from cool to warm — golden morning light dominates. Same photographic style as the first frame but with a complete tonal shift from dark/cool to bright/warm. Aspect ratio 16:9.
+Mel's expression shifts to frustrated/defeated. She looks between the two bubbles — the dream is SO close but the money says no.
 
-**COMBINED PROMPT:**
-> A confident woman in her early 30s smiling warmly while walking through the entrance of a bright modern medical clinic. Wearing a casual white blouse and carrying a small bag. Calm, assured, slightly excited expression. Bright airy clinic lobby flooded with natural daylight from floor-to-ceiling windows. Clean white walls with subtle blue accent details. Indoor plants, blurred reception desk in background. Premium welcoming space. 90% of frame bright and well-lit. Cinematic lifestyle photography, full-frame 35mm lens, f/2.0, warm natural daylight with soft shadows. Golden morning light dominates. Aspect ratio 16:9. No text overlay.
-
----
-
-### GOOGLE VEO3 TRANSITION PROMPT
-
-> Create a seamless 8-second cinematic video transitioning between two scenes. The video begins with a close-up of a woman sitting at her kitchen table at night, her face lit by the blue glow of a phone screen, looking concerned as she researches medical procedure costs. Over 8 seconds, the scene gradually transforms: the blue phone light slowly warms and brightens, expanding to fill the frame with golden daylight. The kitchen environment dissolves into a bright modern medical clinic lobby. The woman's expression shifts from worry to a calm, confident smile as she walks through the clinic entrance. The camera maintains a steady eye-level perspective throughout, with a slow gentle drift forward. The transition should feel like a sunrise — darkness giving way to warm light. The lighting shift is the primary driver of the transition, not a hard cut. Cinematic quality, shallow depth of field, 24fps, natural skin tones. The emotional arc moves from anxiety to relief to confidence. Like a premium healthcare brand commercial.
+**Mood:** The tension everyone knows — wanting something but the bank account disagrees
 
 ---
 
-## ALTERNATIVE CONCEPTS
+### BEAT 3 (3–4.5s): "The Discovery"
 
-### ALTERNATIVE A: "The Approval Glow"
+Both previous bubbles pop and fade away. A NEW thought bubble rises — this one is special with a **glowing blue border** (#1e40af) instead of the plain grey outline of the others.
 
-**START FRAME:**
-> Extreme close-up of a woman's eyes in soft shadow, reflecting the blue glow of a phone screen. Worried brow, searching expression. Dark background, only the eyes and phone reflection visible. Cinematic macro photography, 100mm lens, f/2.0. Cool blue tones. 16:9.
+Inside the bubble: **"CosmodiLoans.com.au"** in clean blue text with the CosmodiLoans brand mark. A tiny phone icon showing she's just discovered it.
 
-**END FRAME:**
-> Same close-up framing of the woman's eyes, but now her face is bathed in warm golden light. Her eyes are bright, crinkled at the corners in a genuine smile. The phone screen reflection shows a green checkmark "Approved" symbol. Warm amber and gold tones. 16:9.
+Mel's expression shifts to curious and intrigued — her posture straightens slightly. Lightbulb moment energy.
 
-**VEO3 PROMPT:**
-> Create a 6-second cinematic close-up video of a woman's eyes transitioning from worry to joy. Begin with her eyes reflecting a cool blue phone screen glow in darkness, brow furrowed with concern. Over 6 seconds, the blue light gradually warms to golden amber. Her expression softens, eyes brighten, and crow's feet appear as she breaks into a genuine smile. The phone screen reflection shifts from text to a green checkmark. Shallow depth of field, macro lens, steady framing. Emotional arc from anxiety to relief. Like a luxury skincare commercial but for a financial services brand.
+**Mood:** The pivot. Hope enters the frame.
 
 ---
 
-### ALTERNATIVE B: "The Cost Counter"
+### BEAT 4 (4.5–6.5s): "Approved!"
 
-**START FRAME:**
-> A medical bill/invoice lying on a clean white surface, with large dollar figures visible. A hand hovers over it, fingers slightly tense. Clinical overhead lighting, stark and slightly cold. The numbers feel overwhelming. Product photography, overhead shot, f/8 deep focus. Cool desaturated tones. 16:9.
+Quick transformation — Mel is now standing tall, confident posture, big genuine OPEN smile showing beautiful straight white teeth. Her outfit has subtly upgraded to a smart white blouse (she feels different now).
 
-**END FRAME:**
-> Same overhead angle, same white surface. The invoice has been replaced by a simple card/document showing "Monthly Repayment: $297/mo" with a small CosmodiLoans blue (#1e40af) accent stripe. The hand is now relaxed, resting flat on the table beside a coffee cup. Warm morning light from the side. The mood has shifted from stress to manageable. 16:9.
+Behind her, a phone/screen graphic shows: **"Approved! $15,000"** with a green checkmark.
 
-**VEO3 PROMPT:**
-> Create a 6-second overhead video of a financial transformation. Begin looking down at a medical invoice with large dollar figures on a white surface, with a tense hand hovering over it. Over 6 seconds, the lighting shifts from cold clinical white to warm morning gold entering from the right side. The invoice smoothly transforms into a simple repayment card showing a smaller monthly figure. The hand relaxes and settles flat on the surface. A coffee cup slides into frame. The transition is driven by the lighting change. Steady overhead camera, no movement. Like a premium fintech commercial.
+Her bank balance thought bubble returns — now showing **"$50,000"** in green text. The red is gone, replaced with abundance.
+
+**Mood:** The payoff. The money barrier is gone. She's funded.
 
 ---
 
-### ALTERNATIVE C: "The Waiting Room"
+### BEAT 5 (6.5–8s): "All The Dreams" + Brand Reveal
 
-**START FRAME:**
-> An empty modern medical clinic waiting room, shot from a patient's perspective sitting in a chair. Clean white and blue interior, natural light from windows. The room is serene but empty — no one else is there. The mood is anticipatory, calm, with a hint of vulnerability. Wide angle, 24mm, f/4. 16:9.
+This is the euphoric finale. Multiple thought bubbles of different sizes BURST upward from Mel like champagne bubbles. Each contains a different medical dream now within reach:
 
-**END FRAME:**
-> Same waiting room, same perspective. Now the woman is sitting in the chair across, smiling and looking at her phone (maybe texting someone "I'm here, just about to go in"). A nurse/receptionist walks past in the blurred background. The room feels alive and welcoming. Warm light has intensified. Wide angle, 24mm, f/4. 16:9.
+- 😁 **Perfect white smile** (the original dream — biggest bubble, centre)
+- 👶 A happy baby (IVF/fertility)
+- 👁️ A sparkling eye (LASIK)
+- 💇 Full thick hair (hair transplant)
+- ✨ A confident body silhouette (cosmetic surgery)
+- 💆 Glowing radiant skin (dermatology)
 
-**VEO3 PROMPT:**
-> Create a 7-second video in a modern medical clinic waiting room. Begin with an empty serene waiting area shot from a seated patient's eye level. Clean white and blue interior with natural window light. Over 7 seconds, the space subtly comes to life: the light warms slightly, a woman appears in the chair opposite looking at her phone and smiling, a nurse walks through the background. The camera stays perfectly still. The transition from empty to occupied should feel natural, like time-lapse but at normal speed. The emotional arc is from solitary anticipation to comfortable readiness. Clinical yet warm. Like a healthcare brand film.
+Mel stands in the centre with arms slightly open — joyful, empowered, "the world is my oyster" pose.
+
+**BRAND REVEAL:** A bold **CosmodiLoans** banner stretches across the full width of the frame — either as a **top banner** (like a cinema title card) or **bottom banner** (like an end card). The banner is deep blue (#1e40af) with the CosmodiLoans wordmark in large clean white text, and the tagline **"Dream it. Fund it."** directly beneath in lighter blue (#3b82f6). The banner is substantial — taking up roughly 20-25% of the frame height — so it's impossible to miss. It's not a small logo, it's a proud brand statement.
+
+The background behind Mel brightens to a warm gradient (white to soft gold) while the banner holds steady. The brand is the hero of this final moment.
+
+**Mood:** Euphoric, empowering, brand-forward. The last thing you see — and remember — is CosmodiLoans.
+
+---
+
+## Image Generation Prompts
+
+### FIRST FRAME (for Whisk / Midjourney / Flux)
+
+> A 2D illustrated character, a woman in her late 20s with brown hair in a ponytail, standing centre frame with a closed-mouth sheepish smile, slightly hunched posture. She is wearing a casual teal t-shirt and jeans. Soft rounded character design style like Headspace app illustrations, clean vector aesthetic. A white thought bubble floats above her head to the upper-right containing an illustration of crooked imperfect teeth. To her upper-left, another thought bubble shows a beautiful pearly white Hollywood smile with sparkle effects. Below the smile bubble, a third smaller thought bubble shows the number "-$127.43" in bold red text with a tiny wallet icon. Her expression is frustrated, looking between the dream smile and the empty bank balance. Muted lavender-grey flat colour background. Soft pastel palette with deep blue (#1e40af) accents. Clean vector illustration style, no outlines, soft shadows. Sympathetic and relatable mood. Aspect ratio 16:9. No text outside the thought bubbles.
+
+---
+
+### LAST FRAME (for Whisk / Midjourney / Flux)
+
+> A 2D illustrated character, the same woman with brown ponytail, now standing tall and confident with arms slightly open in a joyful empowered pose, beaming with a wide open smile showing perfect white teeth. She is wearing a smart casual white blouse. Multiple colourful thought bubbles of different sizes float upward from her like champagne bubbles. The largest bubble in the centre shows a perfect white smile with sparkle effects. Other bubbles contain: a happy baby icon, a sparkling eye, a hair silhouette, a confident body silhouette, and glowing radiant skin. A green "$50,000" text floats beside her. Across the bottom 20-25% of the frame, a bold deep blue (#1e40af) banner bar stretches full width, containing "CosmodiLoans" in large clean white text with "Dream it. Fund it." tagline below in lighter blue (#3b82f6). The banner is substantial, prominent, and unmissable — like a cinema end card. The upper portion has a warm bright gradient background from white to soft gold with confetti-like particles. Soft rounded character design like Headspace illustrations. Clean vector style, joyful and empowering mood. Aspect ratio 16:9.
+
+---
+
+### GOOGLE VEO3 VIDEO PROMPT (8 seconds)
+
+> Create an 8-second 2D character animation video in a soft rounded illustration style similar to Headspace app animations. Pastel colour palette with deep blue (#1e40af) accents.
+>
+> Beat 1 (0-1.5s): A woman character with brown ponytail in a teal t-shirt stands centre frame against a muted lavender-grey background with a closed-mouth sheepish smile. A white thought bubble rises showing crooked imperfect teeth.
+>
+> Beat 2 (1.5-3s): Two thought bubbles appear — left shows a beautiful pearly white smile with sparkle effects, right shows "-$127.43" in bold red text with a tiny wallet icon. She looks frustrated, glancing between the dream and reality.
+>
+> Beat 3 (3-4.5s): Previous bubbles pop and dissolve. A new thought bubble with a glowing blue border (#1e40af) rises containing "CosmodiLoans.com.au" in blue text. Her expression shifts to curious and hopeful, posture straightens.
+>
+> Beat 4 (4.5-6.5s): She transforms — now wearing a white blouse, standing tall with a confident open smile showing perfect teeth. A phone screen graphic shows "Approved! $15,000" with a green checkmark. A green "$50,000" text replaces the old red bank balance.
+>
+> Beat 5 (6.5-8s): Multiple thought bubbles burst upward like champagne bubbles, each containing a different medical dream — perfect smile (largest, centre), happy baby, sparkling eye, full hair, confident body, glowing skin. She stands with arms open in a joyful pose. A bold deep blue (#1e40af) banner slides in from the bottom, stretching the full width of the frame and taking up the bottom 20-25% — like a cinema end card. The banner contains "CosmodiLoans" in large white text with "Dream it. Fund it." tagline in lighter blue beneath. Background brightens to warm white-to-gold gradient above the banner. The banner is substantial and proud — the brand is the hero of this final frame. It holds steady for the last 1.5 seconds.
+>
+> Style: Soft 2D vector illustration, rounded character design, no hard outlines, soft shadows. Pastel palette with deep blue (#1e40af) for brand elements, green (#22c55e) for positive moments, red for negative bank balance. Smooth gentle animations with slight bounce physics on thought bubbles. Warm, hopeful, empowering tone. The final frame with the logo should feel like a brand moment — confident and proud. Like a premium fintech explainer video crossed with Headspace animation quality.
+
+---
+
+## ALTERNATIVE CONCEPTS (Cinematic/Live-Action Options)
+
+These are backup concepts if you want a realistic style instead of the illustrated approach.
+
+### ALTERNATIVE A: "From Worry to Walking In"
+
+**START:** A woman sitting at a kitchen table at night, face lit by blue phone glow, researching procedure costs. Concerned expression. Cinematic, 35mm, f/1.8. 70% in shadow. 16:9.
+
+**END:** Same woman walking into a bright modern clinic, smiling confidently, white blouse. Daylight floods the space. CosmodiLoans logo subtly visible on a screen/poster in the clinic background. 35mm, f/2.0. 16:9.
+
+**VEO3:** 8-second transition from dark kitchen to bright clinic. Blue phone glow warms to golden daylight. Camera drifts forward gently. CosmodiLoans logo fades in at the bottom of the final frame, holding for the last 2 seconds.
+
+### ALTERNATIVE B: "The Approval Glow"
+
+**START:** Extreme close-up of eyes reflecting blue phone screen. Worried brow. 100mm macro, dark. 16:9.
+
+**END:** Same eyes bathed in warm golden light, crinkled in a smile. Phone reflection shows green "Approved" checkmark. CosmodiLoans wordmark in small blue text at the bottom of the frame. 16:9.
+
+**VEO3:** 6-second close-up transition from worry to joy. Blue light warms to amber. Expression softens. Logo appears bottom-centre in the final 1.5 seconds.
+
+### ALTERNATIVE C: "The Cost Counter"
+
+**START:** Overhead shot of a medical bill with large dollar figures on white surface. Tense hand hovering. Cold lighting. 16:9.
+
+**END:** Same angle — bill replaced by a simple "$297/mo" repayment card with CosmodiLoans blue stripe and logo. Hand relaxed. Coffee cup. Warm light. 16:9.
+
+**VEO3:** 6-second overhead transition. Lighting shifts from cold to warm. Bill transforms to repayment card. CosmodiLoans branding visible on the card throughout the final frame.
 
 ---
 
 ## TECHNICAL NOTES
 
-- **Aspect ratio:** Generate at 16:9 for desktop hero. Also generate 9:16 vertical crops for mobile hero (reframe the same concept)
-- **Colour consistency:** Both frames MUST share: skin tones, clothing colour (white/cream blouse), and at least one blue accent (#1e40af)
-- **Composition rule:** The woman's face should be at roughly the same position (left third) in both frames for smooth interpolation
-- **Material emphasis:** The lighting is the hero material — the shift from cool blue phone glow to warm golden daylight is the entire story
-- **File targets:** MP4, H.264, under 5MB for web. WebM as backup format. Poster frame = the end frame (bright/confident)
-- **Autoplay settings:** `autoplay muted loop playsinline` — no sound needed
-- **Backup plan:** If AI generation doesn't produce the quality needed, search stock footage for: "woman healthcare clinic confident" or "medical financing approval" on Artgrid, Pexels, or Coverr
+- **Aspect ratio:** 16:9 for desktop hero, 9:16 for mobile/social crops
+- **Colour consistency:** Both frames MUST share brand blue (#1e40af) and the character design
+- **Composition rule:** Character stays centre-frame for smooth AI interpolation
+- **Brand visibility:** CosmodiLoans logo MUST be prominent and legible in the final frame — this is the brand moment
+- **File targets:** MP4 H.264, under 5MB for web. WebM backup. Poster frame = LAST frame (logo visible)
+- **Autoplay settings:** `autoplay muted loop playsInline` — no audio needed
+- **Social repurpose:** The 9:16 crop works directly as an Instagram Reel / TikTok — the character animation style is inherently social-native
+- **Backup plan:** If AI generation quality isn't sufficient, commission a motion designer on Fiverr/Upwork using the beat breakdown as the creative brief. Budget: $200-500 for an 8-second illustrated animation.
 
 ---
 
 ## RECOMMENDED CONCEPT
 
-**Primary pick: "From Worry to Walking In"**
+**Primary: "Dream It. Fund It." (Illustrated/Cartoon)**
 
-Rationale:
-1. **Strongest emotional arc** — moves from a universally relatable moment (worrying about costs at night) to an aspirational outcome (walking into your procedure with confidence)
-2. **Smooth interpolation** — same subject, same camera distance, lighting change as the primary driver (Tier 1 reliability for AI video generation)
-3. **Brand story without text** — anyone watching understands the before/after without reading a word
-4. **Colour consistency** — both frames share the subject, clothing, and blue accents. Only the lighting temperature changes.
-5. **Scroll narrative** — as users scroll down the page, the darkness-to-light transition maps perfectly to the journey of discovering CosmodiLoans (worry → solution → confidence)
-6. **Reusable assets** — the start and end frames work as standalone images for social ads, OG images, and blog headers
-
-**Best backup:** Alternative A ("The Approval Glow") — great for social media and shorter loops (6 sec)
-
-**Best for social/ads:** Alternative A or B — both work as standalone short-form content on Instagram Reels / TikTok
+Why this wins:
+1. **Most shareable** — illustrated characters perform 3-5x better on social than live-action for this demographic
+2. **No uncanny valley** — AI-generated realistic humans still look off. Illustration sidesteps this
+3. **Brand-ownable** — "Mel" becomes a recurring character across all touchpoints
+4. **Procedure sensitivity** — illustrating "bad teeth" or body issues in cartoon form is lighthearted and inclusive, not offensive
+5. **Thought bubbles work natively** — in illustration, thought bubbles are expected. In live-action they're cheesy
+6. **Strong brand finish** — the CosmodiLoans logo + tagline as the final lingering frame creates genuine brand recall
+7. **The tagline "Dream it. Fund it."** — short, punchy, works everywhere
 
 ---
 
@@ -157,13 +199,13 @@ Rationale:
   poster="/images/hero-end-frame.webp"
   className="absolute inset-0 w-full h-full object-cover"
 >
-  <source src="/videos/hero-scroll.webm" type="video/webm" />
-  <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+  <source src="/videos/hero-dream-it-fund-it.webm" type="video/webm" />
+  <source src="/videos/hero-dream-it-fund-it.mp4" type="video/mp4" />
 </video>
 ```
 
-**Overlay:** Semi-transparent gradient overlay from left (for text readability) using `bg-gradient-to-r from-white/90 via-white/70 to-transparent`
+**Overlay:** For text readability over the video, use `bg-gradient-to-r from-white/90 via-white/60 to-transparent` on the left content column.
 
-**Performance:** Lazy load video after hero text/form render. Use poster frame for instant visual while video loads. Preload="none" to save bandwidth, play on intersection observer.
+**Performance:** `preload="none"`, load via Intersection Observer. Poster frame = final frame with logo visible (so even before video loads, the brand is shown).
 
-**Mobile:** Use the 9:16 vertical crop via `<source media="(max-width: 768px)">` or serve a poster image only on mobile to save bandwidth.
+**Mobile:** Serve poster image only on mobile to save bandwidth, or use 9:16 vertical crop via `<source media="(max-width: 768px)">`.
