@@ -59,19 +59,28 @@ export function VideoHero() {
   };
 
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#dde5f0]">
-      {/* Video — full viewport */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        poster="/videos/hero-poster.jpg"
-        className="absolute inset-0 w-full h-full object-contain bg-[#dde5f0]"
-      >
-        <source src="/videos/hero-scroll.mp4" type="video/mp4" />
-      </video>
+    <section className="relative min-h-[85svh] w-full overflow-hidden bg-[#bcc1d1]">
+      {/* Video — centred, fills the section seamlessly */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          poster="/videos/hero-poster.jpg"
+          className="max-w-5xl w-full h-auto"
+        >
+          <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Soft vignette — fades the outer edges to white so it transitions cleanly to the rest of the page */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true"
+        style={{
+          background: "radial-gradient(ellipse 75% 70% at center, transparent 45%, rgba(240,244,250,0.6) 70%, #f0f4fa 100%)",
+        }}
+      />
 
       {/* Gradient overlay — fades in when video ends to make text readable */}
       <div
@@ -80,7 +89,7 @@ export function VideoHero() {
         }`}
         style={{
           background:
-            "linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 35%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0.75) 70%, rgba(255,255,255,0.92) 100%)",
+            "rgba(240,244,250,0.88)",
         }}
       />
 
@@ -95,7 +104,7 @@ export function VideoHero() {
       )}
 
       {/* Content — slides in after video freezes */}
-      <div className="relative z-20 min-h-[100svh] flex items-center">
+      <div className="relative z-20 min-h-[85svh] flex items-center">
         <div className="mx-auto max-w-7xl w-full px-6 md:px-section-x py-20">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
             {/* Left — text content slides in from left */}
