@@ -161,18 +161,8 @@ export default function Home() {
       />
 
       {/* ── HERO SECTION ──────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
-        {/* Hero background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-15 pointer-events-none hidden lg:block"
-        >
-          <source src="/videos/hero-scroll.mp4" type="video/mp4" />
-        </video>
-        <div className="container-narrow relative z-10">
+      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
+        <div className="container-narrow">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
             {/* Left column — content */}
             <div className="flex flex-col justify-center pt-2">
@@ -206,6 +196,29 @@ export default function Home() {
               <HeroLeadForm />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── HERO VIDEO SHOWCASE ─────────────────────────────────── */}
+      <section className="bg-gradient-to-b from-[#e0ecff] to-white py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="relative rounded-2xl overflow-hidden shadow-form">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              poster="/videos/hero-poster.jpg"
+              className="w-full h-auto block rounded-2xl"
+            >
+              <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-center text-sm text-text-muted mt-4">
+            See how CosmodiLoans helps Australians finance their medical procedures
+          </p>
         </div>
       </section>
 
