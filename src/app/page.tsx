@@ -161,8 +161,18 @@ export default function Home() {
       />
 
       {/* ── HERO SECTION ──────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
-        <div className="container-narrow">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
+        {/* Hero background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-15 pointer-events-none hidden lg:block"
+        >
+          <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+        </video>
+        <div className="container-narrow relative z-10">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
             {/* Left column — content */}
             <div className="flex flex-col justify-center pt-2">
