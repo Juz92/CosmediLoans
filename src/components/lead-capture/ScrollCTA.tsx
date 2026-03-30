@@ -50,7 +50,7 @@ export function ScrollCTA() {
 
   return (
     <div className="fixed bottom-0 inset-x-0 z-40 hidden md:block animate-slide-up">
-      <div className="bg-primary text-white px-6 py-4 shadow-[0_-4px_16px_rgba(0,0,0,0.15)]">
+      <div role="complementary" aria-live="polite" className="bg-primary text-white px-6 py-4 shadow-[0_-4px_16px_rgba(0,0,0,0.15)]">
         <div className="container-narrow flex items-center justify-between gap-4">
           <p className="text-sm font-medium">
             Still researching? Get a free rate check &mdash; no commitment.

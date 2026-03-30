@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, Check, Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
 import { Badge, Card, Button } from "@/components/ui";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { TrustBar } from "@/components/content/TrustBar";
 import { HowItWorks } from "@/components/content/HowItWorks";
+import { PartnerLogos } from "@/components/content/PartnerLogos";
 import { ProcedureCard } from "@/components/procedures/ProcedureCard";
 import { TestimonialGrid } from "@/components/content/TestimonialGrid";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
@@ -11,6 +13,10 @@ import { StickyMobileCTA } from "@/components/lead-capture/StickyMobileCTA";
 import { ScrollCTA } from "@/components/lead-capture/ScrollCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { procedures } from "@/data/procedures";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 /* ── Procedure Grid Data (first 8) ──────────────────────────────── */
 const featuredProcedures = procedures.slice(0, 8);
@@ -50,7 +56,7 @@ const loanExamples = [
     amount: "$5,000",
     rate: "6.99%",
     term: "3 years",
-    monthly: "$154",
+    monthly: "$99",
   },
   {
     procedure: "IVF Treatment",
@@ -64,7 +70,7 @@ const loanExamples = [
     amount: "$30,000",
     rate: "8.99%",
     term: "7 years",
-    monthly: "$468",
+    monthly: "$589",
   },
 ];
 
@@ -140,9 +146,22 @@ export default function Home() {
   return (
     <>
       <JsonLd data={organizationSchema} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "CosmodiLoans",
+          url: "https://cosmedloans.com.au",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://cosmedloans.com.au/procedures?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
 
       {/* ── HERO SECTION ──────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-primary-wash to-[#e0ecff] section-padding pb-12 md:pb-section-y">
+      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
         <div className="container-narrow">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
             {/* Left column — content */}
@@ -183,6 +202,9 @@ export default function Home() {
       {/* ── TRUST BAR ─────────────────────────────────────────────── */}
       <TrustBar />
 
+      {/* ── PARTNER LOGOS ─────────────────────────────────────────── */}
+      <PartnerLogos />
+
       {/* ── HOW IT WORKS ──────────────────────────────────────────── */}
       <HowItWorks />
 
@@ -198,16 +220,17 @@ export default function Home() {
               finance the care they need at rates they can afford.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:grid md:grid-cols-4 md:overflow-visible md:snap-none md:pb-0">
             {featuredProcedures.map((proc) => (
-              <ProcedureCard
-                key={proc.slug}
-                slug={proc.slug}
-                icon={proc.icon}
-                title={proc.title}
-                avgCostRange={proc.avgCostRange}
-                rateFrom={proc.rateFrom}
-              />
+              <div key={proc.slug} className="min-w-[220px] snap-start md:min-w-0">
+                <ProcedureCard
+                  slug={proc.slug}
+                  icon={proc.icon}
+                  title={proc.title}
+                  avgCostRange={proc.avgCostRange}
+                  rateFrom={proc.rateFrom}
+                />
+              </div>
             ))}
           </div>
           <div className="text-center mt-8">

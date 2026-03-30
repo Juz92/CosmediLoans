@@ -136,7 +136,7 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
           {isSubmitting ? "Checking..." : "Check My Rate \u2192"}
         </Button>
         {submitError && (
-          <p className="text-sm text-red-500 text-center">{submitError}</p>
+          <p role="alert" className="text-sm text-red-500 text-center">{submitError}</p>
         )}
         <p className="text-xs text-text-muted text-center">
           Free quote &middot; No obligation &middot; Takes 60 seconds
