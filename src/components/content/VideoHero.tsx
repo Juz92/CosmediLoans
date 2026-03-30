@@ -69,7 +69,7 @@ export function VideoHero() {
           playsInline
           preload="auto"
           poster="/videos/hero-poster.jpg"
-          className="w-full h-auto scale-[1.25] origin-center"
+          className="w-full h-auto scale-[0.83] origin-center"
         >
           <source src="/videos/hero-scroll.mp4" type="video/mp4" />
         </video>

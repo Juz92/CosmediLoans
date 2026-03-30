@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
-import { Card, Button } from "@/components/ui";
-import { VideoHero } from "@/components/content/VideoHero";
+import { ShieldCheck, Check, Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
+import { Badge, Card, Button } from "@/components/ui";
+import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { TrustBar } from "@/components/content/TrustBar";
 import { HowItWorks } from "@/components/content/HowItWorks";
 import { PartnerLogos } from "@/components/content/PartnerLogos";
@@ -160,11 +160,63 @@ export default function Home() {
         }}
       />
 
-      {/* ── VIDEO HERO — Full viewport, plays then reveals content ── */}
-      <VideoHero />
+      {/* ── HERO SECTION ──────────────────────────────────────────── */}
+      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
+        <div className="container-narrow">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
+            <div className="flex flex-col justify-center pt-2">
+              <Badge className="mb-6 self-start">
+                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                Trusted by Australian Patients
+              </Badge>
+              <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-5 leading-tight">
+                Finance Any Medical Procedure.{" "}
+                <span className="text-primary">Find Your Lowest Rate.</span>
+              </h1>
+              <p className="text-body text-text-body mb-8 max-w-lg">
+                Compare rates from 20+ lenders in 60 seconds. Our expert brokers
+                find you the best deal for dental, IVF, cosmetic surgery, and
+                more &mdash; at no cost to you.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-2">
+                <div className="flex items-center gap-2 text-sm text-text-body">
+                  <ShieldCheck className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
+                  <span>No credit impact</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-text-body">
+                  <Check className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
+                  <span>100% free service</span>
+                </div>
+              </div>
+            </div>
+            <div className="lg:max-w-md lg:ml-auto">
+              <HeroLeadForm />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── TRUST BAR ─────────────────────────────────────────────── */}
       <TrustBar />
+
+      {/* ── VIDEO PLAYER ──────────────────────────────────────────── */}
+      <section className="py-8 bg-white">
+        <div className="mx-auto max-w-2xl px-6">
+          <div className="rounded-xl overflow-hidden shadow-card">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              poster="/videos/hero-poster.jpg"
+              className="w-full h-auto block"
+            >
+              <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
 
       {/* ── PARTNER LOGOS ─────────────────────────────────────────── */}
       <PartnerLogos />
