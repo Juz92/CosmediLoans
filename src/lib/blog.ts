@@ -8,6 +8,7 @@ export interface BlogPost {
   category: string;
   excerpt: string;
   readTime: number;
+  image?: string;
   content: string;
 }
 
@@ -69,6 +70,7 @@ export function getAllPosts(): BlogPost[] {
       category: data.category || "",
       excerpt: data.excerpt || "",
       readTime: parseInt(data.readTime || "5", 10),
+      image: data.image || undefined,
       content,
     };
   });
@@ -92,6 +94,7 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
     category: data.category || "",
     excerpt: data.excerpt || "",
     readTime: parseInt(data.readTime || "5", 10),
+    image: data.image || undefined,
     content,
   };
 }

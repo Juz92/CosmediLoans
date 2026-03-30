@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { Card } from "@/components/ui";
 
@@ -7,6 +8,7 @@ const testimonials = [
     name: "Sarah M.",
     procedure: "Dental Implants",
     rating: 5,
+    avatar: "/Images/Sarah M. — Dental Implants.png",
     quote:
       "I was quoted 12% from my bank. CosmodiLoans found me a rate at 6.99%. The whole process took under 48 hours and I had my implants booked within the week.",
   },
@@ -14,6 +16,7 @@ const testimonials = [
     name: "James T.",
     procedure: "IVF Treatment",
     rating: 5,
+    avatar: "/Images/James T. — IVF Treatment.png",
     quote:
       "Financing IVF felt overwhelming until we spoke with CosmodiLoans. Our broker explained every option and secured a rate that made our next cycle affordable.",
   },
@@ -21,6 +24,7 @@ const testimonials = [
     name: "Michelle L.",
     procedure: "Breast Augmentation",
     rating: 5,
+    avatar: "/Images/Michelle L. — Breast Augmentation.png",
     quote:
       "No credit impact, no obligation, and genuinely the lowest rate I found anywhere. My broker was professional and made the entire experience stress-free.",
   },
@@ -61,11 +65,20 @@ export function TestimonialGrid() {
               <blockquote className="mt-4 flex-1 text-text-body text-sm leading-relaxed">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
-              <div className="mt-5 pt-4 border-t border-border">
-                <p className="text-sm font-bold text-text-dark">
-                  {testimonial.name}
-                </p>
-                <p className="text-xs text-text-muted">{testimonial.procedure}</p>
+              <div className="mt-5 pt-4 border-t border-border flex items-center gap-3">
+                <Image
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  width={48}
+                  height={48}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-sm font-bold text-text-dark">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-xs text-text-muted">{testimonial.procedure}</p>
+                </div>
               </div>
             </Card>
           ))}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { DollarSign, Percent, Clock, Shield, Users } from "lucide-react";
@@ -33,8 +34,22 @@ export function ProcedureHero({ procedure }: ProcedureHeroProps) {
   const defaultProcedure = procedureFormMap[procedure.slug] || "other";
 
   return (
-    <section className="bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding">
-      <div className="container-narrow">
+    <section className="relative bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding overflow-hidden">
+      {/* Hero Background Image */}
+      {procedure.heroImage && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={procedure.heroImage}
+            alt={`${procedure.title} illustration`}
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#f0f5ff]/95 via-[#e0ecff]/90 to-[#e0ecff]/70" />
+        </div>
+      )}
+      <div className="container-narrow relative z-10">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
           {/* Left Column — Content */}
           <div>

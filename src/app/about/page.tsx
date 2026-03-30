@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Users,
   Stethoscope,
@@ -65,6 +66,16 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-6">
             About CosmodiLoans
           </h1>
+          <div className="relative w-full max-w-3xl mx-auto mt-8 rounded-2xl overflow-hidden shadow-lg aspect-[16/9]">
+            <Image
+              src="/Images/ABOUT PAGE HERO.png"
+              alt="CosmodiLoans team helping Australians finance medical procedures"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
         </div>
       </section>
 

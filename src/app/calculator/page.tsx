@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Calculator, Mail } from "lucide-react";
 import { Button, Card } from "@/components/ui";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
@@ -128,6 +129,16 @@ export default function CalculatorPage() {
             Adjust the loan amount, interest rate, and term to see how
             different options affect your repayments.
           </p>
+          <div className="relative w-full max-w-md mx-auto mt-8 aspect-[4/3]">
+            <Image
+              src="/Images/CALCULATOR PAGE HERO.png"
+              alt="Medical loan calculator illustration"
+              fill
+              priority
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 448px"
+            />
+          </div>
         </div>
       </section>
 

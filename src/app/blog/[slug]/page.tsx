@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getAllSlugs, getPostBySlug, getPostsByCategory } from "@/lib/blog";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -30,6 +31,7 @@ export function generateMetadata({
       url: `/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      ...(post.image ? { images: [{ url: post.image }] } : {}),
     },
   };
 }
@@ -114,6 +116,20 @@ export default function BlogPost({
               </span>
             </div>
           </header>
+
+          {/* Featured Image */}
+          {post.image && (
+            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-10">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
+          )}
 
           {/* Body */}
           <div className="prose prose-lg max-w-none text-text-body leading-relaxed space-y-6">

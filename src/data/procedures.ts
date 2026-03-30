@@ -31,12 +31,14 @@ export interface Procedure {
   blogCategory: string;
   financingDescription: string;
   benefits: Benefit[];
+  heroImage?: string;
 }
 
 export const procedures: Procedure[] = [
   // ─── 1. DENTAL LOANS ───────────────────────────────────────────────
   {
     slug: "dental-loans",
+    heroImage: "/Images/Dental.png",
     title: "Dental Loans",
     h1: "Dental Loan Financing Australia",
     metaTitle: "Dental Loans Australia | Finance From 6.99%",
@@ -129,6 +131,7 @@ export const procedures: Procedure[] = [
   // ─── 2. VENEERS FINANCING ──────────────────────────────────────────
   {
     slug: "veneers-financing",
+    heroImage: "/Images/Invisalign & Orthodontics.png",
     title: "Veneers Financing",
     h1: "Dental Veneers Financing Australia",
     metaTitle: "Veneers Financing Australia | From 6.99% p.a.",
@@ -221,6 +224,7 @@ export const procedures: Procedure[] = [
   // ─── 3. INVISALIGN FINANCING ───────────────────────────────────────
   {
     slug: "invisalign-financing",
+    heroImage: "/Images/Invisalign & Orthodontics.png",
     title: "Invisalign Financing",
     h1: "Invisalign Financing Australia",
     metaTitle: "Invisalign Financing Australia | From 6.99% p.a.",
@@ -313,6 +317,7 @@ export const procedures: Procedure[] = [
   // ─── 4. IVF FINANCING ──────────────────────────────────────────────
   {
     slug: "ivf-financing",
+    heroImage: "/Images/IVF & Fertility.png",
     title: "IVF Financing",
     h1: "IVF & Fertility Financing Australia",
     metaTitle: "IVF Financing Australia | From 6.99% p.a.",
@@ -406,6 +411,7 @@ export const procedures: Procedure[] = [
   // ─── 5. FERTILITY TREATMENT LOANS ──────────────────────────────────
   {
     slug: "fertility-treatment-loans",
+    heroImage: "/Images/IVF & Fertility.png",
     title: "Fertility Treatment Loans",
     h1: "Fertility Treatment Loans Australia",
     metaTitle: "Fertility Treatment Loans Australia | From 6.99%",
@@ -498,6 +504,7 @@ export const procedures: Procedure[] = [
   // ─── 6. BREAST AUGMENTATION LOANS ──────────────────────────────────
   {
     slug: "breast-augmentation-loans",
+    heroImage: "/Images/Breast Augmentation.png",
     title: "Breast Augmentation Loans",
     h1: "Breast Augmentation Financing Australia",
     metaTitle: "Breast Augmentation Loans Australia | From 6.99%",
@@ -590,6 +597,7 @@ export const procedures: Procedure[] = [
   // ─── 7. RHINOPLASTY FINANCING ──────────────────────────────────────
   {
     slug: "rhinoplasty-financing",
+    heroImage: "/Images/Rhinoplasty.png",
     title: "Rhinoplasty Financing",
     h1: "Rhinoplasty Financing Australia",
     metaTitle: "Rhinoplasty Financing Australia | From 6.99% p.a.",
@@ -682,6 +690,7 @@ export const procedures: Procedure[] = [
   // ─── 8. TUMMY TUCK LOANS ──────────────────────────────────────────
   {
     slug: "tummy-tuck-loans",
+    heroImage: "/Images/Tummy Tuck.png",
     title: "Tummy Tuck Loans",
     h1: "Tummy Tuck Financing Australia",
     metaTitle: "Tummy Tuck Loans Australia | Finance From 6.99%",
@@ -774,6 +783,7 @@ export const procedures: Procedure[] = [
   // ─── 9. LIPOSUCTION FINANCING ─────────────────────────────────────
   {
     slug: "liposuction-financing",
+    heroImage: "/Images/Liposuction.png",
     title: "Liposuction Financing",
     h1: "Liposuction Financing Australia",
     metaTitle: "Liposuction Financing Australia | From 6.99% p.a.",
@@ -866,6 +876,7 @@ export const procedures: Procedure[] = [
   // ─── 10. FACELIFT FINANCING ────────────────────────────────────────
   {
     slug: "facelift-financing",
+    heroImage: "/Images/Facelift.png",
     title: "Facelift Financing",
     h1: "Facelift Financing Australia",
     metaTitle: "Facelift Financing Australia | From 6.99% p.a.",
@@ -958,6 +969,7 @@ export const procedures: Procedure[] = [
   // ─── 11. LASIK LOANS ──────────────────────────────────────────────
   {
     slug: "lasik-loans",
+    heroImage: "/Images/LASIK & Vision.png",
     title: "LASIK Loans",
     h1: "LASIK Eye Surgery Financing Australia",
     metaTitle: "LASIK Loans Australia | Eye Surgery From 6.99%",
@@ -1050,6 +1062,7 @@ export const procedures: Procedure[] = [
   // ─── 12. BARIATRIC SURGERY LOANS ───────────────────────────────────
   {
     slug: "bariatric-surgery-loans",
+    heroImage: "/Images/Bariatric & Weight Loss.png",
     title: "Bariatric Surgery Loans",
     h1: "Bariatric Surgery Financing Australia",
     metaTitle: "Bariatric Surgery Loans Australia | From 6.99%",
@@ -1142,6 +1155,7 @@ export const procedures: Procedure[] = [
   // ─── 13. WEIGHT LOSS SURGERY LOANS ─────────────────────────────────
   {
     slug: "weight-loss-surgery-loans",
+    heroImage: "/Images/Bariatric & Weight Loss.png",
     title: "Weight Loss Surgery Loans",
     h1: "Weight Loss Surgery Financing Australia",
     metaTitle: "Weight Loss Surgery Loans Australia | From 6.99%",
@@ -1234,6 +1248,7 @@ export const procedures: Procedure[] = [
   // ─── 14. HAIR TRANSPLANT LOANS ─────────────────────────────────────
   {
     slug: "hair-transplant-loans",
+    heroImage: "/Images/Hair Transplant.png",
     title: "Hair Transplant Loans",
     h1: "Hair Transplant Financing Australia",
     metaTitle: "Hair Transplant Loans Australia | From 6.99%",
@@ -1326,6 +1341,7 @@ export const procedures: Procedure[] = [
   // ─── 15. ORTHOPEDIC SURGERY LOANS ──────────────────────────────────
   {
     slug: "orthopedic-surgery-loans",
+    heroImage: "/Images/Orthopedic.png",
     title: "Orthopedic Surgery Loans",
     h1: "Orthopedic Surgery Financing Australia",
     metaTitle: "Orthopedic Surgery Loans Australia | From 6.99%",
@@ -1418,6 +1434,7 @@ export const procedures: Procedure[] = [
   // ─── 16. DERMATOLOGY FINANCING ─────────────────────────────────────
   {
     slug: "dermatology-financing",
+    heroImage: "/Images/Dermatology.png",
     title: "Dermatology Financing",
     h1: "Dermatology Treatment Financing Australia",
     metaTitle: "Dermatology Financing Australia | From 6.99%",
@@ -1510,6 +1527,7 @@ export const procedures: Procedure[] = [
   // ─── 17. MOMMY MAKEOVER FINANCING ──────────────────────────────────
   {
     slug: "mommy-makeover-financing",
+    heroImage: "/Images/mommymakeover.png",
     title: "Mommy Makeover Financing",
     h1: "Mommy Makeover Financing Australia",
     metaTitle: "Mommy Makeover Financing Australia | From 6.99%",
@@ -1602,6 +1620,7 @@ export const procedures: Procedure[] = [
   // ─── 18. MEDICAL LOAN (CATCH-ALL) ──────────────────────────────────
   {
     slug: "medical-loan",
+    heroImage: "/Images/Cosmetic & Plastic Surgery.png",
     title: "Medical Loans",
     h1: "Medical Loan Financing Australia",
     metaTitle: "Medical Loans Australia | Any Procedure From 6.99%",

@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   description:
     "Compare rates from 20+ lenders for dental, IVF, cosmetic surgery and any medical procedure. Free broker-matched quotes in 60 seconds.",
   metadataBase: new URL("https://cosmedloans.com.au"),
+  openGraph: {
+    images: [{ url: "/Images/SOCIAL SHARING IMAGE.png", width: 1200, height: 630 }],
+  },
+  icons: {
+    icon: "/Images/favicon APP ICON.png",
+    apple: "/Images/favicon APP ICON.png",
+  },
 };
 
 export default function RootLayout({
