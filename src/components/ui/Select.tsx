@@ -51,7 +51,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
               </option>
             ))}
           </select>
-          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-text-muted pointer-events-none" />
+          <ChevronDown aria-hidden="true" className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-text-muted pointer-events-none" />
         </div>
         {error && (
           <p id={errorId} role="alert" className="text-sm text-red-500">

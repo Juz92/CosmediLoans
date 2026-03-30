@@ -9,3 +9,4 @@ export type { BadgeProps } from "./Badge";
 export { Card } from "./Card";
 export type { CardProps } from "./Card";
 export { Accordion } from "./Accordion";
+export type { AccordionProps, AccordionItem } from "./Accordion";

@@ -4,12 +4,12 @@ import * as RadixAccordion from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
 import type { ReactNode } from "react";
 
-interface AccordionItem {
+export interface AccordionItem {
   question: string;
   answer: ReactNode;
 }
 
-interface AccordionProps {
+export interface AccordionProps {
   items: AccordionItem[];
   type?: "single" | "multiple";
   className?: string;
@@ -32,7 +32,7 @@ export function Accordion({ items, type = "multiple", className = "" }: Accordio
           <RadixAccordion.Header>
             <RadixAccordion.Trigger className="flex w-full items-center justify-between py-5 text-left text-base font-semibold text-text-dark hover:text-primary transition-colors group">
               {item.question}
-              <ChevronDown className="h-5 w-5 text-text-muted shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              <ChevronDown aria-hidden="true" className="h-5 w-5 text-text-muted shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
             </RadixAccordion.Trigger>
           </RadixAccordion.Header>
           <RadixAccordion.Content className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
