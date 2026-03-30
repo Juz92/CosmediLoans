@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CosmodiLoans - Variant D: Premium & Luxurious</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; color: #2d2a26; background: #faf9f6; }
+
+  /* Nav */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 60px; background: #faf9f6; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.5px; }
+  .logo span { color: #b8860b; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a { text-decoration: none; color: #8a8680; font-size: 14px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+  .nav-links a:hover { color: #1a1a1a; }
+  .nav-cta { background: #1a1a1a; color: #faf9f6 !important; padding: 12px 28px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; font-size: 12px !important; }
+
+  /* Hero */
+  .hero { display: flex; align-items: center; justify-content: space-between; padding: 100px 60px 120px; background: linear-gradient(180deg, #faf9f6 0%, #f5f0e8 100%); position: relative; }
+  .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><circle cx="600" cy="300" r="250" fill="none" stroke="%23b8860b" stroke-width="0.5" opacity="0.15"/><circle cx="600" cy="300" r="200" fill="none" stroke="%23b8860b" stroke-width="0.5" opacity="0.1"/><circle cx="600" cy="300" r="150" fill="none" stroke="%23b8860b" stroke-width="0.5" opacity="0.05"/></svg>') no-repeat center; pointer-events: none; }
+  .hero-content { max-width: 560px; position: relative; z-index: 1; }
+  .hero-badge { display: inline-block; border: 1px solid #b8860b; color: #b8860b; padding: 6px 20px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; line-height: 1.1; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .hero h1 em { font-style: italic; color: #b8860b; }
+  .hero p { font-size: 17px; color: #8a8680; line-height: 1.8; margin-bottom: 32px; }
+  .hero-line { width: 60px; height: 1px; background: #b8860b; margin-bottom: 32px; }
+
+  /* Lead Form */
+  .lead-form { background: #ffffff; padding: 48px; border-radius: 2px; box-shadow: 0 20px 60px rgba(0,0,0,0.06); width: 420px; position: relative; z-index: 1; border: 1px solid rgba(0,0,0,0.04); }
+  .lead-form::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #b8860b, #d4a843); }
+  .lead-form h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; margin-bottom: 4px; color: #1a1a1a; }
+  .lead-form p.sub { font-size: 13px; color: #b0a99f; margin-bottom: 28px; letter-spacing: 0.3px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 11px; font-weight: 600; color: #8a8680; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .form-group input, .form-group select { width: 100%; padding: 14px 0; border: none; border-bottom: 1px solid #e5e0d8; font-size: 15px; font-family: inherit; background: transparent; color: #1a1a1a; transition: border-color 0.3s; }
+  .form-group input::placeholder { color: #c8c3bb; }
+  .form-group input:focus, .form-group select:focus { outline: none; border-bottom-color: #b8860b; }
+  .form-btn { width: 100%; padding: 16px; background: #1a1a1a; color: #faf9f6; border: none; font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
+  .form-btn:hover { background: #b8860b; }
+  .form-note { text-align: center; font-size: 11px; color: #c8c3bb; margin-top: 16px; letter-spacing: 0.5px; }
+
+  /* Trust */
+  .trust-bar { display: flex; justify-content: center; gap: 80px; padding: 60px; background: #1a1a1a; }
+  .trust-item { text-align: center; }
+  .trust-value { font-family: 'Playfair Display', serif; font-size: 32px; color: #b8860b; font-weight: 700; }
+  .trust-label { font-size: 12px; color: #8a8680; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* Procedures */
+  .procedures { padding: 100px 60px; background: #faf9f6; }
+  .procedures h2 { text-align: center; font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .procedures .subtitle { text-align: center; color: #b0a99f; font-size: 14px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 2px; }
+  .proc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+  .proc-card { background: #fff; border: 1px solid rgba(0,0,0,0.04); padding: 36px 20px; text-align: center; transition: all 0.3s; cursor: pointer; }
+  .proc-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: #b8860b; }
+  .proc-icon { font-size: 28px; margin-bottom: 16px; }
+  .proc-card h4 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; color: #1a1a1a; }
+  .proc-card p { font-size: 13px; color: #b0a99f; margin-top: 6px; }
+
+  /* Process */
+  .process { padding: 100px 60px; background: #f5f0e8; }
+  .process h2 { text-align: center; font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 600; margin-bottom: 60px; }
+  .steps { display: flex; gap: 60px; max-width: 900px; margin: 0 auto; }
+  .step { flex: 1; text-align: center; }
+  .step-num { font-family: 'Playfair Display', serif; font-size: 48px; color: #b8860b; font-weight: 700; margin-bottom: 16px; opacity: 0.5; }
+  .step h4 { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .step p { font-size: 14px; color: #8a8680; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Cosmedi<span>Loans</span></div>
+  <div class="nav-links">
+    <a href="#">Procedures</a>
+    <a href="#">Process</a>
+    <a href="#">Calculator</a>
+    <a href="#">About</a>
+    <a href="#" class="nav-cta">Begin Your Consultation</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Exclusive Lending Partners</div>
+    <div class="hero-line"></div>
+    <h1>Exceptional Care Deserves <em>Exceptional</em> Financing</h1>
+    <p>We curate financing from an exclusive network of premium lenders, ensuring you receive rates worthy of the care you seek. Your broker. Your advocate. Your best rate.</p>
+  </div>
+  <div class="lead-form">
+    <h3>Private Rate Consultation</h3>
+    <p class="sub">Complimentary · Confidential · 60 seconds</p>
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" placeholder="Full name">
+    </div>
+    <div class="form-group">
+      <label>Procedure of Interest</label>
+      <select>
+        <option>Select your procedure...</option>
+        <option>Dental Restoration</option>
+        <option>Fertility & IVF</option>
+        <option>Aesthetic Surgery</option>
+        <option>Vision Correction</option>
+        <option>Body Contouring</option>
+        <option>Other Procedure</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Investment Amount</label>
+      <input type="text" placeholder="Estimated amount">
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <button class="form-btn">Request My Private Rate</button>
+    <p class="form-note">No credit impact · No obligation</p>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-value">$500M+</div>
+    <div class="trust-label">Funded to Date</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-value">20+</div>
+    <div class="trust-label">Lending Partners</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-value">4.9</div>
+    <div class="trust-label">Client Rating</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-value">60s</div>
+    <div class="trust-label">To Pre-Approval</div>
+  </div>
+</div>
+
+<section class="procedures">
+  <h2>Procedures We Finance</h2>
+  <p class="subtitle">Curated lending for every medical need</p>
+  <div class="proc-grid">
+    <div class="proc-card"><div class="proc-icon">🦷</div><h4>Dental</h4><p>Implants & restoration</p></div>
+    <div class="proc-card"><div class="proc-icon">👶</div><h4>Fertility</h4><p>IVF, IUI & beyond</p></div>
+    <div class="proc-card"><div class="proc-icon">✨</div><h4>Aesthetic</h4><p>Surgical refinement</p></div>
+    <div class="proc-card"><div class="proc-icon">👁️</div><h4>Vision</h4><p>LASIK & correction</p></div>
+    <div class="proc-card"><div class="proc-icon">⚖️</div><h4>Bariatric</h4><p>Weight transformation</p></div>
+    <div class="proc-card"><div class="proc-icon">🦴</div><h4>Orthopedic</h4><p>Mobility & recovery</p></div>
+    <div class="proc-card"><div class="proc-icon">💇</div><h4>Hair</h4><p>Transplant & restoration</p></div>
+    <div class="proc-card"><div class="proc-icon">🩺</div><h4>Specialty</h4><p>All medical procedures</p></div>
+  </div>
+</section>
+
+<section class="process">
+  <h2>A Refined Process</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h4>Consult</h4>
+      <p>Share your procedure details through our secure form. It takes just sixty seconds.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h4>Curate</h4>
+      <p>Your personal broker compares offers from our exclusive network of 20+ lenders.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h4>Commence</h4>
+      <p>Accept your preferred rate, receive funding, and begin your transformation.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
