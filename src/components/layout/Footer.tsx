@@ -44,19 +44,24 @@ export function Footer() {
   return (
     <footer className="bg-text-dark text-white/60">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-section-x">
+        {/* Brand */}
+        <Link href="/" className="inline-block text-[22px] font-bold text-white mb-10">
+          Cosmedi<span className="text-primary-light">Loans</span>
+        </Link>
+
         {/* Columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+              <h2 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
                 {col.title}
-              </h4>
-              <ul className="space-y-2.5">
+              </h2>
+              <ul className="space-y-1">
                 {col.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm hover:text-white transition-colors"
+                      className="inline-block text-sm hover:text-white transition-colors py-1"
                     >
                       {link.label}
                     </Link>

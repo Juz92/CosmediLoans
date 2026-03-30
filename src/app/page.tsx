@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <section className="section-padding bg-gradient-to-b from-primary-wash to-[#e0ecff]">
         <div className="container-narrow text-center">
           <h1 className="text-hero-h1 text-text-dark mb-4">
@@ -13,6 +13,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
