@@ -24,6 +24,7 @@ const procedureOptions = [
   { value: "orthopedic", label: "Orthopedic Surgery" },
   { value: "dermatology", label: "Dermatology" },
   { value: "mommy-makeover", label: "Mommy Makeover" },
+  { value: "debt-consolidation", label: "Debt Consolidation" },
   { value: "other", label: "Other Medical Procedure" },
 ];
 

@@ -43,7 +43,7 @@ export const procedures: Procedure[] = [
     h1: "Dental Loan Financing Australia",
     metaTitle: "Dental Loans Australia | Finance From 6.99%",
     metaDescription:
-      "Compare dental loan rates from 20+ lenders. Finance implants, veneers, crowns & more. Free quotes in 60 seconds. No credit impact.",
+      "Compare dental loan rates from 20+ lenders. Finance implants, veneers, crowns & more. Compare quotes in 60 seconds. No credit impact.",
     heroDescription:
       "Dental work can be expensive — but it doesn't have to be out of reach. Whether you need implants, veneers, or a full restoration, our brokers compare 20+ lenders to find you the lowest dental loan rate in Australia.",
     icon: "🦷",
@@ -1706,6 +1706,86 @@ export const procedures: Procedure[] = [
       {
         title: "60-Second Application",
         description: "Apply online in under a minute and receive personalised loan offers within hours.",
+      },
+    ],
+  },
+
+  // ─── 17. DEBT CONSOLIDATION LOANS ─────────────────────────────────
+  {
+    slug: "debt-consolidation",
+    title: "Debt Consolidation Loans",
+    h1: "Debt Consolidation Loan Australia",
+    metaTitle: "Debt Consolidation Loans Australia | Rates From 6.99%",
+    metaDescription:
+      "Consolidate multiple debts into one lower-rate personal loan. Compare 20+ lenders. No credit impact to check your rate.",
+    heroDescription:
+      "Juggling multiple debts — credit cards, personal loans, buy-now-pay-later — can be stressful and expensive. A debt consolidation loan rolls everything into one manageable repayment at a single, often lower, interest rate. Our brokers compare 20+ lenders to find the most competitive rate for your situation.",
+    icon: "💳",
+    avgCostRange: "$5,000 – $50,000",
+    rateFrom: "6.99%",
+    maxTerm: "7 years",
+    costTable: [
+      { subProcedure: "Small Consolidation", costRange: "$5,000 – $10,000" },
+      { subProcedure: "Medium Consolidation", costRange: "$10,000 – $20,000" },
+      { subProcedure: "Large Consolidation", costRange: "$20,000 – $30,000" },
+      { subProcedure: "High-Balance Consolidation", costRange: "$30,000 – $50,000" },
+    ],
+    repaymentExamples: [
+      { amount: 10000, rate: 6.99, term: 3 },
+      { amount: 20000, rate: 8.99, term: 5 },
+      { amount: 40000, rate: 10.99, term: 7 },
+    ],
+    faqs: [
+      {
+        question: "What is a debt consolidation loan?",
+        answer:
+          "A debt consolidation loan combines multiple existing debts — such as credit cards, personal loans, and buy-now-pay-later balances — into a single personal loan with one regular repayment. The goal is typically to reduce your overall interest rate and simplify your finances.",
+      },
+      {
+        question: "Will applying for debt consolidation affect my credit score?",
+        answer:
+          "Our initial rate check uses a soft credit enquiry, which does not affect your credit score. A hard enquiry only occurs if you choose to proceed with a formal application with a specific lender.",
+      },
+      {
+        question: "What debts can I consolidate?",
+        answer:
+          "You can typically consolidate unsecured debts including credit cards, store cards, personal loans, buy-now-pay-later balances (Afterpay, Zip, Humm), and other lines of credit. Secured debts like home loans generally cannot be consolidated into a personal loan.",
+      },
+      {
+        question: "How long does debt consolidation approval take?",
+        answer:
+          "Most applicants receive a pre-approval decision within a few hours. Once you accept an offer, funds are typically disbursed within 1–3 business days so you can pay out your existing debts promptly.",
+      },
+      {
+        question: "Is a debt consolidation loan worth it?",
+        answer:
+          "It depends on your current interest rates. If you're paying 18–22% p.a. on credit cards and can consolidate at 8–12% p.a., the interest savings over the loan term can be significant. Our brokers can show you the numbers for your specific situation with no obligation.",
+      },
+      {
+        question: "What loan amounts are available for debt consolidation?",
+        answer:
+          "Through our broker network, debt consolidation loans are available from $5,000 up to $50,000, with repayment terms of 1 to 7 years. The right amount and term depends on your total debt and repayment capacity.",
+      },
+    ],
+    relatedSlugs: ["general-medical", "other-cosmetic-medical"],
+    blogCategory: "debt-consolidation",
+    financingDescription:
+      "A debt consolidation personal loan can reduce your overall interest rate and simplify multiple repayments into one. Our brokers compare 20+ lenders to find the best consolidation rate for your credit profile.",
+    benefits: [
+      {
+        title: "Lower Interest Rate",
+        description:
+          "Replace high-rate credit card and BNPL debt with a single personal loan at a lower fixed rate, reducing total interest paid.",
+      },
+      {
+        title: "One Simple Repayment",
+        description:
+          "Combine all your debts into a single monthly repayment, making budgeting easier and reducing the risk of missed payments.",
+      },
+      {
+        title: "Fixed Rate & Term",
+        description:
+          "Unlike credit cards, a personal loan has a fixed rate and a defined payoff date, so you know exactly when you'll be debt-free.",
       },
     ],
   },

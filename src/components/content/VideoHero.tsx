@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ShieldCheck, Check } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { Badge, Button } from "@/components/ui";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import Link from "next/link";
@@ -126,16 +126,12 @@ export function VideoHero() {
               <p className="text-lg text-text-body mb-8 max-w-lg leading-relaxed">
                 Compare rates from 20+ lenders in 60 seconds. Our expert brokers
                 find you the best deal for dental, IVF, cosmetic surgery, and
-                more — at no cost to you.
+                more — so you can book your procedure with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <div className="flex items-center gap-2 text-sm text-text-body">
                   <ShieldCheck className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
                   <span>No credit impact</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-text-body">
-                  <Check className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
-                  <span>100% free service</span>
                 </div>
               </div>
               {/* Mobile CTA — shows on small screens where form is below fold */}

@@ -312,8 +312,7 @@ export default function CalculatorPage() {
                 know which lenders are currently offering promotional rates for
                 medical procedures, giving you access to deals you would never
                 find on your own. The best part? Broker services like
-                CosmediLoans are completely free for patients &mdash; lenders
-                pay the broker, not you.
+                CosmediLoans &mdash; lenders pay the broker, not you.
               </p>
             </div>
 

@@ -51,9 +51,9 @@ const differentiators = [
   },
   {
     icon: DollarSign,
-    title: "Always Free for Patients",
+    title: "No Fees for Patients",
     description:
-      "Our service is completely free for patients. Lenders pay us when a loan settles, which means our incentives are aligned with yours: we want to find you the best deal possible so you proceed with confidence.",
+      "Lenders pay us when a loan settles, which means our incentives are aligned with yours: we want to find you the best deal possible so you proceed with confidence.",
   },
 ];
 

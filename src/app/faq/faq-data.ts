@@ -10,7 +10,7 @@ export const allFAQItems: FAQItem[] = [
     category: "general",
     question: "What is CosmediLoans?",
     answer:
-      "CosmediLoans is a free broker-matching service designed specifically for Australian patients who need financing for medical and cosmetic procedures. Rather than going to a single bank, we connect you with specialist medical finance brokers who compare offers from 20+ lenders across Australia. Our goal is to ensure you receive the most competitive interest rate available for your individual circumstances, without the hassle of applying to multiple lenders yourself. We operate entirely online, making the process convenient regardless of where you live in Australia.",
+      "CosmediLoans is a broker-matching service designed specifically for Australian patients who need financing for medical and cosmetic procedures. Rather than going to a single bank, we connect you with specialist medical finance brokers who compare offers from 20+ lenders across Australia. Our goal is to ensure you receive the most competitive interest rate available for your individual circumstances, without the hassle of applying to multiple lenders yourself. We operate entirely online, making the process convenient regardless of where you live in Australia.",
   },
   {
     category: "general",
@@ -22,7 +22,7 @@ export const allFAQItems: FAQItem[] = [
     category: "general",
     question: "How much does it cost to use CosmediLoans?",
     answer:
-      "Our service is completely free for patients. There are no upfront fees, application fees, or hidden charges from CosmediLoans. We receive a commission from the lender only when a loan successfully settles, which means our costs are built into the loan product itself — the same product you would receive if you went to the lender directly. This model aligns our interests with yours: we benefit when you find a loan that works for your situation, so we are motivated to match you with the best possible option. You are never under any obligation to proceed with any offer presented.",
+      "There are no fees charged to you. There are no upfront fees, application fees, or hidden charges from CosmediLoans. We receive a commission from the lender only when a loan successfully settles, which means our costs are built into the loan product itself — the same product you would receive if you went to the lender directly. This model aligns our interests with yours: we benefit when you find a loan that works for your situation, so we are motivated to match you with the best possible option. You are never under any obligation to proceed with any offer presented.",
   },
   {
     category: "general",
@@ -40,7 +40,7 @@ export const allFAQItems: FAQItem[] = [
     category: "general",
     question: "What areas does CosmediLoans serve?",
     answer:
-      "CosmediLoans serves patients across all Australian states and territories. Because our service is 100% online and our broker network operates nationally, your physical location does not affect your access to competitive rates. Whether you are in Sydney, Melbourne, Brisbane, Perth, Adelaide, Hobart, Darwin, Canberra, or a regional area, you can submit an enquiry and be matched with a broker who can assist you. The lenders in our network also operate Australia-wide, so you have access to the same broad range of products regardless of where you live.",
+      "CosmediLoans serves patients across all Australian states and territories. Because our enquiry process is fully online and our broker network operates nationally, your physical location does not affect your access to competitive rates. Whether you are in Sydney, Melbourne, Brisbane, Perth, Adelaide, Hobart, Darwin, Canberra, or a regional area, you can submit an enquiry and be matched with a broker who can assist you. The lenders in our network also operate Australia-wide, so you have access to the same broad range of products regardless of where you live.",
   },
   {
     category: "general",
