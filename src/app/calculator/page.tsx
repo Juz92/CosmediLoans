@@ -9,12 +9,12 @@ import { LoanCalculator } from "@/components/calculator/LoanCalculator";
 import { RepaymentTableSection } from "./RepaymentTableSection";
 
 export const metadata: Metadata = {
-  title: "Medical Loan Repayment Calculator | CosmodiLoans",
+  title: "Medical Loan Repayment Calculator | CosmediLoans",
   description:
     "Calculate your medical loan repayments instantly. Compare rates from 5.99% across dental, IVF, cosmetic surgery loans. Free interactive calculator with full amortisation schedule.",
   alternates: { canonical: "/calculator" },
   openGraph: {
-    title: "Medical Loan Repayment Calculator | CosmodiLoans",
+    title: "Medical Loan Repayment Calculator | CosmediLoans",
     description:
       "Calculate your medical loan repayments instantly. Compare rates from 5.99% across dental, IVF, cosmetic surgery loans.",
     url: "/calculator",
@@ -95,7 +95,7 @@ const faqItems = [
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "CosmodiLoans Medical Loan Calculator",
+  name: "CosmediLoans Medical Loan Calculator",
   url: "https://cosmedloans.com.au/calculator",
   applicationCategory: "FinanceApplication",
   operatingSystem: "Any",
@@ -312,7 +312,7 @@ export default function CalculatorPage() {
                 know which lenders are currently offering promotional rates for
                 medical procedures, giving you access to deals you would never
                 find on your own. The best part? Broker services like
-                CosmodiLoans are completely free for patients &mdash; lenders
+                CosmediLoans are completely free for patients &mdash; lenders
                 pay the broker, not you.
               </p>
             </div>

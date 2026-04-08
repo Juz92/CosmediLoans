@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer",
   description:
-    "Read the CosmodiLoans financial services disclaimer. CosmodiLoans is a lead generation service, not a credit provider or financial adviser.",
+    "Read the CosmediLoans financial services disclaimer. CosmediLoans is a lead generation service, not a credit provider or financial adviser.",
   alternates: { canonical: "/disclaimer" },
 };
 
@@ -25,29 +25,29 @@ export default function DisclaimerPage() {
         <div className="container-narrow max-w-3xl prose prose-slate max-w-none">
           <h2>Important Notice</h2>
           <p>
-            Please read this disclaimer carefully before using the CosmodiLoans website at
+            Please read this disclaimer carefully before using the CosmediLoans website at
             cosmedloans.com.au (&ldquo;the Website&rdquo;).
           </p>
 
           <h2>Not a Credit Provider</h2>
           <p>
-            [PLACEHOLDER: Business Name] ABN [PLACEHOLDER: ABN] trading as CosmodiLoans is
+            [PLACEHOLDER: Business Name] ABN [PLACEHOLDER: ABN] trading as CosmediLoans is
             <strong> not a credit provider, lender, or credit assistance provider</strong>.
             We do not hold an Australian Credit Licence (ACL) and we do not provide credit,
             arrange credit, or act as an intermediary in any credit transaction.
           </p>
           <p>
-            CosmodiLoans operates as a lead generation service. We collect enquiry
+            CosmediLoans operates as a lead generation service. We collect enquiry
             information from users of the Website and pass that information to licensed
             finance brokers who hold Australian Credit Licences or operate as authorised
             credit representatives. Any credit assistance, credit assessment, or loan
             arrangement is provided by the broker and/or lender directly, not by
-            CosmodiLoans.
+            CosmediLoans.
           </p>
           <p className="text-text-muted italic">
-            [PLACEHOLDER: If CosmodiLoans obtains an Australian Credit Representative (ACR)
+            [PLACEHOLDER: If CosmediLoans obtains an Australian Credit Representative (ACR)
             number or operates under an ACL holder, insert details here. For example:
-            &ldquo;CosmodiLoans is an authorised credit representative (ACR Number: XXXXXX) of
+            &ldquo;CosmediLoans is an authorised credit representative (ACR Number: XXXXXX) of
             [Licence Holder Name] (ACL Number: XXXXXX).&rdquo;]
           </p>
 
@@ -96,7 +96,7 @@ export default function DisclaimerPage() {
             Submitting an enquiry through the Website does not guarantee approval for any
             loan product. Loan approval is subject to the lender&apos;s assessment criteria,
             including but not limited to credit checks, income verification, and
-            responsible lending assessments. CosmodiLoans has no influence over any
+            responsible lending assessments. CosmediLoans has no influence over any
             lender&apos;s approval decision.
           </p>
 
@@ -104,7 +104,7 @@ export default function DisclaimerPage() {
           <p>
             The Website may contain references to, or links to, third-party websites,
             products, and services. These references are provided for convenience only and
-            do not constitute an endorsement or recommendation by CosmodiLoans. We are not
+            do not constitute an endorsement or recommendation by CosmediLoans. We are not
             responsible for the content, accuracy, or practices of any third-party website.
           </p>
 
@@ -126,7 +126,7 @@ export default function DisclaimerPage() {
 
           <h2>Regulatory Compliance</h2>
           <p>
-            All brokers in the CosmodiLoans network are required to hold appropriate
+            All brokers in the CosmediLoans network are required to hold appropriate
             Australian Credit Licences (ACL) or operate as authorised credit
             representatives under the <em>National Consumer Credit Protection Act 2009</em>{" "}
             (Cth). They are bound by responsible lending obligations under the National

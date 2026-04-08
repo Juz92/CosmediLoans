@@ -13,8 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "CosmodiLoans | Medical Procedure Financing Australia",
-    template: "%s | CosmodiLoans",
+    default: "CosmediLoans | Medical Procedure Financing Australia",
+    template: "%s | CosmediLoans",
   },
   description:
     "Compare rates from 20+ lenders for dental, IVF, cosmetic surgery and any medical procedure. Free broker-matched quotes in 60 seconds.",

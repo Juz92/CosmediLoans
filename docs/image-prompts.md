@@ -1,4 +1,4 @@
-# CosmodiLoans — AI Image Generation Prompts
+# CosmediLoans — AI Image Generation Prompts
 
 Use these prompts with Midjourney, DALL-E 3, Ideogram, or Flux to generate images for the website. All images should feel: **clinical, trustworthy, warm, Australian, diverse**.
 

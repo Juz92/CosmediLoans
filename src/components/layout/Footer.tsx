@@ -75,7 +75,7 @@ export function Footer() {
         {/* Compliance */}
         <div className="border-t border-white/10 pt-8 space-y-4">
           <p className="text-xs leading-relaxed">
-            CosmodiLoans is a lead generation service that connects consumers with
+            CosmediLoans is a lead generation service that connects consumers with
             licensed finance brokers. We do not provide credit, financial advice, or
             act as a lender. All loan applications are subject to lender assessment
             and approval. Rates and terms vary based on individual circumstances.
@@ -85,7 +85,7 @@ export function Footer() {
             Credit Licence Number] | [PLACEHOLDER: Credit Guide Link]
           </p>
           <p className="text-xs">
-            &copy; {new Date().getFullYear()} CosmodiLoans. All rights reserved.
+            &copy; {new Date().getFullYear()} CosmediLoans. All rights reserved.
           </p>
         </div>
       </div>

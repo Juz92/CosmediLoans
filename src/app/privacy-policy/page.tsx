@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Read the CosmodiLoans privacy policy. Learn how we collect, use, and protect your personal information in accordance with the Australian Privacy Act 1988.",
+    "Read the CosmediLoans privacy policy. Learn how we collect, use, and protect your personal information in accordance with the Australian Privacy Act 1988.",
   alternates: { canonical: "/privacy-policy" },
 };
 
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
         <div className="container-narrow max-w-3xl prose prose-slate max-w-none">
           <h2>1. Introduction</h2>
           <p>
-            [PLACEHOLDER: Business Name] ABN [PLACEHOLDER: ABN] (&ldquo;CosmodiLoans&rdquo;,
+            [PLACEHOLDER: Business Name] ABN [PLACEHOLDER: ABN] (&ldquo;CosmediLoans&rdquo;,
             &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is committed to protecting the privacy of
             individuals who use our website and services. This Privacy Policy outlines how we
             collect, use, store, disclose, and protect your personal information in accordance

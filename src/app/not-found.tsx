@@ -7,7 +7,7 @@ const helpfulLinks = [
     href: "/",
     icon: Home,
     title: "Homepage",
-    description: "Return to the CosmodiLoans homepage",
+    description: "Return to the CosmediLoans homepage",
   },
   {
     href: "/procedures",

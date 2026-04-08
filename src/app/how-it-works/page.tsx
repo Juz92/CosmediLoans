@@ -6,14 +6,14 @@ import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "How CosmodiLoans Works | 3 Easy Steps to Medical Financing",
+  title: "How CosmediLoans Works | 3 Easy Steps to Medical Financing",
   description:
-    "Learn how CosmodiLoans connects you with 20+ lenders to find the lowest medical loan rate. Simple 3-step process: enquire, compare, get funded.",
+    "Learn how CosmediLoans connects you with 20+ lenders to find the lowest medical loan rate. Simple 3-step process: enquire, compare, get funded.",
   alternates: { canonical: "/how-it-works" },
   openGraph: {
-    title: "How CosmodiLoans Works | 3 Easy Steps to Medical Financing",
+    title: "How CosmediLoans Works | 3 Easy Steps to Medical Financing",
     description:
-      "Learn how CosmodiLoans connects you with 20+ lenders to find the lowest medical loan rate.",
+      "Learn how CosmediLoans connects you with 20+ lenders to find the lowest medical loan rate.",
     url: "/how-it-works",
     type: "website",
   },
@@ -84,14 +84,14 @@ const brokerFeatures = [
 /* ── FAQ Subset ──────────────────────────────────────────────────── */
 const faqItems = [
   {
-    question: "Is there really no cost to use CosmodiLoans?",
+    question: "Is there really no cost to use CosmediLoans?",
     answer:
       "Absolutely. Our service is 100% free for patients. We are paid by the lenders in our network when a loan settles, so there is never a fee, hidden charge, or obligation for you to use our service.",
   },
   {
     question: "How is this different from going to my bank?",
     answer:
-      "When you go to a bank, you get one offer from one lender. When you use CosmodiLoans, your broker compares rates from 20+ lenders simultaneously, giving you a much higher chance of securing a lower rate.",
+      "When you go to a bank, you get one offer from one lender. When you use CosmediLoans, your broker compares rates from 20+ lenders simultaneously, giving you a much higher chance of securing a lower rate.",
   },
   {
     question: "Will my credit score be affected?",
@@ -122,7 +122,7 @@ export default function HowItWorksPage() {
       <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">
-            How CosmodiLoans Works
+            How CosmediLoans Works
           </h1>
           <p className="text-body text-text-body max-w-2xl mx-auto">
             From your first enquiry to funded in as little as 24 hours. Our
@@ -192,7 +192,7 @@ export default function HowItWorksPage() {
             </h2>
             <p className="text-body text-text-body max-w-2xl mx-auto">
               Going direct to a bank means you get one rate from one lender. Using
-              a broker through CosmodiLoans means 20+ lenders compete for your
+              a broker through CosmediLoans means 20+ lenders compete for your
               business.
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function HowItWorksPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-primary">
-                    Using CosmodiLoans
+                    Using CosmediLoans
                   </h3>
                   <p className="text-xs text-text-muted">20+ lenders competing</p>
                 </div>

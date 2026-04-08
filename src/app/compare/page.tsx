@@ -7,14 +7,14 @@ import { Button, Card, Badge } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Compare Medical Financing Options in Australia | CosmodiLoans",
+  title: "Compare Medical Financing Options in Australia | CosmediLoans",
   description:
-    "Compare CosmodiLoans with Afterpay, Zip Pay, Humm, Latitude, MoneyMe, Plenti, SocietyOne, and more. See which medical financing option suits your procedure.",
+    "Compare CosmediLoans with Afterpay, Zip Pay, Humm, Latitude, MoneyMe, Plenti, SocietyOne, and more. See which medical financing option suits your procedure.",
   alternates: { canonical: "/compare" },
   openGraph: {
-    title: "Compare Medical Financing Options in Australia | CosmodiLoans",
+    title: "Compare Medical Financing Options in Australia | CosmediLoans",
     description:
-      "Side-by-side comparisons of CosmodiLoans with every major medical financing option in Australia.",
+      "Side-by-side comparisons of CosmediLoans with every major medical financing option in Australia.",
     url: "/compare",
     type: "website",
   },
@@ -51,7 +51,7 @@ export default function CompareHubPage() {
     "@type": "ItemList",
     name: "Medical Financing Comparisons",
     description:
-      "Compare CosmodiLoans with major medical financing options in Australia.",
+      "Compare CosmediLoans with major medical financing options in Australia.",
     numberOfItems: comparisons.length,
     itemListElement: comparisons.map((c, i) => ({
       "@type": "ListItem",
@@ -79,7 +79,7 @@ export default function CompareHubPage() {
               Compare Medical Financing Options in Australia
             </h1>
             <p className="text-body text-text-body max-w-2xl mx-auto">
-              See how CosmodiLoans stacks up against every major medical
+              See how CosmediLoans stacks up against every major medical
               financing option. Our broker-matched loans compare 20+ lenders to
               find your lowest rate.
             </p>

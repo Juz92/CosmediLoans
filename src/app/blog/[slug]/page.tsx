@@ -74,11 +74,11 @@ export default function BlogPost({
           description: post.excerpt,
           author: {
             "@type": "Organization",
-            name: "CosmodiLoans",
+            name: "CosmediLoans",
           },
           publisher: {
             "@type": "Organization",
-            name: "CosmodiLoans",
+            name: "CosmediLoans",
             url: "https://cosmedloans.com.au",
           },
           mainEntityOfPage: `https://cosmedloans.com.au/blog/${post.slug}`,
@@ -169,7 +169,7 @@ export default function BlogPost({
           <div className="mt-10 p-4 bg-background rounded-button border border-border">
             <p className="text-xs text-text-muted">
               This article is for informational purposes only and does not
-              constitute financial advice. CosmodiLoans is a lead generation
+              constitute financial advice. CosmediLoans is a lead generation
               service, not a credit provider.
             </p>
           </div>

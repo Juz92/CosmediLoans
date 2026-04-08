@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Read the CosmodiLoans terms of use. Understand the terms and conditions governing your use of our medical financing lead generation service.",
+    "Read the CosmediLoans terms of use. Understand the terms and conditions governing your use of our medical financing lead generation service.",
   alternates: { canonical: "/terms" },
 };
 
@@ -27,7 +27,7 @@ export default function TermsPage() {
           <p>
             By accessing and using the website at cosmedloans.com.au (&ldquo;the Website&rdquo;),
             operated by [PLACEHOLDER: Business Name] ABN [PLACEHOLDER: ABN]
-            (&ldquo;CosmodiLoans&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), you agree to be bound
+            (&ldquo;CosmediLoans&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), you agree to be bound
             by these Terms of Use. If you do not agree with any part of these terms, you
             must not use the Website.
           </p>
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
           <h2>2. Description of Service</h2>
           <p>
-            CosmodiLoans operates a lead generation website that connects Australian
+            CosmediLoans operates a lead generation website that connects Australian
             patients seeking medical procedure financing with licensed finance brokers.
             Specifically:
           </p>
@@ -158,19 +158,19 @@ export default function TermsPage() {
           <h2>9. Third-Party Links and Services</h2>
           <p>
             The Website may contain links to third-party websites, products, or services
-            that are not owned or controlled by CosmodiLoans. We have no control over, and
+            that are not owned or controlled by CosmediLoans. We have no control over, and
             assume no responsibility for, the content, privacy policies, or practices of
             any third-party websites or services. You acknowledge and agree that
-            CosmodiLoans shall not be responsible or liable for any damage or loss caused
+            CosmediLoans shall not be responsible or liable for any damage or loss caused
             by the use of any such third-party content or services.
           </p>
 
           <h2>10. Broker Relationship</h2>
           <p>
             When we connect you with a finance broker through our service, that broker
-            operates independently of CosmodiLoans. The broker-client relationship is
+            operates independently of CosmediLoans. The broker-client relationship is
             between you and the broker, governed by their own terms, privacy policy, and
-            regulatory obligations. CosmodiLoans is not a party to any loan agreement,
+            regulatory obligations. CosmediLoans is not a party to any loan agreement,
             credit contract, or advisory relationship between you and the broker or lender.
           </p>
 

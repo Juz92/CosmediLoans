@@ -8,49 +8,49 @@ export const allFAQItems: FAQItem[] = [
   // ── GENERAL (8) ──────────────────────────────────────────────────
   {
     category: "general",
-    question: "What is CosmodiLoans?",
+    question: "What is CosmediLoans?",
     answer:
-      "CosmodiLoans is a free broker-matching service designed specifically for Australian patients who need financing for medical and cosmetic procedures. Rather than going to a single bank, we connect you with specialist medical finance brokers who compare offers from 20+ lenders across Australia. Our goal is to ensure you receive the most competitive interest rate available for your individual circumstances, without the hassle of applying to multiple lenders yourself. We operate entirely online, making the process convenient regardless of where you live in Australia.",
+      "CosmediLoans is a free broker-matching service designed specifically for Australian patients who need financing for medical and cosmetic procedures. Rather than going to a single bank, we connect you with specialist medical finance brokers who compare offers from 20+ lenders across Australia. Our goal is to ensure you receive the most competitive interest rate available for your individual circumstances, without the hassle of applying to multiple lenders yourself. We operate entirely online, making the process convenient regardless of where you live in Australia.",
   },
   {
     category: "general",
-    question: "Is CosmodiLoans a lender or credit provider?",
+    question: "Is CosmediLoans a lender or credit provider?",
     answer:
-      "No. CosmodiLoans is not a lender, credit provider, or financial adviser. We are a lead generation and broker-matching service. When you submit an enquiry through our website, we pass your details to a licensed Australian finance broker who then compares loan products from their panel of 20+ lenders on your behalf. The broker handles the credit assessment, application, and settlement process. This means you get professional guidance throughout the entire process from someone who is legally required to act in your best interest under responsible lending laws.",
+      "No. CosmediLoans is not a lender, credit provider, or financial adviser. We are a lead generation and broker-matching service. When you submit an enquiry through our website, we pass your details to a licensed Australian finance broker who then compares loan products from their panel of 20+ lenders on your behalf. The broker handles the credit assessment, application, and settlement process. This means you get professional guidance throughout the entire process from someone who is legally required to act in your best interest under responsible lending laws.",
   },
   {
     category: "general",
-    question: "How much does it cost to use CosmodiLoans?",
+    question: "How much does it cost to use CosmediLoans?",
     answer:
-      "Our service is completely free for patients. There are no upfront fees, application fees, or hidden charges from CosmodiLoans. We receive a commission from the lender only when a loan successfully settles, which means our costs are built into the loan product itself — the same product you would receive if you went to the lender directly. This model aligns our interests with yours: we benefit when you find a loan that works for your situation, so we are motivated to match you with the best possible option. You are never under any obligation to proceed with any offer presented.",
+      "Our service is completely free for patients. There are no upfront fees, application fees, or hidden charges from CosmediLoans. We receive a commission from the lender only when a loan successfully settles, which means our costs are built into the loan product itself — the same product you would receive if you went to the lender directly. This model aligns our interests with yours: we benefit when you find a loan that works for your situation, so we are motivated to match you with the best possible option. You are never under any obligation to proceed with any offer presented.",
   },
   {
     category: "general",
-    question: "How is CosmodiLoans different from going to my bank?",
+    question: "How is CosmediLoans different from going to my bank?",
     answer:
-      "When you approach your bank directly, you receive a single offer based on that one institution's lending criteria and rate card. Your bank has no incentive to offer their most competitive rate because there is no competition. With CosmodiLoans, your broker simultaneously compares products from 20+ lenders, creating genuine competition for your business. This often results in lower interest rates, more flexible terms, and faster approvals. Additionally, our brokers specialise in medical financing, so they understand the specific costs and timelines associated with different procedures, which general bank staff may not.",
+      "When you approach your bank directly, you receive a single offer based on that one institution's lending criteria and rate card. Your bank has no incentive to offer their most competitive rate because there is no competition. With CosmediLoans, your broker simultaneously compares products from 20+ lenders, creating genuine competition for your business. This often results in lower interest rates, more flexible terms, and faster approvals. Additionally, our brokers specialise in medical financing, so they understand the specific costs and timelines associated with different procedures, which general bank staff may not.",
   },
   {
     category: "general",
-    question: "Is my personal information safe with CosmodiLoans?",
+    question: "Is my personal information safe with CosmediLoans?",
     answer:
       "Yes. Protecting your personal information is a top priority. We use industry-standard SSL encryption for all data transmitted through our website, and we store information in accordance with the Australian Privacy Act 1988 and the Australian Privacy Principles (APPs). Your details are only shared with the licensed broker assigned to your enquiry — never with third parties for marketing purposes. You can read our full Privacy Policy for details on how we collect, store, and use your data, including your right to access and correct your information at any time.",
   },
   {
     category: "general",
-    question: "What areas does CosmodiLoans serve?",
+    question: "What areas does CosmediLoans serve?",
     answer:
-      "CosmodiLoans serves patients across all Australian states and territories. Because our service is 100% online and our broker network operates nationally, your physical location does not affect your access to competitive rates. Whether you are in Sydney, Melbourne, Brisbane, Perth, Adelaide, Hobart, Darwin, Canberra, or a regional area, you can submit an enquiry and be matched with a broker who can assist you. The lenders in our network also operate Australia-wide, so you have access to the same broad range of products regardless of where you live.",
+      "CosmediLoans serves patients across all Australian states and territories. Because our service is 100% online and our broker network operates nationally, your physical location does not affect your access to competitive rates. Whether you are in Sydney, Melbourne, Brisbane, Perth, Adelaide, Hobart, Darwin, Canberra, or a regional area, you can submit an enquiry and be matched with a broker who can assist you. The lenders in our network also operate Australia-wide, so you have access to the same broad range of products regardless of where you live.",
   },
   {
     category: "general",
-    question: "How long has CosmodiLoans been operating?",
+    question: "How long has CosmediLoans been operating?",
     answer:
-      "CosmodiLoans was founded to address a specific gap in the Australian medical financing market: patients were either settling for their bank's rate or turning to expensive buy-now-pay-later products without realising that better options existed. Our founding team has extensive experience in finance broking and digital health services. While we are a newer brand, the brokers in our network hold established Australian Credit Licences and have years of experience in personal and medical lending. We are focused on building long-term trust through transparency, competitive outcomes, and exceptional service.",
+      "CosmediLoans was founded to address a specific gap in the Australian medical financing market: patients were either settling for their bank's rate or turning to expensive buy-now-pay-later products without realising that better options existed. Our founding team has extensive experience in finance broking and digital health services. While we are a newer brand, the brokers in our network hold established Australian Credit Licences and have years of experience in personal and medical lending. We are focused on building long-term trust through transparency, competitive outcomes, and exceptional service.",
   },
   {
     category: "general",
-    question: "Can I leave a review of my experience with CosmodiLoans?",
+    question: "Can I leave a review of my experience with CosmediLoans?",
     answer:
       "Absolutely, and we encourage it. Patient feedback is incredibly valuable to us and helps future patients make informed decisions. After your loan has settled, you may receive an invitation to share your experience. You can also leave reviews on Google or contact us directly with feedback. We take all reviews seriously — both positive and constructive — and use them to continually improve our service. If you had an issue at any point during the process, we want to hear about it so we can resolve it and prevent it from recurring.",
   },
@@ -128,7 +128,7 @@ export const allFAQItems: FAQItem[] = [
     category: "eligibility",
     question: "Will checking my rate affect my credit score?",
     answer:
-      "No. When you submit an enquiry through CosmodiLoans, we do not perform a credit check. Your assigned broker may conduct a soft credit inquiry during the initial assessment, which does not appear on your credit file and has zero impact on your credit score. A hard credit inquiry — which is recorded on your credit file — only occurs if you decide to proceed with a formal loan application. Your broker will always inform you before a hard inquiry is made, giving you the opportunity to decide whether to proceed. This protects your credit score while you explore your options.",
+      "No. When you submit an enquiry through CosmediLoans, we do not perform a credit check. Your assigned broker may conduct a soft credit inquiry during the initial assessment, which does not appear on your credit file and has zero impact on your credit score. A hard credit inquiry — which is recorded on your credit file — only occurs if you decide to proceed with a formal loan application. Your broker will always inform you before a hard inquiry is made, giving you the opportunity to decide whether to proceed. This protects your credit score while you explore your options.",
   },
   {
     category: "eligibility",
@@ -210,7 +210,7 @@ export const allFAQItems: FAQItem[] = [
     category: "process",
     question: "How do I make repayments on my medical loan?",
     answer:
-      "Repayments are made directly to the lender (not to CosmodiLoans) via automatic direct debit from your nominated bank account. Most lenders offer weekly, fortnightly, or monthly repayment frequencies — choosing weekly or fortnightly payments can reduce total interest over the life of the loan. Your broker will set up the repayment schedule as part of the loan settlement process. Most lenders also provide an online portal or app where you can view your loan balance, upcoming payments, and make additional repayments if you wish. If you experience financial hardship, contact your lender directly to discuss hardship provisions.",
+      "Repayments are made directly to the lender (not to CosmediLoans) via automatic direct debit from your nominated bank account. Most lenders offer weekly, fortnightly, or monthly repayment frequencies — choosing weekly or fortnightly payments can reduce total interest over the life of the loan. Your broker will set up the repayment schedule as part of the loan settlement process. Most lenders also provide an online portal or app where you can view your loan balance, upcoming payments, and make additional repayments if you wish. If you experience financial hardship, contact your lender directly to discuss hardship provisions.",
   },
   {
     category: "process",

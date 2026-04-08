@@ -1,4 +1,4 @@
-# CosmodiLoans Implementation Plan
+# CosmediLoans Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
@@ -168,8 +168,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "CosmodiLoans | Medical Procedure Financing Australia",
-    template: "%s | CosmodiLoans",
+    default: "CosmediLoans | Medical Procedure Financing Australia",
+    template: "%s | CosmediLoans",
   },
   description:
     "Compare rates from 20+ lenders for dental, IVF, cosmetic surgery and any medical procedure. Free broker-matched quotes in 60 seconds.",
@@ -709,7 +709,7 @@ export function Footer() {
         {/* Compliance */}
         <div className="border-t border-white/10 pt-8 space-y-4">
           <p className="text-xs leading-relaxed">
-            CosmodiLoans is a lead generation service that connects consumers with
+            CosmediLoans is a lead generation service that connects consumers with
             licensed finance brokers. We do not provide credit, financial advice, or
             act as a lender. All loan applications are subject to lender assessment
             and approval. Rates and terms vary based on individual circumstances.
@@ -719,7 +719,7 @@ export function Footer() {
             Credit Licence Number] | [PLACEHOLDER: Credit Guide Link]
           </p>
           <p className="text-xs">
-            &copy; {new Date().getFullYear()} CosmodiLoans. All rights reserved.
+            &copy; {new Date().getFullYear()} CosmediLoans. All rights reserved.
           </p>
         </div>
       </div>
@@ -810,7 +810,7 @@ export const procedures: Procedure[] = [
     slug: "dental-loans",
     title: "Dental Loans",
     h1: "Dental Loan Financing Australia",
-    metaTitle: "Dental Loans Australia | Finance From 6.99% | CosmodiLoans",
+    metaTitle: "Dental Loans Australia | Finance From 6.99% | CosmediLoans",
     metaDescription:
       "Compare dental loan rates from 20+ lenders. Finance implants, veneers, crowns & more. Free quotes in 60 seconds. No credit impact.",
     heroDescription:
@@ -892,7 +892,7 @@ export const procedures: Procedure[] = [
     slug: "ivf-financing",
     title: "IVF Financing",
     h1: "IVF & Fertility Financing Australia",
-    metaTitle: "IVF Financing Australia | Fertility Loans From 6.99% | CosmodiLoans",
+    metaTitle: "IVF Financing Australia | Fertility Loans From 6.99% | CosmediLoans",
     metaDescription:
       "Finance your IVF treatment with rates from 6.99%. Compare 20+ lenders in 60 seconds. No credit impact. Loans from $5,000 to $100,000.",
     heroDescription:
@@ -1052,12 +1052,12 @@ export const comparisons: Comparison[] = [
     slug: "cosmediloans-vs-afterpay",
     competitorName: "Afterpay",
     competitorType: "bnpl",
-    h1: "CosmodiLoans vs Afterpay: Which Is Better for Medical Financing?",
-    metaTitle: "CosmodiLoans vs Afterpay (2025) | Medical Financing Compared",
+    h1: "CosmediLoans vs Afterpay: Which Is Better for Medical Financing?",
+    metaTitle: "CosmediLoans vs Afterpay (2025) | Medical Financing Compared",
     metaDescription:
-      "Compare CosmodiLoans broker-matched medical loans vs Afterpay BNPL. See which is better for dental, IVF, cosmetic surgery & more.",
+      "Compare CosmediLoans broker-matched medical loans vs Afterpay BNPL. See which is better for dental, IVF, cosmetic surgery & more.",
     verdict:
-      "CosmodiLoans compares 20+ lenders to find personalised rates for any medical procedure up to $100,000. Afterpay offers interest-free instalments but with a $2,000 limit for most users. CosmodiLoans is better for any procedure over $2,000 or where you want the lowest long-term cost. Afterpay suits small cosmetic treatments you can repay in 6 weeks.",
+      "CosmediLoans compares 20+ lenders to find personalised rates for any medical procedure up to $100,000. Afterpay offers interest-free instalments but with a $2,000 limit for most users. CosmediLoans is better for any procedure over $2,000 or where you want the lowest long-term cost. Afterpay suits small cosmetic treatments you can repay in 6 weeks.",
     features: [
       { feature: "Maximum Amount", us: "$2,000 – $100,000", them: "Up to $2,000 (standard)" },
       { feature: "Interest Rate", us: "From 6.99% p.a. (personalised)", them: "0% (but late fees apply)" },
@@ -1069,7 +1069,7 @@ export const comparisons: Comparison[] = [
       { feature: "Best For", us: "Larger procedures ($2K+)", them: "Small purchases under $2K" },
     ],
     howWeWork:
-      "CosmodiLoans connects you with a personal broker who compares rates from 20+ lenders. You fill out one application, and your broker finds the lowest rate for your specific procedure and financial situation. It's free, there's no credit impact for the initial check, and you get a dedicated person managing your application.",
+      "CosmediLoans connects you with a personal broker who compares rates from 20+ lenders. You fill out one application, and your broker finds the lowest rate for your specific procedure and financial situation. It's free, there's no credit impact for the initial check, and you get a dedicated person managing your application.",
     howTheyWork:
       "Afterpay is a buy-now-pay-later service that splits your purchase into 4 fortnightly payments with no interest. It's available at select retail partners and medical providers who have partnered with Afterpay. The standard limit is around $2,000, though long-term users may get higher limits.",
     chooseUs: [
@@ -1087,28 +1087,28 @@ export const comparisons: Comparison[] = [
     ],
     faqs: [
       {
-        question: "Is CosmodiLoans better than Afterpay for medical procedures?",
-        answer: "For procedures over $2,000, CosmodiLoans typically offers better value through competitive loan rates and flexible terms. Afterpay is better suited to smaller treatments under $2,000 that you can repay quickly.",
+        question: "Is CosmediLoans better than Afterpay for medical procedures?",
+        answer: "For procedures over $2,000, CosmediLoans typically offers better value through competitive loan rates and flexible terms. Afterpay is better suited to smaller treatments under $2,000 that you can repay quickly.",
       },
       {
         question: "Can I use Afterpay for dental implants?",
-        answer: "Afterpay's standard limit of ~$2,000 makes it unsuitable for most dental implant procedures, which cost $3,000-$50,000. A broker-matched loan through CosmodiLoans is a better fit.",
+        answer: "Afterpay's standard limit of ~$2,000 makes it unsuitable for most dental implant procedures, which cost $3,000-$50,000. A broker-matched loan through CosmediLoans is a better fit.",
       },
       {
         question: "Does Afterpay charge interest?",
         answer: "Afterpay doesn't charge interest, but it does charge late fees of up to $68 per missed payment. For larger amounts with longer repayment needs, a personal loan with a fixed rate can be more predictable.",
       },
       {
-        question: "Can I use both Afterpay and CosmodiLoans?",
-        answer: "Yes. Some patients use Afterpay for minor follow-up treatments and a CosmodiLoans-matched loan for the main procedure.",
+        question: "Can I use both Afterpay and CosmediLoans?",
+        answer: "Yes. Some patients use Afterpay for minor follow-up treatments and a CosmediLoans-matched loan for the main procedure.",
       },
       {
         question: "Which has a faster approval process?",
-        answer: "Afterpay offers instant approval for small amounts. CosmodiLoans provides same-day decisions for larger loans, with funds typically available within 1-3 business days.",
+        answer: "Afterpay offers instant approval for small amounts. CosmediLoans provides same-day decisions for larger loans, with funds typically available within 1-3 business days.",
       },
       {
         question: "What's the maximum I can borrow with each?",
-        answer: "Afterpay: typically $2,000 (up to $4,000 for long-term users). CosmodiLoans: $2,000 to $100,000 depending on your financial situation.",
+        answer: "Afterpay: typically $2,000 (up to $4,000 for long-term users). CosmediLoans: $2,000 to $100,000 depending on your financial situation.",
       },
     ],
     lastReviewed: "2025-03-01",

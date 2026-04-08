@@ -14,14 +14,14 @@ import {
 import { Card, Button } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "About CosmodiLoans | Medical Financing Made Simple",
+  title: "About CosmediLoans | Medical Financing Made Simple",
   description:
-    "CosmodiLoans connects Australian patients with expert brokers who compare 20+ lenders for the best medical loan rate. Free, fast, and no obligation.",
+    "CosmediLoans connects Australian patients with expert brokers who compare 20+ lenders for the best medical loan rate. Free, fast, and no obligation.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About CosmodiLoans | Medical Financing Made Simple",
+    title: "About CosmediLoans | Medical Financing Made Simple",
     description:
-      "CosmodiLoans connects Australian patients with expert brokers who compare 20+ lenders for the best medical loan rate.",
+      "CosmediLoans connects Australian patients with expert brokers who compare 20+ lenders for the best medical loan rate.",
     url: "/about",
     type: "website",
   },
@@ -64,12 +64,12 @@ export default function AboutPage() {
       <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-6">
-            About CosmodiLoans
+            About CosmediLoans
           </h1>
           <div className="relative w-full max-w-3xl mx-auto mt-8 rounded-2xl overflow-hidden shadow-lg aspect-[16/9]">
             <Image
               src="/Images/ABOUT PAGE HERO.png"
-              alt="CosmodiLoans team helping Australians finance medical procedures"
+              alt="CosmediLoans team helping Australians finance medical procedures"
               fill
               priority
               className="object-cover"
@@ -89,13 +89,13 @@ export default function AboutPage() {
             <p>
               Too many Australians delay or forgo medical procedures because they
               believe financing is complicated, expensive, or out of reach. At
-              CosmodiLoans, we exist to change that. Our mission is to give every
+              CosmediLoans, we exist to change that. Our mission is to give every
               patient access to the same competitive rates that were once reserved
               for borrowers who had the time and knowledge to shop around across
               dozens of lenders.
             </p>
             <p>
-              We built CosmodiLoans because we saw a gap in the market: patients
+              We built CosmediLoans because we saw a gap in the market: patients
               were either going to their bank and accepting the first rate offered,
               or turning to expensive buy-now-pay-later products that often carry
               higher long-term costs. By connecting patients with specialist medical
@@ -166,7 +166,7 @@ export default function AboutPage() {
           <Card>
             <div className="space-y-4 text-sm text-text-body leading-relaxed">
               <p>
-                CosmodiLoans is a lead generation service that connects patients
+                CosmediLoans is a lead generation service that connects patients
                 with licensed Australian Credit Licence (ACL) holders. We do not
                 provide credit, act as a lender, or provide financial advice.
               </p>

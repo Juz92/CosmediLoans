@@ -370,7 +370,7 @@ export default function ProcedurePage({
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <h2 className="text-section-h2 text-text-dark mb-3 text-center">
-            Why Finance Your {procedure.title} With CosmodiLoans
+            Why Finance Your {procedure.title} With CosmediLoans
           </h2>
           <p className="text-body text-text-body mb-10 text-center max-w-2xl mx-auto">
             We specialise in medical procedure financing and work with you every step

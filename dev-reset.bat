@@ -1,6 +1,6 @@
 @echo off
 echo ==========================================
-echo  CosmodiLoans - Dev Server Reset
+echo  CosmediLoans - Dev Server Reset
 echo ==========================================
 echo.
 

@@ -3,13 +3,13 @@ import { ShieldCheck, Clock, Users } from "lucide-react";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 
 export const metadata: Metadata = {
-  title: "Get Your Personalised Rate | CosmodiLoans",
+  title: "Get Your Personalised Rate | CosmediLoans",
   description:
     "Apply for medical procedure financing in 60 seconds. Compare rates from 20+ lenders with no credit impact. Free, fast, and no obligation.",
   alternates: { canonical: "/apply" },
   robots: { index: false },
   openGraph: {
-    title: "Get Your Personalised Rate | CosmodiLoans",
+    title: "Get Your Personalised Rate | CosmediLoans",
     description:
       "Apply for medical procedure financing in 60 seconds. Compare rates from 20+ lenders with no credit impact.",
     url: "/apply",
@@ -90,7 +90,7 @@ export default function ApplyPage() {
               <a href="/terms" className="text-primary hover:underline">
                 Terms of Use
               </a>
-              . CosmodiLoans is a lead generation service, not a credit provider.
+              . CosmediLoans is a lead generation service, not a credit provider.
             </p>
           </div>
         </div>

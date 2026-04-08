@@ -5,7 +5,7 @@ import { Card } from "@/components/ui";
 import { ConversionPixel } from "./ConversionPixel";
 
 export const metadata: Metadata = {
-  title: "Thank You | CosmodiLoans",
+  title: "Thank You | CosmediLoans",
   description:
     "Your enquiry has been received. A specialist broker will contact you shortly with personalised rate options.",
   robots: { index: false },

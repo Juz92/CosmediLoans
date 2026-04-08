@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Medical Financing Insights & Guides",
   description:
-    "Expert articles on financing dental, IVF, cosmetic surgery and medical procedures in Australia. Tips, costs, and guides from CosmodiLoans.",
+    "Expert articles on financing dental, IVF, cosmetic surgery and medical procedures in Australia. Tips, costs, and guides from CosmediLoans.",
   alternates: { canonical: "/blog" },
 };
 

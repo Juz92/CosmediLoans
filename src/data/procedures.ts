@@ -138,7 +138,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance porcelain or composite veneers with rates from 6.99% p.a. Compare 20+ lenders in 60 seconds. Get the smile you want — pay over time.",
     heroDescription:
-      "A stunning smile is a confidence booster, and veneers are one of the most popular cosmetic dental treatments in Australia. With veneer financing through CosmodiLoans, you can spread the cost across manageable repayments while our brokers find you the best rate from 20+ lenders.",
+      "A stunning smile is a confidence booster, and veneers are one of the most popular cosmetic dental treatments in Australia. With veneer financing through CosmediLoans, you can spread the cost across manageable repayments while our brokers find you the best rate from 20+ lenders.",
     icon: "✨",
     avgCostRange: "$4,800 – $24,000",
     rateFrom: "6.99%",
@@ -231,7 +231,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance Invisalign clear aligners in Australia from 6.99%. Compare 20+ lenders instantly. Straighten your teeth now, pay over time with fixed repayments.",
     heroDescription:
-      "Invisalign is the most popular clear aligner treatment in Australia, but the upfront cost can be a barrier. CosmodiLoans helps you finance your Invisalign treatment with competitive rates from 20+ lenders so you can start your smile transformation today.",
+      "Invisalign is the most popular clear aligner treatment in Australia, but the upfront cost can be a barrier. CosmediLoans helps you finance your Invisalign treatment with competitive rates from 20+ lenders so you can start your smile transformation today.",
     icon: "😁",
     avgCostRange: "$4,500 – $9,500",
     rateFrom: "6.99%",
@@ -282,7 +282,7 @@ export const procedures: Procedure[] = [
       {
         question: "Is Invisalign cheaper than traditional braces?",
         answer:
-          "Invisalign and traditional braces are similarly priced in Australia ($4,500-$9,500). Invisalign is often preferred for its discreet appearance and removability, and both can be financed through CosmodiLoans.",
+          "Invisalign and traditional braces are similarly priced in Australia ($4,500-$9,500). Invisalign is often preferred for its discreet appearance and removability, and both can be financed through CosmediLoans.",
       },
       {
         question: "Can I start Invisalign before my loan is approved?",
@@ -418,7 +418,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Compare fertility loan rates from 20+ lenders in Australia. Finance IUI, egg freezing, donor programs & more. No credit impact. Free quotes in 60 seconds.",
     heroDescription:
-      "Fertility treatments go well beyond IVF. From IUI and egg freezing to donor programs and genetic testing, these procedures carry real costs. CosmodiLoans compares 20+ lenders to help you finance any fertility treatment at the most competitive rate in Australia.",
+      "Fertility treatments go well beyond IVF. From IUI and egg freezing to donor programs and genetic testing, these procedures carry real costs. CosmediLoans compares 20+ lenders to help you finance any fertility treatment at the most competitive rate in Australia.",
     icon: "🌸",
     avgCostRange: "$1,500 – $50,000",
     rateFrom: "6.99%",
@@ -511,7 +511,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance breast augmentation surgery in Australia from 6.99%. Compare 20+ lenders. Implants, lifts & reductions covered. Free quotes in 60 seconds.",
     heroDescription:
-      "Breast augmentation is one of the most performed cosmetic surgeries in Australia, but costs can vary widely depending on the surgeon and procedure. CosmodiLoans compares 20+ lenders to find the most competitive rate for your breast surgery financing.",
+      "Breast augmentation is one of the most performed cosmetic surgeries in Australia, but costs can vary widely depending on the surgeon and procedure. CosmediLoans compares 20+ lenders to find the most competitive rate for your breast surgery financing.",
     icon: "💎",
     avgCostRange: "$8,000 – $20,000",
     rateFrom: "6.99%",
@@ -542,7 +542,7 @@ export const procedures: Procedure[] = [
       {
         question: "Is breast reduction covered by Medicare in Australia?",
         answer:
-          "Breast reduction may be partially covered by Medicare if deemed medically necessary (e.g., for chronic back pain). Your surgeon can advise on eligibility. Any out-of-pocket gap can be financed through CosmodiLoans.",
+          "Breast reduction may be partially covered by Medicare if deemed medically necessary (e.g., for chronic back pain). Your surgeon can advise on eligibility. Any out-of-pocket gap can be financed through CosmediLoans.",
       },
       {
         question: "How long is recovery from breast augmentation?",
@@ -604,7 +604,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance rhinoplasty (nose job) surgery in Australia with rates from 6.99%. Compare 20+ lenders instantly. No credit impact. Free quotes in 60 seconds.",
     heroDescription:
-      "Rhinoplasty is one of the most sought-after cosmetic procedures in Australia, whether for aesthetic reasons or to correct breathing issues. CosmodiLoans makes nose job financing accessible by comparing 20+ lenders to find you the best rate and repayment plan.",
+      "Rhinoplasty is one of the most sought-after cosmetic procedures in Australia, whether for aesthetic reasons or to correct breathing issues. CosmediLoans makes nose job financing accessible by comparing 20+ lenders to find you the best rate and repayment plan.",
     icon: "👃",
     avgCostRange: "$8,000 – $25,000",
     rateFrom: "6.99%",
@@ -697,7 +697,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance your tummy tuck (abdominoplasty) in Australia from 6.99%. Compare 20+ lenders. Full & mini tummy tucks covered. Free quotes in 60 seconds.",
     heroDescription:
-      "A tummy tuck (abdominoplasty) can transform your body confidence, especially after pregnancy or significant weight loss. CosmodiLoans compares rates from 20+ lenders so you can finance your tummy tuck at the lowest rate available in Australia.",
+      "A tummy tuck (abdominoplasty) can transform your body confidence, especially after pregnancy or significant weight loss. CosmediLoans compares rates from 20+ lenders so you can finance your tummy tuck at the lowest rate available in Australia.",
     icon: "💪",
     avgCostRange: "$9,000 – $25,000",
     rateFrom: "6.99%",
@@ -790,7 +790,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance liposuction in Australia with rates from 6.99%. Compare 20+ lenders. VASER, tumescent & surgical lipo covered. Free quotes in 60 seconds.",
     heroDescription:
-      "Liposuction is the most popular body contouring procedure in Australia, with costs varying based on technique and treatment areas. CosmodiLoans compares 20+ lenders to find the most competitive financing for your liposuction procedure.",
+      "Liposuction is the most popular body contouring procedure in Australia, with costs varying based on technique and treatment areas. CosmediLoans compares 20+ lenders to find the most competitive financing for your liposuction procedure.",
     icon: "🏋️",
     avgCostRange: "$4,000 – $20,000",
     rateFrom: "6.99%",
@@ -883,7 +883,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance your facelift surgery in Australia from 6.99%. Compare 20+ lenders. Full facelifts, mini lifts & neck lifts covered. Free quotes in 60 seconds.",
     heroDescription:
-      "A facelift can take years off your appearance and restore your confidence. Whether you are considering a full facelift, mini lift, or neck lift, CosmodiLoans compares rates from 20+ lenders to help you finance your facial rejuvenation at the best rate in Australia.",
+      "A facelift can take years off your appearance and restore your confidence. Whether you are considering a full facelift, mini lift, or neck lift, CosmediLoans compares rates from 20+ lenders to help you finance your facial rejuvenation at the best rate in Australia.",
     icon: "🌟",
     avgCostRange: "$10,000 – $35,000",
     rateFrom: "6.99%",
@@ -976,7 +976,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance LASIK eye surgery in Australia from 6.99%. Compare 20+ lenders. LASIK, SMILE & PRK covered. Free quotes in 60 seconds. No credit impact.",
     heroDescription:
-      "LASIK eye surgery can free you from glasses and contacts for life, but the upfront cost is a consideration. CosmodiLoans compares 20+ lenders to find you the best financing rate for laser eye surgery in Australia, so clear vision doesn't have to wait.",
+      "LASIK eye surgery can free you from glasses and contacts for life, but the upfront cost is a consideration. CosmediLoans compares 20+ lenders to find you the best financing rate for laser eye surgery in Australia, so clear vision doesn't have to wait.",
     icon: "👁️",
     avgCostRange: "$4,500 – $8,000",
     rateFrom: "6.99%",
@@ -1069,7 +1069,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance bariatric surgery in Australia from 6.99%. Gastric sleeve, bypass & lap band loans. Compare 20+ lenders. Free quotes in 60 seconds.",
     heroDescription:
-      "Bariatric surgery can be a life-changing step towards better health, but the costs in Australia can be significant. CosmodiLoans compares rates from 20+ lenders to help you finance gastric sleeve, bypass, and other weight loss surgeries at the most competitive rate.",
+      "Bariatric surgery can be a life-changing step towards better health, but the costs in Australia can be significant. CosmediLoans compares rates from 20+ lenders to help you finance gastric sleeve, bypass, and other weight loss surgeries at the most competitive rate.",
     icon: "⚕️",
     avgCostRange: "$10,000 – $30,000",
     rateFrom: "6.99%",
@@ -1162,7 +1162,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance weight loss surgery in Australia from 6.99%. Gastric sleeve, bypass, balloon & non-surgical options. Compare 20+ lenders. Free quotes in 60s.",
     heroDescription:
-      "Weight loss surgery is one of the most effective treatments for obesity and related health conditions. Whether you are considering surgical or non-surgical options, CosmodiLoans compares 20+ lenders to help you finance your weight loss journey at the best possible rate in Australia.",
+      "Weight loss surgery is one of the most effective treatments for obesity and related health conditions. Whether you are considering surgical or non-surgical options, CosmediLoans compares 20+ lenders to help you finance your weight loss journey at the best possible rate in Australia.",
     icon: "🏃",
     avgCostRange: "$3,500 – $25,000",
     rateFrom: "6.99%",
@@ -1255,7 +1255,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance your hair transplant in Australia from 6.99%. FUE, FUT & eyebrow transplants covered. Compare 20+ lenders. Free quotes in 60 seconds.",
     heroDescription:
-      "Hair transplant surgery in Australia can cost thousands, but the results are permanent. CosmodiLoans compares 20+ lenders to find the most affordable financing for FUE, FUT, and other hair restoration procedures so you can restore your confidence without the upfront financial burden.",
+      "Hair transplant surgery in Australia can cost thousands, but the results are permanent. CosmediLoans compares 20+ lenders to find the most affordable financing for FUE, FUT, and other hair restoration procedures so you can restore your confidence without the upfront financial burden.",
     icon: "💇",
     avgCostRange: "$6,000 – $30,000",
     rateFrom: "6.99%",
@@ -1348,7 +1348,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance orthopedic surgery in Australia from 6.99%. Knee, hip, shoulder & spine procedures covered. Compare 20+ lenders. Free quotes in 60 seconds.",
     heroDescription:
-      "Orthopedic surgery can restore mobility and eliminate chronic pain, but waiting list delays and out-of-pocket costs in Australia can be a barrier. CosmodiLoans compares 20+ lenders to help you finance your joint replacement, spine surgery, or sports injury repair sooner.",
+      "Orthopedic surgery can restore mobility and eliminate chronic pain, but waiting list delays and out-of-pocket costs in Australia can be a barrier. CosmediLoans compares 20+ lenders to help you finance your joint replacement, spine surgery, or sports injury repair sooner.",
     icon: "🦴",
     avgCostRange: "$5,000 – $40,000",
     rateFrom: "6.99%",
@@ -1441,7 +1441,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance dermatology treatments in Australia from 6.99%. Skin cancer, acne, laser & cosmetic dermatology covered. Compare 20+ lenders. Free quotes.",
     heroDescription:
-      "From skin cancer treatment to cosmetic procedures like laser resurfacing and acne scar removal, dermatology costs in Australia can add up. CosmodiLoans compares 20+ lenders to help you finance your dermatology treatment at the best rate.",
+      "From skin cancer treatment to cosmetic procedures like laser resurfacing and acne scar removal, dermatology costs in Australia can add up. CosmediLoans compares 20+ lenders to help you finance your dermatology treatment at the best rate.",
     icon: "🧴",
     avgCostRange: "$2,000 – $15,000",
     rateFrom: "6.99%",
@@ -1534,7 +1534,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance your mommy makeover in Australia from 6.99%. Tummy tuck, breast lift, liposuction & more in one loan. Compare 20+ lenders. Free quotes.",
     heroDescription:
-      "A mommy makeover combines multiple procedures to restore your pre-pregnancy body, but the combined cost can be significant. CosmodiLoans compares 20+ lenders to help you finance your tummy tuck, breast lift, liposuction, and other procedures in one affordable loan.",
+      "A mommy makeover combines multiple procedures to restore your pre-pregnancy body, but the combined cost can be significant. CosmediLoans compares 20+ lenders to help you finance your tummy tuck, breast lift, liposuction, and other procedures in one affordable loan.",
     icon: "👩",
     avgCostRange: "$15,000 – $40,000",
     rateFrom: "6.99%",
@@ -1627,7 +1627,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance any medical procedure in Australia from 6.99%. Compare 20+ lenders in 60 seconds. Dental, cosmetic, fertility, surgical & more. No credit impact.",
     heroDescription:
-      "Whatever medical procedure you need — from dental work and eye surgery to cosmetic procedures and hospital gap fees — CosmodiLoans compares 20+ lenders to find the best personal loan rate in Australia. One application, multiple offers, no credit impact.",
+      "Whatever medical procedure you need — from dental work and eye surgery to cosmetic procedures and hospital gap fees — CosmediLoans compares 20+ lenders to find the best personal loan rate in Australia. One application, multiple offers, no credit impact.",
     icon: "🏥",
     avgCostRange: "$2,000 – $100,000",
     rateFrom: "6.99%",

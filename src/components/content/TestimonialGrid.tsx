@@ -10,7 +10,7 @@ const testimonials = [
     rating: 5,
     avatar: "/Images/Sarah M. — Dental Implants.png",
     quote:
-      "I was quoted 12% from my bank. CosmodiLoans found me a rate at 6.99%. The whole process took under 48 hours and I had my implants booked within the week.",
+      "I was quoted 12% from my bank. CosmediLoans found me a rate at 6.99%. The whole process took under 48 hours and I had my implants booked within the week.",
   },
   {
     name: "James T.",
@@ -18,7 +18,7 @@ const testimonials = [
     rating: 5,
     avatar: "/Images/James T. — IVF Treatment.png",
     quote:
-      "Financing IVF felt overwhelming until we spoke with CosmodiLoans. Our broker explained every option and secured a rate that made our next cycle affordable.",
+      "Financing IVF felt overwhelming until we spoke with CosmediLoans. Our broker explained every option and secured a rate that made our next cycle affordable.",
   },
   {
     name: "Michelle L.",
@@ -55,7 +55,7 @@ export function TestimonialGrid() {
             What Our Patients Say
           </h2>
           <p className="text-body text-text-body max-w-2xl mx-auto">
-            Thousands of Australians have trusted CosmodiLoans to finance their medical procedures.
+            Thousands of Australians have trusted CosmediLoans to finance their medical procedures.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">

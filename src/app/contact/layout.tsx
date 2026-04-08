@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | CosmodiLoans",
+  title: "Contact Us | CosmediLoans",
   description:
-    "Get in touch with the CosmodiLoans team. We typically respond within 2 business hours. Ask about medical financing, rates, or procedures.",
+    "Get in touch with the CosmediLoans team. We typically respond within 2 business hours. Ask about medical financing, rates, or procedures.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Us | CosmodiLoans",
+    title: "Contact Us | CosmediLoans",
     description:
-      "Get in touch with the CosmodiLoans team. We typically respond within 2 business hours.",
+      "Get in touch with the CosmediLoans team. We typically respond within 2 business hours.",
     url: "/contact",
     type: "website",
   },

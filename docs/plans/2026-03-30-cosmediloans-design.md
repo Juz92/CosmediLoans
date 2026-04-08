@@ -1,4 +1,4 @@
-# CosmodiLoans — Full Design Document
+# CosmediLoans — Full Design Document
 
 **Date:** 2026-03-30
 **Status:** Approved
@@ -8,7 +8,7 @@
 
 ## 1. Project Overview
 
-**CosmodiLoans** is a lead generation website for medical procedure financing in Australia. The site captures patient enquiries and connects them with expert brokers who shop 20+ lenders for the best rate.
+**CosmediLoans** is a lead generation website for medical procedure financing in Australia. The site captures patient enquiries and connects them with expert brokers who shop 20+ lenders for the best rate.
 
 **Business Model:** Lead generation — captures leads via forms, passes them to brokers. The site does NOT position itself as a broker or credit provider.
 
@@ -319,7 +319,7 @@ type Procedure = {
 
 **Sections:**
 1. Breadcrumb
-2. Comparison Hero — H1 "CosmodiLoans vs [X]: Which Is Better for Medical Financing?"
+2. Comparison Hero — H1 "CosmediLoans vs [X]: Which Is Better for Medical Financing?"
 3. Quick Verdict Box (featured snippet bait)
 4. Side-by-Side Feature Table (8-10 rows)
 5. Detailed Breakdown — how each option works

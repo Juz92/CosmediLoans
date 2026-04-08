@@ -80,7 +80,7 @@ export default function ComparisonPage({
     dateModified: comparison.lastReviewed,
     publisher: {
       "@type": "Organization",
-      name: "CosmodiLoans",
+      name: "CosmediLoans",
       url: "https://cosmedloans.com.au",
     },
   };
@@ -124,7 +124,7 @@ export default function ComparisonPage({
               <Card className="border-2 border-primary/20">
                 <h3 className="font-bold text-primary mb-4 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-success" aria-hidden="true" />
-                  Medical Loan (via CosmodiLoans)
+                  Medical Loan (via CosmediLoans)
                 </h3>
                 <ul className="space-y-2">
                   {comparison.features.map((row, i) => (
@@ -174,7 +174,7 @@ export default function ComparisonPage({
           <div className="grid gap-10 md:grid-cols-2">
             <div>
               <h2 className="text-xl font-bold text-text-dark mb-4">
-                How CosmodiLoans Works
+                How CosmediLoans Works
               </h2>
               <p className="text-body text-text-body leading-relaxed">
                 {comparison.howWeWork}
@@ -202,7 +202,7 @@ export default function ComparisonPage({
             {/* Choose Us */}
             <Card className="border-t-4 border-t-primary">
               <h3 className="font-bold text-primary mb-4">
-                Choose CosmodiLoans If&hellip;
+                Choose CosmediLoans If&hellip;
               </h3>
               <ul className="space-y-3">
                 {comparison.chooseUs.map((reason, i) => (

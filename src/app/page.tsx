@@ -77,12 +77,12 @@ const loanExamples = [
 /* ── FAQ Items ───────────────────────────────────────────────────── */
 const faqItems = [
   {
-    question: "What is CosmodiLoans?",
+    question: "What is CosmediLoans?",
     answer:
-      "CosmodiLoans is a free broker-matching service that helps Australian patients find the lowest interest rates on medical procedure financing. We compare offers from 20+ lenders to find the best deal for your situation.",
+      "CosmediLoans is a free broker-matching service that helps Australian patients find the lowest interest rates on medical procedure financing. We compare offers from 20+ lenders to find the best deal for your situation.",
   },
   {
-    question: "How much does it cost to use CosmodiLoans?",
+    question: "How much does it cost to use CosmediLoans?",
     answer:
       "Nothing. Our service is 100% free for patients. We are paid by the lenders in our network, so there is never a fee or hidden cost to you.",
   },
@@ -117,9 +117,9 @@ const faqItems = [
       "Loan amounts typically range from $2,000 to $100,000 depending on the procedure and your financial situation. Terms range from 1 to 7 years.",
   },
   {
-    question: "Is CosmodiLoans a lender?",
+    question: "Is CosmediLoans a lender?",
     answer:
-      "No. CosmodiLoans is a lead generation and broker-matching service. We connect you with licensed finance brokers who then compare offers from their lender panels to find your best rate.",
+      "No. CosmediLoans is a lead generation and broker-matching service. We connect you with licensed finance brokers who then compare offers from their lender panels to find your best rate.",
   },
   {
     question: "Can I pay off my loan early?",
@@ -132,7 +132,7 @@ const faqItems = [
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "CosmodiLoans",
+  name: "CosmediLoans",
   url: "https://cosmedloans.com.au",
   description:
     "Compare medical procedure financing rates from 20+ lenders. Free broker-matched quotes for dental, IVF, cosmetic surgery and more.",
@@ -150,7 +150,7 @@ export default function Home() {
         data={{
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "CosmodiLoans",
+          name: "CosmediLoans",
           url: "https://cosmedloans.com.au",
           potentialAction: {
             "@type": "SearchAction",
@@ -178,7 +178,7 @@ export default function Home() {
                 find you the best deal for dental, IVF, cosmetic surgery, and
                 more &mdash; at no cost to you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-2">
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <div className="flex items-center gap-2 text-sm text-text-body">
                   <ShieldCheck className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
                   <span>No credit impact</span>
@@ -187,6 +187,20 @@ export default function Home() {
                   <Check className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
                   <span>100% free service</span>
                 </div>
+              </div>
+              {/* Video — visible in hero below copy */}
+              <div className="rounded-xl overflow-hidden shadow-card">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="/videos/hero-poster.jpg"
+                  className="w-full h-auto block"
+                >
+                  <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
             <div className="lg:max-w-md lg:ml-auto">
@@ -198,25 +212,6 @@ export default function Home() {
 
       {/* ── TRUST BAR ─────────────────────────────────────────────── */}
       <TrustBar />
-
-      {/* ── VIDEO PLAYER ──────────────────────────────────────────── */}
-      <section className="py-8 bg-white">
-        <div className="mx-auto max-w-2xl px-6">
-          <div className="rounded-xl overflow-hidden shadow-card">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              poster="/videos/hero-poster.jpg"
-              className="w-full h-auto block"
-            >
-              <source src="/videos/hero-scroll.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
 
       {/* ── PARTNER LOGOS ─────────────────────────────────────────── */}
       <PartnerLogos />
@@ -266,7 +261,7 @@ export default function Home() {
         <div className="container-narrow">
           <div className="text-center mb-12">
             <h2 className="text-section-h2 text-text-dark mb-4">
-              Why Choose CosmodiLoans
+              Why Choose CosmediLoans
             </h2>
             <p className="text-body text-text-body max-w-2xl mx-auto">
               We&apos;re not a bank. We&apos;re your shortcut to the best

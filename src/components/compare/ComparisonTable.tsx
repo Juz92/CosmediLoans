@@ -18,7 +18,7 @@ export function ComparisonTable({ features, competitorName }: ComparisonTablePro
             <th className="text-left py-4 px-4 text-sm font-semibold text-primary border-b-2 border-primary w-1/3">
               <span className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-success" aria-hidden="true" />
-                CosmodiLoans
+                CosmediLoans
               </span>
             </th>
             <th className="text-left py-4 px-4 text-sm font-semibold text-text-body border-b-2 border-border w-1/3">
