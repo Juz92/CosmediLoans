@@ -124,7 +124,7 @@ export const comparisons: Comparison[] = [
       { feature: "Best For", us: "Planned medical procedures ($2K+)", them: "Ongoing smaller purchases under $5K" },
     ],
     howWeWork:
-      "CosmodiLoans assigns you a personal broker who compares medical loan rates from over 20 Australian lenders. You complete a single application, and your broker sources the best rate for your procedure and financial profile. The initial check is a soft pull with no credit impact, and the service is completely free.",
+      "CosmodiLoans assigns you a personal broker who compares medical loan rates from over 20 Australian lenders. You complete a single application, and your broker sources the best rate for your procedure and financial profile. The initial check is a soft pull with no credit impact, and lenders pay the broker — not you.",
     howTheyWork:
       "Zip Pay is a buy-now-pay-later platform offering a revolving line of credit. Zip Pay provides up to $1,000 interest-free (with minimum repayments), while Zip Plus offers up to $5,000 at up to 25.9% p.a. with a $9.95 monthly account fee. It works at participating merchants who have integrated with Zip.",
     chooseUs: [
@@ -389,7 +389,7 @@ export const comparisons: Comparison[] = [
       {
         question: "Is it free to use CosmodiLoans instead of going directly to Latitude?",
         answer:
-          "Yes. CosmodiLoans is completely free for patients. Brokers are paid a commission by the lender, and this does not increase your interest rate. You may even get a lower rate than applying directly.",
+          "Yes. Brokers are paid a commission by the lender, and this does not increase your interest rate. You may even get a lower rate than applying directly.",
       },
     ],
     lastReviewed: "2026-03-01",
@@ -605,7 +605,7 @@ export const comparisons: Comparison[] = [
       {
         question: "Is CosmodiLoans free to use compared to SocietyOne?",
         answer:
-          "Both are free for the initial application. CosmodiLoans is completely free — brokers are paid by the lender upon settlement. SocietyOne charges establishment fees on funded loans.",
+          "Both have no upfront application fee. With CosmodiLoans, brokers are paid by the lender upon settlement so there are no patient-facing charges. SocietyOne charges establishment fees on funded loans.",
       },
     ],
     lastReviewed: "2026-03-01",

@@ -84,9 +84,9 @@ const brokerFeatures = [
 /* ── FAQ Subset ──────────────────────────────────────────────────── */
 const faqItems = [
   {
-    question: "Is there really no cost to use CosmodiLoans?",
+    question: "Does it cost anything to use CosmodiLoans?",
     answer:
-      "Absolutely. Our service is 100% free for patients. We are paid by the lenders in our network when a loan settles, so there is never a fee, hidden charge, or obligation for you to use our service.",
+      "There are no fees charged to you. We are paid by the lenders in our network when a loan settles, so there is never a hidden charge or obligation to use our service.",
   },
   {
     question: "How is this different from going to my bank?",
@@ -127,7 +127,7 @@ export default function HowItWorksPage() {
           <p className="text-body text-text-body max-w-2xl mx-auto">
             From your first enquiry to funded in as little as 24 hours. Our
             streamlined, three-step process makes medical financing simple,
-            transparent, and completely free.
+            transparent, and straightforward.
           </p>
         </div>
       </section>
@@ -301,7 +301,7 @@ export default function HowItWorksPage() {
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
             Join thousands of Australians who have financed their medical
-            procedures through our free broker-matching service.
+            procedures through our broker-matching service.
           </p>
           <Button
             as={Link}

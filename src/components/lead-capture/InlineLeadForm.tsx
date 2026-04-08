@@ -24,6 +24,7 @@ const procedureOptions = [
   { value: "orthopedic", label: "Orthopedic Surgery" },
   { value: "dermatology", label: "Dermatology" },
   { value: "mommy-makeover", label: "Mommy Makeover" },
+  { value: "debt-consolidation", label: "Debt Consolidation" },
   { value: "other", label: "Other Medical Procedure" },
 ];
 
@@ -34,7 +35,7 @@ interface InlineLeadFormProps {
 
 export function InlineLeadForm({
   defaultProcedure,
-  heading = "Get Your Free Quote",
+  heading = "Get Your Personalised Rate",
 }: InlineLeadFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");

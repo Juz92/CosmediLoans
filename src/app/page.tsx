@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ShieldCheck, Check, Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
+import { ShieldCheck, Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
 import { Badge, Card, Button } from "@/components/ui";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { TrustBar } from "@/components/content/TrustBar";
@@ -37,9 +37,9 @@ const benefits = [
   },
   {
     icon: DollarSign,
-    title: "Zero Cost, Zero Catch",
+    title: "Broker-Matched Savings",
     description:
-      "Our service is 100% free for patients. We're paid by lenders, not by you. No hidden fees, ever.",
+      "We're paid by lenders, not by you. No hidden fees, ever.",
   },
   {
     icon: Clock,
@@ -79,12 +79,12 @@ const faqItems = [
   {
     question: "What is CosmodiLoans?",
     answer:
-      "CosmodiLoans is a free broker-matching service that helps Australian patients find the lowest interest rates on medical procedure financing. We compare offers from 20+ lenders to find the best deal for your situation.",
+      "CosmodiLoans is a broker-matching service that helps Australian patients find the lowest interest rates on medical procedure financing. We compare offers from 20+ lenders to find the best deal for your situation.",
   },
   {
     question: "How much does it cost to use CosmodiLoans?",
     answer:
-      "Nothing. Our service is 100% free for patients. We are paid by the lenders in our network, so there is never a fee or hidden cost to you.",
+      "There are no fees charged to you. We are paid by the lenders in our network, so there's never a hidden cost.",
   },
   {
     question: "Will checking my rate affect my credit score?",
@@ -135,7 +135,7 @@ const organizationSchema = {
   name: "CosmodiLoans",
   url: "https://cosmedloans.com.au",
   description:
-    "Compare medical procedure financing rates from 20+ lenders. Free broker-matched quotes for dental, IVF, cosmetic surgery and more.",
+    "Compare medical procedure financing rates from 20+ lenders. Broker-matched quotes for dental, IVF, cosmetic surgery and more.",
   areaServed: {
     "@type": "Country",
     name: "Australia",
@@ -176,16 +176,12 @@ export default function Home() {
               <p className="text-body text-text-body mb-8 max-w-lg">
                 Compare rates from 20+ lenders in 60 seconds. Our expert brokers
                 find you the best deal for dental, IVF, cosmetic surgery, and
-                more &mdash; at no cost to you.
+                more &mdash; so you can book your procedure with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-2">
                 <div className="flex items-center gap-2 text-sm text-text-body">
                   <ShieldCheck className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
                   <span>No credit impact</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-text-body">
-                  <Check className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
-                  <span>100% free service</span>
                 </div>
               </div>
             </div>
@@ -372,7 +368,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
             Join thousands of Australians who&apos;ve financed their medical
-            procedures with confidence. Free, fast, and no credit impact.
+            procedures with confidence. Fast approvals, no credit impact.
           </p>
           <Button as={Link} href="/apply" size="lg" variant="secondary" className="bg-white text-primary hover:bg-primary-wash">
             Get Your Personalised Rate &rarr;

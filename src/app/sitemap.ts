@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllProcedureSlugs } from "@/data/procedures";
 import { getAllComparisonSlugs } from "@/data/comparisons";
 import { getAllSlugs as getAllBlogSlugs } from "@/lib/blog";
+import { getAllLocationSlugs } from "@/data/locations";
 
 const BASE_URL = "https://cosmedloans.com.au";
 
@@ -48,5 +49,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...corePages, ...procedurePages, ...comparisonPages, ...blogPages];
+  // Location city pages (30)
+  const locationSlugs = getAllLocationSlugs();
+  const locationPages: MetadataRoute.Sitemap = locationSlugs.map((loc) => ({
+    url: `${BASE_URL}/locations/${loc}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Location + procedure pages (30 × 17 = 510)
+  const procedureSlugs = getAllProcedureSlugs();
+  const locationProcedurePages: MetadataRoute.Sitemap = locationSlugs.flatMap((loc) =>
+    procedureSlugs.map((proc) => ({
+      url: `${BASE_URL}/locations/${loc}/${proc}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }))
+  );
+
+  return [
+    ...corePages,
+    ...procedurePages,
+    ...comparisonPages,
+    ...blogPages,
+    ...locationPages,
+    ...locationProcedurePages,
+  ];
 }
