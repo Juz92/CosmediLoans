@@ -13,6 +13,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { StickyMobileCTA } from "@/components/lead-capture/StickyMobileCTA";
 import { ScrollCTA } from "@/components/lead-capture/ScrollCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { LoanFeatures } from "@/components/content/LoanFeatures";
 import { procedures } from "@/data/procedures";
 
 export const metadata: Metadata = {
@@ -302,6 +303,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── LOAN FEATURES ─────────────────────────────────────────── */}
+      <LoanFeatures />
 
       {/* ── LOAN EXAMPLES ─────────────────────────────────────────── */}
       <section className="section-padding bg-surface">
