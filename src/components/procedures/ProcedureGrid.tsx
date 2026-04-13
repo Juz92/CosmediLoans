@@ -12,6 +12,7 @@ const categories = [
   { key: "broad-medical", label: "Body & Medical" },
   { key: "debt-consolidation", label: "Debt Consolidation" },
   { key: "finance-education", label: "Other" },
+  { key: "vet", label: "Vet & Pet" },
 ] as const;
 
 type CategoryKey = (typeof categories)[number]["key"];

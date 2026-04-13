@@ -738,7 +738,7 @@ export const procedures: Procedure[] = [
       {
         question: "Can I combine a tummy tuck with other procedures?",
         answer:
-          "Yes. It's common to combine a tummy tuck with liposuction, breast augmentation, or a breast lift (often called a mommy makeover). All combined costs can be financed in a single loan.",
+          "Yes. It's common to combine a tummy tuck with liposuction, breast augmentation, or a breast lift (often called a mummy makeover). All combined costs can be financed in a single loan.",
       },
       {
         question: "What are monthly repayments on an $18,000 tummy tuck loan?",
@@ -1524,17 +1524,17 @@ export const procedures: Procedure[] = [
     ],
   },
 
-  // ─── 17. MOMMY MAKEOVER FINANCING ──────────────────────────────────
+  // ─── 17. MUMMY MAKEOVER FINANCING ──────────────────────────────────
   {
     slug: "mommy-makeover-financing",
     heroImage: "/Images/mommymakeover.png",
-    title: "Mommy Makeover Financing",
-    h1: "Mommy Makeover Financing Australia",
-    metaTitle: "Mommy Makeover Financing Australia | From 6.99%",
+    title: "Mummy Makeover Financing",
+    h1: "Mummy Makeover Financing Australia",
+    metaTitle: "Mummy Makeover Financing Australia | From 6.99%",
     metaDescription:
-      "Finance your mommy makeover in Australia from 6.99%. Tummy tuck, breast lift, liposuction & more in one loan. Compare 20+ lenders. Free quotes.",
+      "Finance your mummy makeover in Australia from 6.99%. Tummy tuck, breast lift, liposuction & more in one loan. Compare 20+ lenders. Free quotes.",
     heroDescription:
-      "A mommy makeover combines multiple procedures to restore your pre-pregnancy body, but the combined cost can be significant. CosmediLoans compares 20+ lenders to help you finance your tummy tuck, breast lift, liposuction, and other procedures in one affordable loan.",
+      "A mummy makeover combines multiple procedures to restore your pre-pregnancy body, but the combined cost can be significant. CosmediLoans compares 20+ lenders to help you finance your tummy tuck, breast lift, liposuction, and other procedures in one affordable loan.",
     icon: "👩",
     avgCostRange: "$15,000 – $40,000",
     rateFrom: "6.99%",
@@ -1543,7 +1543,7 @@ export const procedures: Procedure[] = [
       { subProcedure: "Tummy Tuck + Breast Augmentation", costRange: "$18,000 – $30,000" },
       { subProcedure: "Tummy Tuck + Breast Lift", costRange: "$18,000 – $32,000" },
       { subProcedure: "Tummy Tuck + Liposuction", costRange: "$15,000 – $28,000" },
-      { subProcedure: "Full Mommy Makeover (3+ procedures)", costRange: "$25,000 – $40,000" },
+      { subProcedure: "Full Mummy Makeover (3+ procedures)", costRange: "$25,000 – $40,000" },
       { subProcedure: "Breast Lift + Augmentation Only", costRange: "$15,000 – $22,000" },
     ],
     repaymentExamples: [
@@ -1553,42 +1553,42 @@ export const procedures: Procedure[] = [
     ],
     faqs: [
       {
-        question: "How much does a mommy makeover cost in Australia?",
+        question: "How much does a mummy makeover cost in Australia?",
         answer:
-          "A mommy makeover in Australia typically costs between $20,000 and $40,000 depending on the combination of procedures. A tummy tuck with breast augmentation starts around $18,000, while a full makeover with three or more procedures can reach $40,000.",
+          "A mummy makeover in Australia typically costs between $20,000 and $40,000 depending on the combination of procedures. A tummy tuck with breast augmentation starts around $18,000, while a full makeover with three or more procedures can reach $40,000.",
       },
       {
-        question: "What procedures are included in a mommy makeover?",
+        question: "What procedures are included in a mummy makeover?",
         answer:
-          "A mommy makeover typically combines a tummy tuck (abdominoplasty) with breast surgery (augmentation, lift, or reduction) and often includes liposuction. The specific combination is customised to your goals and body.",
+          "A mummy makeover typically combines a tummy tuck (abdominoplasty) with breast surgery (augmentation, lift, or reduction) and often includes liposuction. The specific combination is customised to your goals and body.",
       },
       {
-        question: "Is it cheaper to combine procedures in a mommy makeover?",
+        question: "Is it cheaper to combine procedures in a mummy makeover?",
         answer:
           "Yes. Combining procedures means one hospital admission, one anaesthesia fee, and one recovery period. This typically saves $3,000-$8,000 compared to having each procedure done separately.",
       },
       {
-        question: "How long should I wait after my last pregnancy for a mommy makeover?",
+        question: "How long should I wait after my last pregnancy for a mummy makeover?",
         answer:
           "Most surgeons recommend waiting at least 6-12 months after your last pregnancy and 3-6 months after finishing breastfeeding. Your weight should be stable and you should be finished having children.",
       },
       {
-        question: "What is the recovery time for a mommy makeover?",
+        question: "What is the recovery time for a mummy makeover?",
         answer:
           "Expect 2-4 weeks off work and 6-8 weeks before resuming exercise. Full healing takes 3-6 months. Having help with childcare during the first 2 weeks is essential for mums recovering from this procedure.",
       },
       {
-        question: "Can I finance a mommy makeover with no deposit?",
+        question: "Can I finance a mummy makeover with no deposit?",
         answer:
           "Yes. Most lenders in our network offer 100% financing with no deposit required. You can finance the complete cost of all combined procedures including surgeon, hospital, and anaesthetist fees.",
       },
       {
-        question: "What are monthly repayments on a $30,000 mommy makeover loan?",
+        question: "What are monthly repayments on a $30,000 mummy makeover loan?",
         answer:
           "A $30,000 loan at 7.99% over 7 years has monthly repayments of approximately $468. Over 5 years, repayments are around $593. Use our calculator to explore options that fit your family budget.",
       },
       {
-        question: "Can I stage my mommy makeover and finance it in parts?",
+        question: "Can I stage my mummy makeover and finance it in parts?",
         answer:
           "Yes. Some patients prefer to stage procedures (e.g., tummy tuck first, breast surgery later). You can take out separate loans for each stage, or finance the expected total upfront if you have a clear surgical plan.",
       },
@@ -1596,7 +1596,7 @@ export const procedures: Procedure[] = [
     relatedSlugs: ["tummy-tuck-loans", "breast-augmentation-loans", "liposuction-financing", "medical-loan"],
     blogCategory: "cosmetic",
     financingDescription:
-      "A mommy makeover is a significant investment in reclaiming your body after pregnancy. Financing multiple procedures in one loan is the most cost-effective approach, saving on hospital and anaesthesia fees compared to separate surgeries. Our brokers find the best rate from 20+ lenders.",
+      "A mummy makeover is a significant investment in reclaiming your body after pregnancy. Financing multiple procedures in one loan is the most cost-effective approach, saving on hospital and anaesthesia fees compared to separate surgeries. Our brokers find the best rate from 20+ lenders.",
     benefits: [
       {
         title: "One Loan, Multiple Procedures",
@@ -1786,6 +1786,93 @@ export const procedures: Procedure[] = [
         title: "Fixed Rate & Term",
         description:
           "Unlike credit cards, a personal loan has a fixed rate and a defined payoff date, so you know exactly when you'll be debt-free.",
+      },
+    ],
+  },
+
+  // ─── 20. VET BILL LOANS ────────────────────────────────────────────
+  {
+    slug: "vet-bill-loans",
+    title: "Vet Bill Loans",
+    h1: "Vet Bill Financing Australia",
+    metaTitle: "Vet Bill Loans Australia | Finance Pet Care From 6.99%",
+    metaDescription:
+      "Finance unexpected vet bills in Australia from 6.99%. Emergency surgery, cancer treatment, orthopaedic procedures & more. Compare 20+ lenders. No credit impact.",
+    heroDescription:
+      "Unexpected vet bills can reach tens of thousands of dollars — but your pet's health shouldn't depend on your savings account. CosmediLoans compares 20+ lenders to help you finance emergency surgery, specialist treatment, and ongoing pet care in one affordable loan.",
+    icon: "🐾",
+    avgCostRange: "$2,000 – $20,000",
+    rateFrom: "6.99%",
+    maxTerm: "7 years",
+    costTable: [
+      { subProcedure: "Emergency Surgery", costRange: "$3,000 – $10,000" },
+      { subProcedure: "Cancer Treatment (chemotherapy/radiation)", costRange: "$5,000 – $20,000" },
+      { subProcedure: "Orthopaedic Surgery (e.g. cruciate repair)", costRange: "$4,000 – $8,000" },
+      { subProcedure: "Specialist Consultations & Diagnostics", costRange: "$1,000 – $5,000" },
+      { subProcedure: "Dental Extractions & Oral Surgery", costRange: "$800 – $3,000" },
+    ],
+    repaymentExamples: [
+      { amount: 3000, rate: 6.99, term: 2 },
+      { amount: 7000, rate: 7.99, term: 3 },
+      { amount: 15000, rate: 8.99, term: 5 },
+    ],
+    faqs: [
+      {
+        question: "Can I get a loan to pay for vet bills in Australia?",
+        answer:
+          "Yes. A personal loan is one of the most cost-effective ways to cover unexpected vet bills. Rates through our broker network start from 6.99% p.a. — far cheaper than credit cards at 18–22% p.a. You can borrow from $2,000 to $20,000 and repay over 1 to 5 years.",
+      },
+      {
+        question: "What vet expenses can I finance?",
+        answer:
+          "You can finance virtually any vet expense including emergency surgery, cancer treatment, orthopaedic surgery, specialist consultations, dental procedures, diagnostic imaging (MRI, CT scans), and ongoing medication or rehabilitation costs.",
+      },
+      {
+        question: "How quickly can I get funds for an emergency vet bill?",
+        answer:
+          "Many lenders in our network offer same-day or next-business-day funding once approved. Most applications receive a decision within hours, so you can often access funds in time for urgent treatment.",
+      },
+      {
+        question: "Is a vet bill loan better than pet insurance?",
+        answer:
+          "They serve different purposes. Pet insurance covers future unexpected costs but won't help with an existing vet bill. A loan is the right tool when you already have a bill to pay. If your pet isn't insured, a low-rate personal loan is typically the most affordable way to cover the cost.",
+      },
+      {
+        question: "What if I don't have pet insurance?",
+        answer:
+          "No problem. Our brokers help uninsured pet owners access affordable financing every day. You don't need pet insurance to qualify for a vet bill loan — approval is based on your income and credit profile, not whether you have a policy.",
+      },
+      {
+        question: "How much can I borrow for vet bills?",
+        answer:
+          "Through our broker network you can borrow from $2,000 up to $20,000 for vet expenses. The amount depends on your income, credit profile, and the lender. For very large specialist bills, we can explore options up to $50,000.",
+      },
+      {
+        question: "Can I finance ongoing vet costs, not just a one-off bill?",
+        answer:
+          "Yes. If your pet has a chronic condition requiring ongoing treatment — such as cancer management, diabetes, or a long rehabilitation programme — you can take out a loan to cover the projected total cost of treatment upfront.",
+      },
+    ],
+    relatedSlugs: ["medical-loan", "debt-consolidation"],
+    blogCategory: "vet",
+    financingDescription:
+      "Vet bills can arrive without warning and quickly exceed what most families have in savings. A personal loan through our broker network gives you access to funds within days at rates starting from 6.99% p.a. — so you can focus on your pet's recovery, not the bill.",
+    benefits: [
+      {
+        title: "Fast Access to Funds",
+        description: "Same-day or next-day funding available with many lenders — so you're not waiting when your pet needs urgent care.",
+      },
+      {
+        title: "No Pet Insurance Required",
+        description: "Finance your vet bill regardless of whether you have a policy. Approval is based on your financial profile, not your pet's insurance status.",
+      },
+      {
+        title: "Rates from 6.99%",
+        description: "A personal loan through our network costs a fraction of a credit card. Save thousands in interest on large vet bills.",
+      },
+      {
+        title: "Flexible Repayment Terms",
+        description: "Repay over 1 to 5 years with fixed monthly repayments that fit your family budget.",
       },
     ],
   },

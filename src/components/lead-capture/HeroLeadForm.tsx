@@ -23,8 +23,9 @@ const procedureOptions = [
   { value: "hair-transplant", label: "Hair Transplant" },
   { value: "orthopedic", label: "Orthopedic Surgery" },
   { value: "dermatology", label: "Dermatology" },
-  { value: "mommy-makeover", label: "Mommy Makeover" },
+  { value: "mommy-makeover", label: "Mummy Makeover" },
   { value: "debt-consolidation", label: "Debt Consolidation" },
+  { value: "vet-bills", label: "Vet Bills" },
   { value: "other", label: "Other Medical Procedure" },
 ];
 

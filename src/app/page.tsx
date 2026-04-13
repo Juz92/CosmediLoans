@@ -7,6 +7,7 @@ import { TrustBar } from "@/components/content/TrustBar";
 import { HowItWorks } from "@/components/content/HowItWorks";
 import { PartnerLogos } from "@/components/content/PartnerLogos";
 import { ProcedureCard } from "@/components/procedures/ProcedureCard";
+import { ProcedureBrowseDropdown } from "@/components/procedures/ProcedureBrowseDropdown";
 import { TestimonialGrid } from "@/components/content/TestimonialGrid";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { StickyMobileCTA } from "@/components/lead-capture/StickyMobileCTA";
@@ -18,8 +19,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-/* ── Procedure Grid Data (first 8) ──────────────────────────────── */
-const featuredProcedures = procedures.slice(0, 8);
+/* ── Procedure Grid Data (curated 8) ────────────────────────────── */
+const featuredSlugs = [
+  "dental-loans",
+  "ivf-financing",
+  "breast-augmentation-loans",
+  "rhinoplasty-financing",
+  "hair-transplant-loans",
+  "lasik-loans",
+  "bariatric-surgery-loans",
+  "vet-bill-loans",
+];
+const featuredProcedures = featuredSlugs
+  .map((slug) => procedures.find((p) => p.slug === slug))
+  .filter(Boolean) as typeof procedures;
 
 /* ── Why Choose Us Benefits ─────────────────────────────────────── */
 const benefits = [
@@ -133,7 +146,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "CosmediLoans",
-  url: "https://cosmedloans.com.au",
+  url: "https://cosmediloans.com.au",
   description:
     "Compare medical procedure financing rates from 20+ lenders. Broker-matched quotes for dental, IVF, cosmetic surgery and more.",
   areaServed: {
@@ -151,10 +164,10 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "CosmediLoans",
-          url: "https://cosmedloans.com.au",
+          url: "https://cosmediloans.com.au",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://cosmedloans.com.au/procedures?q={search_term_string}",
+            target: "https://cosmediloans.com.au/procedures?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
         }}
@@ -239,7 +252,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/procedures"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
@@ -247,6 +260,8 @@ export default function Home() {
               Don&apos;t see your procedure? We finance all medical treatments
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
+            <span className="hidden sm:inline text-text-muted text-sm">·</span>
+            <ProcedureBrowseDropdown />
           </div>
         </div>
       </section>
