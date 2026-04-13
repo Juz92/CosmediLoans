@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MapPin, ArrowRight } from "lucide-react";
-import { Badge, Card } from "@/components/ui";
+import { Badge } from "@/components/ui";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { TrustBar } from "@/components/content/TrustBar";
 import { HowItWorks } from "@/components/content/HowItWorks";

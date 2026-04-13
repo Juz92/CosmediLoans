@@ -178,11 +178,24 @@ export default function Home() {
                 find you the best deal for dental, IVF, cosmetic surgery, and
                 more &mdash; so you can book your procedure with confidence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-2">
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <div className="flex items-center gap-2 text-sm text-text-body">
                   <ShieldCheck className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
                   <span>No credit impact</span>
                 </div>
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-card">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="/videos/hero-poster.jpg"
+                  className="w-full h-auto block"
+                >
+                  <source src="/videos/hero-scroll.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
             <div className="lg:max-w-md lg:ml-auto">
@@ -194,25 +207,6 @@ export default function Home() {
 
       {/* ── TRUST BAR ─────────────────────────────────────────────── */}
       <TrustBar />
-
-      {/* ── VIDEO PLAYER ──────────────────────────────────────────── */}
-      <section className="py-8 bg-white">
-        <div className="mx-auto max-w-2xl px-6">
-          <div className="rounded-xl overflow-hidden shadow-card">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              poster="/videos/hero-poster.jpg"
-              className="w-full h-auto block"
-            >
-              <source src="/videos/hero-scroll.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
 
       {/* ── PARTNER LOGOS ─────────────────────────────────────────── */}
       <PartnerLogos />

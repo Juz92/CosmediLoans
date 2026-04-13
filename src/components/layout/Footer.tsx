@@ -7,9 +7,22 @@ const footerColumns = [
       { href: "/procedures/dental-loans", label: "Dental Loans" },
       { href: "/procedures/ivf-financing", label: "IVF Financing" },
       { href: "/procedures/breast-augmentation-loans", label: "Cosmetic Surgery" },
+      { href: "/procedures/debt-consolidation", label: "Debt Consolidation" },
       { href: "/procedures/lasik-loans", label: "LASIK Loans" },
-      { href: "/procedures/bariatric-surgery-loans", label: "Bariatric Surgery" },
       { href: "/procedures", label: "View All \u2192" },
+    ],
+  },
+  {
+    title: "Locations",
+    links: [
+      { href: "/locations/sydney", label: "Sydney" },
+      { href: "/locations/melbourne", label: "Melbourne" },
+      { href: "/locations/brisbane", label: "Brisbane" },
+      { href: "/locations/perth", label: "Perth" },
+      { href: "/locations/adelaide", label: "Adelaide" },
+      { href: "/locations/gold-coast", label: "Gold Coast" },
+      { href: "/locations/canberra", label: "Canberra" },
+      { href: "/locations/sunshine-coast", label: "Sunshine Coast" },
     ],
   },
   {
@@ -26,7 +39,6 @@ const footerColumns = [
     title: "Resources",
     links: [
       { href: "/blog", label: "Blog" },
-      { href: "/guides", label: "Guides" },
       { href: "/compare", label: "Compare Options" },
     ],
   },
@@ -50,7 +62,7 @@ export function Footer() {
         </Link>
 
         {/* Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
           {footerColumns.map((col) => (
             <div key={col.title}>
               <h2 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
@@ -81,8 +93,7 @@ export function Footer() {
             and approval. Rates and terms vary based on individual circumstances.
           </p>
           <p className="text-xs leading-relaxed">
-            [PLACEHOLDER: Credit Representative Number] | [PLACEHOLDER: Australian
-            Credit Licence Number] | [PLACEHOLDER: Credit Guide Link]
+            ABN 14 693 894 558 &nbsp;&middot;&nbsp; <a href="mailto:cosmediloans@gmail.com" className="hover:text-white transition-colors">cosmediloans@gmail.com</a> &nbsp;&middot;&nbsp; <a href="tel:0422676073" className="hover:text-white transition-colors">0422 676 073</a>
           </p>
           <p className="text-xs">
             &copy; {new Date().getFullYear()} CosmediLoans. All rights reserved.

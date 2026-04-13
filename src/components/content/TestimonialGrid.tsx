@@ -10,7 +10,7 @@ const testimonials = [
     rating: 5,
     avatar: "/Images/Sarah M. — Dental Implants.png",
     quote:
-      "I was quoted 12% from my bank. CosmediLoans found me a rate at 6.99%. The whole process took under 48 hours and I had my implants booked within the week.",
+      "I'd been putting off my dental implants for two years because I thought I couldn't afford them. CosmediLoans connected me with a broker who found a repayment plan that actually fit my budget. Booked within the week.",
   },
   {
     name: "James T.",

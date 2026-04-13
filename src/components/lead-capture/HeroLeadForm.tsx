@@ -65,10 +65,17 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
     };
 
     try {
-      const res = await fetch("/api/leads", {
+      const res = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(enrichedData),
+        body: JSON.stringify({
+          source: "hero-form",
+          name: enrichedData.fullName,
+          email: enrichedData.email,
+          phone: enrichedData.phone,
+          procedure: enrichedData.procedure,
+          amount: enrichedData.amount,
+        }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);

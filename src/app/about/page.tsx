@@ -177,9 +177,15 @@ export default function AboutPage() {
                 bound by responsible lending obligations and are members of the
                 Australian Financial Complaints Authority (AFCA).
               </p>
-              <p className="text-text-muted italic">
-                [PLACEHOLDER: Insert ACL number, ABN, and specific licensing
-                details here once confirmed.]
+              <p>
+                <strong>CosmediLoans</strong> &middot; ABN 14 693 894 558 &middot;{" "}
+                <a href="mailto:cosmediloans@gmail.com" className="text-primary hover:underline">
+                  cosmediloans@gmail.com
+                </a>{" "}
+                &middot;{" "}
+                <a href="tel:0422676073" className="text-primary hover:underline">
+                  0422 676 073
+                </a>
               </p>
             </div>
           </Card>

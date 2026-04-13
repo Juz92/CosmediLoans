@@ -10,6 +10,7 @@ const categories = [
   { key: "fertility", label: "Fertility" },
   { key: "cosmetic", label: "Cosmetic" },
   { key: "broad-medical", label: "Body & Medical" },
+  { key: "debt-consolidation", label: "Debt Consolidation" },
   { key: "finance-education", label: "Other" },
 ] as const;
 

@@ -24,10 +24,28 @@ function ContactPageInner() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitError, setSubmitError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would POST to an API endpoint
-    setSubmitted(true);
+    setSubmitError("");
+    try {
+      const res = await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "contact-form",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+    } catch {
+      setSubmitError("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -120,6 +138,9 @@ function ContactPageInner() {
                   <Button type="submit" className="w-full" size="lg">
                     Send Message <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
+                  {submitError && (
+                    <p role="alert" className="text-sm text-red-500 text-center">{submitError}</p>
+                  )}
                 </form>
               )}
             </div>
@@ -159,10 +180,10 @@ function ContactPageInner() {
                     <h3 className="font-semibold text-text-dark">Email</h3>
                     <p className="text-sm text-text-body">
                       <a
-                        href="mailto:hello@cosmedloans.com.au"
+                        href="mailto:cosmediloans@gmail.com"
                         className="text-primary hover:underline"
                       >
-                        hello@cosmedloans.com.au
+                        cosmediloans@gmail.com
                       </a>
                     </p>
                   </div>
@@ -179,10 +200,10 @@ function ContactPageInner() {
                     <h3 className="font-semibold text-text-dark">Phone</h3>
                     <p className="text-sm text-text-body">
                       <a
-                        href="tel:1300000000"
+                        href="tel:0422676073"
                         className="text-primary hover:underline"
                       >
-                        1300 000 000
+                        0422 676 073
                       </a>{" "}
                       <span className="text-text-muted">
                         (Mon-Fri, 9am-5pm AEST)
