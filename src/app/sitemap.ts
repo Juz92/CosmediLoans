@@ -4,7 +4,7 @@ import { getAllComparisonSlugs } from "@/data/comparisons";
 import { getAllSlugs as getAllBlogSlugs } from "@/lib/blog";
 import { getAllLocationSlugs } from "@/data/locations";
 
-const BASE_URL = "https://cosmedloans.com.au";
+const BASE_URL = "https://cosmediloans.com.au";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
