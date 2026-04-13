@@ -24,7 +24,6 @@ const purposeRows: { label: string }[] = [
 ];
 
 const feeRows: { label: string; value: string }[] = [
-  { label: "Broker fee charged to you", value: "$0" },
   { label: "Ongoing fee", value: "$0" },
   { label: "Early repayment fee", value: "$0 (most lenders)" },
   { label: "Early termination fee", value: "$0 (most lenders)" },
