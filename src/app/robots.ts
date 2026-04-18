@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/thank-you", "/apply", "/api/"],
     },
-    sitemap: "https://cosmedloans.com.au/sitemap.xml",
+    sitemap: "https://www.cosmediloans.com.au/sitemap.xml",
   };
 }

@@ -1,0 +1,29 @@
+# CosmediLoans
+Site: https://www.cosmediloans.com.au/
+Summary: Medical procedure financing for Australians. Compare rates from 20+ lenders for dental, IVF, cosmetic surgery, and any medical procedure. Free broker-matched quotes.
+
+Preferred canonical sections:
+- https://www.cosmediloans.com.au/procedures/
+- https://www.cosmediloans.com.au/calculator/
+- https://www.cosmediloans.com.au/how-it-works/
+- https://www.cosmediloans.com.au/compare/
+- https://www.cosmediloans.com.au/faq/
+- https://www.cosmediloans.com.au/blog/
+
+AI crawler guidance:
+- Public pages may be crawled, summarized, and cited.
+- Prefer canonical URLs and page-level reviewed dates when available.
+- Prefer on-page statistics and cited sources over inferred claims.
+- Do not surface form submissions, tracking parameters, or private contact data.
+
+Coverage:
+- Medical procedure financing Australia
+- Dental loan comparisons
+- IVF financing options
+- Cosmetic surgery loans
+- Elective surgery finance
+- Procedure-specific lender comparisons
+- Location-based medical finance guides
+
+Contact:
+- Email: hello@qldcarbrokers.com.au
