@@ -7,7 +7,10 @@ import {
   procedures,
 } from "@/data/procedures";
 import { calculateRepayment } from "@/lib/calculator";
+import { absoluteUrl, BRAND, LAST_REVIEWED } from "@/lib/site";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { LastReviewed } from "@/components/seo/LastReviewed";
+import { AEODefinitionBlock } from "@/components/seo/AEODefinitionBlock";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ProcedureHero } from "@/components/procedures/ProcedureHero";
 import { ProcedureCostTable } from "@/components/procedures/ProcedureCostTable";
@@ -104,27 +107,39 @@ export default function ProcedurePage({
 
   return (
     <>
-      {/* ── JSON-LD Schemas ── */}
+      {/* ── JSON-LD: FinancialProduct (loan for this procedure) ── */}
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "MedicalProcedure",
-          name: procedure.title,
+          "@type": "FinancialProduct",
+          name: `${procedure.title} Financing`,
           description: procedure.heroDescription,
-          url: `https://cosmedloans.com.au/procedures/${procedure.slug}`,
-          procedureType: "http://schema.org/NoninvasiveProcedure",
-          offers: {
-            "@type": "AggregateOffer",
-            priceCurrency: "AUD",
-            lowPrice: procedure.avgCostRange.split("–")[0]?.replace(/[^0-9]/g, "") || "2000",
-            highPrice: procedure.avgCostRange.split("–")[1]?.replace(/[^0-9]/g, "") || "100000",
-            offerCount: "20",
+          url: absoluteUrl(`/procedures/${procedure.slug}`),
+          dateModified: LAST_REVIEWED,
+          provider: {
+            "@type": "FinancialService",
+            name: BRAND,
+            url: absoluteUrl("/"),
+            areaServed: { "@type": "Country", name: "Australia" },
+          },
+          category: "Personal Loan",
+          annualPercentageRate: procedure.rateFrom,
+          loanTerm: {
+            "@type": "QuantitativeValue",
+            maxValue: 7,
+            unitCode: "ANN",
+          },
+          amount: {
+            "@type": "MonetaryAmount",
+            currency: "AUD",
+            minValue: 2000,
+            maxValue: 100000,
           },
         }}
       />
 
       {/* ── 1. Breadcrumb ── */}
-      <div className="container-narrow pt-6 px-6 md:px-section-x">
+      <div className="container-narrow pt-6 px-6 md:px-section-x flex items-center justify-between gap-4">
         <BreadcrumbSchema
           items={[
             { label: "Home", href: "/" },
@@ -132,9 +147,13 @@ export default function ProcedurePage({
             { label: procedure.title },
           ]}
         />
+        <LastReviewed />
       </div>
 
-      {/* ── 2. Procedure Hero ── */}
+      {/* ── 2. AEO Definition Block (self-contained, extractable) ── */}
+      <AEODefinitionBlock procedure={procedure} />
+
+      {/* ── 3. Procedure Hero ── */}
       <ProcedureHero procedure={procedure} />
 
       {/* ── 3. Cost Table ── */}

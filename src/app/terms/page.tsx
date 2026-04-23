@@ -60,7 +60,7 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-3 text-sm text-text-body leading-relaxed">
                 <p>
-                  By accessing and using the website at cosmedloans.com.au (&ldquo;the Website&rdquo;),
+                  By accessing and using the website at cosmediloans.com.au (&ldquo;the Website&rdquo;),
                   operated by CosmediLoans ABN 14 693 894 558 (&ldquo;CosmediLoans&rdquo;, &ldquo;we&rdquo;,
                   &ldquo;us&rdquo;, &ldquo;our&rdquo;), you agree to be bound by these Terms of Use. If you do not
                   agree with any part of these terms, you must not use the Website.

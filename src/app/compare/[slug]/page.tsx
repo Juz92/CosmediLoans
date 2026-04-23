@@ -11,6 +11,7 @@ import { ComparisonHero } from "@/components/compare/ComparisonHero";
 import { ComparisonTable } from "@/components/compare/ComparisonTable";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { Card, Button } from "@/components/ui";
+import { absoluteUrl, BRAND, SITE_ORIGIN } from "@/lib/site";
 import {
   ArrowRight,
   CheckCircle,
@@ -75,13 +76,13 @@ export default function ComparisonPage({
     "@type": "Article",
     headline: comparison.h1,
     description: comparison.metaDescription,
-    url: `https://cosmedloans.com.au/compare/${comparison.slug}`,
+    url: absoluteUrl(`/compare/${comparison.slug}`),
     datePublished: comparison.lastReviewed,
     dateModified: comparison.lastReviewed,
     publisher: {
       "@type": "Organization",
-      name: "CosmediLoans",
-      url: "https://cosmedloans.com.au",
+      name: BRAND,
+      url: SITE_ORIGIN,
     },
   };
 

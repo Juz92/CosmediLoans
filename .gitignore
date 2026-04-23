@@ -28,6 +28,12 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# pipeline
+/pipeline/node_modules
+/pipeline/.env
+/google-oauth-credentials.json
+/google-token.json
+
 # vercel
 .vercel
 

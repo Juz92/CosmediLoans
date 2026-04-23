@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { ChevronRight } from "lucide-react";
+import { absoluteUrl } from "@/lib/site";
 
 interface Crumb {
   label: string;
@@ -19,7 +20,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      ...(item.href ? { item: `https://cosmedloans.com.au${item.href}` } : {}),
+      ...(item.href ? { item: absoluteUrl(item.href) } : {}),
     })),
   };
 

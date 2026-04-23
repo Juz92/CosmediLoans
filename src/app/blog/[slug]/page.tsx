@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllSlugs, getPostBySlug, getPostsByCategory } from "@/lib/blog";
+import { absoluteUrl, BRAND, SITE_ORIGIN } from "@/lib/site";
+import { authorPersonSchema, getAuthorBySlug } from "@/data/authors";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BlogCard } from "@/components/content/BlogCard";
@@ -59,6 +61,8 @@ export default function BlogPost({
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const author = getAuthorBySlug(post.author);
+
   const relatedPosts = getPostsByCategory(post.category)
     .filter((p) => p.slug !== post.slug)
     .slice(0, 3);
@@ -71,17 +75,15 @@ export default function BlogPost({
           "@type": "Article",
           headline: post.title,
           datePublished: post.date,
+          dateModified: post.date,
           description: post.excerpt,
-          author: {
-            "@type": "Organization",
-            name: "CosmediLoans",
-          },
+          author: authorPersonSchema(author),
           publisher: {
             "@type": "Organization",
-            name: "CosmediLoans",
-            url: "https://cosmedloans.com.au",
+            name: BRAND,
+            url: SITE_ORIGIN,
           },
-          mainEntityOfPage: `https://cosmedloans.com.au/blog/${post.slug}`,
+          mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
         }}
       />
 
@@ -105,7 +107,11 @@ export default function BlogPost({
               {formatCategory(post.category)}
             </span>
             <h1 className="text-hero-h1 text-text-dark mb-4">{post.title}</h1>
-            <div className="flex items-center gap-4 text-sm text-text-muted">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-text-muted">
+              <span className="inline-flex items-center gap-1.5">
+                By <span className="font-semibold text-text-body">{author.name}</span>
+                <span className="text-text-muted/80">· {author.role}</span>
+              </span>
               <span className="inline-flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" aria-hidden="true" />
                 {formatDate(post.date)}
@@ -165,8 +171,25 @@ export default function BlogPost({
             })}
           </div>
 
+          {/* Author bio */}
+          <aside
+            id={`author-${author.slug}`}
+            className="mt-12 p-5 bg-background rounded-card border border-border"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-text-muted mb-1">
+              About the author
+            </p>
+            <p className="text-sm font-semibold text-text-dark mb-1">
+              {author.name} — {author.role}
+            </p>
+            <p className="text-xs text-text-muted mb-3">{author.credentials}</p>
+            <p className="text-sm text-text-body leading-relaxed">
+              {author.bio}
+            </p>
+          </aside>
+
           {/* Disclaimer */}
-          <div className="mt-10 p-4 bg-background rounded-button border border-border">
+          <div className="mt-6 p-4 bg-background rounded-button border border-border">
             <p className="text-xs text-text-muted">
               This article is for informational purposes only and does not
               constitute financial advice. CosmediLoans is a lead generation

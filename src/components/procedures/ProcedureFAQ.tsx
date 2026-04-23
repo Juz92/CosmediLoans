@@ -4,9 +4,14 @@ import type { FAQ } from "@/data/procedures";
 interface ProcedureFAQProps {
   procedureTitle: string;
   faqs: FAQ[];
+  emitSchema?: boolean;
 }
 
-export function ProcedureFAQ({ procedureTitle, faqs }: ProcedureFAQProps) {
+export function ProcedureFAQ({
+  procedureTitle,
+  faqs,
+  emitSchema = true,
+}: ProcedureFAQProps) {
   return (
     <section className="section-padding bg-surface">
       <div className="container-narrow max-w-3xl">
@@ -16,7 +21,7 @@ export function ProcedureFAQ({ procedureTitle, faqs }: ProcedureFAQProps) {
         <p className="text-body text-text-body mb-8 text-center max-w-xl mx-auto">
           Common questions about financing {procedureTitle.toLowerCase()} in Australia.
         </p>
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} emitSchema={emitSchema} />
       </div>
     </section>
   );

@@ -10,6 +10,8 @@ export interface BlogPost {
   readTime: number;
   image?: string;
   content: string;
+  /** Optional author slug — defaults to the house author if omitted. */
+  author?: string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
@@ -71,6 +73,7 @@ export function getAllPosts(): BlogPost[] {
       excerpt: data.excerpt || "",
       readTime: parseInt(data.readTime || "5", 10),
       image: data.image || undefined,
+      author: data.author || undefined,
       content,
     };
   });
@@ -95,6 +98,7 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
     excerpt: data.excerpt || "",
     readTime: parseInt(data.readTime || "5", 10),
     image: data.image || undefined,
+    author: data.author || undefined,
     content,
   };
 }

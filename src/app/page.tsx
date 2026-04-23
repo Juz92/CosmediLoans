@@ -15,6 +15,7 @@ import { ScrollCTA } from "@/components/lead-capture/ScrollCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LoanFeatures } from "@/components/content/LoanFeatures";
 import { procedures } from "@/data/procedures";
+import { absoluteUrl, BRAND, SITE_ORIGIN } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -145,15 +146,16 @@ const faqItems = [
 /* ── Organization Schema ─────────────────────────────────────────── */
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "CosmediLoans",
-  url: "https://cosmediloans.com.au",
+  "@type": "FinancialService",
+  name: BRAND,
+  url: SITE_ORIGIN,
   description:
     "Compare medical procedure financing rates from 20+ lenders. Broker-matched quotes for dental, IVF, cosmetic surgery and more.",
   areaServed: {
     "@type": "Country",
     name: "Australia",
   },
+  sameAs: [] as string[],
 };
 
 export default function Home() {
@@ -164,11 +166,11 @@ export default function Home() {
         data={{
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "CosmediLoans",
-          url: "https://cosmediloans.com.au",
+          name: BRAND,
+          url: SITE_ORIGIN,
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://cosmediloans.com.au/procedures?q={search_term_string}",
+            target: `${absoluteUrl("/procedures")}?q={search_term_string}`,
             "query-input": "required name=search_term_string",
           },
         }}
@@ -215,6 +217,33 @@ export default function Home() {
             <div className="lg:max-w-md lg:ml-auto">
               <HeroLeadForm />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── AEO DEFINITION BLOCK — extractable by AI search ──────── */}
+      <section aria-labelledby="what-is-cosmediloans" className="bg-surface border-b border-border">
+        <div className="container-narrow py-6 md:py-8">
+          <div className="max-w-3xl">
+            <h2
+              id="what-is-cosmediloans"
+              className="text-sm font-semibold uppercase tracking-wide text-primary mb-2"
+            >
+              What is CosmediLoans?
+            </h2>
+            <p className="text-body text-text-body leading-relaxed">
+              CosmediLoans is an Australian broker-matching service that
+              compares medical procedure loans from 20+ licensed lenders for
+              dental, IVF, cosmetic surgery, orthopaedic, veterinary and any
+              elective medical treatment. Patients can borrow $2,000 – $100,000
+              over terms of up to 7 years at rates from 6.99% p.a., with a
+              single soft-credit inquiry that does not affect credit score.
+              Pre-approval decisions typically return within hours. The service
+              is free to patients — brokers are paid by lenders on settlement,
+              and all brokers on the panel hold Australian Credit Licences
+              under the National Consumer Credit Protection Act 2009 and are
+              members of the Australian Financial Complaints Authority.
+            </p>
           </div>
         </div>
       </section>

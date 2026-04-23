@@ -9,8 +9,9 @@ import { ProcedureFAQ } from "@/components/procedures/ProcedureFAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllLocationSlugs, getLocationBySlug } from "@/data/locations";
 import { getAllProcedureSlugs, getProcedureBySlug } from "@/data/procedures";
+import { SITE_ORIGIN } from "@/lib/site";
 
-const BASE_URL = "https://cosmedloans.com.au";
+const BASE_URL = SITE_ORIGIN;
 
 export async function generateStaticParams() {
   return getAllLocationSlugs().flatMap((location) =>
@@ -27,9 +28,12 @@ export async function generateMetadata({
   const proc = getProcedureBySlug(params.procedure);
   if (!loc || !proc) return {};
   return {
-    title: `${proc.title} in ${loc.name} | From ${proc.rateFrom} | CosmodiLoans`,
+    title: `${proc.title} in ${loc.name} | From ${proc.rateFrom} | CosmediLoans`,
     description: `${proc.title} financing in ${loc.name}, ${loc.stateCode}. Compare rates from ${proc.rateFrom} across 20+ lenders. No credit impact to check your rate.`,
     alternates: { canonical: `/locations/${loc.slug}/${proc.slug}` },
+    // Interim: content is not yet unique per city. Follow links, don't index.
+    // Lift to full indexing once per-city content ships.
+    robots: { index: false, follow: true },
   };
 }
 
@@ -45,7 +49,7 @@ export default function LocationProcedurePage({
   const schema = {
     "@context": "https://schema.org",
     "@type": "FinancialService",
-    name: `CosmodiLoans — ${proc.title} in ${loc.name}`,
+    name: `CosmediLoans — ${proc.title} in ${loc.name}`,
     url: `${BASE_URL}/locations/${loc.slug}/${proc.slug}`,
     description: `${proc.title} financing for patients in ${loc.name}, ${loc.state}. Rates from ${proc.rateFrom}.`,
     areaServed: {
@@ -126,7 +130,7 @@ export default function LocationProcedurePage({
         <section className="section-padding bg-background">
           <div className="container-narrow">
             <h2 className="text-section-h2 text-text-dark mb-8 text-center">
-              Why Finance {proc.title} Through CosmodiLoans?
+              Why Finance {proc.title} Through CosmediLoans?
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {proc.benefits.map((benefit) => (
@@ -157,6 +161,7 @@ export default function LocationProcedurePage({
             <ProcedureFAQ
               procedureTitle={proc.title}
               faqs={proc.faqs}
+              emitSchema={false}
             />
           </div>
         </section>

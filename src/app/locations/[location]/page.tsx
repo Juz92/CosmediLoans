@@ -10,8 +10,9 @@ import { ProcedureCard } from "@/components/procedures/ProcedureCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllLocationSlugs, getLocationBySlug } from "@/data/locations";
 import { procedures } from "@/data/procedures";
+import { SITE_ORIGIN } from "@/lib/site";
 
-const BASE_URL = "https://cosmedloans.com.au";
+const BASE_URL = SITE_ORIGIN;
 
 export async function generateStaticParams() {
   return getAllLocationSlugs().map((location) => ({ location }));
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const loc = getLocationBySlug(params.location);
   if (!loc) return {};
   return {
-    title: `Medical & Personal Loans in ${loc.name} | CosmodiLoans`,
+    title: `Medical & Personal Loans in ${loc.name} | CosmediLoans`,
     description: `Compare loan rates from 20+ lenders for medical procedures and debt consolidation in ${loc.name}, ${loc.stateCode}. No credit impact to check your rate.`,
     alternates: { canonical: `/locations/${loc.slug}` },
   };
@@ -44,7 +45,7 @@ export default function LocationPage({
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "FinancialService",
-    name: "CosmodiLoans",
+    name: "CosmediLoans",
     url: BASE_URL,
     description: `Medical procedure loan broker-matching service in ${loc.name}, ${loc.state}.`,
     areaServed: {

@@ -7,6 +7,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LoanCalculator } from "@/components/calculator/LoanCalculator";
 import { RepaymentTableSection } from "./RepaymentTableSection";
+import { absoluteUrl, BRAND } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Medical Loan Repayment Calculator | CosmediLoans",
@@ -95,8 +96,8 @@ const faqItems = [
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "CosmediLoans Medical Loan Calculator",
-  url: "https://cosmedloans.com.au/calculator",
+  name: `${BRAND} Medical Loan Calculator`,
+  url: absoluteUrl("/calculator"),
   applicationCategory: "FinanceApplication",
   operatingSystem: "Any",
   description:

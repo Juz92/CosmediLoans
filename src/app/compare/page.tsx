@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { comparisons } from "@/data/comparisons";
+import { absoluteUrl } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { Button, Card, Badge } from "@/components/ui";
@@ -57,7 +58,7 @@ export default function CompareHubPage() {
       "@type": "ListItem",
       position: i + 1,
       name: c.h1,
-      url: `https://cosmedloans.com.au/compare/${c.slug}`,
+      url: absoluteUrl(`/compare/${c.slug}`),
     })),
   };
 

@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
                   <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs).
                 </p>
                 <p>
-                  By using our website at cosmedloans.com.au and submitting information through
+                  By using our website at cosmediloans.com.au and submitting information through
                   our forms, you consent to the collection and use of your personal information
                   as described in this policy.
                 </p>
@@ -300,7 +300,7 @@ export default function PrivacyPolicyPage() {
                     0422 676 073
                   </a>
                 </p>
-                <p><span className="text-text-muted w-20 inline-block">Website</span> cosmedloans.com.au</p>
+                <p><span className="text-text-muted w-20 inline-block">Website</span> cosmediloans.com.au</p>
               </div>
             </div>
 

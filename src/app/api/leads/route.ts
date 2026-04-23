@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { leadSchema } from "@/lib/leads";
+import { SITE_ORIGIN } from "@/lib/site";
 
 // Simple in-memory rate limiting (per-IP, resets on cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -33,8 +34,8 @@ export async function POST(request: NextRequest) {
     // Origin validation
     const origin = request.headers.get("origin");
     const allowedOrigins = [
-      "https://cosmedloans.com.au",
-      "https://www.cosmedloans.com.au",
+      SITE_ORIGIN,
+      SITE_ORIGIN.replace("://www.", "://"),
       process.env.NODE_ENV === "development" ? "http://localhost:3000" : "",
     ].filter(Boolean);
 

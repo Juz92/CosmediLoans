@@ -40,7 +40,7 @@ export default function DisclaimerPage() {
             <p className="text-sm font-semibold text-amber-900 mb-1">Important Notice</p>
             <p className="text-sm text-amber-800 leading-relaxed">
               Please read this disclaimer carefully before using the CosmediLoans website at
-              cosmedloans.com.au. CosmediLoans is a lead generation service — not a lender,
+              cosmediloans.com.au. CosmediLoans is a lead generation service — not a lender,
               credit provider, or financial adviser.
             </p>
           </div>
