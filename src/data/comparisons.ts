@@ -831,6 +831,338 @@ export const comparisons: Comparison[] = [
     lastReviewed: "2026-03-01",
     relatedProcedureSlugs: ["veneers-financing", "invisalign-financing", "hair-transplant-loans"],
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // Specialist medical BNPL + cosmetic/medical lenders
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "cosmediloans-vs-medipay",
+    competitorName: "MediPay",
+    competitorType: "bnpl",
+    h1: "CosmediLoans vs MediPay: Medical Financing Compared",
+    metaTitle: "CosmediLoans vs MediPay | Which Is Better for Medical Procedures?",
+    metaDescription:
+      "Compare CosmediLoans broker-matched medical loans with MediPay clinic-integrated payment plans. Amounts, rates, and when to use which.",
+    verdict:
+      "MediPay is a clinic-integrated medical payment plan offered at the point of treatment, typically for $500–$50,000 across short interest-free promotional periods followed by a rate of around 14–20% p.a. after the promo ends. CosmediLoans compares 20+ lenders for fixed-rate medical loans from 6.99% p.a. over 1–7 years. MediPay suits patients whose clinic already partners with MediPay and who can repay within the interest-free window; CosmediLoans is cheaper over 2+ years or when you want a single predictable fixed rate.",
+    features: [
+      { feature: "Maximum Amount", us: "$2,000 – $100,000", them: "$500 – $50,000 (clinic-dependent)" },
+      { feature: "Interest Rate", us: "From 6.99% p.a. (fixed)", them: "0% during promo, ~14–20% p.a. after" },
+      { feature: "Repayment Term", us: "1 – 7 years (fixed)", them: "3–60 months (varies by clinic)" },
+      { feature: "Setup Fees", us: "Varies by lender", them: "$0–$99 establishment + ~$5/mo account fee" },
+      { feature: "Availability", us: "Any accredited clinic Australia-wide", them: "Only clinics that partner with MediPay" },
+      { feature: "Credit Check", us: "Soft pull (no impact)", them: "Soft pull" },
+      { feature: "Approval Speed", us: "Same day", them: "At point of treatment, typically minutes" },
+      { feature: "Best For", us: "Any procedure $2,000+, lowest long-term cost", them: "Smaller treatments repayable inside the interest-free window" },
+    ],
+    howWeWork:
+      "CosmediLoans connects you with a broker who compares fixed-rate medical loan offers across 20+ Australian lenders. You submit one application with no credit impact, receive quotes, and fund the treatment directly — usable at any clinic that accepts bank transfer.",
+    howTheyWork:
+      "MediPay is a medical-specific point-of-sale payment plan offered inside participating clinics. You apply at the clinic reception or portal, receive a soft-check decision in minutes, and pay the clinic over an interest-free promotional period. After the promo ends (or if you miss a payment) interest applies retroactively or ongoing at a rate typically 14–20% p.a., plus establishment and monthly fees.",
+    chooseUs: [
+      "Your clinic does not partner with MediPay",
+      "Your procedure costs more than the MediPay cap your clinic accepts",
+      "You want a single fixed rate instead of a promo-then-retrospective-interest structure",
+      "You'd rather amortise over 3–7 years than front-load repayments",
+      "You want the lowest long-term cost rather than deferring the decision",
+    ],
+    chooseThem: [
+      "Your clinic already uses MediPay and you prefer a one-step checkout",
+      "Your treatment is small enough that you can finish repayments inside the interest-free window",
+      "You want to walk out of the clinic with finance arranged on the spot",
+      "You're comfortable with revolving monthly account fees",
+    ],
+    faqs: [
+      {
+        question: "Is MediPay better than a medical loan for cosmetic surgery?",
+        answer:
+          "Only if your procedure is small enough that you can fully repay inside MediPay's interest-free promotional window. For surgery that costs more than you can clear in 12–24 months, a broker-matched medical loan at a fixed rate from 6.99% p.a. is almost always cheaper over the life of the balance.",
+      },
+      {
+        question: "Does MediPay hurt my credit score?",
+        answer:
+          "MediPay's initial assessment is a soft credit inquiry with no impact. Missed repayments or accounts sent to collections, however, can be reported to credit bureaus and damage your score. CosmediLoans' initial rate check is also a soft pull with no impact.",
+      },
+      {
+        question: "What happens if I can't repay MediPay inside the interest-free period?",
+        answer:
+          "Depending on the plan, interest may apply retroactively from the first day at a rate typically 14–20% p.a., plus any unpaid fees. This is how interest-free medical payment plans can end up costing more than a fixed-rate medical loan.",
+      },
+      {
+        question: "Can I use MediPay for dental implants?",
+        answer:
+          "Yes, if your dental clinic is a MediPay partner. For larger All-on-4 or full-mouth implant cases above the clinic's MediPay cap, a broker-matched dental loan covering up to $100,000 is usually the only complete option.",
+      },
+      {
+        question: "Which is more flexible — MediPay or CosmediLoans?",
+        answer:
+          "CosmediLoans is more flexible in amount ($2,000–$100,000), term (1–7 years), and clinic choice (any Australian clinic). MediPay is more flexible at the clinic counter if your clinic partners with them and your procedure fits their caps.",
+      },
+    ],
+    lastReviewed: "2026-04-24",
+    relatedProcedureSlugs: ["dental-loans", "veneers-financing", "cosmetic-surgery-finance", "ivf-financing"],
+  },
+  {
+    slug: "cosmediloans-vs-tlc",
+    competitorName: "TLC",
+    competitorType: "lender",
+    h1: "CosmediLoans vs TLC: Which Medical Loan Is Better?",
+    metaTitle: "CosmediLoans vs TLC | Medical Loan Comparison Australia",
+    metaDescription:
+      "TLC specialises in cosmetic, dental, and bariatric surgery loans. See how CosmediLoans compares on rates, amounts, and flexibility.",
+    verdict:
+      "TLC (tlc.com.au) is an Australian specialist medical lender focused on cosmetic surgery, dental, and bariatric loans, typically lending $2,000–$50,000 at advertised rates starting around 9.99% p.a. CosmediLoans compares TLC alongside 20+ other medical-friendly lenders through a single broker-matched application, with rates from 6.99% p.a. and amounts up to $100,000. TLC is a reasonable direct option if you already know their rate beats the market; CosmediLoans is the lower-risk choice if you want the cheapest offer verified across multiple lenders.",
+    features: [
+      { feature: "Maximum Amount", us: "$2,000 – $100,000", them: "$2,000 – $50,000" },
+      { feature: "Interest Rate", us: "From 6.99% p.a. (personalised)", them: "From ~9.99% p.a. (risk-based)" },
+      { feature: "Repayment Term", us: "1 – 7 years", them: "1 – 5 years (typical)" },
+      { feature: "Lender Options", us: "20+ lenders compared", them: "Single lender (TLC only)" },
+      { feature: "Specialisation", us: "All medical procedures + vet + debt consolidation", them: "Cosmetic, dental, bariatric" },
+      { feature: "Credit Check", us: "Soft pull (no impact)", them: "Hard pull on application" },
+      { feature: "Approval Speed", us: "Same day", them: "24–48 hours" },
+      { feature: "Best For", us: "Best rate across the market, any procedure", them: "Borrowers set on TLC's product" },
+    ],
+    howWeWork:
+      "CosmediLoans assigns you a broker who compares fixed-rate medical loans across 20+ lenders, including specialist medical lenders and mainstream personal loan providers. One soft-check application returns multiple offers ranked by total cost.",
+    howTheyWork:
+      "TLC is a direct lender specialising in medical and cosmetic procedure loans. You apply on their site, they perform a credit assessment, and if approved provide a single fixed-rate offer. Rates depend on your credit profile and the procedure type.",
+    chooseUs: [
+      "You want to know TLC's rate is actually competitive before committing",
+      "Your procedure falls outside TLC's cosmetic/dental/bariatric focus",
+      "You need a loan above $50,000",
+      "You'd rather a broker negotiate than apply directly",
+      "You want to avoid a hard credit inquiry unless necessary",
+    ],
+    chooseThem: [
+      "You've compared TLC against the market and their offer is lowest",
+      "You prefer working directly with a single specialist lender",
+      "Your procedure specifically aligns with TLC's core cosmetic/dental/bariatric focus",
+    ],
+    faqs: [
+      {
+        question: "Is TLC cheaper than CosmediLoans for cosmetic surgery?",
+        answer:
+          "Sometimes, but rarely for a typical borrower. TLC's rates typically start around 9.99% p.a. CosmediLoans compares 20+ lenders including specialist medical lenders with rates from 6.99% p.a. The only way to know for sure is to check both — and because CosmediLoans uses a single soft inquiry, comparing first costs you nothing.",
+      },
+      {
+        question: "Does TLC offer loans for dental implants?",
+        answer:
+          "Yes, TLC finances dental procedures including implants, veneers, and All-on-4. Their cap is typically $50,000, which covers most single-arch cases but may fall short for full-mouth restorations. CosmediLoans' panel covers dental procedures up to $100,000.",
+      },
+      {
+        question: "How long does TLC take to approve a loan?",
+        answer:
+          "TLC typically returns decisions within 24–48 hours. CosmediLoans' broker network includes lenders with same-day and near-instant approvals, with funds disbursing in 1–3 business days.",
+      },
+      {
+        question: "Does applying to TLC affect my credit score?",
+        answer:
+          "TLC typically performs a hard credit inquiry on full applications, which can leave a small mark on your credit file. CosmediLoans' initial rate check is a soft inquiry with no impact, letting you compare offers before committing to any hard-check application.",
+      },
+      {
+        question: "Can I use TLC for bariatric surgery in Australia?",
+        answer:
+          "Yes, TLC explicitly finances bariatric and weight-loss surgery. CosmediLoans also covers bariatric surgery and compares multiple lenders to find the lowest rate for a procedure that often costs $18,000–$30,000.",
+      },
+    ],
+    lastReviewed: "2026-04-24",
+    relatedProcedureSlugs: ["bariatric-surgery-loans", "dental-loans", "liposuction-financing", "breast-augmentation-loans"],
+  },
+  {
+    slug: "cosmediloans-vs-ourmoneymarket",
+    competitorName: "OurMoneyMarket",
+    competitorType: "lender",
+    h1: "CosmediLoans vs OurMoneyMarket: Medical Loans Compared",
+    metaTitle: "CosmediLoans vs OurMoneyMarket | Medical Loan Comparison",
+    metaDescription:
+      "Compare CosmediLoans broker-matched medical loans with OurMoneyMarket's direct-lender medical and cosmetic finance. Rates, amounts, which is best.",
+    verdict:
+      "OurMoneyMarket is an Australian online lender offering medical and cosmetic loans up to $75,000 at fixed rates typically starting around 6.57% p.a. for strong credit. CosmediLoans compares OurMoneyMarket alongside 20+ other medical-friendly lenders in one broker-matched application — often uncovering a lower total-cost option for the same credit profile. If OurMoneyMarket's offer is the market-lowest for you, apply direct; if you want to verify without a hard credit check, CosmediLoans checks them plus the rest of the panel with a single soft inquiry.",
+    features: [
+      { feature: "Maximum Amount", us: "$2,000 – $100,000", them: "$2,001 – $75,000" },
+      { feature: "Interest Rate", us: "From 6.99% p.a. (personalised)", them: "From ~6.57% p.a. (risk-based)" },
+      { feature: "Repayment Term", us: "1 – 7 years", them: "3 – 7 years" },
+      { feature: "Lender Options", us: "20+ lenders compared", them: "Single lender (OurMoneyMarket only)" },
+      { feature: "Application", us: "One form + broker support", them: "Fully online, self-service" },
+      { feature: "Credit Check", us: "Soft pull (no impact)", them: "Soft pull for quote, hard pull on application" },
+      { feature: "Fees", us: "Varies by lender", them: "Origination fee ~3–5% of loan, $15/mo account fee" },
+      { feature: "Best For", us: "Lowest total cost across the market", them: "Borrowers who already know OurMoneyMarket is their best rate" },
+    ],
+    howWeWork:
+      "CosmediLoans compares medical-friendly lenders (including OurMoneyMarket-adjacent specialists) through a single application. Your broker handles the comparison, accounts for origination fees and monthly charges, and returns offers ranked by total cost — not just headline rate.",
+    howTheyWork:
+      "OurMoneyMarket is a direct online lender offering fixed-rate personal loans for medical, cosmetic, and dental procedures. You complete an online application, receive a soft-pull quote, and if you accept, a hard credit check and funding follow. Rates are risk-based, and the origination fee is charged as a percentage of the loan amount.",
+    chooseUs: [
+      "You want to benchmark OurMoneyMarket's rate against the rest of the market before a hard inquiry",
+      "You need a loan above $75,000",
+      "You want a broker to factor fees into total-cost comparisons",
+      "You prefer receiving multiple offers rather than a single quote",
+    ],
+    chooseThem: [
+      "You've already shopped the market and OurMoneyMarket has the lowest total cost",
+      "You prefer a fully self-service online application with no broker involvement",
+      "You're comfortable with origination and monthly account fees in return for a low headline rate",
+    ],
+    faqs: [
+      {
+        question: "Is OurMoneyMarket cheaper than CosmediLoans?",
+        answer:
+          "Sometimes on headline rate (their advertised minimum is around 6.57% p.a. for strong credit), but OurMoneyMarket charges a 3–5% origination fee plus a monthly account fee which lifts the total cost. CosmediLoans compares 20+ lenders including fee-free options; the broker factors fees into total-cost comparisons before recommending an offer.",
+      },
+      {
+        question: "Does OurMoneyMarket finance cosmetic surgery?",
+        answer:
+          "Yes, OurMoneyMarket explicitly markets medical and cosmetic loans, covering procedures including cosmetic surgery, dental work, IVF, and bariatric surgery. They cap at $75,000. CosmediLoans covers the same procedures up to $100,000 and compares multiple lenders per application.",
+      },
+      {
+        question: "How fast is OurMoneyMarket?",
+        answer:
+          "OurMoneyMarket typically returns decisions within one business day and funds within 1–2 business days after signing. CosmediLoans' panel includes lenders with same-day approvals; fund speed is comparable.",
+      },
+      {
+        question: "Does OurMoneyMarket charge early exit fees?",
+        answer:
+          "OurMoneyMarket does not charge an early-repayment penalty on most products, but the origination fee (paid upfront) is non-refundable. Several lenders on the CosmediLoans panel charge zero establishment fees, which is worth factoring in if you may repay early.",
+      },
+      {
+        question: "Does OurMoneyMarket accept bad credit for medical loans?",
+        answer:
+          "OurMoneyMarket uses risk-based pricing, so weaker credit receives higher rates rather than rejection up to their assessment threshold. CosmediLoans' panel includes specialist near-prime lenders that typically offer better rates for borrowers with imperfect credit than a single mainstream online lender.",
+      },
+    ],
+    lastReviewed: "2026-04-24",
+    relatedProcedureSlugs: ["ivf-financing", "cosmetic-surgery-finance", "dental-loans", "hair-transplant-loans"],
+  },
+  {
+    slug: "cosmediloans-vs-jacaranda-finance",
+    competitorName: "Jacaranda Finance",
+    competitorType: "lender",
+    h1: "CosmediLoans vs Jacaranda Finance: Medical Loan Comparison",
+    metaTitle: "CosmediLoans vs Jacaranda Finance | Medical Loans Compared",
+    metaDescription:
+      "Compare CosmediLoans broker-matched medical loans with Jacaranda Finance personal loans. When each makes sense for medical financing.",
+    verdict:
+      "Jacaranda Finance is an Australian online lender offering personal loans up to $15,000 over 9–36 months, typically at annual percentage rates between 14.95% and 47.61% depending on credit profile. CosmediLoans compares medical-friendly lenders with rates from 6.99% p.a. over terms up to 7 years for amounts up to $100,000. Jacaranda is appropriate for small, short-term loans where speed matters more than rate; CosmediLoans is almost always cheaper over 2+ years or for amounts above $10,000.",
+    features: [
+      { feature: "Maximum Amount", us: "$2,000 – $100,000", them: "$300 – $15,000" },
+      { feature: "Interest Rate", us: "From 6.99% p.a. (personalised)", them: "14.95% – 47.61% p.a. (risk-based)" },
+      { feature: "Repayment Term", us: "1 – 7 years", them: "9 – 36 months" },
+      { feature: "Lender Options", us: "20+ lenders compared", them: "Single lender (Jacaranda only)" },
+      { feature: "Approval Speed", us: "Same day", them: "Minutes to 1 business day" },
+      { feature: "Credit Check", us: "Soft pull (no impact)", them: "Soft pull for quote" },
+      { feature: "Fees", us: "Varies by lender", them: "Establishment fee + monthly account fee" },
+      { feature: "Best For", us: "Medical procedures above $2,000, lowest long-term cost", them: "Small emergency loans under $10,000" },
+    ],
+    howWeWork:
+      "CosmediLoans pairs you with a broker who compares medical loan offers across 20+ Australian lenders. A single soft-check application returns multiple offers. The broker factors all fees into a total-cost comparison.",
+    howTheyWork:
+      "Jacaranda Finance is a direct online lender specialising in small personal loans with fast online decisions. Applications take minutes, decisions are often instant, and funds can land the same day. Rates are risk-based and typically higher than mainstream or specialist medical lenders.",
+    chooseUs: [
+      "Your procedure costs more than $15,000",
+      "You want a rate under 10% p.a. — Jacaranda's floor is 14.95%",
+      "You prefer a term longer than 3 years to keep monthly repayments manageable",
+      "You want a broker to check 20+ options rather than a single offer",
+    ],
+    chooseThem: [
+      "You need less than $15,000 and must have funds the same day",
+      "Your credit history precludes mainstream lenders and you've verified Jacaranda will approve you",
+      "You can comfortably repay inside 36 months",
+    ],
+    faqs: [
+      {
+        question: "Is Jacaranda Finance a good option for medical loans?",
+        answer:
+          "Only for small, short-term amounts under $15,000 where speed is critical. For most medical procedures — dental implants, IVF, cosmetic surgery, bariatric — the total cost through Jacaranda will be significantly higher than a broker-matched medical loan because Jacaranda's rates start at 14.95% p.a. versus 6.99% through CosmediLoans.",
+      },
+      {
+        question: "Does Jacaranda approve bad credit for medical loans?",
+        answer:
+          "Jacaranda assesses a range of credit profiles but charges higher rates for weaker credit, with comparison rates up to 47.61% p.a. for some borrowers. CosmediLoans' panel includes specialist near-prime medical lenders that typically offer better rates for imperfect credit than a small-loan generalist.",
+      },
+      {
+        question: "How fast is Jacaranda compared to CosmediLoans?",
+        answer:
+          "Jacaranda can approve and fund loans within hours for simple applications. CosmediLoans returns same-day decisions with funds in 1–3 business days. Jacaranda is faster; the trade-off is a materially higher interest cost.",
+      },
+      {
+        question: "Can I use Jacaranda for dental work?",
+        answer:
+          "Yes, Jacaranda personal loans can be used for any legal purpose including dental work, but their $15,000 cap rules out most implant and full-mouth cases. A broker-matched dental loan through CosmediLoans is almost always cheaper and sizeable enough to cover the full treatment.",
+      },
+      {
+        question: "Are Jacaranda's repayments flexible?",
+        answer:
+          "Jacaranda offers weekly, fortnightly, and monthly repayments over terms up to 36 months. CosmediLoans offers terms up to 7 years, which materially lowers the monthly repayment on a $15,000 loan — typically $230/month at 7.99% over 7 years versus $530+/month at 20%+ over 3 years.",
+      },
+    ],
+    lastReviewed: "2026-04-24",
+    relatedProcedureSlugs: ["dental-loans", "medical-loan", "debt-consolidation"],
+  },
+  {
+    slug: "cosmediloans-vs-fair-go-finance",
+    competitorName: "Fair Go Finance",
+    competitorType: "lender",
+    h1: "CosmediLoans vs Fair Go Finance: Medical Loan Comparison",
+    metaTitle: "CosmediLoans vs Fair Go Finance | Medical Loan Comparison",
+    metaDescription:
+      "Compare CosmediLoans broker-matched medical loans with Fair Go Finance small personal loans. Which is better for cosmetic surgery and medical procedures.",
+    verdict:
+      "Fair Go Finance is an Australian near-prime lender offering personal loans up to $20,000 over 12–36 months, with rates typically from 29.90% p.a. and comparison rates that can exceed 50% p.a. CosmediLoans compares 20+ medical-friendly lenders with rates from 6.99% p.a. over terms up to 7 years for amounts up to $100,000. Fair Go's speed and acceptance of imperfect credit are its advantages; for any procedure above $2,000 that you'll repay over more than a year, the total interest difference is typically several thousand dollars.",
+    features: [
+      { feature: "Maximum Amount", us: "$2,000 – $100,000", them: "$500 – $20,000" },
+      { feature: "Interest Rate", us: "From 6.99% p.a. (personalised)", them: "From 29.90% p.a. (comparison up to 54.30%)" },
+      { feature: "Repayment Term", us: "1 – 7 years", them: "12 – 36 months" },
+      { feature: "Lender Options", us: "20+ lenders compared", them: "Single lender (Fair Go only)" },
+      { feature: "Approval Speed", us: "Same day", them: "Minutes (fully automated)" },
+      { feature: "Credit Profile", us: "All profiles via panel specialists", them: "Near-prime / subprime focus" },
+      { feature: "Credit Check", us: "Soft pull (no impact)", them: "Soft pull for quote" },
+      { feature: "Best For", us: "Any medical procedure above $2,000", them: "Small emergency loans for borrowers declined elsewhere" },
+    ],
+    howWeWork:
+      "CosmediLoans' broker panel includes near-prime specialist lenders who typically offer better rates than generalist subprime lenders. One soft-check application compares 20+ offers. The broker explains total cost over the term — not just the monthly repayment.",
+    howTheyWork:
+      "Fair Go Finance is a near-prime direct online lender offering fast personal loans for borrowers who don't fit mainstream bank criteria. Decisions are typically returned in minutes with funds available quickly. The rates reflect the higher risk profile, with comparison rates frequently exceeding 50% p.a.",
+    chooseUs: [
+      "Your procedure costs more than $20,000",
+      "You want a rate below 15% p.a.",
+      "You'd prefer a term longer than 36 months",
+      "You want a broker to check whether a near-prime specialist will approve you at a better rate than Fair Go's headline",
+    ],
+    chooseThem: [
+      "You've been declined by mainstream and near-prime lenders and Fair Go has pre-approved you",
+      "You need a small amount (under $10,000) very quickly",
+      "You can repay inside 12 months to minimise interest exposure",
+    ],
+    faqs: [
+      {
+        question: "Is Fair Go Finance a good way to pay for medical procedures?",
+        answer:
+          "It's a last-resort option. Fair Go's comparison rates of 29.90–54.30% p.a. mean a $15,000 loan over 3 years can cost $10,000+ in interest. A broker-matched medical loan through CosmediLoans — even for borrowers with imperfect credit — typically comes in at half that or less. Check CosmediLoans' broker panel before committing to any high-rate lender.",
+      },
+      {
+        question: "Does Fair Go Finance accept bad credit for medical loans?",
+        answer:
+          "Yes, Fair Go Finance is one of Australia's near-prime specialist lenders and explicitly accepts applicants with past credit issues. CosmediLoans' panel also includes near-prime specialists who often offer better rates than a single subprime lender because they compete for your application.",
+      },
+      {
+        question: "How fast is Fair Go Finance?",
+        answer:
+          "Fair Go returns automated decisions in minutes and can fund the same day. CosmediLoans provides same-day decisions with funds in 1–3 business days. The time difference rarely matters for elective medical procedures that are booked in advance.",
+      },
+      {
+        question: "Will Fair Go's rate drop if I have good credit?",
+        answer:
+          "Fair Go's advertised rates start at 29.90% p.a. even for strong credit on their small-loan products. If you have strong credit, a mainstream or specialist medical lender on the CosmediLoans panel will almost always beat Fair Go's rate by 15–20 percentage points.",
+      },
+      {
+        question: "What's the real cost difference on a $10,000 medical loan?",
+        answer:
+          "Over 3 years: at Fair Go's ~30% p.a., total interest is around $5,000 (≈$425/month). Through CosmediLoans at ~8% p.a., total interest is around $1,300 (≈$315/month). Same loan, $3,700 difference.",
+      },
+    ],
+    lastReviewed: "2026-04-24",
+    relatedProcedureSlugs: ["dental-loans", "medical-loan", "debt-consolidation"],
+  },
 ];
 
 export function getComparisonBySlug(slug: string): Comparison | undefined {

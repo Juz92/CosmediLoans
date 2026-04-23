@@ -9,12 +9,11 @@ import { getSiteConfig } from "../config/site.js";
 
 const KEY_PAGES = [
   "/",
-  "/services",
-  "/pricing",
-  "/get-a-quote",
-  "/services/wash-and-fold",
-  "/services/commercial-laundry",
-  "/locations",
+  "/procedures/dental-loans",
+  "/procedures/ivf-financing",
+  "/procedures/hair-transplant-loans",
+  "/calculator",
+  "/compare/cosmediloans-vs-afterpay",
 ];
 
 interface LighthouseAudit {
