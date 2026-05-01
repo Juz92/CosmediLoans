@@ -18,7 +18,7 @@ export async function sendDiscordAlert(alert: AlertMessage): Promise<void> {
   const webhookUrl = getDiscordWebhookUrl();
 
   const embed = {
-    title: `${alert.severity} — Fresh Folds`,
+    title: `${alert.severity} - Fresh Folds`,
     description: alert.title,
     color: COLORS[alert.severity],
     fields: [
@@ -45,7 +45,7 @@ export async function sendDiscordDigest(
   const description = items.map((item) => `• ${item}`).join("\n");
 
   const embed = {
-    title: `${severity} DIGEST — Fresh Folds`,
+    title: `${severity} DIGEST - Fresh Folds`,
     description: title,
     color: COLORS[severity],
     fields: [{ name: "Items", value: description.slice(0, 1024) }],

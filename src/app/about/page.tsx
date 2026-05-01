@@ -14,12 +14,12 @@ import {
 import { Card, Button } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "About CosmediLoans | Medical Financing Made Simple",
+  title: "About | Medical Financing Made Simple",
   description:
     "CosmediLoans connects Australian patients with expert brokers who compare 20+ lenders for the best medical loan rate. Free, fast, and no obligation.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About CosmediLoans | Medical Financing Made Simple",
+    title: "About | Medical Financing Made Simple",
     description:
       "CosmediLoans connects Australian patients with expert brokers who compare 20+ lenders for the best medical loan rate.",
     url: "/about",
@@ -61,7 +61,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-6">
             About CosmediLoans
@@ -193,7 +193,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ───────────────────────────────────────────────────── */}
-      <section className="section-padding bg-gradient-to-br from-primary to-[#1e3a8a]">
+      <section className="section-padding bg-gradient-to-br from-primary to-primary-deep">
         <div className="container-narrow text-center">
           <h2 className="text-3xl md:text-section-h2 text-white mb-4 font-bold">
             Ready to Find Your Best Rate?

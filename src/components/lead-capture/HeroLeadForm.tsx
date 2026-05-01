@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { leadSchema, type LeadData } from "@/lib/leads";
 import { captureUTMParams, getStoredUTMParams } from "@/lib/utm";
 import { Input, Select, Button } from "@/components/ui";
-import { CheckCircle } from "lucide-react";
+import { BadgeCheck, CheckCircle, Clock, Lock } from "lucide-react";
 
 const procedureOptions = [
   { value: "dental", label: "Dental" },
@@ -87,11 +87,11 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
 
   if (submitted) {
     return (
-      <div className="bg-surface rounded-card p-8 shadow-form text-center">
+      <div className="rounded-[22px] border border-primary-light/15 bg-white p-8 text-center shadow-brand-panel">
         <CheckCircle className="h-12 w-12 text-success mx-auto mb-4" />
-        <h3 className="text-xl font-bold text-text-dark mb-2">
+        <h2 className="text-xl font-bold text-text-dark mb-2">
           You&apos;re All Set!
-        </h3>
+        </h2>
         <p className="text-text-body">
           A broker will be in touch shortly with your personalised rate options.
         </p>
@@ -100,17 +100,18 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
   }
 
   return (
-    <div className="bg-surface rounded-card p-8 shadow-form">
-      <h3 className="text-xl font-bold text-text-dark mb-1">
+    <div className="rounded-[22px] border border-primary-light/15 bg-white/95 p-6 shadow-brand-panel backdrop-blur md:p-7">
+      <h2 className="text-2xl font-extrabold tracking-tight text-primary mb-1">
         Get Your Personalised Rate
-      </h3>
-      <p className="text-sm text-text-muted mb-6">
+      </h2>
+      <p className="text-sm font-medium text-primary-light mb-5">
         No impact to your credit score
       </p>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-3.5">
         <Input
           label="Full Name"
           placeholder="Your full name"
+          autoComplete="name"
           error={errors.fullName?.message}
           {...register("fullName")}
         />
@@ -118,6 +119,7 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
           label="Phone"
           placeholder="04XX XXX XXX"
           type="tel"
+          autoComplete="tel"
           error={errors.phone?.message}
           {...register("phone")}
         />
@@ -125,6 +127,7 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
           label="Email"
           placeholder="you@email.com"
           type="email"
+          autoComplete="email"
           error={errors.email?.message}
           {...register("email")}
         />
@@ -138,18 +141,31 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
         <Input
           label="Estimated Amount"
           placeholder="e.g. $10,000"
+          autoComplete="off"
+          inputMode="numeric"
           error={errors.amount?.message}
           {...register("amount")}
         />
-        <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+        <Button type="submit" className="w-full min-h-[52px] shadow-brand-soft" size="lg" disabled={isSubmitting}>
           {isSubmitting ? "Checking..." : "Check My Rate \u2192"}
         </Button>
         {submitError && (
           <p role="alert" className="text-sm text-red-500 text-center">{submitError}</p>
         )}
-        <p className="text-xs text-text-muted text-center">
-          Free quote &middot; No obligation &middot; Takes 60 seconds
-        </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 pt-1 text-xs font-medium text-text-muted">
+          <span className="inline-flex items-center gap-1.5">
+            <Lock className="h-3.5 w-3.5" aria-hidden="true" />
+            Free quote
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />
+            No obligation
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+            Takes 60 seconds
+          </span>
+        </div>
       </form>
     </div>
   );

@@ -64,7 +64,7 @@ export default function LocationPage({
       <JsonLd data={localBusinessSchema} />
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding pb-12 md:pb-section-y">
         <div className="container-narrow">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
             <div className="flex flex-col justify-center pt-2">

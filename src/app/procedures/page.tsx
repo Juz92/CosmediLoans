@@ -22,7 +22,7 @@ export default function ProceduresHubPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-br from-primary-wash to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-hero-h1 text-text-dark mb-4">
             Medical Procedure Financing

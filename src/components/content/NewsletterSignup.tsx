@@ -44,7 +44,7 @@ export function NewsletterSignup() {
 
   if (status === "success") {
     return (
-      <div className="bg-gradient-to-br from-primary-wash to-[#e0ecff] rounded-card p-8 text-center">
+      <div className="bg-gradient-to-br from-primary-wash to-primary-sky rounded-card p-8 text-center">
         <CheckCircle2 className="h-12 w-12 text-success mx-auto mb-4" />
         <h3 className="text-xl font-bold text-text-dark mb-2">You&apos;re subscribed!</h3>
         <p className="text-text-body">
@@ -55,7 +55,7 @@ export function NewsletterSignup() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-primary-wash to-[#e0ecff] rounded-card p-8">
+    <div className="bg-gradient-to-br from-primary-wash to-primary-sky rounded-card p-8">
       <div className="flex items-center gap-3 mb-3">
         <Mail className="h-6 w-6 text-primary" />
         <h3 className="text-xl font-bold text-text-dark">

@@ -104,18 +104,21 @@ export function InlineLeadForm({
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 sm:grid-cols-2">
         <Input
           placeholder="Full name"
+          autoComplete="name"
           error={errors.fullName?.message}
           {...register("fullName")}
         />
         <Input
           placeholder="04XX XXX XXX"
           type="tel"
+          autoComplete="tel"
           error={errors.phone?.message}
           {...register("phone")}
         />
         <Input
           placeholder="Email address"
           type="email"
+          autoComplete="email"
           error={errors.email?.message}
           {...register("email")}
         />
@@ -127,6 +130,8 @@ export function InlineLeadForm({
         />
         <Input
           placeholder="Estimated amount (e.g. $10,000)"
+          autoComplete="off"
+          inputMode="numeric"
           error={errors.amount?.message}
           {...register("amount")}
           className="sm:col-span-2"

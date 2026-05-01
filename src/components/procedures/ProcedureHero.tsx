@@ -34,7 +34,7 @@ export function ProcedureHero({ procedure }: ProcedureHeroProps) {
   const defaultProcedure = procedureFormMap[procedure.slug] || "other";
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary-wash to-primary-sky section-padding overflow-hidden">
       {/* Hero Background Image */}
       {procedure.heroImage && (
         <div className="absolute inset-0 z-0">
@@ -46,12 +46,12 @@ export function ProcedureHero({ procedure }: ProcedureHeroProps) {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f0f5ff]/95 via-[#e0ecff]/90 to-[#e0ecff]/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-mist/95 via-primary-sky/90 to-primary-sky/70" />
         </div>
       )}
       <div className="container-narrow relative z-10">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
-          {/* Left Column — Content */}
+          {/* Left Column, Content */}
           <div>
             <Badge className="mb-4">
               <span aria-hidden="true">{procedure.icon}</span> {procedure.title}
@@ -99,7 +99,7 @@ export function ProcedureHero({ procedure }: ProcedureHeroProps) {
             </div>
           </div>
 
-          {/* Right Column — Lead Form */}
+          {/* Right Column, Lead Form */}
           <div className="lg:sticky lg:top-24">
             <HeroLeadForm defaultProcedure={defaultProcedure} />
           </div>

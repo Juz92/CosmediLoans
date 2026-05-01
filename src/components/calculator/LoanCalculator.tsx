@@ -308,7 +308,7 @@ export function LoanCalculator() {
 
       {/* ── Right: Results Card (2 cols) ──────────────────────────── */}
       <div className="lg:col-span-2">
-        <Card className="sticky top-28 bg-gradient-to-br from-primary to-[#1e3a8a] text-white !shadow-form">
+        <Card className="sticky top-28 bg-gradient-to-br from-primary to-primary-deep text-white !shadow-form">
           <div className="space-y-6">
             <div>
               <p className="text-sm text-white/70 font-medium mb-1">

@@ -7,7 +7,7 @@ const KEY_LOCATION = `${ORIGIN}/${KEY}.txt`;
 
 /**
  * IndexNow pings Bing, Yandex, DuckDuckGo, Seznam, Naver. Google does NOT
- * participate — for Google we submit the sitemap via GSC API separately.
+ * participate, for Google we submit the sitemap via GSC API separately.
  *
  * Bing powers Microsoft Copilot + ChatGPT web search, so IndexNow is the
  * fastest path to AI-search visibility.
@@ -57,17 +57,17 @@ async function main() {
   console.log(`\nResponse ${result.status}: ${result.text || "(empty body)"}`);
 
   if (result.status === 200 || result.status === 202) {
-    console.log("\n✓ IndexNow accepted the submission.");
+    console.log("\nOK: IndexNow accepted the submission.");
     console.log(
       "  Bing/Copilot, Yandex, DuckDuckGo, Seznam, and Naver will re-crawl.",
     );
   } else if (result.status === 422) {
     console.error(
-      "\n✗ 422 — key file likely not reachable yet. Deploy first, then re-run.",
+      "\nERROR: 422, key file likely not reachable yet. Deploy first, then re-run.",
     );
     process.exit(1);
   } else {
-    console.error("\n✗ Submission rejected.");
+    console.error("\nERROR: Submission rejected.");
     process.exit(1);
   }
 }

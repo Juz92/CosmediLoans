@@ -6,12 +6,12 @@ import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "How CosmediLoans Works | 3 Easy Steps to Medical Financing",
+  title: "How It Works | 3 Easy Steps to Medical Financing",
   description:
     "Learn how CosmediLoans connects you with 20+ lenders to find the lowest medical loan rate. Simple 3-step process: enquire, compare, get funded.",
   alternates: { canonical: "/how-it-works" },
   openGraph: {
-    title: "How CosmediLoans Works | 3 Easy Steps to Medical Financing",
+    title: "How It Works | 3 Easy Steps to Medical Financing",
     description:
       "Learn how CosmediLoans connects you with 20+ lenders to find the lowest medical loan rate.",
     url: "/how-it-works",
@@ -119,7 +119,7 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">
             How CosmediLoans Works
@@ -258,7 +258,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── INLINE LEAD FORM ──────────────────────────────────────── */}
-      <section className="section-padding bg-gradient-to-br from-primary-wash to-[#e0ecff]">
+      <section className="section-padding bg-gradient-to-br from-primary-wash to-primary-sky">
         <div className="container-narrow max-w-lg">
           <div className="text-center mb-8">
             <h2 className="text-section-h2 text-text-dark mb-3">
@@ -294,7 +294,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── FINAL CTA ─────────────────────────────────────────────── */}
-      <section className="section-padding bg-gradient-to-br from-primary to-[#1e3a8a]">
+      <section className="section-padding bg-gradient-to-br from-primary to-primary-deep">
         <div className="container-narrow text-center">
           <h2 className="text-3xl md:text-section-h2 text-white mb-4 font-bold">
             Find Your Best Rate Today

@@ -37,7 +37,7 @@ export default function FAQPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">
             Frequently Asked Questions

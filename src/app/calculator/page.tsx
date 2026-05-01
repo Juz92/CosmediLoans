@@ -10,12 +10,12 @@ import { RepaymentTableSection } from "./RepaymentTableSection";
 import { absoluteUrl, BRAND } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Medical Loan Repayment Calculator | CosmediLoans",
+  title: "Medical Loan Repayment Calculator",
   description:
     "Calculate your medical loan repayments instantly. Compare rates from 5.99% across dental, IVF, cosmetic surgery loans. Free interactive calculator with full amortisation schedule.",
   alternates: { canonical: "/calculator" },
   openGraph: {
-    title: "Medical Loan Repayment Calculator | CosmediLoans",
+    title: "Medical Loan Repayment Calculator",
     description:
       "Calculate your medical loan repayments instantly. Compare rates from 5.99% across dental, IVF, cosmetic surgery loans.",
     url: "/calculator",
@@ -116,7 +116,7 @@ export default function CalculatorPage() {
       <JsonLd data={pageSchema} />
 
       {/* ── 1. HERO ───────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding pb-8 md:pb-12">
+      <section className="bg-gradient-to-br from-primary-wash to-primary-sky section-padding pb-8 md:pb-12">
         <div className="container-narrow text-center">
           <div className="inline-flex items-center gap-2 bg-white/80 px-4 py-1.5 rounded-full text-sm font-semibold text-primary mb-6">
             <Calculator className="h-4 w-4" aria-hidden="true" />
@@ -313,7 +313,7 @@ export default function CalculatorPage() {
                 know which lenders are currently offering promotional rates for
                 medical procedures, giving you access to deals you would never
                 find on your own. The best part? Broker services like
-                CosmediLoans &mdash; lenders pay the broker, not you.
+                CosmediLoans, lenders pay the broker, not you.
               </p>
             </div>
 
@@ -344,7 +344,7 @@ export default function CalculatorPage() {
                 $15,000 loan at 7.99%, choosing a 3-year term instead of a
                 7-year term saves you over $2,500 in interest. Our calculator
                 above lets you compare different terms side by side. The sweet
-                spot for most medical loans is 2&ndash;5 years &mdash; long
+                spot for most medical loans is 2&ndash;5 years, long
                 enough for manageable payments, short enough to minimise
                 interest costs. If your procedure is urgent, start with a
                 longer term and make extra repayments when you can.
@@ -405,14 +405,14 @@ export default function CalculatorPage() {
       </section>
 
       {/* ── 8. FINAL CTA ──────────────────────────────────────────── */}
-      <section className="section-padding bg-gradient-to-br from-primary to-[#1e3a8a]">
+      <section className="section-padding bg-gradient-to-br from-primary to-primary-deep">
         <div className="container-narrow text-center">
           <h2 className="text-3xl md:text-section-h2 text-white mb-4 font-bold">
             Ready to Get Your Personalised Rate?
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
             The calculator gives you an estimate. Our brokers give you a real
-            rate from 20+ lenders &mdash; in 60 seconds, with no credit
+            rate from 20+ lenders, in 60 seconds, with no credit
             impact.
           </p>
           <Button

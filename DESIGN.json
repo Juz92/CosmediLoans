@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-30T20:35:02.6840624+10:00",
+  "title": "Design System: CosmediLoans",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Deep Navy",
+        "canonical": "#0d2b5c",
+        "tonalRamp": [
+          "oklch(15% 0.08 265)",
+          "oklch(25% 0.12 265)",
+          "oklch(35% 0.16 265)",
+          "oklch(45% 0.18 265)",
+          "oklch(55% 0.16 265)",
+          "oklch(68% 0.12 265)",
+          "oklch(82% 0.07 265)",
+          "oklch(95% 0.025 265)"
+        ]
+      },
+      "primary-light": {
+        "role": "primary",
+        "displayName": "Ocean Teal",
+        "canonical": "#0e9fb2",
+        "tonalRamp": [
+          "oklch(18% 0.08 255)",
+          "oklch(28% 0.11 255)",
+          "oklch(40% 0.15 255)",
+          "oklch(54% 0.18 255)",
+          "oklch(66% 0.16 255)",
+          "oklch(76% 0.11 255)",
+          "oklch(87% 0.06 255)",
+          "oklch(96% 0.025 255)"
+        ]
+      },
+      "primary-wash": {
+        "role": "primary",
+        "displayName": "Sky Mist",
+        "canonical": "#eaf7fb",
+        "tonalRamp": [
+          "oklch(18% 0.03 255)",
+          "oklch(30% 0.04 255)",
+          "oklch(45% 0.045 255)",
+          "oklch(60% 0.04 255)",
+          "oklch(74% 0.035 255)",
+          "oklch(84% 0.03 255)",
+          "oklch(92% 0.022 255)",
+          "oklch(97% 0.012 255)"
+        ]
+      },
+      "primary-deep": {
+        "role": "primary",
+        "displayName": "Deep Approval Blue",
+        "canonical": "#1e3a8a",
+        "tonalRamp": [
+          "oklch(14% 0.08 265)",
+          "oklch(22% 0.11 265)",
+          "oklch(31% 0.14 265)",
+          "oklch(42% 0.16 265)",
+          "oklch(55% 0.14 265)",
+          "oklch(69% 0.1 265)",
+          "oklch(84% 0.055 265)",
+          "oklch(95% 0.02 265)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#64748b",
+          "#64748b",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#ffffff"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Cool Page Background",
+        "canonical": "#f8fafc",
+        "tonalRamp": [
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#64748b",
+          "#64748b",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#f8fafc"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Slate Border",
+        "canonical": "#e2e8f0",
+        "tonalRamp": [
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#64748b",
+          "#64748b",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#f8fafc"
+        ]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "Approval Green",
+        "canonical": "#22c55e",
+        "tonalRamp": [
+          "oklch(18% 0.07 145)",
+          "oklch(28% 0.1 145)",
+          "oklch(40% 0.13 145)",
+          "oklch(52% 0.15 145)",
+          "oklch(64% 0.14 145)",
+          "oklch(76% 0.1 145)",
+          "oklch(88% 0.055 145)",
+          "oklch(96% 0.025 145)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero Display",
+        "purpose": "First-screen promises and major SEO landing page headings."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Section headers and final CTA copy."
+      },
+      "title": {
+        "displayName": "Card Title",
+        "purpose": "Card titles, compact headers, and form titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanatory content, FAQ answers, and SEO body copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, badges, filters, and compact controls."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 4px 24px rgba(0,0,0,0.06)",
+        "purpose": "Standard lift for cards and procedure tiles."
+      },
+      {
+        "name": "form",
+        "value": "0 8px 32px rgba(0,0,0,0.08)",
+        "purpose": "Lead forms and high-conversion panels."
+      },
+      {
+        "name": "hover",
+        "value": "0 8px 24px rgba(30,64,175,0.1)",
+        "purpose": "Interactive card hover lift."
+      },
+      {
+        "name": "dropdown",
+        "value": "0 8px 32px rgba(0,0,0,0.12)",
+        "purpose": "Navigation dropdowns and floating menus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "200ms ease-out",
+        "purpose": "Button, nav, field, and card state changes."
+      },
+      {
+        "name": "slide-up",
+        "value": "300ms ease-out",
+        "purpose": "Scroll CTA entrance and mobile affordance motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action button for rate checks, form submission, and high-value CTAs.",
+      "html": "<button class=\"ds-btn-primary\">Check My Rate</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: #1e40af; color: #ffffff; padding: 12px 24px; font-family: Inter, system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: background-color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out; cursor: pointer; } .ds-btn-primary:hover { background: rgba(30,64,175,0.9); } .ds-btn-primary:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Reversed action button for blue CTA panels and lower-pressure actions.",
+      "html": "<button class=\"ds-btn-secondary\">Get This Rate</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; color: #1e40af; padding: 12px 24px; font-family: Inter, system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; transition: background-color 200ms ease-out, border-color 200ms ease-out, transform 200ms ease-out; cursor: pointer; } .ds-btn-secondary:hover { background: #eff6ff; } .ds-btn-secondary:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; } .ds-btn-secondary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Trust Badge",
+      "kind": "chip",
+      "refersTo": "badge-trust",
+      "description": "Compact reassurance chip used above hero copy and conversion sections.",
+      "html": "<span class=\"ds-badge-trust\">Trusted by Australian Patients</span>",
+      "css": ".ds-badge-trust { display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; background: #eff6ff; color: #1e40af; padding: 6px 16px; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 600; line-height: 1.5; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field-standard",
+      "description": "Labeled form field used by the lead form and calculator inputs.",
+      "html": "<label class=\"ds-field\"><span>Full Name</span><input placeholder=\"Your full name\" /></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font-family: Inter, system-ui, sans-serif; } .ds-field span { color: #0f172a; font-size: 14px; font-weight: 600; line-height: 1.5; } .ds-field input { width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc; color: #0f172a; padding: 12px 16px; font-size: 16px; line-height: 1.5; transition: border-color 200ms ease-out, box-shadow 200ms ease-out; } .ds-field input::placeholder { color: #64748b; } .ds-field input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.1); }"
+    },
+    {
+      "name": "Standard Card",
+      "kind": "card",
+      "refersTo": "card-standard",
+      "description": "The base white content surface for benefits, repayment examples, and trust blocks.",
+      "html": "<article class=\"ds-card\"><h3>Broker-Matched, Not Bank-Locked</h3><p>Compare 20+ lenders for your specific situation.</p></article>",
+      "css": ".ds-card { background: #ffffff; border-radius: 16px; padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); font-family: Inter, system-ui, sans-serif; color: #475569; } .ds-card h3 { margin: 0 0 4px; color: #0f172a; font-size: 16px; font-weight: 600; line-height: 1.4; } .ds-card p { margin: 0; font-size: 14px; line-height: 1.6; }"
+    },
+    {
+      "name": "Procedure Card",
+      "kind": "card",
+      "refersTo": "card-standard",
+      "description": "Browsable procedure tile with icon, cost range, rate line, and arrow affordance.",
+      "html": "<a class=\"ds-procedure-card\" href=\"#\"><span class=\"ds-procedure-icon\">+</span><h3>Dental Loans</h3><p>$2,000 to $50,000</p><strong>From 6.99% p.a.</strong></a>",
+      "css": ".ds-procedure-card { display: flex; min-height: 180px; flex-direction: column; text-decoration: none; background: #ffffff; border-radius: 16px; padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); font-family: Inter, system-ui, sans-serif; transition: transform 200ms ease-out, box-shadow 200ms ease-out; } .ds-procedure-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,64,175,0.1); } .ds-procedure-card:focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; } .ds-procedure-icon { color: #1e40af; font-size: 30px; line-height: 1; margin-bottom: 12px; } .ds-procedure-card h3 { margin: 0 0 4px; color: #0f172a; font-size: 16px; font-weight: 600; line-height: 1.4; } .ds-procedure-card p { margin: 0 0 12px; color: #64748b; font-size: 14px; line-height: 1.5; } .ds-procedure-card strong { margin-top: auto; color: #1e40af; font-size: 12px; font-weight: 700; line-height: 1.5; }"
+    },
+    {
+      "name": "Lead Form Shell",
+      "kind": "custom",
+      "refersTo": "card-standard",
+      "description": "Primary conversion container for the five-field rate check flow.",
+      "html": "<section class=\"ds-lead-form\"><h3>Get Your Personalised Rate</h3><p>No impact to your credit score</p><button>Check My Rate</button></section>",
+      "css": ".ds-lead-form { width: 100%; max-width: 448px; background: #ffffff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); font-family: Inter, system-ui, sans-serif; } .ds-lead-form h3 { margin: 0 0 4px; color: #0f172a; font-size: 20px; font-weight: 700; line-height: 1.3; } .ds-lead-form p { margin: 0 0 24px; color: #64748b; font-size: 14px; line-height: 1.5; } .ds-lead-form button { width: 100%; border: 0; border-radius: 8px; background: #1e40af; color: #ffffff; padding: 16px 32px; font-size: 18px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease-out; } .ds-lead-form button:hover { background: rgba(30,64,175,0.9); } .ds-lead-form button:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Calculator Result Card",
+      "kind": "custom",
+      "refersTo": "card-standard",
+      "description": "High-confidence financial summary surface for monthly repayment and totals.",
+      "html": "<aside class=\"ds-result-card\"><span>Estimated Monthly Repayment</span><strong>$297.00</strong><p>per month</p></aside>",
+      "css": ".ds-result-card { background: linear-gradient(135deg, #1e40af, #1e3a8a); border-radius: 16px; padding: 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); color: #ffffff; font-family: Inter, system-ui, sans-serif; } .ds-result-card span { display: block; color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500; line-height: 1.5; margin-bottom: 4px; } .ds-result-card strong { display: block; color: #ffffff; font-size: 48px; font-weight: 700; line-height: 1; letter-spacing: -0.5px; } .ds-result-card p { margin: 4px 0 0; color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.5; }"
+    },
+    {
+      "name": "Sticky Mobile CTA",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Fixed bottom conversion strip on mobile with one full-width action.",
+      "html": "<div class=\"ds-sticky-cta\"><button>Get Your Rate</button></div>",
+      "css": ".ds-sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #ffffff; border-top: 1px solid #e2e8f0; box-shadow: 0 -4px 12px rgba(0,0,0,0.08); padding: 12px 16px; } .ds-sticky-cta button { width: 100%; min-height: 44px; border: 0; border-radius: 8px; background: #1e40af; color: #ffffff; font-family: Inter, system-ui, sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease-out; } .ds-sticky-cta button:hover { background: rgba(30,64,175,0.9); } .ds-sticky-cta button:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clear Funding Desk",
+    "overview": "CosmediLoans is a clinical-financial brand surface: serious enough for regulated lending context, warm enough for sensitive treatment decisions, and direct enough to convert. The current system uses a restrained blue trust palette, Inter typography, rounded white cards, and soft shadows to make medical financing feel orderly rather than intimidating.\n\nThe site is built as a conversion and SEO machine, so the design must keep trust and action close together. Forms, calculators, procedure cards, comparison pages, and FAQ content should feel like one coherent desk where a patient can understand cost, compare options, and take the next step without pressure.\n\nThe system explicitly rejects the anti-references in PRODUCT.md: cold bank site, payday-loan or BNPL gimmick, crypto or neon fintech dashboard, generic medical clinic, generic SaaS landing-page cliches, dark-mode finance tropes, purple gradients, over-polished stock imagery, fear-based urgency, and anything that makes sensitive medical procedures feel transactional or exploitative.",
+    "keyCharacteristics": [
+      "Restrained blue and cool neutral palette, with green reserved for approval and confidence.",
+      "Rounded, well-lit surfaces that make forms and financial content feel manageable.",
+      "Dense but plain-language trust signals: 20+ lenders, soft credit check, no patient fee, Australia-wide.",
+      "Conversion-first layout that still gives medical topics room to breathe."
+    ],
+    "rules": [
+      {
+        "name": "The Blue Is Proof Rule",
+        "body": "Primary blue should signal trust, comparison, or action. Do not use it as decoration where it does not clarify a decision.",
+        "section": "colors"
+      },
+      {
+        "name": "The Green Has To Earn It Rule",
+        "body": "Green is reserved for positive financial or process states. Do not use it for generic decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Neon Rule",
+        "body": "Purple gradients, neon accents, and crypto-dashboard colors are prohibited.",
+        "section": "colors"
+      },
+      {
+        "name": "The Plain-English Rate Rule",
+        "body": "Financial values can be large and bold, but the supporting copy must explain them in direct language.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Decorative Type Rule",
+        "body": "Do not add serif, script, mono, or novelty fonts unless the brand direction is deliberately changed. The current system gets its authority from clarity.",
+        "section": "typography"
+      },
+      {
+        "name": "The Trust Before Drama Rule",
+        "body": "Shadows support scanability and touch affordance. They must never make the page feel like a glossy loan app.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Lift Means Action Rule",
+        "body": "Static content can be flat. Lifted surfaces should contain a form, link, comparison, calculator, or CTA.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep Broker Blue tied to trust, lender comparison, form action, or active navigation.",
+      "Do keep forms visually calm: labeled fields, clear helper text, visible errors, and one obvious CTA.",
+      "Do use real medical-financing proof points near conversion moments: 20+ lenders, soft credit check, no patient fee, Australia-wide context.",
+      "Do preserve WCAG 2.2 AA contrast, visible keyboard focus, and 44px mobile touch targets.",
+      "Do use imagery that feels helpful and human, especially for procedures and process explanations."
+    ],
+    "donts": [
+      "Don't make CosmediLoans feel like a cold bank site.",
+      "Don't make it feel like a payday-loan or BNPL gimmick.",
+      "Don't use crypto or neon fintech dashboard styling.",
+      "Don't make it feel like a generic medical clinic.",
+      "Don't rely on generic SaaS landing-page cliches, identical icon-card grids, or oversized hero-metric templates.",
+      "Don't introduce dark-mode finance tropes, purple gradients, glassmorphism, or gradient text.",
+      "Don't use over-polished stock imagery that makes sensitive medical procedures feel transactional or exploitative.",
+      "Don't use fear-based urgency, scarcity pressure, or shame-driven medical copy.",
+      "Don't use side-stripe borders as card accents."
+    ]
+  }
+}

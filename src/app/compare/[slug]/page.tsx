@@ -288,7 +288,7 @@ export default function ComparisonPage({
           </h2>
           <p className="text-lg text-white/90 mb-8">
             Stop comparing and start saving. Our brokers shop 20+ lenders in 60
-            seconds &mdash; free, no credit impact, no obligation.
+            seconds, free, no credit impact, no obligation.
           </p>
           <Link href="/apply">
             <Button

@@ -7,11 +7,13 @@ import {
   procedures,
 } from "@/data/procedures";
 import { calculateRepayment } from "@/lib/calculator";
+import { getProcedureCopy } from "@/lib/procedure-copy";
 import { absoluteUrl, BRAND, LAST_REVIEWED } from "@/lib/site";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { LastReviewed } from "@/components/seo/LastReviewed";
 import { AEODefinitionBlock } from "@/components/seo/AEODefinitionBlock";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { QuickAnswer } from "@/components/seo/QuickAnswer";
 import { ProcedureHero } from "@/components/procedures/ProcedureHero";
 import { ProcedureCostTable } from "@/components/procedures/ProcedureCostTable";
 import { ProcedureFAQ } from "@/components/procedures/ProcedureFAQ";
@@ -69,6 +71,8 @@ export default function ProcedurePage({
 }) {
   const procedure = getProcedureBySlug(params.slug);
   if (!procedure) notFound();
+
+  const copy = getProcedureCopy(procedure);
 
   // Pre-calculate repayment examples
   const repaymentResults = procedure.repaymentExamples.map((ex) => ({
@@ -150,15 +154,15 @@ export default function ProcedurePage({
         <LastReviewed />
       </div>
 
-      {/* ── 2. AEO Definition Block (self-contained, extractable) ── */}
-      <AEODefinitionBlock procedure={procedure} />
-
-      {/* ── 3. Procedure Hero ── */}
+      {/* ── 2. Procedure Hero ── */}
       <ProcedureHero procedure={procedure} />
+
+      {/* ── 3. AEO Definition Block (self-contained, extractable) ── */}
+      <AEODefinitionBlock procedure={procedure} />
 
       {/* ── 3. Cost Table ── */}
       <ProcedureCostTable
-        procedureTitle={procedure.title}
+        costHeading={copy.costHeading}
         costTable={procedure.costTable}
       />
 
@@ -166,13 +170,13 @@ export default function ProcedurePage({
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <h2 className="text-section-h2 text-text-dark mb-3 text-center">
-            {procedure.title} Financing Options
+            {copy.financingTitle} Options
           </h2>
           <p className="text-body text-text-body mb-10 text-center max-w-2xl mx-auto">
-            Compare the most popular ways to finance your {procedure.title.toLowerCase()} in Australia.
+            Compare the most popular ways to finance {copy.treatment} in Australia.
           </p>
           <div className="grid gap-6 md:grid-cols-3">
-            {/* Medical Loan — Recommended */}
+            {/* Medical Loan, Recommended */}
             <Card className="relative border-2 border-primary">
               <Badge className="absolute -top-3 left-6" variant="default">
                 <Star className="h-3 w-3" /> Recommended
@@ -268,24 +272,23 @@ export default function ProcedurePage({
       </section>
 
       {/* ── 5. Featured Snippet Box ── */}
-      <section className="section-padding bg-surface">
-        <div className="container-narrow max-w-3xl">
-          <div className="bg-primary-wash border border-primary/10 rounded-card p-6 md:p-8">
-            <h2 className="text-xl font-bold text-text-dark mb-3">
-              {procedure.title} Financing in Australia — Quick Answer
-            </h2>
-            <p className="text-body text-text-body leading-relaxed">
-              {procedure.financingDescription}
-            </p>
-          </div>
-        </div>
-      </section>
+      <QuickAnswer
+        title={`${copy.financingTitle} in Australia`}
+        facts={[
+          { label: "Best fit", value: "Broker-matched loan" },
+          { label: "Clinic choice", value: "Use your provider" },
+          { label: "Repayments", value: "Fixed term" },
+        ]}
+        variant="wash"
+      >
+        <p>{procedure.financingDescription}</p>
+      </QuickAnswer>
 
       {/* ── 6. Repayment Examples ── */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <h2 className="text-section-h2 text-text-dark mb-3 text-center">
-            {procedure.title} Repayment Examples
+            {copy.financingTitle} Repayment Examples
           </h2>
           <p className="text-body text-text-body mb-10 text-center max-w-2xl mx-auto">
             See what your repayments could look like at different loan amounts and terms.
@@ -336,11 +339,11 @@ export default function ProcedurePage({
         <div className="container-narrow">
           <div className="text-center mb-12">
             <h2 className="text-section-h2 text-text-dark mb-4">
-              How {procedure.title} Financing Works
+              How {copy.financingTitle} Works
             </h2>
             <p className="text-body text-text-body max-w-2xl mx-auto">
               From enquiry to funded in as little as 24 hours. Our streamlined process
-              makes financing your {procedure.title.toLowerCase()} simple.
+              makes financing {copy.treatment} simple.
             </p>
           </div>
           <div className="relative grid gap-8 md:grid-cols-3 md:gap-6">
@@ -353,17 +356,17 @@ export default function ProcedurePage({
               {
                 num: "1",
                 title: "Tell Us What You Need",
-                desc: `Fill out our 60-second form with your ${procedure.title.toLowerCase()} details and estimated amount. No credit impact.`,
+                desc: `Fill out our 60-second form with details about ${copy.treatment} and the estimated amount. No credit impact.`,
               },
               {
                 num: "2",
                 title: "We Shop 20+ Lenders",
-                desc: `Your dedicated broker compares rates across our network to find the best ${procedure.title.toLowerCase()} financing deal.`,
+                desc: `Your dedicated broker compares rates across our network to find a competitive financing option for ${copy.treatment}.`,
               },
               {
                 num: "3",
                 title: "Get Funded & Book In",
-                desc: `Accept your personalised offer, receive funds (often same-day), and book your ${procedure.title.toLowerCase()}.`,
+                desc: "Accept your personalised offer, receive funds (often same-day), and book your procedure.",
               },
             ].map((step) => (
               <div
@@ -389,7 +392,7 @@ export default function ProcedurePage({
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <h2 className="text-section-h2 text-text-dark mb-3 text-center">
-            Why Finance Your {procedure.title} With CosmediLoans
+            Why Finance {copy.ctaSubject} With CosmediLoans
           </h2>
           <p className="text-body text-text-body mb-10 text-center max-w-2xl mx-auto">
             We specialise in medical procedure financing and work with you every step
@@ -418,6 +421,8 @@ export default function ProcedurePage({
       {/* ── 9. Procedure FAQ ── */}
       <ProcedureFAQ
         procedureTitle={procedure.title}
+        financingTitle={copy.financingTitle}
+        treatment={copy.treatment}
         faqs={procedure.faqs}
       />
 
@@ -451,7 +456,7 @@ export default function ProcedurePage({
       <section className="bg-gradient-to-r from-primary to-primary-light section-padding">
         <div className="container-narrow text-center max-w-2xl">
           <h2 className="text-section-h2 text-white mb-4">
-            Ready to Finance Your {procedure.title}?
+            Ready to Finance {copy.ctaSubject}?
           </h2>
           <p className="text-lg text-white/90 mb-8">
             Get a personalised rate from 20+ lenders in 60 seconds. No credit
@@ -460,7 +465,7 @@ export default function ProcedurePage({
           <div className="max-w-lg mx-auto">
             <InlineLeadForm
               defaultProcedure={defaultProcedure}
-              heading={`Get Your ${procedure.title} Quote`}
+              heading={`Get Your ${copy.financingTitle} Quote`}
             />
           </div>
         </div>

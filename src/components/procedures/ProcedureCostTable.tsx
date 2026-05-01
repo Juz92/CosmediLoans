@@ -1,16 +1,16 @@
 import type { CostRow } from "@/data/procedures";
 
 interface ProcedureCostTableProps {
-  procedureTitle: string;
+  costHeading: string;
   costTable: CostRow[];
 }
 
-export function ProcedureCostTable({ procedureTitle, costTable }: ProcedureCostTableProps) {
+export function ProcedureCostTable({ costHeading, costTable }: ProcedureCostTableProps) {
   return (
     <section className="section-padding bg-surface">
       <div className="container-narrow">
         <h2 className="text-section-h2 text-text-dark mb-3">
-          How Much Does {procedureTitle} Cost in Australia?
+          {costHeading}
         </h2>
         <p className="text-body text-text-body mb-8 max-w-2xl">
           Costs vary depending on complexity, location, and provider. Here are typical

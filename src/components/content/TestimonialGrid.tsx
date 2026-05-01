@@ -8,7 +8,7 @@ const testimonials = [
     name: "Sarah M.",
     procedure: "Dental Implants",
     rating: 5,
-    avatar: "/Images/Sarah M. — Dental Implants.png",
+    avatar: "/Images/Dental.png",
     quote:
       "I'd been putting off my dental implants for two years because I thought I couldn't afford them. CosmediLoans connected me with a broker who found a repayment plan that actually fit my budget. Booked within the week.",
   },
@@ -16,7 +16,7 @@ const testimonials = [
     name: "James T.",
     procedure: "IVF Treatment",
     rating: 5,
-    avatar: "/Images/James T. — IVF Treatment.png",
+    avatar: "/Images/IVF & Fertility.png",
     quote:
       "Financing IVF felt overwhelming until we spoke with CosmediLoans. Our broker explained every option and secured a rate that made our next cycle affordable.",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     name: "Michelle L.",
     procedure: "Breast Augmentation",
     rating: 5,
-    avatar: "/Images/Michelle L. — Breast Augmentation.png",
+    avatar: "/Images/Breast Augmentation.png",
     quote:
       "No credit impact, no obligation, and genuinely the lowest rate I found anywhere. My broker was professional and made the entire experience stress-free.",
   },
@@ -32,7 +32,7 @@ const testimonials = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex gap-0.5" role="img" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}

@@ -10,9 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1e40af",
-          light: "#3b82f6",
-          wash: "#eff6ff",
+          DEFAULT: "#0d2b5c",
+          light: "#087f8f",
+          wash: "#eaf7fb",
+          hero: "#f7fdff",
+          mist: "#f0f5ff",
+          sky: "#e0ecff",
+          ice: "#e8f0ff",
+          deep: "#1e3a8a",
         },
         surface: "#ffffff",
         background: "#f8fafc",
@@ -21,7 +26,7 @@ const config: Config = {
         text: {
           dark: "#0f172a",
           body: "#475569",
-          muted: "#94a3b8",
+          muted: "#64748b",
         },
       },
       fontFamily: {
@@ -38,6 +43,11 @@ const config: Config = {
         card: "0 4px 24px rgba(0,0,0,0.06)",
         form: "0 8px 32px rgba(0,0,0,0.08)",
         hover: "0 8px 24px rgba(30,64,175,0.1)",
+        "brand-soft": "0 18px 42px -30px rgba(13,43,92,0.72)",
+        "brand-panel": "0 24px 60px -38px rgba(13,43,92,0.76)",
+      },
+      backgroundImage: {
+        "hero-surface": "linear-gradient(180deg, #f7fdff 0%, #ffffff 72%, #f8fafc 100%)",
       },
       borderRadius: {
         card: "16px",

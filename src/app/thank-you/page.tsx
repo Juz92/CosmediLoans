@@ -5,7 +5,7 @@ import { Card } from "@/components/ui";
 import { ConversionPixel } from "./ConversionPixel";
 
 export const metadata: Metadata = {
-  title: "Thank You | CosmediLoans",
+  title: "Thank You",
   description:
     "Your enquiry has been received. A specialist broker will contact you shortly with personalised rate options.",
   robots: { index: false },
@@ -29,7 +29,7 @@ const nextSteps = [
     icon: CalendarCheck,
     title: "Choose & Get Funded",
     description:
-      "Review your personalised offers, choose the one that suits you best, and receive funds — often within 1-3 business days.",
+      "Review your personalised offers, choose the one that suits you best, and receive funds, often within 1-3 business days.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function ThankYouPage() {
       <ConversionPixel />
 
       {/* ── CONFIRMATION ──────────────────────────────────────────── */}
-      <section className="section-padding bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff]">
+      <section className="section-padding bg-gradient-to-b from-primary-mist to-primary-sky">
         <div className="container-narrow max-w-2xl text-center">
           <div className="flex justify-center mb-6">
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-success/10">

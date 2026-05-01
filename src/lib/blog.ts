@@ -10,7 +10,7 @@ export interface BlogPost {
   readTime: number;
   image?: string;
   content: string;
-  /** Optional author slug — defaults to the house author if omitted. */
+  /** Optional author slug, defaults to the house author if omitted. */
   author?: string;
 }
 

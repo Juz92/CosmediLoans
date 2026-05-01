@@ -7,7 +7,7 @@ import { Input, Button } from "@/components/ui";
 
 /* ── Metadata is exported from a separate file for client components ─ */
 // For client components, we set metadata via a parallel route or head.tsx
-// In this case we use generateMetadata in a wrapper — but the simplest
+// In this case we use generateMetadata in a wrapper, but the simplest
 // Next.js 14 pattern is to keep this as a server component with a client child.
 // We will restructure below.
 
@@ -51,7 +51,7 @@ function ContactPageInner() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">
             Get in Touch
@@ -67,7 +67,7 @@ function ContactPageInner() {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* Left — Contact Form */}
+            {/* Left, Contact Form */}
             <div>
               <h2 className="text-2xl font-bold text-text-dark mb-6">
                 Send Us a Message
@@ -92,6 +92,7 @@ function ContactPageInner() {
                     label="Full Name"
                     placeholder="Your full name"
                     required
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) =>
                       setFormData((p) => ({ ...p, name: e.target.value }))
@@ -102,6 +103,7 @@ function ContactPageInner() {
                     placeholder="you@email.com"
                     type="email"
                     required
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData((p) => ({ ...p, email: e.target.value }))
@@ -111,6 +113,7 @@ function ContactPageInner() {
                     label="Phone"
                     placeholder="04XX XXX XXX"
                     type="tel"
+                    autoComplete="tel"
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData((p) => ({ ...p, phone: e.target.value }))
@@ -128,6 +131,7 @@ function ContactPageInner() {
                       rows={5}
                       required
                       placeholder="How can we help you?"
+                      autoComplete="off"
                       className="w-full px-4 py-3 border border-border rounded-button bg-background text-text-dark placeholder:text-text-muted focus:outline-none focus:border-primary-light focus:ring-2 focus:ring-primary-light/10 transition-all resize-y"
                       value={formData.message}
                       onChange={(e) =>
@@ -145,7 +149,7 @@ function ContactPageInner() {
               )}
             </div>
 
-            {/* Right — Contact Details */}
+            {/* Right, Contact Details */}
             <div>
               <h2 className="text-2xl font-bold text-text-dark mb-6">
                 Contact Details

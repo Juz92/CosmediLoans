@@ -53,7 +53,7 @@ export function ScrollCTA() {
       <div role="complementary" aria-live="polite" className="bg-primary text-white px-6 py-4 shadow-[0_-4px_16px_rgba(0,0,0,0.15)]">
         <div className="container-narrow flex items-center justify-between gap-4">
           <p className="text-sm font-medium">
-            Still researching? Get a free rate check &mdash; no commitment.
+            Still researching? Get a free rate check, no commitment.
           </p>
           <div className="flex items-center gap-3 shrink-0">
             <Button

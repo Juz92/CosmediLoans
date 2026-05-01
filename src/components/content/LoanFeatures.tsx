@@ -10,7 +10,7 @@ const featureRows: { label: string; value: string | true }[] = [
   { label: "Loan terms", value: "1 to 7 years" },
   { label: "Repayments weekly, fortnightly or monthly", value: true },
   { label: "Additional repayments allowed", value: true },
-  { label: "Online application — no paperwork", value: true },
+  { label: "Online application, no paperwork", value: true },
   { label: "No credit impact to check your rate", value: true },
 ];
 
@@ -63,19 +63,19 @@ function FeeRow({ label, value }: { label: string; value: string }) {
 
 export function LoanFeatures() {
   return (
-    <section className="section-padding bg-gradient-to-b from-[#f0f5ff] to-[#e8f0ff]">
+    <section className="section-padding bg-gradient-to-b from-primary-mist to-primary-ice">
       <div className="container-narrow">
         <div className="text-center mb-12">
           <h2 className="text-section-h2 text-text-dark mb-4">
             Easy to understand features,<br className="hidden sm:block" /> variables and fees
           </h2>
           <p className="text-body text-text-body max-w-2xl mx-auto">
-            We compare 20+ lenders so you get the best deal — here&apos;s what you can expect across our network.
+            We compare 20+ lenders so you get the best deal, here&apos;s what you can expect across our network.
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* Left column — Features */}
+          {/* Left column, Features */}
           <div>
             <h3 className="text-base font-bold text-primary mb-1">Features</h3>
             <div>
@@ -85,7 +85,7 @@ export function LoanFeatures() {
             </div>
           </div>
 
-          {/* Right column — Purpose + Fees */}
+          {/* Right column, Purpose + Fees */}
           <div className="space-y-10">
             <div>
               <h3 className="text-base font-bold text-primary mb-1">Accepted Purpose</h3>

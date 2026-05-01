@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ShieldCheck, Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
-import { Badge, Card, Button } from "@/components/ui";
-import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
-import { TrustBar } from "@/components/content/TrustBar";
+import { Heart, Stethoscope, Clock, DollarSign, ArrowRight } from "lucide-react";
+import { Card } from "@/components/ui";
+import { HomeHero } from "@/components/content/HomeHero";
 import { HowItWorks } from "@/components/content/HowItWorks";
 import { PartnerLogos } from "@/components/content/PartnerLogos";
+import { ProcessVideo } from "@/components/content/ProcessVideo";
 import { ProcedureCard } from "@/components/procedures/ProcedureCard";
 import { ProcedureBrowseDropdown } from "@/components/procedures/ProcedureBrowseDropdown";
 import { TestimonialGrid } from "@/components/content/TestimonialGrid";
@@ -13,6 +13,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { StickyMobileCTA } from "@/components/lead-capture/StickyMobileCTA";
 import { ScrollCTA } from "@/components/lead-capture/ScrollCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { QuickAnswer } from "@/components/seo/QuickAnswer";
 import { LoanFeatures } from "@/components/content/LoanFeatures";
 import { procedures } from "@/data/procedures";
 import { absoluteUrl, BRAND, SITE_ORIGIN } from "@/lib/site";
@@ -177,82 +178,36 @@ export default function Home() {
       />
 
       {/* ── HERO SECTION ──────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding pb-12 md:pb-section-y">
-        <div className="container-narrow">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
-            <div className="flex flex-col justify-center pt-2">
-              <Badge className="mb-6 self-start">
-                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-                Trusted by Australian Patients
-              </Badge>
-              <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-5 leading-tight">
-                Finance Any Medical Procedure.{" "}
-                <span className="text-primary">Find Your Lowest Rate.</span>
-              </h1>
-              <p className="text-body text-text-body mb-8 max-w-lg">
-                Compare rates from 20+ lenders in 60 seconds. Our expert brokers
-                find you the best deal for dental, IVF, cosmetic surgery, and
-                more &mdash; so you can book your procedure with confidence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <div className="flex items-center gap-2 text-sm text-text-body">
-                  <ShieldCheck className="h-5 w-5 text-success shrink-0" aria-hidden="true" />
-                  <span>No credit impact</span>
-                </div>
-              </div>
-              <div className="rounded-xl overflow-hidden shadow-card">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  poster="/videos/hero-poster.jpg"
-                  className="w-full h-auto block"
-                >
-                  <source src="/videos/hero-scroll.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-            <div className="lg:max-w-md lg:ml-auto">
-              <HeroLeadForm />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
-      {/* ── AEO DEFINITION BLOCK — extractable by AI search ──────── */}
-      <section aria-labelledby="what-is-cosmediloans" className="bg-surface border-b border-border">
-        <div className="container-narrow py-6 md:py-8">
-          <div className="max-w-3xl">
-            <h2
-              id="what-is-cosmediloans"
-              className="text-sm font-semibold uppercase tracking-wide text-primary mb-2"
-            >
-              What is CosmediLoans?
-            </h2>
-            <p className="text-body text-text-body leading-relaxed">
-              CosmediLoans is an Australian broker-matching service that
-              compares medical procedure loans from 20+ licensed lenders for
-              dental, IVF, cosmetic surgery, orthopaedic, veterinary and any
-              elective medical treatment. Patients can borrow $2,000 – $100,000
-              over terms of up to 7 years at rates from 6.99% p.a., with a
-              single soft-credit inquiry that does not affect credit score.
-              Pre-approval decisions typically return within hours. The service
-              is free to patients — brokers are paid by lenders on settlement,
-              and all brokers on the panel hold Australian Credit Licences
-              under the National Consumer Credit Protection Act 2009 and are
-              members of the Australian Financial Complaints Authority.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TRUST BAR ─────────────────────────────────────────────── */}
-      <TrustBar />
+      {/* ── AEO DEFINITION BLOCK, extractable by AI search ──────── */}
+      <QuickAnswer
+        id="what-is-cosmediloans"
+        title="What is CosmediLoans?"
+        facts={[
+          { label: "Service", value: "Broker matching" },
+          { label: "Panel", value: "20+ lenders" },
+          { label: "Credit check", value: "Soft inquiry" },
+        ]}
+      >
+        <p>
+          CosmediLoans is an Australian broker-matching service that compares
+          medical procedure loans from 20+ licensed lenders for dental, IVF,
+          cosmetic surgery, orthopaedic, veterinary, and elective medical
+          treatment. Patients can borrow $2,000 to $100,000 over terms of up to
+          7 years at rates from 6.99% p.a., with a single soft-credit inquiry
+          that does not affect credit score. The service is free to patients:
+          brokers are paid by lenders on settlement, and brokers on the panel
+          hold Australian Credit Licences under the National Consumer Credit
+          Protection Act 2009.
+        </p>
+      </QuickAnswer>
 
       {/* ── PARTNER LOGOS ─────────────────────────────────────────── */}
       <PartnerLogos />
+
+      {/* ── RATE CHECK VIDEO ──────────────────────────────────────── */}
+      <ProcessVideo />
 
       {/* ── HOW IT WORKS ──────────────────────────────────────────── */}
       <HowItWorks />
@@ -285,7 +240,7 @@ export default function Home() {
           <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/procedures"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+              className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
             >
               Don&apos;t see your procedure? We finance all medical treatments
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -345,7 +300,7 @@ export default function Home() {
             </h2>
             <p className="text-body text-text-body max-w-2xl mx-auto">
               See what your repayments could look like. Rates vary by lender and
-              credit profile &mdash; use our{" "}
+              credit profile, use our{" "}
               <Link
                 href="/calculator"
                 className="text-primary font-semibold hover:underline"
@@ -399,22 +354,6 @@ export default function Home() {
             </p>
           </div>
           <FAQAccordion items={faqItems} />
-        </div>
-      </section>
-
-      {/* ── FINAL CTA ─────────────────────────────────────────────── */}
-      <section className="section-padding bg-gradient-to-br from-primary to-[#1e3a8a]">
-        <div className="container-narrow text-center">
-          <h2 className="text-3xl md:text-section-h2 text-white mb-4 font-bold">
-            Ready to Find Your Best Rate?
-          </h2>
-          <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
-            Join thousands of Australians who&apos;ve financed their medical
-            procedures with confidence. Fast approvals, no credit impact.
-          </p>
-          <Button as={Link} href="/apply" size="lg" variant="secondary" className="bg-white text-primary hover:bg-primary-wash">
-            Get Your Personalised Rate &rarr;
-          </Button>
         </div>
       </section>
 

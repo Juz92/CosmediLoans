@@ -32,7 +32,7 @@ const helpfulLinks = [
 export default function NotFound() {
   return (
     <>
-      <section className="section-padding bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] min-h-[50vh] flex items-center">
+      <section className="section-padding bg-gradient-to-b from-primary-mist to-primary-sky min-h-[50vh] flex items-center">
         <div className="container-narrow text-center">
           <p className="text-6xl font-bold text-primary mb-4">404</p>
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">

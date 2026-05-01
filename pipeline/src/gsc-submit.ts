@@ -15,9 +15,13 @@ const TOP_PAGES = [
   "/procedures/ivf-financing",
   "/procedures/hair-transplant-loans",
   "/procedures/vet-bill-loans",
-  "/procedures/cosmetic-surgery-finance-australia",
   "/calculator",
   "/compare/cosmediloans-vs-afterpay",
+  "/locations/sydney/dental-loans",
+  "/locations/melbourne/ivf-financing",
+  "/locations/brisbane/dental-loans",
+  "/locations/perth/breast-augmentation-loans",
+  "/locations/gold-coast/rhinoplasty-financing",
 ];
 
 async function main() {
@@ -33,10 +37,10 @@ async function main() {
 
   try {
     await sc.sitemaps.submit({ siteUrl, feedpath: sitemapUrl });
-    console.log("✓ Sitemap submitted to GSC.");
+    console.log("OK: Sitemap submitted to GSC.");
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    console.error(`✗ Sitemap submission failed: ${msg}`);
+    console.error(`ERROR: Sitemap submission failed: ${msg}`);
   }
 
   console.log("\nListing known sitemaps for this property:");

@@ -3,13 +3,13 @@ import { ShieldCheck, Clock, Users } from "lucide-react";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 
 export const metadata: Metadata = {
-  title: "Get Your Personalised Rate | CosmediLoans",
+  title: "Get Your Personalised Rate",
   description:
     "Apply for medical procedure financing in 60 seconds. Compare rates from 20+ lenders with no credit impact. Free, fast, and no obligation.",
   alternates: { canonical: "/apply" },
   robots: { index: false },
   openGraph: {
-    title: "Get Your Personalised Rate | CosmediLoans",
+    title: "Get Your Personalised Rate",
     description:
       "Apply for medical procedure financing in 60 seconds. Compare rates from 20+ lenders with no credit impact.",
     url: "/apply",
@@ -22,7 +22,7 @@ const trustBadges = [
   {
     icon: ShieldCheck,
     title: "No Credit Impact",
-    description: "Soft check only — your credit score stays safe",
+    description: "Soft check only, your credit score stays safe",
   },
   {
     icon: Clock,
@@ -40,7 +40,7 @@ export default function ApplyPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding min-h-[60vh]">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding min-h-[60vh]">
         <div className="container-narrow">
           <div className="max-w-xl mx-auto">
             {/* Heading */}

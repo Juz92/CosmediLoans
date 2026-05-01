@@ -77,7 +77,7 @@ export function FAQPageClient({ items }: FAQPageClientProps) {
       <section className="section-padding bg-background">
         <div className="container-narrow max-w-3xl">
           {isSearching ? (
-            /* Search results — flat list across all categories */
+            /* Search results, flat list across all categories */
             filteredItems.length > 0 ? (
               <Accordion
                 items={filteredItems.map((i) => ({

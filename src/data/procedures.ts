@@ -45,7 +45,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Compare dental loan rates from 20+ lenders. Finance implants, veneers, crowns & more. Compare quotes in 60 seconds. No credit impact.",
     heroDescription:
-      "Dental work can be expensive — but it doesn't have to be out of reach. Whether you need implants, veneers, or a full restoration, our brokers compare 20+ lenders to find you the lowest dental loan rate in Australia.",
+      "Dental work can be expensive, but it doesn't have to be out of reach. Whether you need implants, veneers, or a full restoration, our brokers compare 20+ lenders to find you the lowest dental loan rate in Australia.",
     icon: "🦷",
     avgCostRange: "$3,000 – $50,000",
     rateFrom: "6.99%",
@@ -86,7 +86,7 @@ export const procedures: Procedure[] = [
       {
         question: "Can I finance multiple dental procedures at once?",
         answer:
-          "Absolutely. You can bundle multiple procedures into a single loan — for example, combining implants with crowns or veneers into one financing plan.",
+          "Absolutely. You can bundle multiple procedures into a single loan, for example, combining implants with crowns or veneers into one financing plan.",
       },
       {
         question: "What's the minimum loan amount for dental work?",
@@ -107,7 +107,7 @@ export const procedures: Procedure[] = [
     relatedSlugs: ["veneers-financing", "invisalign-financing", "medical-loan", "orthopedic-surgery-loans"],
     blogCategory: "dental",
     financingDescription:
-      "The most common way to finance dental work in Australia is through a personal loan matched by a broker. This gives you a fixed rate, fixed term, and predictable repayments — unlike credit cards or BNPL which can have hidden costs.",
+      "The most common way to finance dental work in Australia is through a personal loan matched by a broker. This gives you a fixed rate, fixed term, and predictable repayments, unlike credit cards or BNPL which can have hidden costs.",
     benefits: [
       {
         title: "Specialist Dental Financing",
@@ -119,7 +119,7 @@ export const procedures: Procedure[] = [
       },
       {
         title: "Finance $2,000 – $100,000",
-        description: "From a single crown to full mouth reconstruction — we cover it all.",
+        description: "From a single crown to full mouth reconstruction, we cover it all.",
       },
       {
         title: "Same-Day Decisions",
@@ -136,7 +136,7 @@ export const procedures: Procedure[] = [
     h1: "Dental Veneers Financing Australia",
     metaTitle: "Veneers Financing Australia | From 6.99% p.a.",
     metaDescription:
-      "Finance porcelain or composite veneers with rates from 6.99% p.a. Compare 20+ lenders in 60 seconds. Get the smile you want — pay over time.",
+      "Finance porcelain or composite veneers with rates from 6.99% p.a. Compare 20+ lenders in 60 seconds. Get the smile you want, pay over time.",
     heroDescription:
       "A stunning smile is a confidence booster, and veneers are one of the most popular cosmetic dental treatments in Australia. With veneer financing through CosmediLoans, you can spread the cost across manageable repayments while our brokers find you the best rate from 20+ lenders.",
     icon: "✨",
@@ -324,7 +324,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance your IVF treatment with rates from 6.99%. Compare 20+ lenders in 60 seconds. No credit impact. Loans from $5,000 to $100,000.",
     heroDescription:
-      "Starting a family shouldn't be limited by finances. IVF and fertility treatments are a significant investment, and our brokers help you find the most affordable way to fund your journey — comparing 20+ lenders for the best rate.",
+      "Starting a family shouldn't be limited by finances. IVF and fertility treatments are a significant investment, and our brokers help you find the most affordable way to fund your journey, comparing 20+ lenders for the best rate.",
     icon: "👶",
     avgCostRange: "$5,000 – $60,000",
     rateFrom: "6.99%",
@@ -459,7 +459,7 @@ export const procedures: Procedure[] = [
       {
         question: "What is the difference between a fertility loan and a medical loan?",
         answer:
-          "A fertility loan is a personal loan specifically used for fertility treatments. There is no structural difference from a medical loan — the rate and terms depend on your creditworthiness, not the purpose of the loan.",
+          "A fertility loan is a personal loan specifically used for fertility treatments. There is no structural difference from a medical loan, the rate and terms depend on your creditworthiness, not the purpose of the loan.",
       },
       {
         question: "Can my partner and I apply for a joint fertility loan?",
@@ -630,7 +630,7 @@ export const procedures: Procedure[] = [
       {
         question: "Is rhinoplasty covered by Medicare in Australia?",
         answer:
-          "If your rhinoplasty is deemed medically necessary — such as correcting a deviated septum that impairs breathing — Medicare may provide a partial rebate. Purely cosmetic rhinoplasty is not covered.",
+          "If your rhinoplasty is deemed medically necessary, such as correcting a deviated septum that impairs breathing, Medicare may provide a partial rebate. Purely cosmetic rhinoplasty is not covered.",
       },
       {
         question: "Can I finance a nose job with bad credit?",
@@ -645,7 +645,7 @@ export const procedures: Procedure[] = [
       {
         question: "What is the difference between open and closed rhinoplasty?",
         answer:
-          "Open rhinoplasty involves a small incision on the columella (between the nostrils) for greater visibility. Closed rhinoplasty uses internal incisions only. The technique affects recovery and cost — your surgeon will recommend the best approach.",
+          "Open rhinoplasty involves a small incision on the columella (between the nostrils) for greater visibility. Closed rhinoplasty uses internal incisions only. The technique affects recovery and cost, your surgeon will recommend the best approach.",
       },
       {
         question: "Can I finance non-surgical rhinoplasty?",
@@ -670,7 +670,7 @@ export const procedures: Procedure[] = [
     benefits: [
       {
         title: "Cosmetic & Functional Coverage",
-        description: "Finance cosmetic, functional, or revision rhinoplasty — all procedure types are eligible.",
+        description: "Finance cosmetic, functional, or revision rhinoplasty, all procedure types are eligible.",
       },
       {
         title: "Rates From 6.99% p.a.",
@@ -816,7 +816,7 @@ export const procedures: Procedure[] = [
       {
         question: "What types of liposuction are available in Australia?",
         answer:
-          "The main types are traditional suction-assisted liposuction, tumescent liposuction, VASER (ultrasound-assisted), and laser-assisted liposuction. Each has different costs and recovery profiles — your surgeon will recommend the best approach.",
+          "The main types are traditional suction-assisted liposuction, tumescent liposuction, VASER (ultrasound-assisted), and laser-assisted liposuction. Each has different costs and recovery profiles, your surgeon will recommend the best approach.",
       },
       {
         question: "Is liposuction a weight loss procedure?",
@@ -856,7 +856,7 @@ export const procedures: Procedure[] = [
     benefits: [
       {
         title: "All Liposuction Types Covered",
-        description: "Finance traditional, VASER, tumescent, or laser liposuction — any technique is eligible.",
+        description: "Finance traditional, VASER, tumescent, or laser liposuction, any technique is eligible.",
       },
       {
         title: "Multi-Area Treatment Financing",
@@ -949,7 +949,7 @@ export const procedures: Procedure[] = [
     benefits: [
       {
         title: "Full & Mini Facelifts Financed",
-        description: "From mini lifts to comprehensive facelift and neck lift combinations — we cover it all.",
+        description: "From mini lifts to comprehensive facelift and neck lift combinations, we cover it all.",
       },
       {
         title: "Competitive Fixed Rates",
@@ -1032,7 +1032,7 @@ export const procedures: Procedure[] = [
       {
         question: "What if LASIK doesn't work perfectly?",
         answer:
-          "Most reputable LASIK clinics include a free enhancement (retreatment) within the first 12 months if results aren't optimal. Ask about this guarantee when choosing your clinic — it doesn't affect your loan.",
+          "Most reputable LASIK clinics include a free enhancement (retreatment) within the first 12 months if results aren't optimal. Ask about this guarantee when choosing your clinic, it doesn't affect your loan.",
       },
     ],
     relatedSlugs: ["medical-loan", "dental-loans", "dermatology-financing", "orthopedic-surgery-loans"],
@@ -1054,7 +1054,7 @@ export const procedures: Procedure[] = [
       },
       {
         title: "Any Clinic, Any Surgeon",
-        description: "Our financing works with any LASIK provider in Australia — you choose the best surgeon for you.",
+        description: "Our financing works with any LASIK provider in Australia, you choose the best surgeon for you.",
       },
     ],
   },
@@ -1143,7 +1143,7 @@ export const procedures: Procedure[] = [
       },
       {
         title: "Invest in Your Health",
-        description: "Bariatric surgery reduces obesity-related health costs — financing it is an investment in your future.",
+        description: "Bariatric surgery reduces obesity-related health costs, financing it is an investment in your future.",
       },
       {
         title: "Flexible Terms Up to 7 Years",
@@ -1291,7 +1291,7 @@ export const procedures: Procedure[] = [
       {
         question: "Can I finance a hair transplant with no deposit?",
         answer:
-          "Yes. Most lenders in our network offer 100% financing for hair transplants. No upfront deposit is required — you can finance the entire procedure cost.",
+          "Yes. Most lenders in our network offer 100% financing for hair transplants. No upfront deposit is required, you can finance the entire procedure cost.",
       },
       {
         question: "Is a hair transplant covered by Medicare or health insurance?",
@@ -1627,7 +1627,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance any medical procedure in Australia from 6.99%. Compare 20+ lenders in 60 seconds. Dental, cosmetic, fertility, surgical & more. No credit impact.",
     heroDescription:
-      "Whatever medical procedure you need — from dental work and eye surgery to cosmetic procedures and hospital gap fees — CosmediLoans compares 20+ lenders to find the best personal loan rate in Australia. One application, multiple offers, no credit impact.",
+      "Whatever medical procedure you need, from dental work and eye surgery to cosmetic procedures and hospital gap fees, CosmediLoans compares 20+ lenders to find the best personal loan rate in Australia. One application, multiple offers, no credit impact.",
     icon: "🏥",
     avgCostRange: "$2,000 – $100,000",
     rateFrom: "6.99%",
@@ -1648,7 +1648,7 @@ export const procedures: Procedure[] = [
       {
         question: "What is a medical loan?",
         answer:
-          "A medical loan is a personal loan used to pay for medical, dental, or cosmetic procedures. It works like any personal loan — you receive a lump sum, then repay it over a fixed term at a fixed interest rate. There is no restriction on which provider or procedure you choose.",
+          "A medical loan is a personal loan used to pay for medical, dental, or cosmetic procedures. It works like any personal loan, you receive a lump sum, then repay it over a fixed term at a fixed interest rate. There is no restriction on which provider or procedure you choose.",
       },
       {
         question: "What medical procedures can I finance?",
@@ -1693,7 +1693,7 @@ export const procedures: Procedure[] = [
     benefits: [
       {
         title: "Any Medical Procedure",
-        description: "From dental and cosmetic to fertility and surgical — one application covers any medical expense.",
+        description: "From dental and cosmetic to fertility and surgical, one application covers any medical expense.",
       },
       {
         title: "20+ Lenders Competing",
@@ -1719,7 +1719,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Consolidate multiple debts into one lower-rate personal loan. Compare 20+ lenders. No credit impact to check your rate.",
     heroDescription:
-      "Juggling multiple debts — credit cards, personal loans, buy-now-pay-later — can be stressful and expensive. A debt consolidation loan rolls everything into one manageable repayment at a single, often lower, interest rate. Our brokers compare 20+ lenders to find the most competitive rate for your situation.",
+      "Juggling multiple debts, credit cards, personal loans, buy-now-pay-later, can be stressful and expensive. A debt consolidation loan rolls everything into one manageable repayment at a single, often lower, interest rate. Our brokers compare 20+ lenders to find the most competitive rate for your situation.",
     icon: "💳",
     avgCostRange: "$5,000 – $50,000",
     rateFrom: "6.99%",
@@ -1739,7 +1739,7 @@ export const procedures: Procedure[] = [
       {
         question: "What is a debt consolidation loan?",
         answer:
-          "A debt consolidation loan combines multiple existing debts — such as credit cards, personal loans, and buy-now-pay-later balances — into a single personal loan with one regular repayment. The goal is typically to reduce your overall interest rate and simplify your finances.",
+          "A debt consolidation loan combines multiple existing debts, such as credit cards, personal loans, and buy-now-pay-later balances, into a single personal loan with one regular repayment. The goal is typically to reduce your overall interest rate and simplify your finances.",
       },
       {
         question: "Will applying for debt consolidation affect my credit score?",
@@ -1799,7 +1799,7 @@ export const procedures: Procedure[] = [
     metaDescription:
       "Finance unexpected vet bills in Australia from 6.99%. Emergency surgery, cancer treatment, orthopaedic procedures & more. Compare 20+ lenders. No credit impact.",
     heroDescription:
-      "Unexpected vet bills can reach tens of thousands of dollars — but your pet's health shouldn't depend on your savings account. CosmediLoans compares 20+ lenders to help you finance emergency surgery, specialist treatment, and ongoing pet care in one affordable loan.",
+      "Unexpected vet bills can reach tens of thousands of dollars, but your pet's health shouldn't depend on your savings account. CosmediLoans compares 20+ lenders to help you finance emergency surgery, specialist treatment, and ongoing pet care in one affordable loan.",
     icon: "🐾",
     avgCostRange: "$2,000 – $20,000",
     rateFrom: "6.99%",
@@ -1820,7 +1820,7 @@ export const procedures: Procedure[] = [
       {
         question: "Can I get a loan to pay for vet bills in Australia?",
         answer:
-          "Yes. A personal loan is one of the most cost-effective ways to cover unexpected vet bills. Rates through our broker network start from 6.99% p.a. — far cheaper than credit cards at 18–22% p.a. You can borrow from $2,000 to $20,000 and repay over 1 to 5 years.",
+          "Yes. A personal loan is one of the most cost-effective ways to cover unexpected vet bills. Rates through our broker network start from 6.99% p.a., far cheaper than credit cards at 18–22% p.a. You can borrow from $2,000 to $20,000 and repay over 1 to 5 years.",
       },
       {
         question: "What vet expenses can I finance?",
@@ -1840,7 +1840,7 @@ export const procedures: Procedure[] = [
       {
         question: "What if I don't have pet insurance?",
         answer:
-          "No problem. Our brokers help uninsured pet owners access affordable financing every day. You don't need pet insurance to qualify for a vet bill loan — approval is based on your income and credit profile, not whether you have a policy.",
+          "No problem. Our brokers help uninsured pet owners access affordable financing every day. You don't need pet insurance to qualify for a vet bill loan, approval is based on your income and credit profile, not whether you have a policy.",
       },
       {
         question: "How much can I borrow for vet bills?",
@@ -1850,17 +1850,17 @@ export const procedures: Procedure[] = [
       {
         question: "Can I finance ongoing vet costs, not just a one-off bill?",
         answer:
-          "Yes. If your pet has a chronic condition requiring ongoing treatment — such as cancer management, diabetes, or a long rehabilitation programme — you can take out a loan to cover the projected total cost of treatment upfront.",
+          "Yes. If your pet has a chronic condition requiring ongoing treatment, such as cancer management, diabetes, or a long rehabilitation programme, you can take out a loan to cover the projected total cost of treatment upfront.",
       },
     ],
     relatedSlugs: ["medical-loan", "debt-consolidation"],
     blogCategory: "vet",
     financingDescription:
-      "Vet bills can arrive without warning and quickly exceed what most families have in savings. A personal loan through our broker network gives you access to funds within days at rates starting from 6.99% p.a. — so you can focus on your pet's recovery, not the bill.",
+      "Vet bills can arrive without warning and quickly exceed what most families have in savings. A personal loan through our broker network gives you access to funds within days at rates starting from 6.99% p.a., so you can focus on your pet's recovery, not the bill.",
     benefits: [
       {
         title: "Fast Access to Funds",
-        description: "Same-day or next-day funding available with many lenders — so you're not waiting when your pet needs urgent care.",
+        description: "Same-day or next-day funding available with many lenders, so you're not waiting when your pet needs urgent care.",
       },
       {
         title: "No Pet Insurance Required",

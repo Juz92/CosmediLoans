@@ -22,7 +22,7 @@ export const allFAQItems: FAQItem[] = [
     category: "general",
     question: "How much does it cost to use CosmediLoans?",
     answer:
-      "There are no fees charged to you. There are no upfront fees, application fees, or hidden charges from CosmediLoans. We receive a commission from the lender only when a loan successfully settles, which means our costs are built into the loan product itself — the same product you would receive if you went to the lender directly. This model aligns our interests with yours: we benefit when you find a loan that works for your situation, so we are motivated to match you with the best possible option. You are never under any obligation to proceed with any offer presented.",
+      "There are no fees charged to you. There are no upfront fees, application fees, or hidden charges from CosmediLoans. We receive a commission from the lender only when a loan successfully settles, which means our costs are built into the loan product itself, the same product you would receive if you went to the lender directly. This model aligns our interests with yours: we benefit when you find a loan that works for your situation, so we are motivated to match you with the best possible option. You are never under any obligation to proceed with any offer presented.",
   },
   {
     category: "general",
@@ -34,7 +34,7 @@ export const allFAQItems: FAQItem[] = [
     category: "general",
     question: "Is my personal information safe with CosmediLoans?",
     answer:
-      "Yes. Protecting your personal information is a top priority. We use industry-standard SSL encryption for all data transmitted through our website, and we store information in accordance with the Australian Privacy Act 1988 and the Australian Privacy Principles (APPs). Your details are only shared with the licensed broker assigned to your enquiry — never with third parties for marketing purposes. You can read our full Privacy Policy for details on how we collect, store, and use your data, including your right to access and correct your information at any time.",
+      "Yes. Protecting your personal information is a top priority. We use industry-standard SSL encryption for all data transmitted through our website, and we store information in accordance with the Australian Privacy Act 1988 and the Australian Privacy Principles (APPs). Your details are only shared with the licensed broker assigned to your enquiry, never with third parties for marketing purposes. You can read our full Privacy Policy for details on how we collect, store, and use your data, including your right to access and correct your information at any time.",
   },
   {
     category: "general",
@@ -52,7 +52,7 @@ export const allFAQItems: FAQItem[] = [
     category: "general",
     question: "Can I leave a review of my experience with CosmediLoans?",
     answer:
-      "Absolutely, and we encourage it. Patient feedback is incredibly valuable to us and helps future patients make informed decisions. After your loan has settled, you may receive an invitation to share your experience. You can also leave reviews on Google or contact us directly with feedback. We take all reviews seriously — both positive and constructive — and use them to continually improve our service. If you had an issue at any point during the process, we want to hear about it so we can resolve it and prevent it from recurring.",
+      "Absolutely, and we encourage it. Patient feedback is incredibly valuable to us and helps future patients make informed decisions. After your loan has settled, you may receive an invitation to share your experience. You can also leave reviews on Google or contact us directly with feedback. We take all reviews seriously, both positive and constructive, and use them to continually improve our service. If you had an issue at any point during the process, we want to hear about it so we can resolve it and prevent it from recurring.",
   },
 
   // ── LOANS & RATES (8) ───────────────────────────────────────────
@@ -90,13 +90,13 @@ export const allFAQItems: FAQItem[] = [
     category: "loans",
     question: "What fees are associated with a medical loan?",
     answer:
-      "Fees vary by lender but typically include an establishment fee (sometimes called an application fee) which can range from $0 to $400, and a monthly or annual account-keeping fee. Some lenders waive the establishment fee for certain products or promotions. Your broker will provide a clear breakdown of all fees associated with each loan option before you commit, so there are no surprises. The comparison rate — which includes both the interest rate and standard fees — gives you a more accurate picture of the true cost of each loan.",
+      "Fees vary by lender but typically include an establishment fee (sometimes called an application fee) which can range from $0 to $400, and a monthly or annual account-keeping fee. Some lenders waive the establishment fee for certain products or promotions. Your broker will provide a clear breakdown of all fees associated with each loan option before you commit, so there are no surprises. The comparison rate, which includes both the interest rate and standard fees, gives you a more accurate picture of the true cost of each loan.",
   },
   {
     category: "loans",
     question: "Is a medical loan different from a personal loan?",
     answer:
-      "Structurally, a medical loan is a type of unsecured personal loan — the mechanics of borrowing, repaying, and interest calculation are the same. However, some lenders offer specific medical loan products with features tailored to healthcare financing, such as deferred repayment start dates (useful if you need recovery time before returning to work), direct payment to your healthcare provider, and competitive rates for medical purposes. Our brokers specialise in finding these medical-specific products when they offer genuine advantages over standard personal loans.",
+      "Structurally, a medical loan is a type of unsecured personal loan, the mechanics of borrowing, repaying, and interest calculation are the same. However, some lenders offer specific medical loan products with features tailored to healthcare financing, such as deferred repayment start dates (useful if you need recovery time before returning to work), direct payment to your healthcare provider, and competitive rates for medical purposes. Our brokers specialise in finding these medical-specific products when they offer genuine advantages over standard personal loans.",
   },
   {
     category: "loans",
@@ -110,31 +110,31 @@ export const allFAQItems: FAQItem[] = [
     category: "eligibility",
     question: "What are the basic eligibility requirements?",
     answer:
-      "Basic eligibility requirements for most lenders in our network include: being at least 18 years old, being an Australian citizen or permanent resident, having a regular source of income (employment, self-employment, or government benefits in some cases), and having a valid Australian bank account. Some lenders also require you to have been at your current address for a minimum period. These are general requirements — specific lenders may have additional criteria. Your broker will assess your situation during the initial consultation and identify which lenders are most likely to approve your application.",
+      "Basic eligibility requirements for most lenders in our network include: being at least 18 years old, being an Australian citizen or permanent resident, having a regular source of income (employment, self-employment, or government benefits in some cases), and having a valid Australian bank account. Some lenders also require you to have been at your current address for a minimum period. These are general requirements, specific lenders may have additional criteria. Your broker will assess your situation during the initial consultation and identify which lenders are most likely to approve your application.",
   },
   {
     category: "eligibility",
     question: "Do I need a good credit score to get a medical loan?",
     answer:
-      "While a higher credit score generally gives you access to more lenders and lower interest rates, you do not necessarily need an excellent credit score to be approved. Our broker network includes lenders who specialise in applicants with average or below-average credit histories. If you have had credit issues in the past — such as defaults, late payments, or a low Equifax score — your broker can still explore options on your behalf. Being upfront about your credit history helps your broker target the most appropriate lenders, saving time and avoiding unnecessary hard credit inquiries.",
+      "While a higher credit score generally gives you access to more lenders and lower interest rates, you do not necessarily need an excellent credit score to be approved. Our broker network includes lenders who specialise in applicants with average or below-average credit histories. If you have had credit issues in the past, such as defaults, late payments, or a low Equifax score, your broker can still explore options on your behalf. Being upfront about your credit history helps your broker target the most appropriate lenders, saving time and avoiding unnecessary hard credit inquiries.",
   },
   {
     category: "eligibility",
     question: "Can I apply if I am self-employed?",
     answer:
-      "Yes. Self-employed Australians can absolutely apply for medical financing through our service. The documentation requirements may differ from standard employment — you may need to provide Business Activity Statements (BAS), tax returns, or accountant-prepared financial statements instead of payslips. Some lenders have specific products designed for self-employed borrowers with streamlined documentation requirements. Let your broker know about your employment situation upfront so they can match you with lenders experienced in assessing self-employed applications, which can significantly improve your chances of approval.",
+      "Yes. Self-employed Australians can absolutely apply for medical financing through our service. The documentation requirements may differ from standard employment, you may need to provide Business Activity Statements (BAS), tax returns, or accountant-prepared financial statements instead of payslips. Some lenders have specific products designed for self-employed borrowers with streamlined documentation requirements. Let your broker know about your employment situation upfront so they can match you with lenders experienced in assessing self-employed applications, which can significantly improve your chances of approval.",
   },
   {
     category: "eligibility",
     question: "Will checking my rate affect my credit score?",
     answer:
-      "No. When you submit an enquiry through CosmediLoans, we do not perform a credit check. Your assigned broker may conduct a soft credit inquiry during the initial assessment, which does not appear on your credit file and has zero impact on your credit score. A hard credit inquiry — which is recorded on your credit file — only occurs if you decide to proceed with a formal loan application. Your broker will always inform you before a hard inquiry is made, giving you the opportunity to decide whether to proceed. This protects your credit score while you explore your options.",
+      "No. When you submit an enquiry through CosmediLoans, we do not perform a credit check. Your assigned broker may conduct a soft credit inquiry during the initial assessment, which does not appear on your credit file and has zero impact on your credit score. A hard credit inquiry, which is recorded on your credit file, only occurs if you decide to proceed with a formal loan application. Your broker will always inform you before a hard inquiry is made, giving you the opportunity to decide whether to proceed. This protects your credit score while you explore your options.",
   },
   {
     category: "eligibility",
     question: "Is there a minimum income requirement?",
     answer:
-      "Income requirements vary by lender, but most require a minimum annual income of approximately $25,000 to $35,000. Some lenders are more flexible, particularly for smaller loan amounts. Income can come from various sources including full-time or part-time employment, casual work (with sufficient history), self-employment, government benefits (Centrelink), or a combination. Your broker will assess your total financial picture — including income, existing debts, and living expenses — to determine your borrowing capacity and match you with lenders whose criteria align with your situation.",
+      "Income requirements vary by lender, but most require a minimum annual income of approximately $25,000 to $35,000. Some lenders are more flexible, particularly for smaller loan amounts. Income can come from various sources including full-time or part-time employment, casual work (with sufficient history), self-employment, government benefits (Centrelink), or a combination. Your broker will assess your total financial picture, including income, existing debts, and living expenses, to determine your borrowing capacity and match you with lenders whose criteria align with your situation.",
   },
   {
     category: "eligibility",
@@ -154,7 +154,7 @@ export const allFAQItems: FAQItem[] = [
     category: "procedures",
     question: "Can I finance multiple procedures at once?",
     answer:
-      "Yes. Many patients choose to combine multiple procedures — such as a breast augmentation with a tummy tuck (sometimes called a 'mommy makeover') or dental veneers with orthodontic work. You can request financing for the total cost of all procedures in a single loan application. In fact, combining procedures into one loan is often more cost-effective than taking out separate loans, as you benefit from a single establishment fee and potentially a better rate due to the higher loan amount. Discuss your planned procedures with your broker so they can structure the best possible financing package.",
+      "Yes. Many patients choose to combine multiple procedures, such as a breast augmentation with a tummy tuck (sometimes called a 'mommy makeover') or dental veneers with orthodontic work. You can request financing for the total cost of all procedures in a single loan application. In fact, combining procedures into one loan is often more cost-effective than taking out separate loans, as you benefit from a single establishment fee and potentially a better rate due to the higher loan amount. Discuss your planned procedures with your broker so they can structure the best possible financing package.",
   },
   {
     category: "procedures",
@@ -172,13 +172,13 @@ export const allFAQItems: FAQItem[] = [
     category: "procedures",
     question: "What if my procedure cost changes after approval?",
     answer:
-      "It is not uncommon for the final cost of a medical procedure to differ slightly from the initial quote, especially if additional work is identified during surgery or treatment. If the cost increases before funds are disbursed, your broker may be able to adjust the loan amount with the lender, depending on your borrowing capacity. If the cost decreases, you can simply borrow less than the approved amount. Significant changes may require a new assessment. Communication with your broker is key — keep them informed of any changes to your treatment plan so they can adjust the financing accordingly.",
+      "It is not uncommon for the final cost of a medical procedure to differ slightly from the initial quote, especially if additional work is identified during surgery or treatment. If the cost increases before funds are disbursed, your broker may be able to adjust the loan amount with the lender, depending on your borrowing capacity. If the cost decreases, you can simply borrow less than the approved amount. Significant changes may require a new assessment. Communication with your broker is key, keep them informed of any changes to your treatment plan so they can adjust the financing accordingly.",
   },
   {
     category: "procedures",
     question: "Can the loan be paid directly to my healthcare provider?",
     answer:
-      "Yes, many lenders offer the option to disburse funds directly to your healthcare provider, which some patients find more convenient and reassuring. Alternatively, funds can be deposited into your personal bank account, giving you the flexibility to manage payments to your provider yourself. The disbursement method can vary by lender — some require direct payment to the provider for medical-purpose loans, while others leave the choice to you. Your broker will explain the disbursement options available with each lender so you can choose the arrangement that works best for your situation.",
+      "Yes, many lenders offer the option to disburse funds directly to your healthcare provider, which some patients find more convenient and reassuring. Alternatively, funds can be deposited into your personal bank account, giving you the flexibility to manage payments to your provider yourself. The disbursement method can vary by lender, some require direct payment to the provider for medical-purpose loans, while others leave the choice to you. Your broker will explain the disbursement options available with each lender so you can choose the arrangement that works best for your situation.",
   },
 
   // ── PROCESS & PAYMENT (6) ───────────────────────────────────────
@@ -186,7 +186,7 @@ export const allFAQItems: FAQItem[] = [
     category: "process",
     question: "How long does the entire process take from enquiry to funding?",
     answer:
-      "The entire process — from submitting your initial enquiry to receiving funds — typically takes between 24 hours and 5 business days. Many patients receive a pre-approval decision within hours of their broker consultation. The formal approval and settlement process then depends on the lender and how quickly you provide any required documentation. Some lenders offer same-day approval and next-day funding for straightforward applications. Complex situations (such as self-employment or credit issues) may take longer. Your broker will give you a realistic timeline based on your specific circumstances.",
+      "The entire process, from submitting your initial enquiry to receiving funds, typically takes between 24 hours and 5 business days. Many patients receive a pre-approval decision within hours of their broker consultation. The formal approval and settlement process then depends on the lender and how quickly you provide any required documentation. Some lenders offer same-day approval and next-day funding for straightforward applications. Complex situations (such as self-employment or credit issues) may take longer. Your broker will give you a realistic timeline based on your specific circumstances.",
   },
   {
     category: "process",
@@ -198,19 +198,19 @@ export const allFAQItems: FAQItem[] = [
     category: "process",
     question: "What happens after I submit the online enquiry form?",
     answer:
-      "After you submit the enquiry form on our website, here is what happens: First, your details are securely transmitted to a licensed medical finance broker in our network (typically within minutes). The broker will then contact you — usually by phone — within 2 business hours during office hours to discuss your needs, answer questions, and gather any additional information. They will then compare products across their lender panel and present you with the most competitive options. You review the options, ask questions, and decide whether to proceed. There is never any pressure or obligation to accept an offer.",
+      "After you submit the enquiry form on our website, here is what happens: First, your details are securely transmitted to a licensed medical finance broker in our network (typically within minutes). The broker will then contact you, usually by phone, within 2 business hours during office hours to discuss your needs, answer questions, and gather any additional information. They will then compare products across their lender panel and present you with the most competitive options. You review the options, ask questions, and decide whether to proceed. There is never any pressure or obligation to accept an offer.",
   },
   {
     category: "process",
     question: "Can I choose which lender to go with?",
     answer:
-      "Absolutely. The final decision is always yours. Your broker will present you with a shortlist of the most competitive options from their lender panel, explaining the pros and cons of each — including interest rates, fees, repayment terms, and any special features. You are free to choose whichever option best suits your needs, or to decline all offers if none are suitable. A good broker will never pressure you into accepting a particular product. If you have questions or need time to consider your options, your broker will be happy to give you the space to make an informed decision.",
+      "Absolutely. The final decision is always yours. Your broker will present you with a shortlist of the most competitive options from their lender panel, explaining the pros and cons of each, including interest rates, fees, repayment terms, and any special features. You are free to choose whichever option best suits your needs, or to decline all offers if none are suitable. A good broker will never pressure you into accepting a particular product. If you have questions or need time to consider your options, your broker will be happy to give you the space to make an informed decision.",
   },
   {
     category: "process",
     question: "How do I make repayments on my medical loan?",
     answer:
-      "Repayments are made directly to the lender (not to CosmediLoans) via automatic direct debit from your nominated bank account. Most lenders offer weekly, fortnightly, or monthly repayment frequencies — choosing weekly or fortnightly payments can reduce total interest over the life of the loan. Your broker will set up the repayment schedule as part of the loan settlement process. Most lenders also provide an online portal or app where you can view your loan balance, upcoming payments, and make additional repayments if you wish. If you experience financial hardship, contact your lender directly to discuss hardship provisions.",
+      "Repayments are made directly to the lender (not to CosmediLoans) via automatic direct debit from your nominated bank account. Most lenders offer weekly, fortnightly, or monthly repayment frequencies, choosing weekly or fortnightly payments can reduce total interest over the life of the loan. Your broker will set up the repayment schedule as part of the loan settlement process. Most lenders also provide an online portal or app where you can view your loan balance, upcoming payments, and make additional repayments if you wish. If you experience financial hardship, contact your lender directly to discuss hardship provisions.",
   },
   {
     category: "process",

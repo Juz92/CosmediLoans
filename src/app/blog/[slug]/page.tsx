@@ -180,7 +180,7 @@ export default function BlogPost({
               About the author
             </p>
             <p className="text-sm font-semibold text-text-dark mb-1">
-              {author.name} — {author.role}
+              {author.name}, {author.role}
             </p>
             <p className="text-xs text-text-muted mb-3">{author.credentials}</p>
             <p className="text-sm text-text-body leading-relaxed">

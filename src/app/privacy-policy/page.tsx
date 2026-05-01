@@ -26,7 +26,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">
             Privacy Policy
@@ -164,7 +164,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p>
                   We implement reasonable technical and organisational measures to protect your
-                  information against unauthorised access, loss, misuse, or alteration — including
+                  information against unauthorised access, loss, misuse, or alteration, including
                   access controls, encryption at rest, regular security assessments, and staff
                   training on data handling procedures.
                 </p>

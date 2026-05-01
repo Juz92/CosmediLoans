@@ -17,7 +17,7 @@ function formatCategory(category: string): string {
 
 const categoryDescriptions: Record<string, string> = {
   dental:
-    "Everything you need to know about financing dental procedures in Australia — from implant costs to payment plan options.",
+    "Everything you need to know about financing dental procedures in Australia, from implant costs to payment plan options.",
   fertility:
     "Guides and insights on financing IVF, egg freezing, and other fertility treatments in Australia.",
   cosmetic:

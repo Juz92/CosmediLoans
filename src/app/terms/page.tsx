@@ -27,7 +27,7 @@ const sections = [
 export default function TermsPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-[#f0f5ff] to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-b from-primary-mist to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-4xl md:text-hero-h1 text-text-dark mb-4">
             Terms of Use
@@ -69,8 +69,8 @@ export default function TermsPage() {
                   These terms should be read in conjunction with our{" "}
                   <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>{" "}
                   and{" "}
-                  <a href="/disclaimer" className="text-primary hover:underline">Disclaimer</a>
-                  , which also govern your use of the Website.
+                  <a href="/disclaimer" className="text-primary hover:underline">Disclaimer</a>, which
+                  also govern your use of the Website.
                 </p>
               </div>
             </div>
@@ -136,8 +136,8 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-3 text-sm text-text-body leading-relaxed">
                 <p>
-                  All content on the Website — including text, graphics, logos, images, software,
-                  and design elements — is the property of CosmediLoans or its licensors and is
+                  All content on the Website, including text, graphics, logos, images, software,
+                  and design elements, is the property of CosmediLoans or its licensors and is
                   protected by Australian and international copyright, trademark, and intellectual
                   property laws.
                 </p>

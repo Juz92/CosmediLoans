@@ -8,12 +8,12 @@ import { Button, Card, Badge } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Compare Medical Financing Options in Australia | CosmediLoans",
+  title: "Compare Medical Financing Options in Australia",
   description:
     "Compare CosmediLoans with Afterpay, Zip Pay, Humm, Latitude, MoneyMe, Plenti, SocietyOne, and more. See which medical financing option suits your procedure.",
   alternates: { canonical: "/compare" },
   openGraph: {
-    title: "Compare Medical Financing Options in Australia | CosmediLoans",
+    title: "Compare Medical Financing Options in Australia",
     description:
       "Side-by-side comparisons of CosmediLoans with every major medical financing option in Australia.",
     url: "/compare",
@@ -67,7 +67,7 @@ export default function CompareHubPage() {
       <JsonLd data={itemListSchema} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding">
+      <section className="bg-gradient-to-br from-primary-wash to-primary-sky section-padding">
         <div className="container-narrow">
           <BreadcrumbSchema
             items={[

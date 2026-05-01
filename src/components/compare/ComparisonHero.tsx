@@ -10,7 +10,7 @@ export function ComparisonHero({ comparison }: ComparisonHeroProps) {
   const isGeneric = comparison.competitorType === "generic";
 
   return (
-    <section className="bg-gradient-to-br from-primary-wash to-[#e0ecff] section-padding pb-12">
+    <section className="bg-gradient-to-br from-primary-wash to-primary-sky section-padding pb-12">
       <div className="container-narrow">
         {/* Breadcrumb */}
         <BreadcrumbSchema
