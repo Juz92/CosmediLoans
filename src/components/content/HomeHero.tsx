@@ -1,12 +1,10 @@
 import Image from "next/image";
 import {
-  ArrowRight,
   BadgeCheck,
   Building2,
   ShieldCheck,
   Zap,
 } from "lucide-react";
-import { Badge } from "@/components/ui";
 import { HeroLeadForm } from "@/components/lead-capture/HeroLeadForm";
 
 const trustItems = [
@@ -54,72 +52,51 @@ export function HomeHero() {
     <section className="relative isolate overflow-hidden border-b border-border bg-hero-surface">
       <HeroBackdrop />
       <div className="absolute inset-x-0 top-0 h-px bg-white" aria-hidden="true" />
-      <div className="container-narrow relative px-6 pb-10 pt-10 md:px-section-x md:pb-12 md:pt-14">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.86fr)] lg:gap-14">
-          <div className="relative z-10">
-            <Badge className="mb-5 gap-2 bg-white/75 text-primary shadow-brand-soft ring-1 ring-primary-light/15">
+      <div className="hero-bold-command">
+        <div className="hero-bold-command__grid">
+          <div>
+            <div className="hero-bold-command__eyebrow">
               <ShieldCheck className="h-4 w-4 text-primary-light" aria-hidden="true" />
               Trusted by Australian Patients
-            </Badge>
-
-            <h1 className="max-w-[610px] text-[40px] font-extrabold leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-[64px]">
-              Finance Any Medical Procedure. Find Your Lowest Rate.
+            </div>
+            <h1 className="hero-bold-command__title">
+              Finance any medical procedure. <span>Find your lowest rate.</span>
             </h1>
-
-            <p className="mt-5 max-w-[590px] text-base leading-8 text-text-body md:text-lg">
-              Compare rates from 20+ lenders in 60 seconds. Our expert brokers help you find the best deal for dental, IVF, cosmetic surgery and more - so you can book with confidence.
+            <p className="hero-bold-command__copy">
+              Compare rates from 20+ lenders in 60 seconds. Expert brokers help you
+              find the best deal for dental, IVF, cosmetic surgery and more.
             </p>
-
-            <div className="mt-7 grid max-w-[620px] gap-2 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="hero-bold-command__chips">
               {trustItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-button border border-primary-light/20 bg-white/80 px-3 text-sm font-semibold text-text-body shadow-brand-soft"
-                >
+                <div key={item.label} className="hero-bold-command__chip">
                   <item.icon className="h-4 w-4 shrink-0 text-primary-light" aria-hidden="true" />
                   <span>{item.label}</span>
                 </div>
               ))}
             </div>
-
-            <div className="mt-8 max-w-[640px] rounded-[20px] border border-primary-light/20 bg-white/90 p-4 shadow-brand-panel">
-              <div className="flex flex-col gap-3 border-b border-border pb-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="hero-bold-command__desk">
+              <div className="hero-bold-command__desk-head">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary-light">
-                    Clear Funding Desk
-                  </p>
+                  <p className="hero-bold-command__label">Clear Funding Desk</p>
                   <p className="mt-1 text-sm font-semibold leading-6 text-text-dark">
                     One soft-check path from treatment quote to lender-ready option.
                   </p>
                 </div>
-                <div className="rounded-button bg-primary px-4 py-2 text-sm font-bold text-white">
-                  20+ lender panel
-                </div>
+                <div className="hero-bold-command__panel">20+ lender panel</div>
               </div>
-
-              <ol className="mt-4 grid gap-3 md:grid-cols-3">
+              <ol className="hero-bold-command__steps">
                 {fundingPath.map((item, index) => (
-                  <li key={item.label} className="relative rounded-button bg-primary-wash px-4 py-3">
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-surface text-xs font-extrabold text-primary shadow-card">
-                        {index + 1}
-                      </span>
-                      {index < fundingPath.length - 1 && (
-                        <ArrowRight className="hidden h-4 w-4 text-primary-light md:block" aria-hidden="true" />
-                      )}
-                    </div>
-                    <p className="mt-3 text-sm font-bold text-text-dark">{item.label}</p>
+                  <li key={item.label} className="hero-bold-command__step">
+                    <p className="text-xs font-black text-primary-light">{index + 1}</p>
+                    <p className="mt-2 text-sm font-bold text-text-dark">{item.label}</p>
                     <p className="mt-1 text-xs leading-5 text-text-body">{item.text}</p>
                   </li>
                 ))}
               </ol>
             </div>
           </div>
-
-          <div className="relative z-0 min-h-[560px] lg:min-h-[610px]">
-            <div className="relative z-10 mx-auto max-w-[410px] pt-2 sm:pt-8 lg:ml-4 lg:mr-0 lg:pt-7">
-              <HeroLeadForm />
-            </div>
+          <div className="hero-bold-command__form">
+            <HeroLeadForm />
           </div>
         </div>
       </div>
