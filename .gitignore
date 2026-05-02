@@ -27,6 +27,10 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env*
+
+# google oauth credentials
+google-*.json
 
 # pipeline
 /pipeline/node_modules

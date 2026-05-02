@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const SHEET_WEBHOOK_URL = process.env.GOOGLE_SHEET_WEBHOOK_URL || "";
 const NOTIFY_EMAIL = "cosmediloans@gmail.com";
 
@@ -30,11 +28,14 @@ export async function POST(req: NextRequest) {
     }
 
     // ── 2. Send notification email via Resend ────────────────────────
-    await resend.emails.send({
-      from: "CosmediLoans <onboarding@resend.dev>",
-      to: NOTIFY_EMAIL,
-      subject: `New Lead: ${name} - ${procedure || "General Enquiry"}`,
-      html: `
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (resendApiKey) {
+      const resend = new Resend(resendApiKey);
+      await resend.emails.send({
+        from: "CosmediLoans <onboarding@resend.dev>",
+        to: NOTIFY_EMAIL,
+        subject: `New Lead: ${name} - ${procedure || "General Enquiry"}`,
+        html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px">
           <h2 style="color:#1e40af;margin:0 0 16px">New CosmediLoans Lead</h2>
           <table style="width:100%;border-collapse:collapse">
@@ -49,7 +50,10 @@ export async function POST(req: NextRequest) {
           <p style="margin:24px 0 0;font-size:12px;color:#94a3b8">Submitted via CosmediLoans on ${new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney" })}</p>
         </div>
       `,
-    });
+      });
+    } else {
+      console.warn("RESEND_API_KEY is not set; skipping lead notification email");
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
