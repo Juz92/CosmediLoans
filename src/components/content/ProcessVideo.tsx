@@ -101,8 +101,8 @@ export function ProcessVideo() {
               controls
               muted
               playsInline
-              preload="metadata"
-              poster="/videos/hero-poster.jpg"
+              preload="none"
+              poster="/videos/hero-poster-640.jpg"
               aria-describedby="rate-check-video-summary"
             >
               <source src="/videos/hero-scroll.mp4" type="video/mp4" />

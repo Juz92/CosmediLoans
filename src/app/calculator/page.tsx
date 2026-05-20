@@ -12,12 +12,12 @@ import { absoluteUrl, BRAND } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Medical Loan Repayment Calculator",
   description:
-    "Calculate your medical loan repayments instantly. Compare rates from 5.99% across dental, IVF, cosmetic surgery loans. Free interactive calculator with full amortisation schedule.",
+    "Estimate medical loan repayments for dental, IVF and cosmetic treatment. Compare terms and request a broker-matched rate with no credit impact.",
   alternates: { canonical: "/calculator" },
   openGraph: {
     title: "Medical Loan Repayment Calculator",
     description:
-      "Calculate your medical loan repayments instantly. Compare rates from 5.99% across dental, IVF, cosmetic surgery loans.",
+      "Estimate medical loan repayments and request a broker-matched rate with no credit impact.",
     url: "/calculator",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 /* ── Rate Comparison Data ────────────────────────────────────────── */
 const rateComparisons = [
-  { rate: 7.99, label: "Broker Rate", color: "bg-emerald-500", highlight: true },
+  { rate: 7.99, label: "Broker Rate", color: "bg-emerald-700", highlight: true },
   { rate: 12.99, label: "Average Bank", color: "bg-amber-500", highlight: false },
   { rate: 18.99, label: "Credit Card", color: "bg-red-500", highlight: false },
 ];
@@ -229,12 +229,12 @@ export default function CalculatorPage() {
                 key={item.rate}
                 className={`relative overflow-hidden ${
                   item.highlight
-                    ? "ring-2 ring-emerald-500 ring-offset-2"
+                    ? "ring-2 ring-emerald-700 ring-offset-2"
                     : ""
                 }`}
               >
                 {item.highlight && (
-                  <div className="absolute top-0 left-0 right-0 bg-emerald-500 text-white text-xs font-semibold text-center py-1">
+                  <div className="absolute top-0 left-0 right-0 bg-emerald-700 text-white text-xs font-semibold text-center py-1">
                     Best Rate via Broker
                   </div>
                 )}
@@ -272,7 +272,7 @@ export default function CalculatorPage() {
                   </div>
 
                   {item.highlight && (
-                    <p className="mt-3 text-sm font-semibold text-emerald-600">
+                    <p className="mt-3 text-sm font-semibold text-emerald-700">
                       You save $
                       {(
                         comparisonData[comparisonData.length - 1].interest -

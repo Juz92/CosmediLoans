@@ -4,6 +4,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { UTMCapture } from "@/components/analytics/UTMCapture";
 import { GA4 } from "@/components/analytics/GA4";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { absoluteUrl, BRAND, LEGAL, SITE_ORIGIN } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -35,6 +37,43 @@ export const metadata: Metadata = {
   },
 };
 
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "FinancialService"],
+      "@id": absoluteUrl("/#organization"),
+      name: BRAND,
+      url: SITE_ORIGIN,
+      logo: absoluteUrl("/Images/Logo.png"),
+      image: absoluteUrl("/Images/SOCIAL SHARING IMAGE.png"),
+      email: LEGAL.email,
+      telephone: LEGAL.phone,
+      areaServed: {
+        "@type": "Country",
+        name: "Australia",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: LEGAL.email,
+        telephone: LEGAL.phone,
+        areaServed: "AU",
+        availableLanguage: "English",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": absoluteUrl("/#website"),
+      name: BRAND,
+      url: SITE_ORIGIN,
+      publisher: {
+        "@id": absoluteUrl("/#organization"),
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -43,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans">
+        <JsonLd data={siteSchema} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:text-primary focus:rounded-button focus:shadow-form"

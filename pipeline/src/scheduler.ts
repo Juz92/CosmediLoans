@@ -10,6 +10,27 @@ import type { CollectorResult } from "./collectors/types.js";
 // Helpers
 // ---------------------------------------------------------------------------
 
+const SOURCE_TO_TAB: Record<string, string> = {
+  uptime: "uptime-log",
+  "ssl-check": "ssl-check",
+  "search-console": "search-queries",
+  ga4: "daily-traffic",
+  pagespeed: "pagespeed",
+  "robots-monitor": "robots-monitor",
+  "content-freshness": "content-freshness",
+  "business-profile": "business-profile",
+  cannibalization: "cannibalization",
+  "snippet-opportunities": "snippet-opportunities",
+  "keyword-gaps": "keyword-gaps",
+};
+
+const ALERT_SHEET_SOURCES = new Set([
+  "snippet-opportunities",
+  "keyword-gaps",
+  "trending-keywords",
+  "competitor-movements",
+]);
+
 /** Write a collector result to the appropriate Sheets tab. */
 async function writeResult(result: CollectorResult): Promise<void> {
   const config = getSiteConfig();
@@ -17,9 +38,13 @@ async function writeResult(result: CollectorResult): Promise<void> {
     console.log(`[scheduler] ${result.source}: no rows to write`);
     return;
   }
-  await appendRows(config.sheetId, result.source, result.rows);
+  const tabName = SOURCE_TO_TAB[result.source] ?? result.source;
+  const sheetId = ALERT_SHEET_SOURCES.has(result.source)
+    ? config.alertsSheetId
+    : config.sheetId;
+  await appendRows(sheetId, tabName, result.rows);
   console.log(
-    `[scheduler] ${result.source}: wrote ${result.rows.length} row(s)`
+    `[scheduler] ${tabName}: wrote ${result.rows.length} row(s)`
   );
 }
 
@@ -32,9 +57,13 @@ async function writeAnalyzerResult(result: CollectorResult): Promise<void> {
   }
   // Analyzer results replace previous data so the sheet is always current
   const headers = getHeadersForSource(result.source);
-  await clearAndWrite(config.sheetId, result.source, headers, result.rows);
+  const tabName = SOURCE_TO_TAB[result.source] ?? result.source;
+  const sheetId = ALERT_SHEET_SOURCES.has(result.source)
+    ? config.alertsSheetId
+    : config.sheetId;
+  await clearAndWrite(sheetId, tabName, headers, result.rows);
   console.log(
-    `[scheduler] ${result.source}: wrote ${result.rows.length} row(s) (replaced)`
+    `[scheduler] ${tabName}: wrote ${result.rows.length} row(s) (replaced)`
   );
 }
 
@@ -43,7 +72,7 @@ function getHeadersForSource(source: string): string[] {
     case "cannibalization":
       return ["timestamp", "query", "pageCount", "pages", "impressions"];
     case "snippet-opportunities":
-      return ["timestamp", "query", "position", "ctr", "impressions", "page"];
+      return ["timestamp", "query", "position", "ctr", "impressions"];
     case "keyword-gaps":
       return [
         "timestamp",
@@ -52,7 +81,6 @@ function getHeadersForSource(source: string): string[] {
         "clicks",
         "ctr",
         "position",
-        "page",
       ];
     default:
       return [];
@@ -145,6 +173,14 @@ export function startScheduler(): void {
       await writeResult(result);
     });
 
+    await safeRun("business-profile", async () => {
+      const { collectBusinessProfile } = await import(
+        "./collectors/business-profile.js"
+      );
+      const result = await collectBusinessProfile();
+      await writeResult(result);
+    });
+
     await runAlertPipeline();
   });
 
@@ -204,6 +240,6 @@ export function startScheduler(): void {
 
   console.log("[scheduler] Cron jobs registered:");
   console.log("  - */5 * * * *   uptime");
-  console.log("  - 0 20 * * *    search-console, ga4, ssl-check");
+  console.log("  - 0 20 * * *    search-console, ga4, ssl-check, business-profile");
   console.log("  - 0 20 * * 0    pagespeed, freshness, robots, analyzers");
 }

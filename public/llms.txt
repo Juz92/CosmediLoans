@@ -1,6 +1,6 @@
 # CosmediLoans
 Site: https://www.cosmediloans.com.au/
-Last reviewed: 2026-04-24
+Last reviewed: 2026-05-21
 
 > CosmediLoans is an Australian medical procedure loan broker-matching service. We compare rates from 20+ licensed lenders for dental, IVF, cosmetic surgery, veterinary, orthopaedic, and any elective or essential medical procedure. Free, soft-credit checks, broker-matched, no fees to the patient.
 
@@ -27,6 +27,9 @@ Last reviewed: 2026-04-24
 - https://www.cosmediloans.com.au/faq/ — frequently asked questions
 - https://www.cosmediloans.com.au/blog/ — educational guides
 
+- https://www.cosmediloans.com.au/guides/ - payment plan and medical finance guides
+- https://www.cosmediloans.com.au/editorial-policy/ - finance content review and disclosure standards
+
 ## Procedures financed
 - Dental loans: https://www.cosmediloans.com.au/procedures/dental-loans
 - Veneers financing: https://www.cosmediloans.com.au/procedures/veneers-financing
@@ -48,6 +51,31 @@ Last reviewed: 2026-04-24
 - Medical loan (general): https://www.cosmediloans.com.au/procedures/medical-loan
 - Vet bill loans: https://www.cosmediloans.com.au/procedures/vet-bill-loans
 - Debt consolidation: https://www.cosmediloans.com.au/procedures/debt-consolidation
+
+## High-intent payment plan guides
+- Dental payment plans Australia: https://www.cosmediloans.com.au/guides/dental-payment-plans-australia
+- IVF payment plans Australia: https://www.cosmediloans.com.au/guides/ivf-payment-plans-australia
+- Cosmetic surgery payment plans Australia: https://www.cosmediloans.com.au/guides/cosmetic-surgery-payment-plans-australia
+- Vet bill payment plans Australia: https://www.cosmediloans.com.au/guides/vet-bill-payment-plans-australia
+- Medical loans for bad credit Australia: https://www.cosmediloans.com.au/guides/medical-loans-bad-credit-australia
+- No credit check dental finance Australia: https://www.cosmediloans.com.au/guides/no-credit-check-dental-finance-australia
+
+## Topic hubs
+- Dental finance hub: https://www.cosmediloans.com.au/guides/topics/dental-finance
+- IVF finance hub: https://www.cosmediloans.com.au/guides/topics/ivf-finance
+- Cosmetic surgery finance hub: https://www.cosmediloans.com.au/guides/topics/cosmetic-surgery-finance
+- Bad credit medical loans hub: https://www.cosmediloans.com.au/guides/topics/bad-credit-medical-loans
+- Location treatment costs hub: https://www.cosmediloans.com.au/guides/topics/location-treatment-costs
+
+## High-intent comparison pages
+- Medical loans vs payment plans: https://www.cosmediloans.com.au/compare/medical-loans-vs-payment-plans
+- Dental loans vs buy now pay later: https://www.cosmediloans.com.au/compare/dental-loans-vs-buy-now-pay-later
+- IVF payment plan vs personal loan: https://www.cosmediloans.com.au/compare/ivf-payment-plan-vs-personal-loan
+- Cosmetic surgery finance vs credit card: https://www.cosmediloans.com.au/compare/cosmetic-surgery-finance-vs-credit-card
+- Bad credit medical loan alternatives: https://www.cosmediloans.com.au/compare/bad-credit-medical-loans-alternatives
+
+## Priority local opportunity
+- Facelift and neck lift finance on the Sunshine Coast: https://www.cosmediloans.com.au/locations/sunshine-coast/facelift-financing
 
 ## AI crawler guidance
 - Public pages under the canonical URLs above may be crawled, summarised, and cited.

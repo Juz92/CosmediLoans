@@ -1163,6 +1163,318 @@ export const comparisons: Comparison[] = [
     lastReviewed: "2026-04-24",
     relatedProcedureSlugs: ["dental-loans", "medical-loan", "debt-consolidation"],
   },
+  {
+    slug: "medical-loans-vs-payment-plans",
+    competitorName: "Payment Plans",
+    competitorType: "generic",
+    h1: "Medical Loans vs Payment Plans: Which Costs Less?",
+    metaTitle: "Medical Loans vs Payment Plans | Compare Total Cost",
+    metaDescription:
+      "Compare medical loans with clinic payment plans for treatment costs, provider choice, fees, repayment terms and approval timing.",
+    verdict:
+      "A clinic payment plan can work well for smaller balances when fees are low, the term is short and you are happy to use that provider. A broker-matched medical loan is usually stronger for larger treatment quotes because it can compare multiple lenders, fixed terms and higher borrowing limits. The right answer depends on total cost, not the weekly repayment shown first.",
+    features: [
+      { feature: "Provider Choice", us: "Use your preferred provider", them: "Usually tied to one clinic" },
+      { feature: "Loan Amount", us: "$2,000 - $100,000", them: "Set by clinic or finance partner" },
+      { feature: "Repayment Term", us: "1 - 7 years", them: "Often shorter or promotion based" },
+      { feature: "Cost Comparison", us: "20+ lenders can be compared", them: "Usually one plan only" },
+      { feature: "Best For", us: "Larger quotes and fixed repayments", them: "Simple smaller balances" },
+      { feature: "Watch Out", us: "Approval depends on lender assessment", them: "Fees and provider lock-in" },
+    ],
+    howWeWork:
+      "CosmediLoans connects you with a broker who compares medical-friendly lenders against the treatment amount, income, expenses, credit profile and payment deadline. The first step focuses on rate comparison before a formal lender application.",
+    howTheyWork:
+      "Clinic payment plans are arranged by the provider or a finance partner. They can be convenient because the plan is presented near the treatment quote, but the clinic may only offer one plan and the real cost can include account, establishment or late fees.",
+    chooseUs: [
+      "Your treatment quote is above a few thousand dollars",
+      "You want to compare several lenders before choosing",
+      "You may use a provider that does not offer in-clinic finance",
+      "You want a fixed repayment schedule with a clear end date",
+    ],
+    chooseThem: [
+      "The balance is small and can be repaid quickly",
+      "The plan has low or no fees and suits your cash flow",
+      "You are committed to that clinic and do not need lender choice",
+    ],
+    faqs: [
+      {
+        question: "Are medical payment plans cheaper than medical loans?",
+        answer:
+          "Sometimes, but only if the plan has low fees and is repaid quickly. For larger balances, a fixed medical loan can be cheaper and more predictable than a short promotion or clinic-only plan.",
+      },
+      {
+        question: "What should I compare first?",
+        answer:
+          "Compare total repayment, fees, term, provider choice, early payout rules and whether the plan requires a full credit application.",
+      },
+      {
+        question: "Can I use a medical loan with any clinic?",
+        answer:
+          "In many cases, yes. A medical loan is usually not limited to one participating clinic, but lender approval and settlement rules still apply.",
+      },
+      {
+        question: "Is a payment plan better for urgent treatment?",
+        answer:
+          "It can be if the clinic offers immediate setup and the amount is manageable. For larger urgent costs, a broker can help compare lenders that can move quickly.",
+      },
+      {
+        question: "Can I compare both before deciding?",
+        answer:
+          "Yes. Ask the clinic for the written plan terms, then compare those against broker-matched loan options using the same treatment amount.",
+      },
+    ],
+    lastReviewed: "2026-05-21",
+    relatedProcedureSlugs: ["medical-loan", "dental-loans", "ivf-financing", "vet-bill-loans"],
+  },
+  {
+    slug: "dental-loans-vs-buy-now-pay-later",
+    competitorName: "Dental BNPL",
+    competitorType: "generic",
+    h1: "Dental Loans vs Buy Now Pay Later for Dental Work",
+    metaTitle: "Dental Loans vs BNPL | Implants, Crowns and Veneers",
+    metaDescription:
+      "Compare dental loans with buy now pay later for implants, crowns, veneers, orthodontics and emergency dental treatment.",
+    verdict:
+      "BNPL can suit small dental bills if you can clear the balance quickly and the clinic accepts it. Dental loans are usually a better fit for implants, All-on-4, crowns, veneers and orthodontics because the amount is higher, the term is longer and repayments are fixed.",
+    features: [
+      { feature: "Best Amount", us: "$2,000 - $100,000", them: "Usually smaller balances" },
+      { feature: "Treatment Fit", us: "Implants, crowns, veneers, orthodontics", them: "Check-ups, whitening, small gaps" },
+      { feature: "Repayment Window", us: "Fixed term up to 7 years", them: "Short instalment windows" },
+      { feature: "Provider Choice", us: "Use many dental providers", them: "Only clinics that accept the BNPL product" },
+      { feature: "Credit Risk", us: "Soft initial assessment focus", them: "Missed payments can affect future borrowing" },
+      { feature: "Best For", us: "Major dental treatment", them: "Small short-term dental costs" },
+    ],
+    howWeWork:
+      "CosmediLoans helps dental patients compare lender options using the written treatment plan, expected payment dates and preferred dentist. The broker can factor staged implants, lab fees and follow-up appointments into the finance amount.",
+    howTheyWork:
+      "BNPL splits the bill into instalments through a participating provider. It can be fast and familiar, but limits and short repayment windows often do not match major dental quotes.",
+    chooseUs: [
+      "You are financing implants, All-on-4, crowns or orthodontics",
+      "You need a longer fixed repayment term",
+      "You want to use a dentist that does not accept BNPL",
+      "You want one loan for a staged treatment plan",
+    ],
+    chooseThem: [
+      "The dental bill is small",
+      "You can repay the balance quickly",
+      "Your clinic accepts the BNPL product and fees are clear",
+    ],
+    faqs: [
+      {
+        question: "Is BNPL good for dental implants?",
+        answer:
+          "Usually not for the full amount. Implant treatment often costs more than BNPL limits and may need a longer term than BNPL provides.",
+      },
+      {
+        question: "Can a dental loan cover a whole treatment plan?",
+        answer:
+          "Potentially, yes. Lenders assess the requested amount, income, expenses and credit profile. Use the final dental quote where possible.",
+      },
+      {
+        question: "Does BNPL affect future borrowing?",
+        answer:
+          "BNPL conduct and applications can affect how lenders view your overall commitments, especially if repayments are missed.",
+      },
+      {
+        question: "Which is faster?",
+        answer:
+          "BNPL may be faster for small approved amounts. Dental loan timing depends on lender assessment, but some options can move quickly once documents are ready.",
+      },
+      {
+        question: "Can I combine savings with a dental loan?",
+        answer:
+          "Yes. Using savings for a deposit can reduce the amount borrowed and may improve affordability.",
+      },
+    ],
+    lastReviewed: "2026-05-21",
+    relatedProcedureSlugs: ["dental-loans", "veneers-financing", "invisalign-financing"],
+  },
+  {
+    slug: "ivf-payment-plan-vs-personal-loan",
+    competitorName: "IVF Payment Plan",
+    competitorType: "generic",
+    h1: "IVF Payment Plan vs Personal Loan: Which Is Safer?",
+    metaTitle: "IVF Payment Plan vs Personal Loan | Fertility Finance",
+    metaDescription:
+      "Compare IVF clinic payment plans with personal loans for cycle fees, medication, Medicare rebate timing and multiple treatment stages.",
+    verdict:
+      "An IVF clinic payment plan can be convenient when the clinic's stages match your cash flow. A personal loan can be stronger when you need to cover medication, testing, storage, transfer costs or more than one treatment stage with one predictable repayment.",
+    features: [
+      { feature: "Cost Coverage", us: "Clinic plus related fertility costs", them: "Often clinic charges only" },
+      { feature: "Repayment Term", us: "Fixed term selected upfront", them: "Set by clinic or finance partner" },
+      { feature: "Flexibility", us: "Can include medication and timing buffers", them: "May not cover changed treatment scope" },
+      { feature: "Rebate Timing", us: "Can bridge cash flow before rebates", them: "Depends on clinic billing setup" },
+      { feature: "Best For", us: "Full cycle planning", them: "Simple clinic-staged payments" },
+    ],
+    howWeWork:
+      "CosmediLoans compares fertility loan options using the clinic quote, medication estimate, expected rebate timing and treatment stage. This helps patients plan cash flow before the cycle starts.",
+    howTheyWork:
+      "An IVF payment plan is usually tied to the fertility clinic or a clinic finance partner. It may match the clinic's billing schedule but may not include external costs or another cycle.",
+    chooseUs: [
+      "You need to cover medication, testing or storage as well as cycle fees",
+      "You want one fixed repayment schedule",
+      "You may need multiple treatment stages",
+      "You want to compare lenders beyond the clinic's option",
+    ],
+    chooseThem: [
+      "The clinic plan covers the full amount you need",
+      "Fees and payment dates are clear",
+      "You are comfortable using that clinic's finance pathway",
+    ],
+    faqs: [
+      {
+        question: "Can a personal loan cover IVF medication?",
+        answer:
+          "Potentially, yes. Use the clinic and pharmacy estimates to set a realistic amount before applying.",
+      },
+      {
+        question: "Are IVF payment plans interest free?",
+        answer:
+          "Some plans may advertise interest-free periods, but fees, account charges and late fees can still apply. Compare total cost.",
+      },
+      {
+        question: "How do Medicare rebates affect IVF finance?",
+        answer:
+          "Rebates can reduce out-of-pocket cost, but timing matters because you may need to pay before claiming.",
+      },
+      {
+        question: "Should I borrow for more than one IVF cycle?",
+        answer:
+          "Only if it fits lender assessment and your budget. Discuss realistic treatment stages with the clinic first.",
+      },
+      {
+        question: "Can I apply before choosing an IVF clinic?",
+        answer:
+          "You can compare likely options, but final approval works best with a confirmed clinic quote and payment dates.",
+      },
+    ],
+    lastReviewed: "2026-05-21",
+    relatedProcedureSlugs: ["ivf-financing", "fertility-treatment-loans", "medical-loan"],
+  },
+  {
+    slug: "cosmetic-surgery-finance-vs-credit-card",
+    competitorName: "Credit Card for Surgery",
+    competitorType: "generic",
+    h1: "Cosmetic Surgery Finance vs Credit Card",
+    metaTitle: "Cosmetic Surgery Finance vs Credit Card | Compare Cost",
+    metaDescription:
+      "Compare cosmetic surgery finance with credit cards for larger procedures, fixed repayments, interest rates and provider payment timing.",
+    verdict:
+      "A credit card can work for a small deposit if you clear it quickly. For breast augmentation, facelift, rhinoplasty, tummy tuck or liposuction, a fixed-term cosmetic surgery loan is usually more predictable because credit card rates are high and revolving balances can last for years.",
+    features: [
+      { feature: "Rate Structure", us: "Fixed lender rate", them: "Revolving purchase rate" },
+      { feature: "Repayment End Date", us: "Clear term", them: "Can extend if only minimums are paid" },
+      { feature: "Procedure Fit", us: "Larger surgery quotes", them: "Small deposits or short-term cash flow" },
+      { feature: "Provider Choice", us: "Use many providers", them: "Depends on card acceptance and limit" },
+      { feature: "Best For", us: "Planned surgery above $3,000", them: "Balances cleared inside interest-free period" },
+    ],
+    howWeWork:
+      "CosmediLoans compares lenders against the full surgery quote, including hospital, anaesthetist, implants, garments and payment dates. The goal is a fixed repayment plan that fits the confirmed treatment amount.",
+    howTheyWork:
+      "A credit card lets you pay a provider immediately if the clinic accepts cards and you have enough limit. If the balance is not cleared inside the interest-free period, high purchase rates can make the procedure materially more expensive.",
+    chooseUs: [
+      "The surgery quote is larger than your short-term cash flow",
+      "You want a fixed term and known repayment end date",
+      "You need to compare rates before booking",
+      "You want to preserve credit card limit for other expenses",
+    ],
+    chooseThem: [
+      "You only need to pay a small deposit",
+      "You can repay the card before interest applies",
+      "Your card benefits clearly outweigh any surcharge or interest risk",
+    ],
+    faqs: [
+      {
+        question: "Can I pay for cosmetic surgery on a credit card?",
+        answer:
+          "Some clinics accept cards, but surcharges, limits and high interest can make cards expensive if the balance is carried.",
+      },
+      {
+        question: "Is surgery finance cheaper than a credit card?",
+        answer:
+          "For balances carried beyond the interest-free period, a fixed medical loan is often cheaper than a credit card purchase rate.",
+      },
+      {
+        question: "Can cosmetic surgery finance include hospital fees?",
+        answer:
+          "Potentially, yes. Use the complete written quote, including surgeon, hospital and anaesthetist estimates.",
+      },
+      {
+        question: "Should I finance surgery before consulting a surgeon?",
+        answer:
+          "You can check likely borrowing capacity first, but final loan comparison should use the surgeon's written quote.",
+      },
+      {
+        question: "Can I repay early?",
+        answer:
+          "Some lenders allow extra repayments or early payout. Confirm fees and rules before accepting an offer.",
+      },
+    ],
+    lastReviewed: "2026-05-21",
+    relatedProcedureSlugs: ["breast-augmentation-loans", "facelift-financing", "rhinoplasty-financing", "tummy-tuck-loans"],
+  },
+  {
+    slug: "bad-credit-medical-loans-alternatives",
+    competitorName: "Bad Credit Alternatives",
+    competitorType: "generic",
+    h1: "Bad Credit Medical Loans: Alternatives Before You Apply",
+    metaTitle: "Bad Credit Medical Loan Alternatives | Safer Options",
+    metaDescription:
+      "Compare alternatives to bad credit medical loans, including soft checks, staged treatment, lower loan amounts and broker-matched lenders.",
+    verdict:
+      "Bad credit does not always rule out medical finance, but it does make direct applications riskier. Before applying everywhere, compare soft-check broker matching, staged treatment, a smaller loan amount, savings plus finance, and debt cleanup where appropriate.",
+    features: [
+      { feature: "First Step", us: "Soft-check broker comparison", them: "Multiple direct applications" },
+      { feature: "Loan Size", us: "Matched to realistic serviceability", them: "Often requested at full quote amount" },
+      { feature: "Credit Impact", us: "Avoids unnecessary hard enquiries early", them: "Can add enquiries quickly" },
+      { feature: "Alternatives", us: "Stage treatment, deposit, consolidate debts", them: "Often one high-rate offer" },
+      { feature: "Best For", us: "Borrowers needing realistic options", them: "Borrowers who already know a lender fits" },
+    ],
+    howWeWork:
+      "CosmediLoans can help identify lenders that may fit the borrower, treatment type and requested amount before a formal application. This can reduce wasted enquiries and help set a more realistic amount.",
+    howTheyWork:
+      "Applying directly with several bad-credit lenders can create avoidable enquiries and may still result in high rates, low limits or declines if serviceability is not clear.",
+    chooseUs: [
+      "You are worried about declined applications",
+      "You want to test realistic options before a hard enquiry",
+      "You can reduce or stage the amount borrowed",
+      "You need a broker to compare near-prime lender fit",
+    ],
+    chooseThem: [
+      "You have a confirmed pre-approval from a lender you trust",
+      "The treatment is urgent and the provider has a suitable in-clinic option",
+      "You have compared total cost and can afford the repayment",
+    ],
+    faqs: [
+      {
+        question: "Can I get a medical loan with bad credit?",
+        answer:
+          "It may be possible, but approval depends on income, expenses, credit history, debts and the amount requested.",
+      },
+      {
+        question: "What is the safest first step?",
+        answer:
+          "Use a soft initial assessment where available, then apply formally only when the lender fit and treatment amount are clearer.",
+      },
+      {
+        question: "Can staging treatment help?",
+        answer:
+          "If your provider says treatment can be safely staged, a smaller loan amount may improve affordability and reduce total interest.",
+      },
+      {
+        question: "Are guaranteed approval medical loans real?",
+        answer:
+          "Be careful with guaranteed approval claims. Responsible lenders still assess affordability and suitability.",
+      },
+      {
+        question: "Should I consolidate debts first?",
+        answer:
+          "Sometimes. If existing repayments are blocking serviceability, debt consolidation may help, but only if the total cost and term make sense.",
+      },
+    ],
+    lastReviewed: "2026-05-21",
+    relatedProcedureSlugs: ["medical-loan", "dental-loans", "debt-consolidation", "vet-bill-loans"],
+  },
 ];
 
 export function getComparisonBySlug(slug: string): Comparison | undefined {

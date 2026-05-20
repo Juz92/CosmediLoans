@@ -29,7 +29,7 @@ export async function evaluateAlerts(): Promise<TriggeredAlert[]> {
   try {
     const uptimeRows = await readLastNRows(
       config.sheetId,
-      "uptime",
+      "uptime-log",
       "A:D",
       alertRules.siteDown.consecutiveFailures
     );
@@ -104,7 +104,7 @@ export async function evaluateAlerts(): Promise<TriggeredAlert[]> {
   try {
     const trafficRows = await readLastNRows(
       config.sheetId,
-      "ga4",
+      "daily-traffic",
       "A:C",
       14
     );
@@ -189,9 +189,9 @@ export async function evaluateAlerts(): Promise<TriggeredAlert[]> {
   // --- 5. Check snippet opportunities ---
   try {
     const snippetRows = await readLastNRows(
-      config.sheetId,
+      config.alertsSheetId,
       "snippet-opportunities",
-      "A:F",
+      "A:E",
       50
     );
     // Snippet row format: [timestamp, query, position, ctr, impressions, page]
@@ -221,9 +221,9 @@ export async function evaluateAlerts(): Promise<TriggeredAlert[]> {
   // --- 6. Check keyword gaps ---
   try {
     const gapRows = await readLastNRows(
-      config.sheetId,
+      config.alertsSheetId,
       "keyword-gaps",
-      "A:G",
+      "A:F",
       50
     );
     // Gap row format: [timestamp, query, impressions, clicks, ctr, position, page]

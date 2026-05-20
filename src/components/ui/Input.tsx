@@ -8,7 +8,18 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, className = "", id: externalId, ...props }, ref) => {
+  (
+    {
+      label,
+      error,
+      className = "",
+      id: externalId,
+      "aria-label": ariaLabel,
+      placeholder,
+      ...props
+    },
+    ref
+  ) => {
     const generatedId = useId();
     const id = externalId || generatedId;
     const errorId = `${id}-error`;
@@ -23,6 +34,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           id={id}
+          placeholder={placeholder}
+          aria-label={label ? ariaLabel : ariaLabel ?? placeholder}
           aria-invalid={error ? true : undefined}
           aria-describedby={error ? errorId : undefined}
           className={`w-full px-4 py-3 border border-border rounded-button bg-background text-text-dark placeholder:text-text-muted focus:outline-none focus:border-primary-light focus:ring-2 focus:ring-primary-light/10 transition-all ${

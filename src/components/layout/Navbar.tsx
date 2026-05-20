@@ -10,6 +10,8 @@ import { procedures } from "@/data/procedures";
 
 const otherLinks = [
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/guides", label: "Guides" },
+  { href: "/compare", label: "Compare" },
   { href: "/calculator", label: "Calculator" },
   { href: "/about", label: "About" },
 ];

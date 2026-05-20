@@ -32,7 +32,8 @@ function HeroBackdrop() {
         width={1200}
         height={1200}
         loading="lazy"
-        sizes="(min-width: 1280px) 760px, 52vw"
+        quality={65}
+        sizes="(max-width: 767px) 1px, (min-width: 1280px) 760px, 52vw"
         className="absolute left-[-9rem] top-10 h-auto w-[min(800px,56vw)] max-w-none select-none"
         style={{
           WebkitMaskImage:

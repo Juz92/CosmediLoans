@@ -96,19 +96,21 @@ export function InlineLeadForm({
   }
 
   return (
-    <div className="bg-primary-wash rounded-card p-6 md:p-8 border border-primary/10">
+      <div className="bg-primary-wash rounded-card p-6 md:p-8 border border-primary/10">
       <h3 className="text-lg font-bold text-text-dark mb-1">{heading}</h3>
-      <p className="text-sm text-text-muted mb-5">
+      <p className="text-sm text-text-body mb-5">
         No impact to your credit score &middot; Takes 60 seconds
       </p>
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 sm:grid-cols-2">
         <Input
+          label="Full name"
           placeholder="Full name"
           autoComplete="name"
           error={errors.fullName?.message}
           {...register("fullName")}
         />
         <Input
+          label="Phone"
           placeholder="04XX XXX XXX"
           type="tel"
           autoComplete="tel"
@@ -116,6 +118,7 @@ export function InlineLeadForm({
           {...register("phone")}
         />
         <Input
+          label="Email"
           placeholder="Email address"
           type="email"
           autoComplete="email"
@@ -123,12 +126,14 @@ export function InlineLeadForm({
           {...register("email")}
         />
         <Select
+          label="Procedure type"
           placeholder="Procedure type..."
           options={procedureOptions}
           error={errors.procedure?.message}
           {...register("procedure")}
         />
         <Input
+          label="Estimated amount"
           placeholder="Estimated amount (e.g. $10,000)"
           autoComplete="off"
           inputMode="numeric"

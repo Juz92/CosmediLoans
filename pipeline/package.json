@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "auth:google": "tsx src/auth/reauthorize-google.ts",
+    "gsc:opportunities": "tsx src/gsc-opportunities.ts",
     "pipeline": "tsx src/run.ts --mode=scheduler",
     "collect": "tsx src/run.ts --mode=collect",
     "analyze": "tsx src/run.ts --mode=analyze",

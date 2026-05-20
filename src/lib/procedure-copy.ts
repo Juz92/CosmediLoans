@@ -112,7 +112,7 @@ const copyOverrides: Record<string, ProcedureCopyOverride> = {
     ctaSubject: "Your Medical Procedure",
     financingTitle: "Medical Financing",
   },
-  "debt-consolidation-loans": {
+  "debt-consolidation": {
     treatment: "debt consolidation",
     costSubject: "Debt Consolidation",
     ctaSubject: "Your Debt Consolidation",

@@ -275,7 +275,7 @@ export function LoanCalculator() {
             </div>
           </div>
           {rate <= BROKER_MAX && (
-            <p className="text-xs text-emerald-600 font-medium">
+            <p className="text-xs text-emerald-700 font-medium">
               This rate is within the typical broker-matched range.
             </p>
           )}

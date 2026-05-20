@@ -15,6 +15,7 @@ const DATA_TABS = [
   "broken-links",
   "robots-monitor",
   "content-freshness",
+  "business-profile",
   "cannibalization",
   "google-trends",
   "backlinks",

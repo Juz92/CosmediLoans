@@ -5,8 +5,11 @@ import {
   getComparisonBySlug,
   getAllComparisonSlugs,
 } from "@/data/comparisons";
+import { authorPersonSchema, getAuthorBySlug } from "@/data/authors";
 import { procedures } from "@/data/procedures";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { TrustDisclosure } from "@/components/seo/TrustDisclosure";
+import { SeoLeadCaptureBlock } from "@/components/lead-capture/SeoLeadCaptureBlock";
 import { ComparisonHero } from "@/components/compare/ComparisonHero";
 import { ComparisonTable } from "@/components/compare/ComparisonTable";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
@@ -69,26 +72,52 @@ export default function ComparisonPage({
     .map((slug) => procedures.find((p) => p.slug === slug))
     .filter(Boolean)
     .slice(0, 4);
+  const author = getAuthorBySlug(undefined);
 
-  // Article JSON-LD
-  const articleSchema = {
+  // Article and FAQ JSON-LD
+  const pageSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: comparison.h1,
-    description: comparison.metaDescription,
-    url: absoluteUrl(`/compare/${comparison.slug}`),
-    datePublished: comparison.lastReviewed,
-    dateModified: comparison.lastReviewed,
-    publisher: {
-      "@type": "Organization",
-      name: BRAND,
-      url: SITE_ORIGIN,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: comparison.h1,
+        description: comparison.metaDescription,
+        url: absoluteUrl(`/compare/${comparison.slug}`),
+        datePublished: comparison.lastReviewed,
+        dateModified: comparison.lastReviewed,
+        author: authorPersonSchema(author),
+        reviewedBy: {
+          "@type": "Organization",
+          name: BRAND,
+          url: SITE_ORIGIN,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: BRAND,
+          url: SITE_ORIGIN,
+          logo: {
+            "@type": "ImageObject",
+            url: absoluteUrl("/Images/Logo.png"),
+          },
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: comparison.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
   };
 
   return (
     <>
-      <JsonLd data={articleSchema} />
+      <JsonLd data={pageSchema} />
 
       {/* ── 1 & 2. Breadcrumb + ComparisonHero ── */}
       <ComparisonHero comparison={comparison} />
@@ -111,6 +140,12 @@ export default function ComparisonPage({
       </section>
 
       {/* ── 4. Side-by-Side Feature Table / Pros-Cons ── */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <TrustDisclosure date={comparison.lastReviewed} compact />
+        </div>
+      </section>
+
       <section className="section-padding bg-surface">
         <div className="container-narrow">
           <h2 className="text-section-h2 text-text-dark mb-8 text-center">
@@ -238,6 +273,10 @@ export default function ComparisonPage({
           </div>
         </div>
       </section>
+
+      <SeoLeadCaptureBlock
+        heading={`Check your quote before choosing ${comparison.competitorName}`}
+      />
 
       {/* ── 7. Related Procedure Pages ── */}
       {relatedProcedures.length > 0 && (

@@ -17,6 +17,7 @@ import { TrustBar } from "@/components/content/TrustBar";
 import { ProcedureCostTable } from "@/components/procedures/ProcedureCostTable";
 import { ProcedureFAQ } from "@/components/procedures/ProcedureFAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { LastReviewed } from "@/components/seo/LastReviewed";
 import { getAllLocationSlugs, getLocationBySlug, locations } from "@/data/locations";
 import {
   getAllProcedureSlugs,
@@ -24,7 +25,11 @@ import {
   type Procedure,
 } from "@/data/procedures";
 import { getProcedureCopy } from "@/lib/procedure-copy";
-import { shouldIndexLocationProcedure } from "@/lib/location-procedure-indexing";
+import { getLocationProcedureContent } from "@/lib/location-procedure-content";
+import {
+  getIndexedLocationProcedurePaths,
+  shouldIndexLocationProcedure,
+} from "@/lib/location-procedure-indexing";
 import { SITE_ORIGIN } from "@/lib/site";
 
 const BASE_URL = SITE_ORIGIN;
@@ -35,17 +40,10 @@ function formatList(items: string[]) {
   return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
 }
 
-function formatAmount(amount: number) {
-  return new Intl.NumberFormat("en-AU", {
-    style: "currency",
-    currency: "AUD",
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
-
 export async function generateStaticParams() {
-  return getAllLocationSlugs().flatMap((location) =>
-    getAllProcedureSlugs().map((procedure) => ({ location, procedure }))
+  return getIndexedLocationProcedurePaths(
+    getAllLocationSlugs(),
+    getAllProcedureSlugs()
   );
 }
 
@@ -59,13 +57,13 @@ export async function generateMetadata({
   if (!loc || !proc) return {};
 
   const copy = getProcedureCopy(proc);
+  const content = getLocationProcedureContent(loc, proc);
   const nearbyAreas = loc.nearbyAreas.slice(0, 3).join(", ");
-  const topCost = proc.costTable[0]?.subProcedure;
-  const shouldIndex = shouldIndexLocationProcedure(proc.slug);
+  const shouldIndex = shouldIndexLocationProcedure(loc.slug, proc.slug);
 
   return {
     title: `${copy.financingTitle} in ${loc.name} | From ${proc.rateFrom}`,
-    description: `Compare ${copy.financingTitle} in ${loc.name}, ${loc.stateCode}. Plan around ${proc.avgCostRange} treatment costs${topCost ? ` including ${topCost}` : ""}, then check broker-matched options from 20+ lenders.`,
+    description: content.metaDescription,
     alternates: { canonical: `/locations/${loc.slug}/${proc.slug}` },
     robots: shouldIndex
       ? undefined
@@ -75,7 +73,7 @@ export async function generateMetadata({
         },
     openGraph: {
       title: `${copy.financingTitle} in ${loc.name} | CosmediLoans`,
-      description: `Local guide for ${copy.treatment} finance in ${loc.name}, including ${nearbyAreas}. Compare rates, terms, deposits, and lender options before booking treatment.`,
+      description: `Local guide for ${copy.treatment} finance in ${loc.name}, including ${nearbyAreas}. Compare quote details, payment timing, and lender options before booking.`,
       url: `/locations/${loc.slug}/${proc.slug}`,
       type: "website",
     },
@@ -92,67 +90,71 @@ export default function LocationProcedurePage({
   if (!loc || !proc) notFound();
 
   const copy = getProcedureCopy(proc);
+  const content = getLocationProcedureContent(loc, proc);
+  const shouldIndex = shouldIndexLocationProcedure(loc.slug, proc.slug);
   const nearbyAreas = loc.nearbyAreas.join(", ");
   const nearbyShortList = formatList(loc.nearbyAreas.slice(0, 3));
-  const primaryCost = proc.costTable[0];
-  const secondaryCost = proc.costTable[1] ?? proc.costTable[0];
-  const repaymentExample =
-    proc.repaymentExamples[1] ?? proc.repaymentExamples[0] ?? null;
   const relatedLocations = locations
-    .filter((item) => item.stateCode === loc.stateCode && item.slug !== loc.slug)
+    .filter(
+      (item) =>
+        item.stateCode === loc.stateCode &&
+        item.slug !== loc.slug &&
+        shouldIndexLocationProcedure(item.slug, proc.slug)
+    )
     .slice(0, 3);
   const relatedProcedures = proc.relatedSlugs
     .map((slug) => getProcedureBySlug(slug))
-    .filter((item): item is Procedure => item !== undefined)
+    .filter(
+      (item): item is Procedure =>
+        item !== undefined &&
+        shouldIndexLocationProcedure(loc.slug, item.slug)
+    )
     .slice(0, 3);
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
-    name: `CosmediLoans - ${copy.financingTitle} in ${loc.name}`,
-    url: `${BASE_URL}/locations/${loc.slug}/${proc.slug}`,
-    description: `${copy.financingTitle} for patients in ${loc.name}, ${loc.state}. Typical treatment costs range from ${proc.avgCostRange}, with rates from ${proc.rateFrom}.`,
-    areaServed: {
-      "@type": "City",
-      name: loc.name,
-      containedInPlace: {
-        "@type": "State",
-        name: loc.state,
-        containedInPlace: { "@type": "Country", name: "Australia" },
-      },
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: copy.financingTitle,
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: copy.financingTitle,
-          description: proc.heroDescription,
-          eligibleRegion: { "@type": "City", name: loc.name },
+    "@graph": [
+      {
+        "@type": "FinancialService",
+        name: `CosmediLoans - ${copy.financingTitle} in ${loc.name}`,
+        url: `${BASE_URL}/locations/${loc.slug}/${proc.slug}`,
+        description: `${copy.financingTitle} for patients in ${loc.name}, ${loc.state}. Typical treatment costs range from ${proc.avgCostRange}, with rates from ${proc.rateFrom}.`,
+        serviceType: content.schemaServiceType,
+        areaServed: {
+          "@type": "City",
+          name: loc.name,
+          containedInPlace: {
+            "@type": "State",
+            name: loc.state,
+            containedInPlace: { "@type": "Country", name: "Australia" },
+          },
         },
-      ],
-    },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: copy.financingTitle,
+          itemListElement: [
+            {
+              "@type": "Offer",
+              name: copy.financingTitle,
+              description: proc.heroDescription,
+              eligibleRegion: { "@type": "City", name: loc.name },
+            },
+          ],
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: content.localFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
   };
-
-  const localGuideItems = [
-    {
-      title: "Compare the quote, not just the rate",
-      text: `Ask the provider for a written ${copy.treatment} quote, then compare lender fees, loan terms, and repayment timing against that exact amount.`,
-    },
-    {
-      title: "Keep provider choice open",
-      text: `Patients around ${loc.name} often compare options across ${nearbyAreas}. A broker-matched loan can move with the provider you choose.`,
-    },
-    {
-      title: "Check deposit timing",
-      text: "Some clinics require a deposit before the final appointment date. Pre-approval can help you avoid accepting rushed payment terms.",
-    },
-    {
-      title: "Use a soft-credit inquiry first",
-      text: "CosmediLoans can check your rate path without affecting your credit score, so you can compare before making a commitment.",
-    },
-  ];
 
   const heroFacts = [
     { label: "Local area", value: loc.stateCode === "ACT" ? "ACT" : loc.stateCode },
@@ -160,53 +162,11 @@ export default function LocationProcedurePage({
     { label: "Credit check", value: "Soft inquiry" },
   ];
 
-  const quoteVariables = [
-    {
-      icon: Calculator,
-      label: "Typical quote range",
-      value: proc.avgCostRange,
-      text: `Use this as the starting range for ${copy.treatment} before checking lender terms in ${loc.name}.`,
-    },
-    {
-      icon: ClipboardList,
-      label: primaryCost ? "Quote item to confirm" : "Quote details",
-      value: primaryCost?.subProcedure ?? copy.ctaSubject,
-      text: primaryCost
-        ? `${primaryCost.subProcedure} is commonly quoted around ${primaryCost.costRange}; confirm inclusions before comparing finance.`
-        : "Ask the provider for a written quote with deposits, treatment stages, and payment dates separated.",
-    },
-    {
-      icon: CalendarDays,
-      label: "Planning window",
-      value: repaymentExample
-        ? `${formatAmount(repaymentExample.amount)} example`
-        : `Up to ${proc.maxTerm}`,
-      text: repaymentExample
-        ? `A ${formatAmount(repaymentExample.amount)} loan over ${repaymentExample.term} years is a useful repayment anchor before booking.`
-        : `Compare terms up to ${proc.maxTerm} before accepting clinic payment timing.`,
-    },
-  ];
-
-  const localQuestions = [
-    {
-      question: `Can I compare ${copy.financingTitle} around ${loc.name}?`,
-      answer: `Yes. Patients in ${loc.name} can compare broker-matched lender options while still choosing providers across ${nearbyShortList}. That helps separate the treatment decision from the payment pressure.`,
-    },
-    {
-      question: `What should my ${copy.treatment} quote include before I check rates?`,
-      answer: secondaryCost
-        ? `Ask for itemised costs such as ${primaryCost?.subProcedure ?? copy.ctaSubject} and ${secondaryCost.subProcedure}, plus deposits, staged payments, and any follow-up fees.`
-        : "Ask for itemised treatment costs, deposits, staged payments, follow-up fees, and the date payment is due.",
-    },
-    {
-      question: `When should I check finance before booking in ${loc.name}?`,
-      answer: `${loc.localContext} Checking finance before you pay a deposit gives your broker room to compare lenders instead of rushing into the first available option.`,
-    },
-  ];
+  const quoteIcons = [Calculator, ClipboardList, CalendarDays, ShieldCheck];
 
   return (
     <>
-      <JsonLd data={schema} />
+      {shouldIndex && <JsonLd data={schema} />}
 
       <section className="bg-gradient-to-b from-primary-wash via-surface to-background section-padding pb-12 md:pb-section-y">
         <div className="container-narrow">
@@ -221,10 +181,7 @@ export default function LocationProcedurePage({
                 <span className="text-primary">{loc.name}</span>
               </h1>
               <p className="text-body text-text-body mb-6 max-w-2xl">
-                Compare broker-matched finance for {copy.treatment} before you
-                book care in {loc.name}. CosmediLoans helps patients check rates
-                from 20+ lenders, understand repayment options, and keep provider
-                choice open across {nearbyAreas}.
+                {content.heroDescription}
               </p>
               <div className="grid gap-3 sm:grid-cols-3 max-w-2xl">
                 {heroFacts.map((fact) => (
@@ -240,6 +197,9 @@ export default function LocationProcedurePage({
                     </p>
                   </div>
                 ))}
+              </div>
+              <div className="mt-5">
+                <LastReviewed />
               </div>
             </div>
             <div className="lg:ml-auto">
@@ -261,15 +221,15 @@ export default function LocationProcedurePage({
               <h2 className="mt-3 text-section-h2 text-text-dark">
                 Plan finance before you book in {loc.name}
               </h2>
-              <p className="mt-4 text-body text-text-body">
-                {loc.localContext} Financing should be checked against the actual
-                procedure quote, the expected appointment timeline, and any deposit
-                the provider asks for upfront.
-              </p>
+              <div className="mt-4 space-y-4 text-body text-text-body">
+                {content.localNarrative.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              {localGuideItems.map((item) => (
+              {content.localGuideItems.map((item) => (
                 <article
                   key={item.title}
                   className="rounded-card border border-border bg-surface p-5"
@@ -298,24 +258,101 @@ export default function LocationProcedurePage({
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
-              {quoteVariables.map((item) => (
-                <article
-                  key={item.label}
-                  className="rounded-card border border-border bg-surface p-5"
-                >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-wash">
-                    <item.icon className="h-5 w-5 text-primary" aria-hidden="true" />
-                  </div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-text-muted">
-                    {item.label}
+              {content.quotePlanningCards.map((item, index) => {
+                const Icon = quoteIcons[index % quoteIcons.length];
+
+                return (
+                  <article
+                    key={item.title}
+                    className="rounded-card border border-border bg-surface p-5"
+                  >
+                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-wash">
+                      <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-bold uppercase tracking-wide text-text-muted">
+                      {item.title}
+                    </p>
+                    <h4 className="mt-2 text-lg font-bold text-text-dark">
+                      {item.value}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-text-body">
+                      {item.text}
+                    </p>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 border-t border-border pt-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <div className="mb-5 max-w-2xl">
+                <h3 className="text-2xl font-bold tracking-tight text-text-dark">
+                  How to compare providers and finance in {loc.name}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-text-body">
+                  These checks help separate the treatment choice from the loan
+                  choice, especially when quotes differ across {nearbyAreas}.
+                </p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
+                {content.providerComparisonItems.map((item) => (
+                  <article
+                    key={item.title}
+                    className="rounded-card border border-border bg-surface p-5"
+                  >
+                    <h4 className="font-bold text-text-dark">{item.title}</h4>
+                    <p className="mt-2 text-sm leading-relaxed text-text-body">
+                      {item.text}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <aside className="rounded-card border border-border bg-surface p-6">
+              <h3 className="text-xl font-bold tracking-tight text-text-dark">
+                Application checklist
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-text-body">
+                Bring these details together before a broker compares lenders.
+              </p>
+              <ul className="mt-5 space-y-3">
+                {content.applicationChecklist.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm text-text-body">
+                    <CheckCircle
+                      className="mt-0.5 h-4 w-4 shrink-0 text-primary"
+                      aria-hidden="true"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 rounded-button bg-primary-wash p-4">
+                <h4 className="font-bold text-text-dark">
+                  {content.exampleScenario.title}
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-text-body">
+                  {content.exampleScenario.text}
+                </p>
+              </div>
+            </aside>
+          </div>
+
+          <div className="mt-10 rounded-card border border-border bg-surface p-6">
+            <h3 className="text-2xl font-bold tracking-tight text-text-dark">
+              Payment timing checks before you apply
+            </h3>
+            <div className="mt-5 grid gap-4 md:grid-cols-4">
+              {content.paymentMilestones.map((item, index) => (
+                <div key={item} className="rounded-button bg-background p-4">
+                  <p className="text-xs font-bold uppercase tracking-wide text-primary">
+                    Step {index + 1}
                   </p>
-                  <h4 className="mt-2 text-lg font-bold text-text-dark">
-                    {item.value}
-                  </h4>
                   <p className="mt-2 text-sm leading-relaxed text-text-body">
-                    {item.text}
+                    {item}
                   </p>
-                </article>
+                </div>
               ))}
             </div>
           </div>
@@ -381,7 +418,7 @@ export default function LocationProcedurePage({
             </p>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
-            {localQuestions.map((item) => (
+            {content.localFaqs.map((item) => (
               <article
                 key={item.question}
                 className="rounded-card border border-border bg-background p-5"
@@ -402,6 +439,7 @@ export default function LocationProcedurePage({
         <ProcedureCostTable
           costHeading={copy.costHeading.replace(" in Australia?", ` in ${loc.name}?`)}
           costTable={proc.costTable}
+          intro={`Use these national cost ranges as a benchmark, then compare them with your written ${loc.name} quote and any provider deposits before choosing a loan amount.`}
         />
       )}
 

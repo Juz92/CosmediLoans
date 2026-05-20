@@ -3,9 +3,14 @@ import type { CostRow } from "@/data/procedures";
 interface ProcedureCostTableProps {
   costHeading: string;
   costTable: CostRow[];
+  intro?: string;
 }
 
-export function ProcedureCostTable({ costHeading, costTable }: ProcedureCostTableProps) {
+export function ProcedureCostTable({
+  costHeading,
+  costTable,
+  intro,
+}: ProcedureCostTableProps) {
   return (
     <section className="section-padding bg-surface">
       <div className="container-narrow">
@@ -13,8 +18,8 @@ export function ProcedureCostTable({ costHeading, costTable }: ProcedureCostTabl
           {costHeading}
         </h2>
         <p className="text-body text-text-body mb-8 max-w-2xl">
-          Costs vary depending on complexity, location, and provider. Here are typical
-          price ranges across Australia.
+          {intro ??
+            "Costs vary depending on complexity, location, and provider. Here are typical price ranges across Australia."}
         </p>
         <div className="overflow-x-auto rounded-card border border-border">
           <table className="w-full text-left">

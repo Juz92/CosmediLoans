@@ -4,7 +4,9 @@ import { comparisons } from "@/data/comparisons";
 import { getAllPosts } from "@/lib/blog";
 import { getAllLocationSlugs } from "@/data/locations";
 import { SITE_ORIGIN, LAST_REVIEWED } from "@/lib/site";
-import { getIndexedLocationProcedureSlugs } from "@/lib/location-procedure-indexing";
+import { getIndexedLocationProcedurePaths } from "@/lib/location-procedure-indexing";
+import { highIntentGuides } from "@/data/high-intent-guides";
+import { guideHubs } from "@/data/guide-hubs";
 
 const BASE_URL = SITE_ORIGIN;
 
@@ -17,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/procedures`, lastModified: reviewedIso, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/calculator`, lastModified: reviewedIso, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/compare`, lastModified: reviewedIso, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE_URL}/guides`, lastModified: reviewedIso, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE_URL}/editorial-policy`, lastModified: reviewedIso, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE_URL}/how-it-works`, lastModified: reviewedIso, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/about`, lastModified: reviewedIso, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified: reviewedIso, changeFrequency: "monthly", priority: 0.5 },
@@ -52,9 +56,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const guidePages: MetadataRoute.Sitemap = highIntentGuides.map((guide) => ({
+    url: `${BASE_URL}/guides/${guide.slug}`,
+    lastModified: new Date(guide.lastReviewed).toISOString(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  const guideHubPages: MetadataRoute.Sitemap = guideHubs.map((hub) => ({
+    url: `${BASE_URL}/guides/topics/${hub.slug}`,
+    lastModified: reviewedIso,
+    changeFrequency: "monthly" as const,
+    priority: 0.72,
+  }));
+
   const locationSlugs = getAllLocationSlugs();
-  const indexedLocationProcedureSlugs =
-    getIndexedLocationProcedureSlugs(procedureSlugs);
+  const indexedLocationProcedurePaths = getIndexedLocationProcedurePaths(
+    locationSlugs,
+    procedureSlugs
+  );
   const locationPages: MetadataRoute.Sitemap = locationSlugs.map((loc) => ({
     url: `${BASE_URL}/locations/${loc}`,
     lastModified: reviewedIso,
@@ -62,20 +82,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  const locationProcedurePages: MetadataRoute.Sitemap = locationSlugs.flatMap((loc) =>
-    indexedLocationProcedureSlugs.map((procedure) => ({
-      url: `${BASE_URL}/locations/${loc}/${procedure}`,
+  const locationProcedurePages: MetadataRoute.Sitemap =
+    indexedLocationProcedurePaths.map(({ location, procedure }) => ({
+      url: `${BASE_URL}/locations/${location}/${procedure}`,
       lastModified: reviewedIso,
       changeFrequency: "monthly" as const,
       priority: 0.55,
-    }))
-  );
+    }));
 
   return [
     ...corePages,
     ...procedurePages,
     ...comparisonPages,
     ...blogPages,
+    ...guideHubPages,
+    ...guidePages,
     ...locationPages,
     ...locationProcedurePages,
   ];

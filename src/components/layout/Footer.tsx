@@ -38,6 +38,10 @@ const footerColumns = [
     title: "Resources",
     links: [
       { href: "/calculator", label: "Loan Calculator" },
+      { href: "/guides", label: "Payment Plan Guides" },
+      { href: "/guides/topics/dental-finance", label: "Dental Finance Hub" },
+      { href: "/guides/topics/ivf-finance", label: "IVF Finance Hub" },
+      { href: "/guides/topics/cosmetic-surgery-finance", label: "Cosmetic Surgery Hub" },
       { href: "/blog", label: "Guides & Articles" },
       { href: "/compare", label: "Compare Options" },
       { href: "/faq", label: "FAQs" },
@@ -49,6 +53,7 @@ const footerColumns = [
       { href: "/privacy-policy", label: "Privacy Policy" },
       { href: "/terms", label: "Terms of Use" },
       { href: "/disclaimer", label: "Disclaimer" },
+      { href: "/editorial-policy", label: "Editorial Policy" },
     ],
   },
 ];

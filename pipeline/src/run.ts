@@ -18,18 +18,31 @@ const SOURCE_TO_TAB: Record<string, string> = {
   pagespeed: "pagespeed",
   "robots-monitor": "robots-monitor",
   "content-freshness": "content-freshness",
+  "business-profile": "business-profile",
   cannibalization: "cannibalization",
   "snippet-finder": "snippet-opportunities",
+  "snippet-opportunities": "snippet-opportunities",
   "keyword-gaps": "keyword-gaps",
 };
+
+const ALERT_SHEET_SOURCES = new Set([
+  "snippet-finder",
+  "snippet-opportunities",
+  "keyword-gaps",
+  "trending-keywords",
+  "competitor-movements",
+]);
 
 async function writeResultToSheets(result: CollectorResult): Promise<void> {
   const { appendRows } = await import("./sheets/writer.js");
   const { getSiteConfig } = await import("./config/site.js");
   const config = getSiteConfig();
   const tabName = SOURCE_TO_TAB[result.source] ?? result.source;
+  const sheetId = ALERT_SHEET_SOURCES.has(result.source)
+    ? config.alertsSheetId
+    : config.sheetId;
   if (result.rows.length > 0) {
-    await appendRows(config.sheetId, tabName, result.rows);
+    await appendRows(sheetId, tabName, result.rows);
     console.log(`Wrote ${result.rows.length} row(s) to "${tabName}"`);
   } else {
     console.log(`No rows to write for "${result.source}"`);
@@ -83,10 +96,17 @@ async function runCollector(name: string): Promise<void> {
       result = await collectContentFreshness();
       break;
     }
+    case "business-profile": {
+      const { collectBusinessProfile } = await import(
+        "./collectors/business-profile.js"
+      );
+      result = await collectBusinessProfile();
+      break;
+    }
     default:
       console.error(
         `Unknown source: ${name}\n` +
-          "Valid sources: uptime, search-console, ga4, ssl, pagespeed, robots, freshness"
+          "Valid sources: uptime, search-console, ga4, ssl, pagespeed, robots, freshness, business-profile"
       );
       process.exit(1);
   }
@@ -145,6 +165,8 @@ async function runAnalyzer(name: string): Promise<void> {
       console.log(`    ${row.join(" | ")}`);
     }
   }
+
+  await writeResultToSheets(result);
 }
 
 // ---------------------------------------------------------------------------
@@ -198,7 +220,7 @@ async function main(): Promise<void> {
       if (!source) {
         console.error(
           "Missing --source flag.\n" +
-            "Usage: tsx src/run.ts --mode=collect --source=uptime|ga4|search-console|ssl|pagespeed|robots|freshness"
+            "Usage: tsx src/run.ts --mode=collect --source=uptime|ga4|search-console|ssl|pagespeed|robots|freshness|business-profile"
         );
         process.exit(1);
       }
@@ -225,7 +247,7 @@ async function main(): Promise<void> {
         "SEO Pipeline CLI\n\n" +
           "Usage:\n" +
           "  tsx src/run.ts --mode=scheduler\n" +
-          "  tsx src/run.ts --mode=collect --source=uptime|ga4|search-console|ssl|pagespeed|robots|freshness\n" +
+          "  tsx src/run.ts --mode=collect --source=uptime|ga4|search-console|ssl|pagespeed|robots|freshness|business-profile\n" +
           "  tsx src/run.ts --mode=analyze --type=cannibalization|snippets|gaps\n" +
           "  tsx src/run.ts --mode=alerts"
       );

@@ -6,6 +6,7 @@ import {
   getAllProcedureSlugs,
   procedures,
 } from "@/data/procedures";
+import { getGuidesForProcedure } from "@/data/high-intent-guides";
 import { calculateRepayment } from "@/lib/calculator";
 import { getProcedureCopy } from "@/lib/procedure-copy";
 import { absoluteUrl, BRAND, LAST_REVIEWED } from "@/lib/site";
@@ -22,6 +23,7 @@ import { InlineLeadForm } from "@/components/lead-capture/InlineLeadForm";
 import { Card, Badge, Button } from "@/components/ui";
 import {
   ArrowRight,
+  BookOpen,
   CheckCircle,
   CreditCard,
   Landmark,
@@ -85,6 +87,7 @@ export default function ProcedurePage({
     .map((slug) => procedures.find((p) => p.slug === slug))
     .filter(Boolean)
     .slice(0, 4);
+  const relatedGuides = getGuidesForProcedure(procedure.slug).slice(0, 3);
 
   // Procedure form key for inline form
   const procedureFormMap: Record<string, string> = {
@@ -326,7 +329,10 @@ export default function ProcedurePage({
           <p className="text-xs text-text-muted text-center mt-6">
             * Repayments are indicative only. Actual rates depend on your credit
             profile.{" "}
-            <Link href="/calculator" className="text-primary hover:underline">
+            <Link
+              href="/calculator"
+              className="text-primary underline underline-offset-2 hover:text-primary-deep"
+            >
               Use our calculator
             </Link>{" "}
             for a detailed breakdown.
@@ -427,6 +433,48 @@ export default function ProcedurePage({
       />
 
       {/* ── 10. Related Procedures ── */}
+      {relatedGuides.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-narrow">
+            <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <h2 className="text-section-h2 text-text-dark">
+                  Payment Plan Guides
+                </h2>
+                <p className="mt-3 max-w-2xl text-body text-text-body">
+                  Compare payment paths before choosing a lender, clinic plan, or
+                  short-term instalment option for {copy.treatment}.
+                </p>
+              </div>
+              <Link
+                href="/guides"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                View all guides <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+            <div className="grid gap-5 md:grid-cols-3">
+              {relatedGuides.map((guide) => (
+                <Link key={guide.slug} href={`/guides/${guide.slug}`}>
+                  <Card hover className="h-full">
+                    <BookOpen className="mb-4 h-7 w-7 text-primary" aria-hidden="true" />
+                    <p className="text-sm font-semibold text-primary">
+                      {guide.category}
+                    </p>
+                    <h3 className="mt-2 text-lg font-bold text-text-dark">
+                      {guide.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-text-body">
+                      {guide.excerpt}
+                    </p>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {relatedProcedures.length > 0 && (
         <section className="section-padding bg-background">
           <div className="container-narrow">
