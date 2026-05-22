@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button, Input } from "@/components/ui";
 import { Mail, CheckCircle2 } from "lucide-react";
+import { submitLead } from "@/lib/lead-client";
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("");
@@ -17,22 +18,13 @@ export function NewsletterSignup() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName: "Newsletter Subscriber",
-          email,
-          phone: "0400000000",
-          procedure: "newsletter",
-          amount: "$0",
-          pageOrigin: "blog-newsletter",
-        }),
+      await submitLead({
+        source: "newsletter",
+        fullName: "Newsletter Subscriber",
+        email,
+        procedure: "newsletter",
+        pageOrigin: typeof window !== "undefined" ? window.location.pathname : "blog-newsletter",
       });
-
-      if (!res.ok) {
-        throw new Error("Subscription failed");
-      }
 
       setStatus("success");
       setEmail("");

@@ -18,7 +18,7 @@ export function ProcedureFAQ({
   heading,
   description,
   faqs,
-  emitSchema = true,
+  emitSchema = false,
 }: ProcedureFAQProps) {
   const headingTitle = financingTitle ?? `${procedureTitle} Financing`;
   const treatmentLabel = treatment ?? procedureTitle.toLowerCase();

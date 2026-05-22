@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight, BookOpen, CheckCircle, Search } from "lucide-react";
 import { highIntentGuides } from "@/data/high-intent-guides";
 import { guideHubs } from "@/data/guide-hubs";
+import { prioritySeoClusters } from "@/data/priority-seo-clusters";
 import { absoluteUrl } from "@/lib/site";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -24,6 +25,14 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesHubPage() {
+  const priorityHubSlugs = new Set(
+    prioritySeoClusters.map((cluster) => cluster.hubSlug)
+  );
+  const priorityHubs = guideHubs.filter((hub) => priorityHubSlugs.has(hub.slug));
+  const supportingHubs = guideHubs.filter(
+    (hub) => !priorityHubSlugs.has(hub.slug)
+  );
+
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -110,15 +119,16 @@ export default function GuidesHubPage() {
           <div className="mb-14">
             <div className="mb-8 max-w-3xl">
               <h2 className="text-section-h2 text-text-dark">
-                Topic Hubs Built for Internal Linking
+                Priority Topic Hubs
               </h2>
               <p className="mt-3 text-body text-text-body">
-                Start with a hub when you need the full path: guide content,
-                procedure pages, local pages, and comparison pages tied together.
+                Dental finance and IVF finance are the two clusters to build
+                first. These hubs tie guide content, procedure pages, local
+                pages, and comparison pages together.
               </p>
             </div>
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {guideHubs.map((hub) => (
+              {priorityHubs.map((hub) => (
                 <Link key={hub.slug} href={`/guides/topics/${hub.slug}`}>
                   <Card hover className="h-full">
                     <Badge variant="outline" className="mb-4">
@@ -138,6 +148,39 @@ export default function GuidesHubPage() {
                 </Link>
               ))}
             </div>
+
+            {supportingHubs.length > 0 && (
+              <div className="mt-10">
+                <h3 className="text-xl font-bold text-text-dark">
+                  Supporting Hubs
+                </h3>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-text-body">
+                  Keep these useful, but do not expand them before dental and
+                  IVF have stronger rankings, links, and lead proof.
+                </p>
+                <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                  {supportingHubs.map((hub) => (
+                    <Link key={hub.slug} href={`/guides/topics/${hub.slug}`}>
+                      <Card hover className="h-full">
+                        <Badge variant="outline" className="mb-4">
+                          {hub.category}
+                        </Badge>
+                        <h3 className="text-xl font-bold text-text-dark">
+                          {hub.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-6 text-text-body">
+                          {hub.metaDescription}
+                        </p>
+                        <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-primary">
+                          Open hub
+                          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </div>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="mb-10 max-w-3xl">

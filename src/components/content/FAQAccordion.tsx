@@ -10,8 +10,8 @@ interface FAQAccordionProps {
   items: FAQItem[];
   className?: string;
   /**
-   * Emit FAQPage JSON-LD. Default true. Set false on pages that repeat
-   * identical FAQs across many URLs (thin-duplicate schema penalty).
+   * Emit FAQPage JSON-LD only on a canonical FAQ surface. Commercial page
+   * templates should keep visible FAQs without broad repeated structured data.
    */
   emitSchema?: boolean;
 }
@@ -19,7 +19,7 @@ interface FAQAccordionProps {
 export function FAQAccordion({
   items,
   className,
-  emitSchema = true,
+  emitSchema = false,
 }: FAQAccordionProps) {
   const schemaData = emitSchema
     ? {

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { leadSchema, type LeadData } from "@/lib/leads";
 import { captureUTMParams, getStoredUTMParams } from "@/lib/utm";
+import { submitLead } from "@/lib/lead-client";
 import { Input, Select, Button } from "@/components/ui";
 import { BadgeCheck, CheckCircle, Clock, Lock } from "lucide-react";
 
@@ -66,19 +67,20 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
     };
 
     try {
-      const res = await fetch("/api/submit-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          source: "hero-form",
-          name: enrichedData.fullName,
-          email: enrichedData.email,
-          phone: enrichedData.phone,
-          procedure: enrichedData.procedure,
-          amount: enrichedData.amount,
-        }),
+      await submitLead({
+        source: "hero-form",
+        fullName: enrichedData.fullName,
+        email: enrichedData.email,
+        phone: enrichedData.phone,
+        procedure: enrichedData.procedure,
+        amount: enrichedData.amount,
+        utmSource: enrichedData.utmSource,
+        utmMedium: enrichedData.utmMedium,
+        utmCampaign: enrichedData.utmCampaign,
+        utmContent: enrichedData.utmContent,
+        utmTerm: enrichedData.utmTerm,
+        pageOrigin: enrichedData.pageOrigin,
       });
-      if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
     } catch {
       setSubmitError("Something went wrong. Please try again.");

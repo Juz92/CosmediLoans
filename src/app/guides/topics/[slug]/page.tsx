@@ -6,12 +6,14 @@ import {
   getAllGuideHubSlugs,
   getGuideHubBySlug,
 } from "@/data/guide-hubs";
+import { getPriorityClusterForHub } from "@/data/priority-seo-clusters";
 import { getGuideBySlug } from "@/data/high-intent-guides";
 import { getComparisonBySlug } from "@/data/comparisons";
 import { getProcedureBySlug } from "@/data/procedures";
 import { absoluteUrl, LAST_REVIEWED } from "@/lib/site";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { PriorityClusterLinks } from "@/components/seo/PriorityClusterLinks";
 import { TrustDisclosure } from "@/components/seo/TrustDisclosure";
 import { SeoLeadCaptureBlock } from "@/components/lead-capture/SeoLeadCaptureBlock";
 import { Badge, Card } from "@/components/ui";
@@ -58,6 +60,7 @@ export default function GuideTopicPage({
   const comparisons = hub.comparisonSlugs
     .map((slug) => getComparisonBySlug(slug))
     .filter(Boolean);
+  const priorityCluster = getPriorityClusterForHub(hub.slug);
 
   const schema = {
     "@context": "https://schema.org",
@@ -94,17 +97,6 @@ export default function GuideTopicPage({
             url: absoluteUrl(`/compare/${slug}`),
           })),
         ],
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: hub.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
       },
     ],
   };
@@ -156,6 +148,10 @@ export default function GuideTopicPage({
           <TrustDisclosure compact />
         </div>
       </section>
+
+      {priorityCluster && (
+        <PriorityClusterLinks cluster={priorityCluster} context="hub" />
+      )}
 
       <section className="section-padding bg-surface">
         <div className="container-narrow">

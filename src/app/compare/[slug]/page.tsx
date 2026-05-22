@@ -101,17 +101,6 @@ export default function ComparisonPage({
           },
         },
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: comparison.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
     ],
   };
 

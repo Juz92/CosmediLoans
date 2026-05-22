@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Mail, Phone, Clock, MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import { Input, Button } from "@/components/ui";
+import { submitLead } from "@/lib/lead-client";
 
 /* ── Metadata is exported from a separate file for client components ─ */
 // For client components, we set metadata via a parallel route or head.tsx
@@ -25,26 +26,26 @@ function ContactPageInner() {
   });
 
   const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError("");
+    setIsSubmitting(true);
     try {
-      const res = await fetch("/api/submit-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          source: "contact-form",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        }),
+      await submitLead({
+        source: "contact-form",
+        fullName: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        pageOrigin: typeof window !== "undefined" ? window.location.pathname : "",
       });
-      if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
     } catch {
       setSubmitError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -139,8 +140,9 @@ function ContactPageInner() {
                       }
                     />
                   </div>
-                  <Button type="submit" className="w-full" size="lg">
-                    Send Message <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                   {submitError && (
                     <p role="alert" className="text-sm text-red-500 text-center">{submitError}</p>

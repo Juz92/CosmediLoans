@@ -142,17 +142,6 @@ export default function LocationProcedurePage({
           ],
         },
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: content.localFaqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
     ],
   };
 

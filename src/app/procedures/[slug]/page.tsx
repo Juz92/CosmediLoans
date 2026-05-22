@@ -7,6 +7,7 @@ import {
   procedures,
 } from "@/data/procedures";
 import { getGuidesForProcedure } from "@/data/high-intent-guides";
+import { getPriorityClusterForProcedure } from "@/data/priority-seo-clusters";
 import { calculateRepayment } from "@/lib/calculator";
 import { getProcedureCopy } from "@/lib/procedure-copy";
 import { absoluteUrl, BRAND, LAST_REVIEWED } from "@/lib/site";
@@ -15,6 +16,7 @@ import { LastReviewed } from "@/components/seo/LastReviewed";
 import { AEODefinitionBlock } from "@/components/seo/AEODefinitionBlock";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { QuickAnswer } from "@/components/seo/QuickAnswer";
+import { PriorityClusterLinks } from "@/components/seo/PriorityClusterLinks";
 import { ProcedureHero } from "@/components/procedures/ProcedureHero";
 import { ProcedureCostTable } from "@/components/procedures/ProcedureCostTable";
 import { ProcedureFAQ } from "@/components/procedures/ProcedureFAQ";
@@ -88,6 +90,7 @@ export default function ProcedurePage({
     .filter(Boolean)
     .slice(0, 4);
   const relatedGuides = getGuidesForProcedure(procedure.slug).slice(0, 3);
+  const priorityCluster = getPriorityClusterForProcedure(procedure.slug);
 
   // Procedure form key for inline form
   const procedureFormMap: Record<string, string> = {
@@ -286,6 +289,10 @@ export default function ProcedurePage({
       >
         <p>{procedure.financingDescription}</p>
       </QuickAnswer>
+
+      {priorityCluster && (
+        <PriorityClusterLinks cluster={priorityCluster} context="procedure" />
+      )}
 
       {/* ── 6. Repayment Examples ── */}
       <section className="section-padding bg-background">

@@ -38,6 +38,9 @@ google-*.json
 /google-oauth-credentials.json
 /google-token.json
 
+# SEO skill cache
+.seo-cache/
+
 # vercel
 .vercel
 

@@ -19,6 +19,7 @@ import {
   getRelatedGuides,
 } from "@/data/high-intent-guides";
 import { getComparisonBySlug } from "@/data/comparisons";
+import { getPriorityClusterForGuide } from "@/data/priority-seo-clusters";
 import { authorPersonSchema, getAuthorBySlug } from "@/data/authors";
 import { procedures } from "@/data/procedures";
 import { absoluteUrl, BRAND, SITE_ORIGIN } from "@/lib/site";
@@ -26,6 +27,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LastReviewed } from "@/components/seo/LastReviewed";
+import { PriorityClusterLinks } from "@/components/seo/PriorityClusterLinks";
 import { TrustDisclosure } from "@/components/seo/TrustDisclosure";
 import { SeoLeadCaptureBlock } from "@/components/lead-capture/SeoLeadCaptureBlock";
 import { Badge, Button, Card } from "@/components/ui";
@@ -102,6 +104,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     .filter(Boolean)
     .slice(0, 3);
   const author = getAuthorBySlug(undefined);
+  const priorityCluster = getPriorityClusterForGuide(guide.slug);
 
   const pageSchema = {
     "@context": "https://schema.org",
@@ -133,17 +136,6 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         about: guide.targetQueries.map((query) => ({
           "@type": "Thing",
           name: query,
-        })),
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: guide.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
         })),
       },
     ],
@@ -480,6 +472,10 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           )}
         </div>
       </section>
+
+      {priorityCluster && (
+        <PriorityClusterLinks cluster={priorityCluster} context="guide" />
+      )}
 
       <section className="section-padding bg-surface">
         <div className="container-narrow max-w-3xl">

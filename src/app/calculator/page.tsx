@@ -7,6 +7,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LoanCalculator } from "@/components/calculator/LoanCalculator";
 import { RepaymentTableSection } from "./RepaymentTableSection";
+import { CalculatorEmailCapture } from "./CalculatorEmailCapture";
 import { absoluteUrl, BRAND } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -166,24 +167,7 @@ export default function CalculatorPage() {
               Get a detailed breakdown of your repayment estimate sent to your
               inbox, including the full amortisation schedule.
             </p>
-            <form
-              action="/api/leads"
-              method="POST"
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-            >
-              <input type="hidden" name="procedure" value="calculator-email" />
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-                className="flex-1 px-4 py-3 border border-border rounded-button bg-background text-text-dark placeholder:text-text-muted focus:outline-none focus:border-primary-light focus:ring-2 focus:ring-primary-light/10 transition-all text-sm"
-                aria-label="Email address"
-              />
-              <Button type="submit" size="md">
-                Send Results
-              </Button>
-            </form>
+            <CalculatorEmailCapture />
             <p className="text-xs text-text-muted mt-3">
               No spam. We&apos;ll only send your calculator results.
             </p>

@@ -6,6 +6,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import { Search, ArrowRight } from "lucide-react";
 import { Accordion } from "@/components/ui";
 import { Input, Button } from "@/components/ui";
+import { submitLead } from "@/lib/lead-client";
 import type { FAQItem } from "./faq-data";
 
 interface FAQPageClientProps {
@@ -23,6 +24,13 @@ const categories = [
 export function FAQPageClient({ items }: FAQPageClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    question: "",
+  });
+  const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isSearching = searchQuery.trim().length > 0;
 
@@ -44,9 +52,25 @@ export function FAQPageClient({ items }: FAQPageClientProps) {
     return map;
   }, [filteredItems]);
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setContactSubmitted(true);
+    setSubmitError("");
+    setIsSubmitting(true);
+
+    try {
+      await submitLead({
+        source: "faq-question",
+        fullName: contactForm.name,
+        email: contactForm.email,
+        message: contactForm.question,
+        pageOrigin: typeof window !== "undefined" ? window.location.pathname : "",
+      });
+      setContactSubmitted(true);
+    } catch {
+      setSubmitError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -170,12 +194,28 @@ export function FAQPageClient({ items }: FAQPageClientProps) {
                 label="Your Name"
                 placeholder="Full name"
                 required
+                autoComplete="name"
+                value={contactForm.name}
+                onChange={(event) =>
+                  setContactForm((current) => ({
+                    ...current,
+                    name: event.target.value,
+                  }))
+                }
               />
               <Input
                 label="Email"
                 placeholder="you@email.com"
                 type="email"
                 required
+                autoComplete="email"
+                value={contactForm.email}
+                onChange={(event) =>
+                  setContactForm((current) => ({
+                    ...current,
+                    email: event.target.value,
+                  }))
+                }
               />
               <div className="space-y-1.5">
                 <label
@@ -190,11 +230,24 @@ export function FAQPageClient({ items }: FAQPageClientProps) {
                   required
                   placeholder="What would you like to know?"
                   className="w-full px-4 py-3 border border-border rounded-button bg-background text-text-dark placeholder:text-text-muted focus:outline-none focus:border-primary-light focus:ring-2 focus:ring-primary-light/10 transition-all resize-y"
+                  value={contactForm.question}
+                  onChange={(event) =>
+                    setContactForm((current) => ({
+                      ...current,
+                      question: event.target.value,
+                    }))
+                  }
                 />
               </div>
-              <Button type="submit" className="w-full" size="lg">
-                Submit Question <ArrowRight className="ml-2 h-5 w-5" />
+              <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit Question"}
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              {submitError && (
+                <p role="alert" className="text-sm text-red-500 text-center">
+                  {submitError}
+                </p>
+              )}
             </form>
           )}
         </div>
