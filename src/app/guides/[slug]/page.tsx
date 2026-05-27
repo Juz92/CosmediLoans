@@ -38,7 +38,37 @@ const guideComparisonMap: Record<string, string[]> = {
     "medical-loans-vs-payment-plans",
     "medical-loan-vs-buy-now-pay-later",
   ],
+  "dental-implants-cost-australia": [
+    "dental-loans-vs-buy-now-pay-later",
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+  ],
+  "all-on-4-dental-implants-cost-australia": [
+    "dental-loans-vs-buy-now-pay-later",
+    "medical-loans-vs-payment-plans",
+    "cosmediloans-vs-medipay",
+  ],
+  "all-on-4-dental-implants-payment-plans-australia": [
+    "dental-loans-vs-buy-now-pay-later",
+    "medical-loans-vs-payment-plans",
+    "cosmediloans-vs-medipay",
+  ],
+  "dental-surgery-loans-australia": [
+    "dental-loans-vs-buy-now-pay-later",
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+  ],
+  "medical-loans-for-surgery-australia": [
+    "medical-loan-vs-credit-card",
+    "medical-loans-vs-payment-plans",
+    "cosmetic-surgery-finance-vs-credit-card",
+  ],
   "ivf-payment-plans-australia": [
+    "ivf-payment-plan-vs-personal-loan",
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+  ],
+  "ivf-cost-australia": [
     "ivf-payment-plan-vs-personal-loan",
     "medical-loans-vs-payment-plans",
     "medical-loan-vs-credit-card",
@@ -48,10 +78,40 @@ const guideComparisonMap: Record<string, string[]> = {
     "medical-loans-vs-payment-plans",
     "medical-loan-vs-credit-card",
   ],
+  "breast-augmentation-cost-australia": [
+    "cosmetic-surgery-finance-vs-credit-card",
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+  ],
+  "breast-augmentation-payment-plans-australia": [
+    "cosmetic-surgery-finance-vs-credit-card",
+    "medical-loans-vs-payment-plans",
+    "cosmediloans-vs-medipay",
+  ],
+  "fat-transfer-breast-augmentation-cost-australia": [
+    "cosmetic-surgery-finance-vs-credit-card",
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+  ],
+  "cosmetic-surgery-loans-australia": [
+    "cosmetic-surgery-finance-vs-credit-card",
+    "medical-loan-vs-credit-card",
+    "medical-loans-vs-payment-plans",
+  ],
   "vet-bill-payment-plans-australia": [
     "medical-loans-vs-payment-plans",
     "medical-loan-vs-credit-card",
     "medical-loan-vs-buy-now-pay-later",
+  ],
+  "vet-bill-loans-australia": [
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+    "bad-credit-medical-loans-alternatives",
+  ],
+  "vetpay-alternatives-australia": [
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+    "bad-credit-medical-loans-alternatives",
   ],
   "medical-loans-bad-credit-australia": [
     "bad-credit-medical-loans-alternatives",

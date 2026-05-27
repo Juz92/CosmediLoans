@@ -35,17 +35,21 @@ export const guideHubs: GuideHub[] = [
     h1: "Dental Finance and Payment Plan Options in Australia",
     metaTitle: "Dental Finance Australia | Loans, Payment Plans and BNPL",
     metaDescription:
-      "Compare dental loans, payment plans, BNPL, bad credit options and local dental finance pages before accepting a treatment quote.",
+      "Compare dental implant costs, dental loans, payment plans, BNPL, bad credit options and local dental finance pages before accepting a quote.",
     primaryKeyword: "dental finance Australia",
     intro:
       "Use this hub to compare dental loans, clinic plans, no-credit-check claims, BNPL and local dental finance pages before choosing how to pay for treatment.",
     proofPoints: [
       "Built for implants, All-on-4, crowns, veneers and urgent dental work",
+      "Separates cost research from loan and payment-plan intent",
       "Separates payment plan marketing from total loan cost",
-      "Links general dental finance guides with local dental loan pages",
     ],
     guideSlugs: [
+      "dental-implants-cost-australia",
+      "all-on-4-dental-implants-cost-australia",
       "dental-payment-plans-australia",
+      "all-on-4-dental-implants-payment-plans-australia",
+      "dental-surgery-loans-australia",
       "no-credit-check-dental-finance-australia",
       "medical-loans-bad-credit-australia",
     ],
@@ -97,16 +101,17 @@ export const guideHubs: GuideHub[] = [
     h1: "IVF Finance, Payment Plans and Fertility Loan Options",
     metaTitle: "IVF Finance Australia | Payment Plans vs Personal Loans",
     metaDescription:
-      "Compare IVF finance, fertility loans, clinic payment plans, Medicare timing and personal loan options for treatment in Australia.",
+      "Compare IVF costs, Medicare rebate timing, fertility loans, clinic payment plans and personal loan options for treatment in Australia.",
     primaryKeyword: "IVF finance Australia",
     intro:
       "IVF finance needs to handle uncertain timing, rebates, medication and the possibility of more than one treatment stage. This hub connects the main fertility finance guides and comparison pages.",
     proofPoints: [
+      "Starts with cycle cost, rebate timing and out-of-pocket gap",
       "Built around cycle timing, medication and rebate cash flow",
       "Compares clinic payment plans with fixed-term personal loans",
-      "Links IVF guide content with location-specific fertility pages",
     ],
     guideSlugs: [
+      "ivf-cost-australia",
       "ivf-payment-plans-australia",
       "medical-loans-bad-credit-australia",
       "cosmetic-surgery-payment-plans-australia",
@@ -159,19 +164,23 @@ export const guideHubs: GuideHub[] = [
     h1: "Cosmetic Surgery Finance and Payment Plan Options",
     metaTitle: "Cosmetic Surgery Finance Australia | Loans and Payment Plans",
     metaDescription:
-      "Compare cosmetic surgery loans, payment plans, credit cards, BNPL and location pages for facelift, breast augmentation and other procedures.",
+      "Compare cosmetic surgery costs, breast augmentation payment plans, loans, credit cards, BNPL and location pages before choosing finance.",
     primaryKeyword: "cosmetic surgery finance Australia",
     intro:
       "Cosmetic surgery finance should be matched to the full written quote, including surgeon, hospital, anaesthetist, implants, garments and recovery costs.",
     proofPoints: [
       "Built for breast augmentation, facelift, rhinoplasty, tummy tuck and liposuction",
+      "Captures cost searches before loan and payment-plan searches",
       "Separates surgery scope from finance cost",
-      "Includes Sunshine Coast facelift and neck lift opportunity links",
     ],
     guideSlugs: [
+      "breast-augmentation-cost-australia",
+      "breast-augmentation-payment-plans-australia",
+      "fat-transfer-breast-augmentation-cost-australia",
+      "cosmetic-surgery-loans-australia",
       "cosmetic-surgery-payment-plans-australia",
+      "medical-loans-for-surgery-australia",
       "medical-loans-bad-credit-australia",
-      "dental-payment-plans-australia",
     ],
     procedureSlugs: [
       "breast-augmentation-loans",
@@ -213,6 +222,65 @@ export const guideHubs: GuideHub[] = [
       },
     ],
     defaultProcedure: "breast-augmentation",
+  },
+  {
+    slug: "vet-bill-finance",
+    category: "Vet bills",
+    title: "Vet Bill Finance Hub",
+    h1: "Vet Bill Loans and Payment Plan Options in Australia",
+    metaTitle: "Vet Bill Finance Australia | Loans and Payment Plans",
+    metaDescription:
+      "Compare vet bill loans, VetPay alternatives, emergency vet payment plans, pet insurance timing and broker-matched finance options in Australia.",
+    primaryKeyword: "vet bill loans Australia",
+    intro:
+      "Vet bill finance is often urgent. This hub connects direct vet loan searches with payment-plan, insurance and bad-credit guidance so pet owners can compare options before choosing a lender or clinic plan.",
+    proofPoints: [
+      "Built for emergency invoices and specialist referral costs",
+      "Covers VetPay alternatives without competing with the main vet loan page",
+      "Separates clinic payment timing from insurance reimbursement timing",
+    ],
+    guideSlugs: [
+      "vetpay-alternatives-australia",
+      "vet-bill-loans-australia",
+      "vet-bill-payment-plans-australia",
+      "medical-loans-bad-credit-australia",
+    ],
+    procedureSlugs: ["vet-bill-loans", "medical-loan", "debt-consolidation"],
+    comparisonSlugs: [
+      "medical-loans-vs-payment-plans",
+      "medical-loan-vs-credit-card",
+      "bad-credit-medical-loans-alternatives",
+    ],
+    localLinks: [
+      {
+        href: "/locations/sunshine-coast/vet-bill-loans",
+        label: "Vet bill finance on the Sunshine Coast",
+        description: "Local vet bill page already receiving Search Console impressions.",
+      },
+      {
+        href: "/procedures/vet-bill-loans",
+        label: "Vet bill loans procedure page",
+        description: "Canonical commercial page for veterinary bill finance enquiries.",
+      },
+      {
+        href: "/guides/vet-bill-payment-plans-australia",
+        label: "Vet bill payment plans",
+        description: "Compare clinic plans, dedicated vet finance, insurance and loans.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the difference between a vet bill loan and a vet payment plan?",
+        answer:
+          "A vet bill loan is usually arranged through a lender and repaid over a fixed term. A vet payment plan is usually offered by a clinic or clinic finance partner and may only work at that provider.",
+      },
+      {
+        question: "Why compare vet finance before applying?",
+        answer:
+          "Emergency invoices can create pressure to accept the fastest option. Comparing total repayment, settlement timing and credit check type can reduce wasted applications.",
+      },
+    ],
+    defaultProcedure: "other",
   },
   {
     slug: "bad-credit-medical-loans",

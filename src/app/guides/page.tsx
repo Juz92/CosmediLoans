@@ -13,12 +13,12 @@ import { Badge, Button, Card } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Medical Finance Guides Australia | Payment Plans and Loans",
   description:
-    "Compare medical payment plans, dental finance, IVF finance, cosmetic surgery loans, vet bill loans, and bad credit medical loan options in Australia.",
+    "Compare medical costs, payment plans, dental finance, IVF finance, cosmetic surgery loans, vet bill loans, and bad credit medical loan options in Australia.",
   alternates: { canonical: "/guides" },
   openGraph: {
     title: "Medical Finance Guides Australia",
     description:
-      "High-intent guides to medical payment plans, dental finance, IVF finance, cosmetic surgery loans, vet bill loans, and bad credit options.",
+      "High-intent guides to medical costs, payment plans, dental finance, IVF finance, cosmetic surgery loans, vet bill loans, and bad credit options.",
     url: "/guides",
     type: "website",
   },
@@ -38,7 +38,7 @@ export default function GuidesHubPage() {
     "@type": "ItemList",
     name: "Medical finance guides",
     description:
-      "Guides for Australians comparing medical payment plans and procedure finance options.",
+      "Guides for Australians comparing medical costs, payment plans and procedure finance options.",
     numberOfItems: highIntentGuides.length + guideHubs.length,
     itemListElement: [
       ...guideHubs.map((hub, index) => ({
@@ -73,15 +73,15 @@ export default function GuidesHubPage() {
             <div>
               <Badge className="mb-4">
                 <Search className="h-4 w-4" aria-hidden="true" />
-                Payment plan research
+                Cost and payment research
               </Badge>
               <h1 className="max-w-4xl text-hero-h1 text-text-dark">
-                Medical Payment Plan Guides for Australians Comparing Their Options
+                Medical Cost and Payment Plan Guides for Australians Comparing Their Options
               </h1>
               <p className="mt-5 max-w-2xl text-body text-text-body">
-                Use these guides to compare dental payment plans, IVF finance,
-                cosmetic surgery loans, vet bill finance, and realistic options
-                when credit is imperfect.
+                Use these guides to compare procedure costs, dental payment
+                plans, IVF finance, cosmetic surgery loans, vet bill finance,
+                and realistic options when credit is imperfect.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button as={Link} href="/apply" size="lg" className="gap-2">
@@ -122,9 +122,8 @@ export default function GuidesHubPage() {
                 Priority Topic Hubs
               </h2>
               <p className="mt-3 text-body text-text-body">
-                Dental finance and IVF finance are the two clusters to build
-                first. These hubs tie guide content, procedure pages, local
-                pages, and comparison pages together.
+                These hubs tie guide content, procedure pages, local pages, and
+                comparison pages together so new organic pages are not isolated.
               </p>
             </div>
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -155,8 +154,8 @@ export default function GuidesHubPage() {
                   Supporting Hubs
                 </h3>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-text-body">
-                  Keep these useful, but do not expand them before dental and
-                  IVF have stronger rankings, links, and lead proof.
+                  Keep these useful as supporting clusters, and promote them
+                  when Search Console shows impressions or lead quality.
                 </p>
                 <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                   {supportingHubs.map((hub) => (
@@ -231,10 +230,10 @@ export default function GuidesHubPage() {
                 What These Guides Are Designed to Clarify
               </h2>
               <p className="mt-4 text-body text-text-body">
-                Payment plan search results can mix clinic promotions, BNPL
-                offers, lender pages, and superannuation claims. These guides
-                separate the options so the next step is based on the full cost,
-                not the smallest weekly repayment.
+                Cost and payment-plan search results can mix clinic
+                promotions, BNPL offers, lender pages, and superannuation
+                claims. These guides separate the options so the next step is
+                based on the full cost, not the smallest weekly repayment.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
