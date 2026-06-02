@@ -2133,6 +2133,168 @@ export const highIntentGuides: HighIntentGuide[] = [
     ],
   },
   {
+    slug: "weight-loss-surgery-cost-australia",
+    category: "Weight loss surgery",
+    title: "Weight Loss Surgery Cost Australia",
+    h1: "Weight Loss Surgery Cost in Australia",
+    metaTitle: "Weight Loss Surgery Cost Australia | Gaps & Finance",
+    metaDescription:
+      "Compare weight loss surgery cost in Australia, gastric sleeve and bypass gaps, Medicare items, private health cover, waiting periods and finance options.",
+    excerpt:
+      "A cost and gap guide for patients planning gastric sleeve, gastric bypass or bariatric surgery before comparing how to fund the out-of-pocket amount.",
+    lastReviewed: "2026-06-02",
+    readTime: "8 min read",
+    primaryKeyword: "weight loss surgery cost Australia",
+    searchIntent:
+      "Patients estimating gastric sleeve or bypass out-of-pocket costs before deciding whether they need a payment plan or weight-loss surgery loan.",
+    heroImage: "/Images/Bariatric & Weight Loss.png",
+    formProcedure: "bariatric",
+    quickAnswer:
+      "Weight loss surgery cost planning should start with the surgeon fee, anaesthetist fee, hospital cost or excess, and any post-operative or program fee, then factor in the Medicare item rebate and whether you hold private hospital cover that includes bariatric surgery. Finance should usually cover the gap that remains after rebates, cover and savings, rather than the headline procedure price.",
+    proofPoints: [
+      "Captures gastric sleeve and bypass cost searches before payment-plan intent",
+      "Explains Medicare items and private health waiting periods as sections instead of a separate page",
+      "Connects cost research to weight-loss surgery finance only after the expected gap is known",
+    ],
+    targetQueries: [
+      "weight loss surgery cost Australia",
+      "how much does weight loss surgery cost in Australia",
+      "gastric sleeve cost Australia",
+      "gastric sleeve surgery cost",
+      "bariatric surgery cost Australia",
+      "gastric bypass cost Australia",
+    ],
+    optionRows: [
+      {
+        name: "Savings plus rebate timing",
+        bestFor: "Patients who can cover the hospital and gap until Medicare or insurer rebates are received.",
+        strengths:
+          "Keeps borrowing lower and may avoid finance costs altogether.",
+        watchOut:
+          "Cash flow can still be difficult because the surgeon and hospital may need payment before rebates arrive.",
+      },
+      {
+        name: "Weight-loss surgery loan",
+        bestFor: "Patients who self-fund without bariatric cover, or who need to cover the gap that remains after rebates.",
+        strengths:
+          "Can create a fixed repayment plan across the amount left after Medicare items, cover and savings.",
+        watchOut:
+          "Approval, rate and limit depend on lender assessment, and a loan does not change clinical eligibility.",
+      },
+      {
+        name: "Clinic or surgeon payment plan",
+        bestFor: "Practices that allow staged payment around the surgery and program milestones.",
+        strengths:
+          "Can match surgery timing and reduce the amount needed upfront.",
+        watchOut:
+          "May only apply at that clinic and may not cover the anaesthetist, hospital excess or program fees.",
+      },
+      {
+        name: "Early super release",
+        bestFor: "Limited eligible cases under compassionate grounds rules where clinical criteria are met.",
+        strengths:
+          "May be an option where evidence and eligibility requirements are satisfied.",
+        watchOut:
+          "It reduces retirement savings and should be compared against other funding paths.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Build the cost from the surgeon, anaesthetist, hospital and program parts",
+        body: [
+          "Weight loss surgery cost is not a single figure. It usually combines a surgeon fee, an anaesthetist fee, a hospital cost or excess, and a post-operative or program fee for dietitian and follow-up support. Self-funded patients without private hospital cover, after the Medicare rebate, commonly see gastric sleeve quotes around $15,000 to $20,000 and gastric bypass quotes around $14,000 to $18,000, with regional areas often lower at around $12,000 to $16,000 and Sydney and Melbourne usually highest.",
+          "If you hold a higher-tier policy that includes bariatric surgery, the picture changes from a full price to a gap. A typical out-of-pocket is around $3,500 to $7,000, made up of a surgeon gap of about $2,000 to $4,000, an anaesthetist gap of about $400 to $600, a hospital excess of about $250 to $750, and a post-operative or program fee of about $500 to $2,000.",
+          "The finance decision should use the expected out-of-pocket gap after rebates and cover, not the headline procedure price.",
+        ],
+        bullets: [
+          "Ask the surgeon for an itemised quote and the expected Medicare items.",
+          "Check whether the anaesthetist and post-operative program are billed separately.",
+          "Confirm the hospital excess that applies under your policy.",
+        ],
+      },
+      {
+        heading: "How Medicare items and private health cover affect the gap and timing",
+        body: [
+          "Medicare lists bariatric surgery items, for example sleeve gastrectomy item 31575 and gastric bypass item 31572, with related items 31569 and 31581. Medicare pays a set schedule fee per item that usually covers only a portion of the surgeon's fee, so a rebate rarely removes the gap on its own.",
+          "Private hospital cover for bariatric surgery usually requires a higher-tier (Gold) policy and a waiting period of about 12 months. The practical issue is timing. You may need to pay the surgeon or hospital first and receive a Medicare or insurer rebate later, so finance planning should separate temporary cash-flow needs from the final out-of-pocket gap.",
+        ],
+        bullets: [
+          "Ask the clinic which MBS items are expected for your procedure.",
+          "Check whether your policy tier includes bariatric surgery and the waiting period.",
+          "Do not assume private health insurance removes the gap.",
+        ],
+      },
+      {
+        heading: "When a weight-loss surgery loan becomes useful",
+        body: [
+          "A weight-loss surgery loan can be useful when you self-fund without bariatric cover, when the surgeon or hospital needs payment before the rebate arrives, or when a gap remains after rebates, cover and savings. The amount to compare is the gap that still needs funding, not the full procedure price.",
+          "Eligibility for surgery is clinical, not financial. Your surgeon assesses suitability, commonly using criteria such as clinically severe obesity (often a BMI of 40 or more, or 35 or more with obesity-related conditions), usually after other weight-loss attempts, and surgeons must be registered with the Bariatric Surgery Registry. A loan does not change that assessment, so borrowing should be matched to a realistic budget once a surgeon has confirmed the plan.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does weight loss surgery cost in Australia?",
+        answer:
+          "Self-funded patients without bariatric cover, after the Medicare rebate, commonly see gastric sleeve quotes around $15,000 to $20,000 and gastric bypass quotes around $14,000 to $18,000, with regional areas often lower. With a higher-tier policy that includes bariatric surgery, the typical out-of-pocket gap is closer to $3,500 to $7,000.",
+      },
+      {
+        question: "Does Medicare cover weight loss surgery?",
+        answer:
+          "Medicare lists bariatric surgery items, such as sleeve gastrectomy item 31575 and gastric bypass item 31572, and pays a set schedule fee that usually covers only a portion of the surgeon's fee. Most patients still pay a gap, so it helps to ask the clinic which items are expected.",
+      },
+      {
+        question: "Does private health insurance cover gastric sleeve?",
+        answer:
+          "Bariatric cover usually requires a higher-tier (Gold) policy and a waiting period of about 12 months. Where it applies, you typically pay a gap made up of surgeon and anaesthetist gaps, a hospital excess and any program fee, rather than the full procedure price.",
+      },
+      {
+        question: "Should I finance the full surgery cost?",
+        answer:
+          "Usually the better comparison is the expected gap after Medicare items, private health cover, savings and clinic timing. Financing the full headline price can mean borrowing more than needed.",
+      },
+      {
+        question: "Can I get weight loss surgery finance with bad credit?",
+        answer:
+          "Some borrowers may have options, but approval is never guaranteed and depends on lender assessment, income, expenses and credit profile. A soft initial check can help reduce wasted direct applications.",
+      },
+    ],
+    relatedProcedureSlugs: [
+      "bariatric-surgery-loans",
+      "weight-loss-surgery-loans",
+      "medical-loan",
+      "debt-consolidation",
+    ],
+    relatedGuideSlugs: [
+      "medical-loans-for-surgery-australia",
+      "medical-loans-bad-credit-australia",
+      "cosmetic-surgery-payment-plans-australia",
+    ],
+    sources: [
+      ...commonFinanceSources,
+      {
+        title: "Medicare Benefits Schedule - bariatric surgery (item 31575)",
+        publisher: "Australian Government Department of Health (MBS Online)",
+        url: "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&q=31575&qt=ItemID",
+      },
+      {
+        title: "Medical Costs Finder",
+        publisher: "Australian Government Department of Health",
+        url: "https://medicalcostsfinder.health.gov.au",
+      },
+      {
+        title: "Waiting periods and what hospital cover includes",
+        publisher: "Australian Government (privatehealth.gov.au)",
+        url: "https://www.privatehealth.gov.au",
+      },
+      {
+        title: "How much does weight loss surgery cost?",
+        publisher: "Finder",
+        url: "https://www.finder.com.au/health-insurance/weight-loss-surgery-cost",
+      },
+    ],
+  },
+  {
     slug: "breast-augmentation-cost-australia",
     category: "Cosmetic surgery",
     title: "Breast Augmentation Cost Australia",
