@@ -128,7 +128,7 @@ const copyOverrides: Record<string, ProcedureCopyOverride> = {
     treatment: "vet care",
     costSubject: "Vet Care",
     ctaSubject: "Your Vet Bill",
-    financingTitle: "Vet Bill Financing",
+    financingTitle: "Vet Financing",
   },
 };
 

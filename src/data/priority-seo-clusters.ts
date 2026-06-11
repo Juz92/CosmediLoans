@@ -200,8 +200,13 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
       },
       {
         href: "/procedures/vet-bill-loans",
-        label: "Vet bill financing",
-        description: "Canonical commercial page for veterinary bill loan enquiries.",
+        label: "Vet loans & payment plans",
+        description: "Canonical commercial page for vet loan and vet payment plan enquiries.",
+      },
+      {
+        href: "/compare/cosmediloans-vs-vetpay",
+        label: "CosmediLoans vs VetPay",
+        description: "Side-by-side comparison of a broker-matched vet loan and the VetPay payment plan.",
       },
       {
         href: "/guides/topics/vet-bill-finance",

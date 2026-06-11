@@ -1808,25 +1808,25 @@ export const procedures: Procedure[] = [
     ],
   },
 
-  // ─── 20. VET BILL LOANS ────────────────────────────────────────────
+  // ─── 20. VET BILL LOANS (HUB) ──────────────────────────────────────
   {
     slug: "vet-bill-loans",
     title: "Vet Bill Loans",
-    h1: "Vet Bill Financing Australia",
-    metaTitle: "Vet Bill Loans & Pet Finance Australia | From 6.99%",
+    h1: "Vet Loans & Payment Plans in Australia",
+    metaTitle: "Vet Loans & Payment Plans Australia | Rates From 6.99%",
     metaDescription:
-      "Finance vet bills and pet care in Australia from 6.99%. A flexible vet payment plan and Vet Pay alternative for emergency surgery, cancer treatment and more. Compare 20+ lenders. No credit impact.",
+      "Compare vet loans and payment plans from 20+ lenders. Finance emergency surgery, dental and ongoing pet care from 6.99% p.a. Soft check, no credit impact.",
     heroDescription:
-      "Unexpected vet bills can reach tens of thousands of dollars, but your pet's health shouldn't depend on your savings account. CosmediLoans compares 20+ lenders to fund emergency surgery, specialist treatment, and ongoing pet care in one affordable loan, a flexible alternative to a Vet Pay or clinic payment plan that works at any vet.",
+      "A vet loan lets you pay the clinic upfront and spread the cost of treatment over fixed repayments. Most pet owners borrow between $2,000 and $20,000 for emergency surgery, dental work, or ongoing care, repaying weekly, fortnightly, or monthly over one to seven years. Our brokers compare 20+ lenders with a soft credit check first, so you see realistic rates from 6.99% p.a. before anything touches your credit file, and the funds work at any vet in Australia.",
     icon: "🐾",
     avgCostRange: "$2,000 – $20,000",
     rateFrom: "6.99%",
     maxTerm: "7 years",
     costTable: [
-      { subProcedure: "Emergency Surgery", costRange: "$3,000 – $10,000" },
+      { subProcedure: "Emergency Surgery", costRange: "$3,000 – $12,000" },
+      { subProcedure: "Cruciate Ligament Surgery (e.g. TPLO)", costRange: "$4,000 – $12,000" },
       { subProcedure: "Cancer Treatment (chemotherapy/radiation)", costRange: "$5,000 – $20,000" },
-      { subProcedure: "Orthopaedic Surgery (e.g. cruciate repair)", costRange: "$4,000 – $8,000" },
-      { subProcedure: "Specialist Consultations & Diagnostics", costRange: "$1,000 – $5,000" },
+      { subProcedure: "Specialist Consultations & Diagnostics (MRI, CT)", costRange: "$1,000 – $5,000" },
       { subProcedure: "Dental Extractions & Oral Surgery", costRange: "$800 – $3,000" },
     ],
     repaymentExamples: [
@@ -1836,71 +1836,135 @@ export const procedures: Procedure[] = [
     ],
     faqs: [
       {
-        question: "Can I get a loan to pay for vet bills in Australia?",
+        question: "What is VetPay and how do vet payment plans work?",
         answer:
-          "Yes. A personal loan is one of the most cost-effective ways to cover unexpected vet bills. Rates through our broker network start from 6.99% p.a., far cheaper than credit cards at 18–22% p.a. You can borrow from $2,000 to $20,000 and repay over 1 to 5 years.",
+          "VetPay is an Australian payment-plan provider that lets pet owners split treatment costs into regular instalments at participating vet clinics, typically after paying a deposit at the time of treatment. Vet payment plans in general, whether through a dedicated provider or the clinic itself, spread an existing invoice into instalments, but they only work at clinics that offer them and their fees and approval criteria vary. A vet loan works differently: the funds are paid upfront, so you can use any vet and repay over a fixed term with a known end date.",
       },
       {
-        question: "What is Vet Pay and is a personal loan a better option?",
+        question: "Can I get a loan to pay vet bills in Australia?",
         answer:
-          "Vet Pay is a pet-specific payment plan that splits a vet bill into instalments at participating clinics. It can suit small, short-term bills, but account and transaction fees add up and you are limited to clinics that offer it. For larger or emergency bills, a broker-matched personal loan from 6.99% p.a. usually costs less overall and works at any vet in Australia.",
-      },
-      {
-        question: "Can I set up a payment plan for my vet bills?",
-        answer:
-          "Yes. A personal loan effectively becomes your own vet payment plan: you receive the funds, pay the clinic in full, then repay in fixed weekly, fortnightly, or monthly amounts over 1 to 5 years. Unlike a clinic plan or buy-now-pay-later, you are not tied to one vet and there are no late fees for missed instalments beyond your normal loan terms.",
-      },
-      {
-        question: "What vet expenses can I finance?",
-        answer:
-          "You can finance virtually any vet expense including emergency surgery, cancer treatment, orthopaedic surgery, specialist consultations, dental procedures, diagnostic imaging (MRI, CT scans), and ongoing medication or rehabilitation costs.",
+          "Yes. Pet owners commonly borrow between $2,000 and $20,000 through our broker network to cover vet bills, with rates from 6.99% p.a. and terms of one to seven years. For very large specialist or referral hospital bills, options up to $50,000 can be explored. Approval depends on your income, expenses, and credit profile, so matching starts with a soft check that shows what is realistic without affecting your credit score.",
       },
       {
         question: "How quickly can I get funds for an emergency vet bill?",
         answer:
-          "Many lenders in our network offer same-day or next-business-day funding once approved. Most applications receive a decision within hours, so you can often access funds in time for urgent treatment.",
+          "Most applications receive a decision within hours, and many lenders in our network can fund the same or next business day once approved. If treatment cannot wait, tell the clinic that finance is underway, ask whether a deposit can secure treatment, and request a written estimate so the loan amount matches the bill.",
       },
       {
-        question: "Is a vet bill loan better than pet insurance?",
+        question: "Can I finance vet bills with bad credit?",
         answer:
-          "They serve different purposes. Pet insurance covers future unexpected costs but won't help with an existing vet bill. A loan is the right tool when you already have a bill to pay. If your pet isn't insured, a low-rate personal loan is typically the most affordable way to cover the cost.",
+          "Sometimes. Our network includes lenders that consider a range of credit profiles, although rates are typically higher with impaired credit and approval is never guaranteed. Because matching starts with a soft credit check, you can see whether a realistic option exists before any hard enquiry is recorded on your file.",
       },
       {
-        question: "What if I don't have pet insurance?",
+        question: "Will checking my vet finance options affect my credit score?",
         answer:
-          "No problem. Our brokers help uninsured pet owners access affordable financing every day. You don't need pet insurance to qualify for a vet bill loan, approval is based on your income and credit profile, not whether you have a policy.",
+          "No. The initial match is a soft enquiry with no impact on your credit score. A hard credit check only happens later, with your consent, if you choose to proceed with a specific lender.",
       },
       {
-        question: "How much can I borrow for vet bills?",
+        question: "Is a vet loan better than pet insurance?",
         answer:
-          "Through our broker network you can borrow from $2,000 up to $20,000 for vet expenses. The amount depends on your income, credit profile, and the lender. For very large specialist bills, we can explore options up to $50,000.",
+          "They solve different problems. Pet insurance can reduce future costs if the policy was active before the condition appeared, but it will not help with an existing bill and often reimburses you after you have paid the clinic. A loan is the tool for an invoice that is due now. Many owners use both: insurance for what it covers, finance for the gap or the wait.",
       },
       {
-        question: "Can I finance ongoing vet costs, not just a one-off bill?",
+        question: "What vet treatments can I finance?",
         answer:
-          "Yes. If your pet has a chronic condition requiring ongoing treatment, such as cancer management, diabetes, or a long rehabilitation programme, you can take out a loan to cover the projected total cost of treatment upfront.",
+          "Virtually any: emergency surgery, cruciate ligament repair, chemotherapy and radiation, dental extractions, diagnostic imaging such as MRI and CT, specialist consultations, and ongoing medication or rehabilitation. Because the loan is paid to you rather than the clinic, it is not limited to a list of approved treatments or partner providers.",
+      },
+      {
+        question: "Can I pay out a vet loan early?",
+        answer:
+          "Many lenders on our panel allow extra repayments or early payout, sometimes with a small fee. If pet insurance may reimburse part of the bill later, tell your broker upfront so they can prioritise lenders with flexible early-repayment terms.",
       },
     ],
     relatedSlugs: ["medical-loan", "debt-consolidation"],
     blogCategory: "vet",
     financingDescription:
-      "Vet bills can arrive without warning and quickly exceed what most families have in savings. A personal loan through our broker network gives you access to funds within days at rates from 6.99% p.a., a lower-cost alternative to a Vet Pay or clinic payment plan, so you can focus on your pet's recovery, not the bill.",
+      "Vet bills rarely arrive with notice, and most clinics need payment before or on the day of treatment. A broker-matched personal loan pays the clinic upfront, then you repay a fixed amount over a term you choose, usually at a much lower rate than a credit card. Because the funds come to you, the loan works at any vet, emergency hospital, or specialist in Australia.",
     benefits: [
       {
         title: "Fast Access to Funds",
-        description: "Same-day or next-day funding available with many lenders, so you're not waiting when your pet needs urgent care.",
+        description:
+          "Same-day or next-business-day funding is available with many lenders once approved, so treatment is not held up by the bill.",
+      },
+      {
+        title: "Works at Any Vet",
+        description:
+          "The loan is paid to you, not the clinic, so you can use any vet, emergency hospital, or specialist in Australia. No provider partnership required.",
+      },
+      {
+        title: "Rates From 6.99% p.a.",
+        description:
+          "A broker-matched loan typically costs far less than carrying a vet bill on a credit card at 18–22% p.a., with a fixed repayment and a known end date.",
       },
       {
         title: "No Pet Insurance Required",
-        description: "Finance your vet bill regardless of whether you have a policy. Approval is based on your financial profile, not your pet's insurance status.",
+        description:
+          "Approval is based on your income and credit profile, not whether your pet has a policy or whether the condition is covered.",
+      },
+    ],
+    contentSections: [
+      {
+        heading: "How a Vet Loan Pays the Clinic",
+        body: [
+          "Vet financing follows the same three moves whether the bill is $2,000 or $20,000. You apply with a 60-second enquiry, your broker runs a soft credit check and compares offers from 20+ lenders, and once you accept an offer and pass the lender's full assessment, the funds land in your account, typically within one to three business days and often sooner. You then pay the clinic exactly as a cash client would.",
+          "Because the money is yours rather than a credit line tied to a provider, nothing about the clinic matters to the lender: any vet, any emergency hospital, any specialist referral. If treatment is urgent, most clinics will start care with a deposit while finance is finalised, so ask for a written estimate and a payment deadline before you settle on a loan amount.",
+        ],
+        bullets: [
+          "Apply online in about 60 seconds with no credit impact",
+          "Your broker compares 20+ lenders and returns realistic offers",
+          "Accept an offer, complete the lender's checks, and receive funds in 1–3 business days",
+          "Pay the clinic directly, at any vet in Australia",
+        ],
       },
       {
-        title: "Rates from 6.99%",
-        description: "A personal loan through our network costs a fraction of a credit card. Save thousands in interest on large vet bills.",
+        heading: "Who Can Apply for Vet Finance?",
+        body: [
+          "Each lender on the panel sets its own criteria, so there is no universal checklist and no broker can guarantee approval. As a general guide, lenders look for applicants who are at least 18, an Australian citizen or permanent resident (some accept certain visa holders), and earning a regular income with room in the budget for the new repayment after existing commitments.",
+          "Credit history shapes the rate more often than the outcome. A clean file usually attracts the sharpest offers, while a thin or imperfect history may still be matched with a lender at a higher rate. The soft-check match shows you where you stand before any hard enquiry is recorded, which matters when a sick pet leaves no time for trial-and-error applications.",
+        ],
+        bullets: [
+          "Aged 18 or over with photo ID",
+          "Australian citizen, permanent resident, or eligible visa holder",
+          "Regular income from employment or self-employment",
+          "Repayments affordable alongside existing debts and expenses",
+        ],
       },
       {
-        title: "Flexible Repayment Terms",
-        description: "Repay over 1 to 5 years with fixed monthly repayments that fit your family budget.",
+        heading: "Vet Payment Plans vs Vet Loans",
+        body: [
+          "A vet payment plan, whether offered by the clinic itself or through a dedicated provider such as VetPay, splits an existing invoice into instalments. Plans can be quick to arrange at the counter, but they generally only work at participating clinics, often involve a deposit on the day, and carry account or transaction fees that add up on longer plans. Many emergency and specialist hospitals do not offer them at all.",
+          "A vet loan flips the order: you receive the funds first, pay the clinic in full, then repay a fixed amount over one to seven years. The trade-off is a formal lending assessment rather than an at-the-counter sign-up, in exchange for a fixed rate, a known end date, and complete freedom over which vet treats your pet. For a small bill at a clinic that already offers a low-fee plan, the plan can genuinely be the better tool; for larger or urgent bills, a loan usually costs less overall and is not limited to partner clinics.",
+        ],
+        links: [
+          { href: "/compare/cosmediloans-vs-vetpay", label: "CosmediLoans vs VetPay" },
+          { href: "/guides/vet-bill-payment-plans-australia", label: "Vet bill payment plans guide" },
+          { href: "/guides/vetpay-alternatives-australia", label: "VetPay alternatives" },
+        ],
+      },
+      {
+        heading: "Emergency Vet Bills: Surgery, After-Hours and Urgent Care",
+        body: [
+          "Emergency vet medicine is where bills escalate fastest. After-hours consultations at emergency hospitals commonly start at several hundred dollars before any treatment begins, and urgent surgery, a blocked bladder, gastric bloat, an intestinal obstruction, or snake-bite treatment with antivenom, is commonly quoted anywhere from $3,000 to $12,000 or more depending on the case and the city.",
+          "Three things keep an emergency manageable. First, ask for a written estimate with a likely range rather than a single figure, since costs can change after diagnostics. Second, ask whether the hospital will start treatment on a deposit; most will, which buys time for finance to settle. Third, if your pet is insured, ask whether the insurer can pay the hospital directly. If it reimburses you later instead, finance can still bridge the gap without committing you to more than the temporary shortfall.",
+        ],
+        links: [
+          { href: "/guides/vet-bill-loans-australia", label: "Vet bill loans guide" },
+        ],
+      },
+      {
+        heading: "Common Treatments Pet Owners Finance",
+        body: [
+          "The treatments below are the ones brokers see financed most often, with the ranges Australian clinics commonly quote. Treat them as orientation rather than a price list: the final cost varies with your pet's size, the technique used, your city, and whether a specialist or after-hours hospital is involved.",
+          "Cruciate ligament surgery, the most common orthopaedic procedure in dogs, is typically quoted between $4,000 and $12,000 depending on the repair technique. A course of chemotherapy commonly runs $5,000 to $20,000 across treatment, dental work with extractions usually sits in the hundreds to low thousands, and advanced imaging such as MRI or CT generally costs $1,000 to $5,000 per study. Ongoing conditions, such as diabetes, skin disease, or rehabilitation after surgery, are less dramatic per visit but add up; a loan can fund a projected course of treatment upfront rather than visit by visit.",
+        ],
+        bullets: [
+          "Emergency surgery and after-hours hospital care",
+          "Cruciate ligament repair (TPLO, TTA, or traditional)",
+          "Chemotherapy, radiation, and oncology referrals",
+          "Dental extractions and oral surgery under anaesthetic",
+          "MRI, CT, ultrasound, and specialist diagnostics",
+          "Chronic condition management and rehabilitation",
+        ],
       },
     ],
   },

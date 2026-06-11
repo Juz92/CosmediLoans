@@ -903,6 +903,73 @@ export const comparisons: Comparison[] = [
     relatedProcedureSlugs: ["dental-loans", "veneers-financing", "cosmetic-surgery-loans", "ivf-financing"],
   },
   {
+    slug: "cosmediloans-vs-vetpay",
+    competitorName: "VetPay",
+    competitorType: "bnpl",
+    h1: "CosmediLoans vs VetPay: Vet Financing Compared",
+    metaTitle: "CosmediLoans vs VetPay | Vet Finance Comparison",
+    metaDescription:
+      "Compare a broker-matched vet loan with the VetPay payment plan: clinic availability, deposits, repayment structure, and which suits your vet bill.",
+    verdict:
+      "VetPay is a dedicated Australian veterinary payment-plan provider that splits treatment costs into regular instalments at participating clinics, typically with a deposit at the time of treatment. CosmediLoans compares fixed-rate personal loans from 20+ lenders, usable at any vet in Australia for $2,000–$100,000 over 1–7 years. VetPay can be convenient when your clinic already offers it and the bill is modest; a broker-matched vet loan tends to suit larger invoices, emergency or specialist hospitals that are not VetPay partners, and owners who want a fixed rate with a known end date.",
+    features: [
+      { feature: "Amount", us: "$2,000 – $100,000", them: "Varies by approval (check with VetPay)" },
+      { feature: "Where You Can Use It", us: "Any vet, emergency hospital, or specialist", them: "Participating VetPay clinics only" },
+      { feature: "Structure", us: "Fixed-term personal loan (1–7 years)", them: "Payment plan repaid by regular direct debit" },
+      { feature: "Deposit", us: "None required", them: "Deposit typically payable at the time of treatment" },
+      { feature: "Rates & Fees", us: "From 6.99% p.a.; fees vary by lender", them: "Interest and account fees apply, per VetPay's current terms" },
+      { feature: "Initial Credit Check", us: "Soft pull (no impact)", them: "Credit assessment as part of the application" },
+      { feature: "Funds Paid To", us: "You (or your clinic), spend like a cash client", them: "The participating clinic through the plan" },
+      { feature: "Best For", us: "Larger bills, specialist referrals, non-partner clinics", them: "Smaller bills at clinics that already offer VetPay" },
+    ],
+    howWeWork:
+      "CosmediLoans connects you with a broker who compares fixed-rate personal loans across 20+ Australian lenders. One application with a soft credit check returns realistic offers; once you accept and pass the lender's assessment, funds typically arrive within 1–3 business days and you pay the clinic directly, so any vet in Australia is covered.",
+    howTheyWork:
+      "VetPay is a veterinary-specific payment-plan provider. You apply online or through a participating clinic, and if approved, treatment is paid through the plan while you repay by regular direct debit, typically after paying a deposit at the time of treatment. Interest, fees, deposit rules, and approval criteria are set by VetPay and can change, so always check their current terms. Availability depends on whether your clinic is a VetPay partner.",
+    chooseUs: [
+      "Your clinic, emergency hospital, or specialist is not a VetPay partner",
+      "The bill is large and you want a fixed rate with a known payoff date",
+      "You want to compare offers from 20+ lenders before any hard credit check",
+      "You'd rather pay the clinic upfront than manage a deposit-plus-instalments plan",
+      "You may need to borrow more than a payment plan supports",
+    ],
+    chooseThem: [
+      "Your vet already offers VetPay and the bill is modest",
+      "You want a veterinary-specific plan arranged at the clinic counter",
+      "You're comfortable with a deposit and ongoing direct-debit instalments",
+      "You've checked VetPay's current fees and they stack up for your invoice",
+    ],
+    faqs: [
+      {
+        question: "Is a vet loan better than VetPay?",
+        answer:
+          "Neither is better in every case. VetPay can be convenient for a modest bill at a clinic that offers it. A broker-matched vet loan usually suits larger or urgent bills better because the funds work at any clinic, the rate is fixed, and the term gives a known end date. Comparing both before committing costs nothing, since the CosmediLoans match is a soft check.",
+      },
+      {
+        question: "Can I use VetPay at any vet?",
+        answer:
+          "No. VetPay works at participating clinics that have partnered with the provider, and many emergency and specialist hospitals are not partners. A personal loan is paid to you, so it works at any vet in Australia.",
+      },
+      {
+        question: "Does VetPay require a deposit?",
+        answer:
+          "VetPay plans have typically involved a deposit payable at the time of treatment, though the exact rules are set by VetPay and can change, so check their current terms. A broker-matched vet loan requires no deposit; the full treatment cost can be financed.",
+      },
+      {
+        question: "What if my vet doesn't offer VetPay?",
+        answer:
+          "You can still finance the bill. A broker-matched personal loan pays funds to your account, so you can settle the invoice at any clinic, including emergency and referral hospitals that don't partner with payment-plan providers.",
+      },
+      {
+        question: "How fast can each option be arranged?",
+        answer:
+          "VetPay applications at a participating clinic can be processed quickly as part of arranging treatment. CosmediLoans typically returns a decision the same day, with funds available within 1–3 business days, and most clinics will begin urgent treatment on a deposit while finance settles.",
+      },
+    ],
+    lastReviewed: "2026-06-12",
+    relatedProcedureSlugs: ["vet-bill-loans", "medical-loan", "debt-consolidation"],
+  },
+  {
     slug: "cosmediloans-vs-tlc",
     competitorName: "TLC",
     competitorType: "lender",
