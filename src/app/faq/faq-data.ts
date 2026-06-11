@@ -5,7 +5,7 @@ export interface FAQItem {
 }
 
 export const allFAQItems: FAQItem[] = [
-  // ── GENERAL (8) ──────────────────────────────────────────────────
+  // ── GENERAL (10) ──────────────────────────────────────────────────
   {
     category: "general",
     question: "What is CosmediLoans?",
@@ -50,12 +50,24 @@ export const allFAQItems: FAQItem[] = [
   },
   {
     category: "general",
+    question: "Does using CosmediLoans cost more than going to a lender directly?",
+    answer:
+      "No. The commission we receive from the lender when a loan settles is built into the loan product itself, the same product you would receive if you approached that lender directly. You do not pay a higher rate or extra fees for coming through CosmediLoans. The practical difference is competition: instead of seeing one lender's offer, your broker compares products from a panel of 20+ lenders. As with any financial decision, always check the comparison rate of each offer so you can judge the true cost, and remember you are never obliged to accept any option presented.",
+  },
+  {
+    category: "general",
+    question: "Is medical financing regulated in Australia?",
+    answer:
+      "Yes. Consumer lending in Australia is regulated under the National Consumer Credit Protection Act 2009 (Cth) and the National Credit Code. Brokers must hold an Australian Credit Licence (ACL) or operate as authorised credit representatives, and they are bound by responsible lending obligations, meaning they must not arrange a loan that is unsuitable for your circumstances. Lenders and brokers in our network are also members of the Australian Financial Complaints Authority (AFCA), a free external dispute resolution scheme you can use if something goes wrong. CosmediLoans itself is a lead generation service and does not hold an ACL, which is why the credit assistance is always provided by a licensed broker.",
+  },
+  {
+    category: "general",
     question: "Can I leave a review of my experience with CosmediLoans?",
     answer:
       "Absolutely, and we encourage it. Patient feedback is incredibly valuable to us and helps future patients make informed decisions. After your loan has settled, you may receive an invitation to share your experience. You can also leave reviews on Google or contact us directly with feedback. We take all reviews seriously, both positive and constructive, and use them to continually improve our service. If you had an issue at any point during the process, we want to hear about it so we can resolve it and prevent it from recurring.",
   },
 
-  // ── LOANS & RATES (8) ───────────────────────────────────────────
+  // ── LOANS & RATES (10) ───────────────────────────────────────────
   {
     category: "loans",
     question: "What interest rates can I expect for a medical loan?",
@@ -100,12 +112,24 @@ export const allFAQItems: FAQItem[] = [
   },
   {
     category: "loans",
+    question: "Can a loan cover the gap after Medicare or private health insurance?",
+    answer:
+      "Yes. Many patients use medical financing specifically for the out-of-pocket gap, the portion of a procedure cost that is not covered by Medicare rebates or private health insurance. Whether your procedure attracts any rebate at all depends on the procedure and your cover, so confirm the expected rebate with your provider and insurer first, then finance the remaining amount. Your broker only needs the out-of-pocket figure you actually need to borrow. Financing the gap rather than the full quoted price keeps the loan amount, and the total interest you pay, as small as possible.",
+  },
+  {
+    category: "loans",
+    question: "Can the loan include related costs like anaesthetist, hospital, or aftercare fees?",
+    answer:
+      "Generally yes. A medical loan is based on the total amount you need to borrow, so you can include associated costs such as anaesthetist fees, hospital or theatre fees, post-operative garments, medications, and follow-up appointments, not just the surgeon's or clinician's fee. The cleanest approach is to gather an itemised quote or treatment plan that captures the full expected cost, then request that amount. Your broker will confirm what the specific lender accepts as loan purpose. Borrow only what you genuinely need, as the loan amount drives both your repayments and total interest.",
+  },
+  {
+    category: "loans",
     question: "What is a comparison rate and why does it matter?",
     answer:
       "A comparison rate is a single percentage figure that combines the advertised interest rate with most of the fees and charges associated with a loan, giving you a more accurate indication of the true annual cost. In Australia, lenders are legally required to display comparison rates alongside advertised rates. When comparing medical loan options, always look at the comparison rate rather than just the headline interest rate, as a loan with a lower interest rate but higher fees could actually cost you more overall. Your broker will ensure you understand the comparison rate for every option presented.",
   },
 
-  // ── ELIGIBILITY (6) ─────────────────────────────────────────────
+  // ── ELIGIBILITY (7) ─────────────────────────────────────────────
   {
     category: "eligibility",
     question: "What are the basic eligibility requirements?",
@@ -129,6 +153,12 @@ export const allFAQItems: FAQItem[] = [
     question: "Will checking my rate affect my credit score?",
     answer:
       "No. When you submit an enquiry through CosmediLoans, we do not perform a credit check. Your assigned broker may conduct a soft credit inquiry during the initial assessment, which does not appear on your credit file and has zero impact on your credit score. A hard credit inquiry, which is recorded on your credit file, only occurs if you decide to proceed with a formal loan application. Your broker will always inform you before a hard inquiry is made, giving you the opportunity to decide whether to proceed. This protects your credit score while you explore your options.",
+  },
+  {
+    category: "eligibility",
+    question: "What is the difference between a soft and a hard credit check?",
+    answer:
+      "A soft credit check (or soft inquiry) lets a broker or lender view an overview of your credit profile without leaving a footprint that other lenders can see, and it has no effect on your credit score. A hard credit check is recorded on your credit file when you formally apply for credit, and multiple hard inquiries in a short period can lower your score because they suggest credit-seeking behaviour. This is why the broker process starts with a soft check to shortlist suitable lenders, and only one hard check is made, with your consent, when you proceed with a formal application to the lender you choose.",
   },
   {
     category: "eligibility",
@@ -181,7 +211,7 @@ export const allFAQItems: FAQItem[] = [
       "Yes, many lenders offer the option to disburse funds directly to your healthcare provider, which some patients find more convenient and reassuring. Alternatively, funds can be deposited into your personal bank account, giving you the flexibility to manage payments to your provider yourself. The disbursement method can vary by lender, some require direct payment to the provider for medical-purpose loans, while others leave the choice to you. Your broker will explain the disbursement options available with each lender so you can choose the arrangement that works best for your situation.",
   },
 
-  // ── PROCESS & PAYMENT (6) ───────────────────────────────────────
+  // ── PROCESS & PAYMENT (8) ───────────────────────────────────────
   {
     category: "process",
     question: "How long does the entire process take from enquiry to funding?",
@@ -211,6 +241,18 @@ export const allFAQItems: FAQItem[] = [
     question: "How do I make repayments on my medical loan?",
     answer:
       "Repayments are made directly to the lender (not to CosmediLoans) via automatic direct debit from your nominated bank account. Most lenders offer weekly, fortnightly, or monthly repayment frequencies, choosing weekly or fortnightly payments can reduce total interest over the life of the loan. Your broker will set up the repayment schedule as part of the loan settlement process. Most lenders also provide an online portal or app where you can view your loan balance, upcoming payments, and make additional repayments if you wish. If you experience financial hardship, contact your lender directly to discuss hardship provisions.",
+  },
+  {
+    category: "process",
+    question: "What happens if my loan application is declined?",
+    answer:
+      "A decline is not the end of the road. Because your broker works with a panel of 20+ lenders with different credit appetites, they can often identify an alternative lender whose criteria better match your situation, without you starting from scratch. Your broker can also explain the likely reason for the decline, such as serviceability, existing commitments, or credit file issues, and what would need to change before reapplying. Avoid submitting multiple direct applications after a decline, as each hard inquiry can further affect your credit score. There is no fee from CosmediLoans either way.",
+  },
+  {
+    category: "process",
+    question: "What should I do if I am struggling to make repayments?",
+    answer:
+      "Contact your lender as early as possible, ideally before you miss a payment. Australian lenders are required to have financial hardship processes under the National Credit Code, and you have the right to request a hardship variation, such as a temporary payment pause or reduced repayments, if illness, job loss, or other circumstances affect your income. If you are not satisfied with the lender's response, you can escalate the matter to the Australian Financial Complaints Authority (AFCA) for free. Free, independent help is also available from the National Debt Helpline and the government's Moneysmart service. Repayments are made to your lender, so CosmediLoans cannot change your loan terms.",
   },
   {
     category: "process",

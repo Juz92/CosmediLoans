@@ -4,14 +4,14 @@ import { FAQPageClient } from "./FAQPageClient";
 import { allFAQItems } from "./faq-data";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Medical Financing Australia",
+  title: "Medical Financing FAQs Australia",
   description:
-    "Find answers to 34 common questions about medical procedure financing in Australia. Learn about rates, eligibility, procedures, and the application process.",
+    "Find answers to 41 common questions about medical procedure financing in Australia. Learn about rates, eligibility, procedures, and the application process.",
   alternates: { canonical: "/faq" },
   openGraph: {
-    title: "Frequently Asked Questions | Medical Financing Australia",
+    title: "Medical Financing FAQs Australia",
     description:
-      "Find answers to 34 common questions about medical procedure financing in Australia.",
+      "Find answers to 41 common questions about medical procedure financing in Australia.",
     url: "/faq",
     type: "website",
   },

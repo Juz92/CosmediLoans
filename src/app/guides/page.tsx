@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Badge, Button, Card } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Medical Finance Guides Australia | Payment Plans and Loans",
+  title: "Medical Finance Guides Australia",
   description:
     "Compare medical costs, payment plans, dental finance, IVF finance, cosmetic surgery loans, vet bill loans, and bad credit medical loan options in Australia.",
   alternates: { canonical: "/guides" },

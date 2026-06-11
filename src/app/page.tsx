@@ -156,7 +156,9 @@ const organizationSchema = {
     "@type": "Country",
     name: "Australia",
   },
-  sameAs: [] as string[],
+  // sameAs intentionally omitted: no verified social/profile URLs exist in
+  // this repo yet. Add real profile URLs here (and in the footer) when the
+  // owner provides them — never fabricate.
 };
 
 export default function Home() {

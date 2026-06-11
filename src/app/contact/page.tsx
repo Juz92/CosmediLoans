@@ -236,6 +236,35 @@ function ContactPageInner() {
                 </div>
               </div>
 
+              {/* What to expect */}
+              <div className="mt-10 space-y-4 text-sm text-text-body leading-relaxed">
+                <h3 className="font-semibold text-text-dark text-base">
+                  What to Expect When You Get in Touch
+                </h3>
+                <p>
+                  The quickest ways to reach us are the form on this page or
+                  email. We answer general questions about how the service
+                  works, what happens to your enquiry, and anything on this
+                  website. During office hours (Mon-Fri, 9am-5pm AEST) we
+                  typically reply within 2 business hours; messages sent
+                  outside those hours are picked up the next business day.
+                </p>
+                <p>
+                  One thing worth knowing before you write: CosmediLoans is a
+                  lead generation service, not a lender or financial adviser,
+                  so we can&apos;t quote you a rate, assess an application, or give
+                  personal financial advice over email or phone. If you&apos;re
+                  ready to compare loan options for a procedure, the fastest
+                  path is to{" "}
+                  <Link href="/apply" className="text-primary hover:underline">
+                    submit an enquiry
+                  </Link>{" "}
+                  — a licensed broker will then contact you directly to discuss
+                  rates and options. There&apos;s no fee and no obligation either
+                  way.
+                </p>
+              </div>
+
               {/* FAQ Link */}
               <div className="mt-10 p-6 bg-surface rounded-card border border-border">
                 <h3 className="font-semibold text-text-dark mb-2">
