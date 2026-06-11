@@ -28,6 +28,19 @@ export interface GuideHubCta {
   description: string;
 }
 
+export interface GuideCostRow {
+  item: string;
+  range: string;
+  note: string;
+}
+
+export interface GuideCostTable {
+  heading: string;
+  intro: string;
+  rows: GuideCostRow[];
+  footnote: string;
+}
+
 export interface HighIntentGuide {
   slug: string;
   category: string;
@@ -52,6 +65,7 @@ export interface HighIntentGuide {
   relatedGuideSlugs: string[];
   sources: GuideSource[];
   hubCta?: GuideHubCta;
+  costTable?: GuideCostTable;
 }
 
 const commonFinanceSources: GuideSource[] = [
@@ -1711,29 +1725,29 @@ export const highIntentGuides: HighIntentGuide[] = [
     h1: "Dental Implants Cost in Australia",
     metaTitle: "Dental Implants Cost Australia | Quote and Finance Guide",
     metaDescription:
-      "Compare dental implant costs in Australia, quote inclusions, payment plans, dental loans and questions to ask before financing treatment.",
+      "A single dental implant is commonly quoted at $3,000 to $6,500 in Australia. Compare implant cost ranges, what moves the price, and finance options.",
     excerpt:
-      "A cost-first guide for patients comparing single implants, implant bridges, full-mouth implants and finance options before accepting a dental quote.",
-    lastReviewed: "2026-05-27",
-    readTime: "8 min read",
+      "Commonly quoted Australian dental implant costs, what drives a quote up or down, and how patients fund the gap once the treatment plan is clear.",
+    lastReviewed: "2026-06-12",
+    readTime: "9 min read",
     primaryKeyword: "dental implants cost Australia",
     searchIntent:
       "Patients researching dental implant prices before deciding whether they can fund the treatment quote.",
     heroImage: "/Images/Dental.png",
     formProcedure: "dental",
     quickAnswer:
-      "Dental implant costs in Australia vary widely because a quote can include scans, extraction, bone grafting, implant placement, abutments, crowns, sedation and follow-up appointments. The safest finance comparison starts with an itemised quote, then compares savings, health fund rebates, clinic payment plans and dental loans against the total repayment rather than the weekly figure.",
+      "A single dental implant in Australia is commonly quoted at $3,000 to $6,500, including the implant, abutment and crown. Implant-supported bridges replacing several teeth are commonly quoted at $6,000 to $15,000, and full-arch All-on-4 treatment at $20,000 to $50,000 per arch. Your itemised quote is the only reliable figure, because extractions, bone grafting, scans and sedation often sit outside the headline price.",
     proofPoints: [
-      "Targets cost research before the patient searches for a dental loan",
-      "Separates implant quote items from payment-plan marketing",
-      "Links cost intent into dental loans only after the treatment amount is clearer",
+      "The number of teeth replaced and any bone grafting can move a quote by thousands of dollars",
+      "Health fund major dental limits rarely cover the full implant cost, so plan for a gap",
+      "A soft-check loan comparison lets you test finance options without marking your credit file",
     ],
     targetQueries: [
       "dental implants cost Australia",
       "dental implants cost",
       "dental implant cost",
       "how much do dental implants cost",
-      "full mouth dental implants cost Australia",
+      "single tooth implant cost Australia",
     ],
     optionRows: [
       {
@@ -1771,10 +1785,10 @@ export const highIntentGuides: HighIntentGuide[] = [
     ],
     sections: [
       {
-        heading: "What changes the cost of dental implants",
+        heading: "What drives a dental implant quote up or down",
         body: [
-          "A single implant quote is not the same as a full-mouth reconstruction quote. The final amount depends on the number of teeth replaced, whether bone grafting is needed, the type of restoration, sedation, scans and the dentist or specialist involved.",
-          "Cost pages rank because patients are trying to understand the quote before they think about finance. That is why this page should explain the cost drivers first, then move into payment options only after the treatment amount is clearer.",
+          "The biggest cost drivers are the number of teeth being replaced, whether bone grafting or a sinus lift is needed before placement, and who does the work. Specialist placement by a periodontist or oral surgeon, front-tooth implants where appearance matters most, premium crown materials and IV sedation all push a quote toward the upper end of the commonly quoted ranges.",
+          "Quotes tend to sit lower when the implant is in a straightforward back-tooth position, no grafting is required, the same clinician handles surgery and restoration, and treatment is completed without sedation. Health fund extras with major dental cover can also reduce the gap, although annual limits usually cover only part of an implant.",
         ],
         bullets: [
           "Ask whether the quote includes scans, surgery, abutment and crown.",
@@ -1786,7 +1800,7 @@ export const highIntentGuides: HighIntentGuide[] = [
         heading: "How to compare implant quotes before finance",
         body: [
           "Two implant quotes can look similar but include different work. One may include the final crown and follow-up reviews, while another only covers the surgical stage.",
-          "Before applying for a dental loan, ask for an itemised quote that separates required treatment from optional upgrades. This keeps the finance amount tied to the actual care plan.",
+          "Before applying for a dental loan, ask for an itemised quote that separates required treatment from optional upgrades. This keeps the finance amount tied to the actual care plan. If you are considering full-arch treatment, the All-on-4 cost guide covers staged payment timing for that larger quote separately.",
         ],
         bullets: [
           "Compare the full treatment plan, not only the headline implant price.",
@@ -1795,10 +1809,10 @@ export const highIntentGuides: HighIntentGuide[] = [
         ],
       },
       {
-        heading: "When finance becomes the next step",
+        heading: "Financing dental implants once the quote is clear",
         body: [
-          "If the quote cannot be covered from savings or a short clinic plan, a dental loan can turn the treatment amount into fixed repayments. The comparison should use the total repayment, fees, term and early payout rules.",
-          "For staged implant work, settlement timing matters. Tell the broker whether the clinic needs the full amount upfront or payment at each stage.",
+          "If the quote cannot be covered from savings, health fund benefits or a short clinic plan, a broker-matched dental loan can turn the treatment amount into fixed repayments over one to seven years. Compare offers on total repayment, fees, term and early payout rules rather than the weekly figure.",
+          "For staged implant work, settlement timing matters: tell the broker whether the clinic needs the full amount upfront or payment at each stage. The dental finance hub linked from the quick answer above connects dental loans, payment plans and the comparisons most implant patients work through before applying.",
         ],
       },
     ],
@@ -1806,27 +1820,32 @@ export const highIntentGuides: HighIntentGuide[] = [
       {
         question: "How much do dental implants cost in Australia?",
         answer:
-          "Published Australian ranges often show single implants from a few thousand dollars and full-mouth implant work much higher. Your actual cost depends on scans, surgery complexity, grafting, restoration type, sedation and provider fees.",
+          "A single dental implant is commonly quoted at $3,000 to $6,500 in Australia, including the implant, abutment and crown. Implant-supported bridges are commonly quoted at $6,000 to $15,000, and full-arch All-on-4 treatment at $20,000 to $50,000 per arch. Grafting, extractions, sedation and imaging can add to these figures, so rely on an itemised written quote.",
+      },
+      {
+        question: "Why do implant quotes vary so much between dentists?",
+        answer:
+          "Quotes move with the clinician's training, whether a specialist places the implant, crown material, imaging and sedation choices, and how much preparatory work your jaw needs. Two honest quotes for the same tooth can differ by thousands once those items are itemised.",
+      },
+      {
+        question: "Does Medicare or health insurance cover dental implants?",
+        answer:
+          "Medicare generally does not cover dental implant treatment. Some health fund extras policies contribute to major dental, but annual limits, waiting periods and item rules vary, and the benefit usually covers only part of an implant. Ask your fund about the exact item numbers before deciding how much to finance.",
       },
       {
         question: "Can I get finance for dental implants?",
         answer:
-          "Potentially, yes. Dental implant finance is usually assessed as a personal loan or clinic finance option, subject to income, expenses, credit history, requested amount and affordability.",
+          "Potentially, yes. Dental implant finance is usually assessed as a personal loan or clinic finance option, subject to income, expenses, credit history, requested amount and affordability. A broker comparison that starts with a soft credit check shows realistic options before anything is recorded on your file.",
       },
       {
-        question: "Should I apply before getting an implant quote?",
+        question: "Is it cheaper to get dental implants overseas?",
         answer:
-          "You can compare likely options early, but formal lender decisions are cleaner when you have an itemised quote and treatment timeline.",
+          "Headline overseas prices can look lower, but travel, accommodation, follow-up visits and the cost of fixing complications at home can close the gap quickly. Australian regulators also cannot oversee overseas providers, so weigh the full cost and aftercare plan, not just the surgical fee.",
       },
       {
         question: "Are dental implant payment plans interest free?",
         answer:
-          "Some clinic or third-party plans advertise interest-free terms, but fees, limits, missed-payment charges and short repayment windows can still affect the real cost.",
-      },
-      {
-        question: "Can health insurance cover dental implants?",
-        answer:
-          "Some extras policies may contribute to major dental costs, but limits, waiting periods and item rules vary. Ask the fund about the exact item numbers before deciding how much to finance.",
+          "Some clinic or third-party plans advertise interest-free terms, but fees, limits, missed-payment charges and short repayment windows can still affect the real cost. Compare the total amount repaid against a fixed-term loan before signing.",
       },
     ],
     relatedProcedureSlugs: [
@@ -1854,6 +1873,41 @@ export const highIntentGuides: HighIntentGuide[] = [
         url: "https://www.healthdirect.gov.au/cost-of-dental-care",
       },
     ],
+    hubCta: {
+      href: "/guides/topics/dental-finance",
+      label: "Visit the dental finance hub",
+      description:
+        "Ready to compare ways to pay? The dental finance hub connects dental loans, payment plans, BNPL comparisons and implant finance guides in one place.",
+    },
+    costTable: {
+      heading: "Typical Dental Implant Costs in Australia",
+      intro:
+        "Commonly quoted Australian ranges for implant treatment. Every mouth and treatment plan differs, so treat these as research figures, not quotes.",
+      rows: [
+        {
+          item: "Single dental implant (implant, abutment and crown)",
+          range: "$3,000 – $6,500",
+          note: "Assumes no grafting. Front-tooth and specialist placements often sit at the upper end.",
+        },
+        {
+          item: "Bone grafting (where needed)",
+          range: "$500 – $3,000",
+          note: "Commonly quoted range. Depends on graft size and material, and is often itemised separately.",
+        },
+        {
+          item: "Implant-supported bridge (replacing 2–4 teeth)",
+          range: "$6,000 – $15,000",
+          note: "Commonly quoted range. Uses fewer implants than teeth replaced; span and material drive the price.",
+        },
+        {
+          item: "Full-arch All-on-4 (per arch)",
+          range: "$20,000 – $50,000",
+          note: "See the dedicated All-on-4 cost guide for staged payment timing and inclusions.",
+        },
+      ],
+      footnote:
+        "These are commonly quoted Australian ranges gathered for research purposes, not quotes, guarantees or financial or medical advice. The itemised written quote from your treating dentist or specialist is the only figure to rely on.",
+    },
   },
   {
     slug: "all-on-4-dental-implants-cost-australia",
@@ -2012,22 +2066,22 @@ export const highIntentGuides: HighIntentGuide[] = [
     h1: "IVF Cost in Australia",
     metaTitle: "IVF Cost Australia | Rebates, Gaps and Finance",
     metaDescription:
-      "Compare IVF costs in Australia, Medicare rebates, Safety Net timing, out-of-pocket gaps and finance options before starting treatment.",
+      "A single IVF cycle is commonly quoted at $8,000 to $15,000 in Australia before rebates. Compare cycle costs, Medicare rebates, gaps and finance options.",
     excerpt:
-      "A cost and rebate guide for patients planning IVF, ICSI, frozen embryo transfer or fertility treatment before comparing payment options.",
-    lastReviewed: "2026-05-27",
-    readTime: "8 min read",
+      "Commonly quoted Australian IVF and fertility treatment costs, how Medicare rebates and the Safety Net change the gap, and how patients fund what remains.",
+    lastReviewed: "2026-06-12",
+    readTime: "9 min read",
     primaryKeyword: "IVF cost Australia",
     searchIntent:
       "Patients estimating IVF out-of-pocket costs before deciding whether they need a payment plan or fertility loan.",
     heroImage: "/Images/IVF & Fertility.png",
     formProcedure: "ivf",
     quickAnswer:
-      "IVF cost planning should start with the clinic fee, medication, day surgery, anaesthetist, testing, storage, Medicare rebate timing and likely out-of-pocket gap. Finance should usually cover the gap you cannot fund from savings, rebates or clinic timing, rather than the headline cycle fee alone.",
+      "A single IVF cycle in Australia is commonly quoted at $8,000 to $15,000 before rebates, with IVF plus ICSI commonly $10,000 to $18,000 and a frozen embryo transfer $3,000 to $5,000. Medicare rebates and the Safety Net usually bring the real out-of-pocket gap below the headline fee, so build your budget — and any finance — around the gap, not the invoice.",
     proofPoints: [
-      "Captures IVF cost searches before payment-plan intent",
-      "Includes Medicare and Safety Net as sections instead of a cannibalising separate page",
-      "Connects cost research to IVF finance only after the expected gap is known",
+      "Medicare rebates and Safety Net timing can change your real gap by thousands per cycle",
+      "Medication, day surgery, anaesthetist and storage are often billed outside the cycle fee",
+      "Many patients need more than one cycle, so repayments need room for uncertainty",
     ],
     targetQueries: [
       "IVF cost Australia",
@@ -2072,10 +2126,10 @@ export const highIntentGuides: HighIntentGuide[] = [
     ],
     sections: [
       {
-        heading: "Build the cost from the treatment plan, not the headline fee",
+        heading: "What drives IVF costs up or down",
         body: [
-          "IVF costs can include specialist appointments, stimulation medication, scans, egg collection, anaesthetic, laboratory work, embryo transfer, freezing and storage. Some costs may be inside the clinic fee and others may be billed separately.",
-          "The finance decision should use the expected out-of-pocket gap after rebates and timing, not only the amount shown in a clinic advertisement.",
+          "Costs climb when a cycle needs ICSI for fertilisation, donor eggs or sperm, higher medication doses, genetic testing of embryos, or day surgery with an anaesthetist for egg collection. Each repeat fresh cycle restarts most of those costs, which is why multi-cycle budgets matter more than single-cycle prices.",
+          "Costs fall when Medicare rebates apply, when the Safety Net threshold has been reached within the calendar year, when frozen embryos from an earlier cycle allow a cheaper transfer instead of a fresh cycle, and at clinics that run lower-cost or bulk-billed programs for eligible patients.",
         ],
         bullets: [
           "Ask the clinic for the expected upfront cost and expected rebate.",
@@ -2096,10 +2150,10 @@ export const highIntentGuides: HighIntentGuide[] = [
         ],
       },
       {
-        heading: "When a fertility loan becomes useful",
+        heading: "Financing the gap with a fertility loan",
         body: [
-          "A fertility loan can be useful when the clinic needs payment before treatment starts, when the gap remains high after rebates, or when the plan includes medication, storage or repeat cycles.",
-          "Borrowing should be matched to a realistic budget because IVF can involve uncertainty. A good page should encourage patients to borrow only the amount that still needs funding after other supports are considered.",
+          "A fertility loan can be useful when the clinic needs payment before treatment starts, when the gap remains high after rebates, or when the plan includes medication, storage or repeat cycles. The IVF financing page linked from the quick answer above covers loan amounts, fixed rates, terms and how the broker comparison works.",
+          "Borrowing should be matched to a realistic budget because IVF involves uncertainty. Borrow only the amount that still needs funding after rebates, savings and clinic payment timing are considered, and leave room in repayments in case another cycle is needed.",
         ],
       },
     ],
@@ -2107,12 +2161,17 @@ export const highIntentGuides: HighIntentGuide[] = [
       {
         question: "How much does IVF cost in Australia?",
         answer:
-          "Published IVF cost guides commonly show total cycle fees in the thousands, with out-of-pocket gaps depending on clinic fees, Medicare rebates, Safety Net status, treatment type, medication and private health insurance.",
+          "A single fresh IVF cycle is commonly quoted at $8,000 to $15,000 in Australia before rebates. IVF with ICSI is commonly $10,000 to $18,000, frozen embryo transfers $3,000 to $5,000, and donor egg IVF $15,000 to $30,000. Your out-of-pocket gap after Medicare rebates depends on the clinic, treatment type and Safety Net status.",
+      },
+      {
+        question: "How much does IVF cost after Medicare rebates?",
+        answer:
+          "It varies by clinic and item numbers, but most patients still pay several thousand dollars out of pocket per fresh cycle after rebates, with the gap shrinking once Medicare Safety Net thresholds are reached in a calendar year. Ask your clinic for a written estimate of the expected upfront cost and expected rebate.",
       },
       {
         question: "Does Medicare cover IVF?",
         answer:
-          "Medicare can help with some fertility and assisted reproductive treatment costs when referral and eligibility rules are met, but most patients still pay some costs themselves.",
+          "Medicare can help with some fertility and assisted reproductive treatment costs when referral and eligibility rules are met, but it does not cover everything, and most patients still pay some costs themselves.",
       },
       {
         question: "Should I finance the full IVF cycle cost?",
@@ -2120,9 +2179,9 @@ export const highIntentGuides: HighIntentGuide[] = [
           "Usually the better comparison is the expected gap after rebates, savings and clinic timing. Financing the full headline fee can mean borrowing more than needed.",
       },
       {
-        question: "Can a fertility loan cover medication and storage?",
+        question: "Can a fertility loan cover medication, storage and repeat cycles?",
         answer:
-          "Potentially, yes, if those costs are included in the requested amount and the lender accepts the purpose. Use written estimates where possible.",
+          "Potentially, yes, if those costs are included in the requested amount and the lender accepts the purpose. Some patients borrow with a second cycle in mind rather than reapplying. Use written estimates where possible.",
       },
       {
         question: "Can I use early super for IVF?",
@@ -2159,6 +2218,51 @@ export const highIntentGuides: HighIntentGuide[] = [
         url: "https://www.servicesaustralia.gov.au/medicare-safety-nets",
       },
     ],
+    hubCta: {
+      href: "/procedures/ivf-financing",
+      label: "Explore IVF financing",
+      description:
+        "Once you know your likely out-of-pocket gap, the IVF financing page covers loan amounts, fixed rates, terms and how the broker comparison works for fertility treatment.",
+    },
+    costTable: {
+      heading: "Typical IVF and Fertility Treatment Costs in Australia",
+      intro:
+        "Commonly quoted Australian ranges before Medicare rebates. Clinic fees, medication response and item numbers change the final figure, so treat these as research figures, not quotes.",
+      rows: [
+        {
+          item: "Single IVF cycle",
+          range: "$8,000 – $15,000",
+          note: "Headline fresh-cycle fee before rebates. Medication is often billed separately.",
+        },
+        {
+          item: "IVF with ICSI",
+          range: "$10,000 – $18,000",
+          note: "Adds laboratory fertilisation fees on top of a standard cycle.",
+        },
+        {
+          item: "Frozen embryo transfer",
+          range: "$3,000 – $5,000",
+          note: "Uses embryos frozen from an earlier cycle, so later attempts can cost less.",
+        },
+        {
+          item: "IUI treatment",
+          range: "$1,500 – $4,000",
+          note: "A lower-cost option some patients try before IVF where clinically suitable.",
+        },
+        {
+          item: "Egg freezing (per cycle)",
+          range: "$5,000 – $8,000",
+          note: "Annual storage fees are usually charged on top.",
+        },
+        {
+          item: "Donor egg IVF",
+          range: "$15,000 – $30,000",
+          note: "Donor coordination and additional screening raise the cost.",
+        },
+      ],
+      footnote:
+        "These are commonly quoted Australian ranges gathered for research purposes, not quotes, guarantees or financial or medical advice. Ask your clinic for a written estimate showing the expected upfront cost and expected Medicare rebate for your treatment plan.",
+    },
   },
   {
     slug: "weight-loss-surgery-cost-australia",
@@ -2918,6 +3022,202 @@ export const highIntentGuides: HighIntentGuide[] = [
         url: "https://www.ahpra.gov.au/Resources/Cosmetic-surgery-hub/Cosmetic-procedure-advertising-guidelines.aspx",
       },
     ],
+  },
+  {
+    slug: "facelift-cost-australia",
+    category: "Cosmetic surgery",
+    title: "Facelift Cost Australia",
+    h1: "Facelift Cost in Australia",
+    metaTitle: "Facelift Cost Australia | Surgeon Fees and Finance Guide",
+    metaDescription:
+      "A full facelift is commonly quoted at $15,000 to $30,000 in Australia. Compare mini facelift and neck lift costs, what drives quotes, and finance options.",
+    excerpt:
+      "Commonly quoted Australian facelift, mini facelift and neck lift costs, what moves a surgical quote up or down, and how patients fund a procedure Medicare does not cover.",
+    lastReviewed: "2026-06-12",
+    readTime: "9 min read",
+    primaryKeyword: "facelift cost Australia",
+    searchIntent:
+      "Patients researching facelift and neck lift prices before deciding whether the procedure is financially realistic and how to fund it.",
+    heroImage: "/Images/Facelift.png",
+    formProcedure: "facelift",
+    quickAnswer:
+      "A full facelift in Australia is commonly quoted at $15,000 to $30,000 once surgeon, hospital and anaesthetist fees are counted. Mini facelifts are commonly quoted at $8,000 to $15,000, neck lifts at $8,000 to $18,000, and combined facelift and neck lift surgery at $18,000 to $35,000. Because cosmetic facelifts are not covered by Medicare or private health insurance, most patients fund the full quote themselves.",
+    proofPoints: [
+      "Combining a neck lift, brow lift or eyelid surgery can add thousands to a facelift quote",
+      "Cosmetic facelifts get no Medicare or insurer help, so the written quote is the real budget",
+      "Two to three weeks off work for recovery is a cost many patients forget to plan for",
+    ],
+    targetQueries: [
+      "facelift cost Australia",
+      "facelift cost",
+      "how much does a facelift cost in Australia",
+      "mini facelift cost Australia",
+      "neck lift cost Australia",
+    ],
+    optionRows: [
+      {
+        name: "Savings and staged payment",
+        bestFor: "Patients who can cover the deposit and final balance from planned savings.",
+        strengths:
+          "Avoids interest and keeps the surgery decision independent of credit approval.",
+        watchOut:
+          "Surgeons usually require the full balance before the operation date, which can compress the savings timeline.",
+      },
+      {
+        name: "Broker-matched facelift loan",
+        bestFor: "Patients with a written quote who want fixed repayments over one to seven years.",
+        strengths:
+          "Can cover surgeon, hospital, anaesthetist and combined procedures in one loan, with lender comparison starting from a soft credit check.",
+        watchOut:
+          "Approval, rate and limit depend on lender assessment, and finance approval never makes surgery medically suitable.",
+      },
+      {
+        name: "Clinic payment schedule",
+        bestFor: "Practices that split the deposit and balance across the lead-up to surgery.",
+        strengths:
+          "Can help organise deposit and final-balance timing without a separate finance product.",
+        watchOut:
+          "It is usually a payment timetable, not finance — the full amount is still due before surgery.",
+      },
+      {
+        name: "Credit card or BNPL",
+        bestFor: "Smaller booking or consultation costs that can be cleared quickly.",
+        strengths:
+          "Convenient for deposits if the balance is repaid fast.",
+        watchOut:
+          "High rates, low limits and short terms make revolving credit expensive for five-figure surgical quotes.",
+      },
+    ],
+    sections: [
+      {
+        heading: "What is inside a facelift quote",
+        body: [
+          "A facelift quote should separate the surgeon's fee, the hospital or accredited day-surgery facility fee, the anaesthetist's fee, and aftercare items such as garments, medication and review appointments. The surgeon's fee is usually the largest single line, but facility and anaesthetist fees can add many thousands of dollars on top of an advertised surgical fee.",
+          "If a quote is presented as one bundled figure, ask what happens if theatre time runs longer, whether revision policy costs are included, and how many follow-up visits are covered. A quote that looks cheaper because it excludes the anaesthetist or facility is not actually cheaper.",
+        ],
+        bullets: [
+          "Ask whether hospital and anaesthetist fees are included or estimated.",
+          "Confirm how many follow-up appointments the fee covers.",
+          "Check deposit, final-balance and cancellation terms before paying anything.",
+        ],
+      },
+      {
+        heading: "What drives facelift costs up or down",
+        body: [
+          "Quotes rise with the scope of surgery: a full facelift costs more than a mini lift, and combining a neck lift, brow lift or eyelid surgery in the same theatre session adds surgical and anaesthetic time. A specialist plastic surgeon with extensive facelift experience, an overnight hospital stay and major-city operating costs also push quotes toward the upper end.",
+          "Quotes sit lower for a mini facelift treating early lower-face sagging, day-surgery settings without an overnight stay, and single procedures rather than combinations. Price should never be the deciding factor for surgery, though — check your practitioner's registration and qualifications on the Ahpra register and weigh experience, facility accreditation and aftercare before cost.",
+        ],
+        bullets: [
+          "Full facelifts and combined procedures sit at the top of the range.",
+          "Mini lifts and day-surgery settings sit toward the bottom.",
+          "An unusually cheap quote deserves more questions, not fewer.",
+        ],
+      },
+      {
+        heading: "Financing a facelift when Medicare does not apply",
+        body: [
+          "Cosmetic facelift surgery is generally not covered by Medicare or private health insurance in Australia, so the written quote is the amount you need to fund. Most patients use savings, a fixed-term personal loan, or a combination of a saved deposit plus a smaller loan for the balance.",
+          "The facelift financing page linked from the quick answer above covers loan amounts, fixed rates from 6.99% p.a., terms up to seven years and how the 20+ lender broker comparison works. Compare any offer on total repayment rather than the weekly figure, and remember that being approved for finance is never a reason to proceed with surgery — suitability is a medical decision made with your surgeon.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does a facelift cost in Australia?",
+        answer:
+          "A full facelift is commonly quoted at $15,000 to $30,000 in Australia, including surgeon, hospital and anaesthetist fees. Mini facelifts are commonly quoted at $8,000 to $15,000, and combined facelift and neck lift surgery can reach $35,000. Your written, itemised quote is the only reliable figure.",
+      },
+      {
+        question: "Does Medicare or private health insurance cover a facelift?",
+        answer:
+          "Cosmetic facelift surgery is generally not covered by Medicare or private health insurance in Australia. Rare reconstructive cases, such as surgery after facial paralysis or trauma, may be assessed differently, so ask your surgeon about item numbers if your case is medical rather than cosmetic.",
+      },
+      {
+        question: "How much is a mini facelift compared with a full facelift?",
+        answer:
+          "Mini facelifts are commonly quoted at $8,000 to $15,000 against $15,000 to $30,000 for a full facelift. The mini lift treats milder lower-face sagging with smaller incisions and a shorter recovery, while a full facelift addresses the face and jawline more comprehensively. Which one suits you is a surgical decision, not a budget decision.",
+      },
+      {
+        question: "Why do facelift quotes vary so much between surgeons?",
+        answer:
+          "Surgeon training and experience, theatre time, whether you stay overnight, anaesthetist fees, facility fees and any combined procedures all move the quote. City and facility choice matter too. Compare quotes line by line rather than on the headline figure.",
+      },
+      {
+        question: "Can I finance a facelift in Australia?",
+        answer:
+          "Potentially, yes. Facelift finance is usually assessed as a personal loan, subject to income, expenses, credit history and affordability. A broker comparison that starts with a soft credit check shows realistic rates before anything touches your credit file. Approval is never guaranteed and never makes surgery suitable.",
+      },
+      {
+        question: "What ongoing costs should I budget after a facelift?",
+        answer:
+          "Plan for two to three weeks off work, compression garments, medication, follow-up appointments and the small possibility of revision surgery. If any of these sit outside the quote, they belong in your budget before you decide how much to borrow.",
+      },
+    ],
+    relatedProcedureSlugs: [
+      "facelift-financing",
+      "cosmetic-surgery-loans",
+      "rhinoplasty-financing",
+      "dermatology-financing",
+    ],
+    relatedGuideSlugs: [
+      "cosmetic-surgery-loans-australia",
+      "cosmetic-surgery-payment-plans-australia",
+      "breast-augmentation-cost-australia",
+      "medical-loans-for-surgery-australia",
+    ],
+    sources: [
+      ...commonFinanceSources,
+      {
+        title: "Cosmetic procedure advertising guidelines",
+        publisher: "Ahpra",
+        url: "https://www.ahpra.gov.au/Resources/Cosmetic-surgery-hub/Cosmetic-procedure-advertising-guidelines.aspx",
+      },
+      {
+        title: "Cosmetic surgery and procedures",
+        publisher: "Healthdirect Australia",
+        url: "https://www.healthdirect.gov.au/cosmetic-surgery",
+      },
+    ],
+    hubCta: {
+      href: "/procedures/facelift-financing",
+      label: "Explore facelift financing",
+      description:
+        "When you have a written quote, the facelift financing page covers loan amounts, fixed rates, terms and how the 20+ lender broker comparison works for full, mini and neck lift procedures.",
+    },
+    costTable: {
+      heading: "Typical Facelift Costs in Australia",
+      intro:
+        "Commonly quoted Australian ranges including surgeon, hospital and anaesthetist fees. Scope, surgeon experience and facility choice change the final figure, so treat these as research figures, not quotes.",
+      rows: [
+        {
+          item: "Mini facelift",
+          range: "$8,000 – $15,000",
+          note: "Smaller incisions for mild to moderate lower-face sagging, with a shorter recovery.",
+        },
+        {
+          item: "Full facelift (rhytidectomy)",
+          range: "$15,000 – $30,000",
+          note: "Comprehensive face and jawline rejuvenation; usually involves a hospital stay.",
+        },
+        {
+          item: "Neck lift",
+          range: "$8,000 – $18,000",
+          note: "Often performed alone or combined with a facelift in the same theatre session.",
+        },
+        {
+          item: "Facelift + neck lift (combined)",
+          range: "$18,000 – $35,000",
+          note: "Combining procedures adds theatre and anaesthetic time but can cost less than separate operations.",
+        },
+        {
+          item: "Brow lift (forehead lift)",
+          range: "$6,000 – $12,000",
+          note: "Sometimes added to a facelift plan; confirm whether it is inside or outside the quote.",
+        },
+      ],
+      footnote:
+        "These are commonly quoted Australian ranges gathered for research purposes, not quotes, guarantees or financial or medical advice. Cosmetic surgery carries risk — check your practitioner's registration with Ahpra and rely only on a written, itemised quote from your treating surgeon.",
+    },
   },
 ];
 

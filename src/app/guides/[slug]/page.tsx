@@ -93,6 +93,11 @@ const guideComparisonMap: Record<string, string[]> = {
     "medical-loans-vs-payment-plans",
     "medical-loan-vs-credit-card",
   ],
+  "facelift-cost-australia": [
+    "cosmetic-surgery-finance-vs-credit-card",
+    "medical-loans-vs-payment-plans",
+    "medical-loan-vs-credit-card",
+  ],
   "cosmetic-surgery-loans-australia": [
     "cosmetic-surgery-finance-vs-credit-card",
     "medical-loan-vs-credit-card",
@@ -314,6 +319,66 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
+
+      {guide.costTable && (
+        <section className="section-padding bg-background">
+          <div className="container-narrow">
+            <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <Badge className="mb-4">
+                  <Landmark className="h-4 w-4" aria-hidden="true" />
+                  Typical costs
+                </Badge>
+                <h2 className="text-section-h2 text-text-dark">
+                  {guide.costTable.heading}
+                </h2>
+              </div>
+              <p className="max-w-xl text-sm leading-6 text-text-body">
+                {guide.costTable.intro}
+              </p>
+            </div>
+
+            <div className="overflow-x-auto rounded-card border border-border bg-surface shadow-card">
+              <table className="w-full min-w-[640px] border-collapse">
+                <thead>
+                  <tr className="bg-primary-wash/70">
+                    <th className="px-5 py-4 text-left text-sm font-bold text-text-dark">
+                      Procedure
+                    </th>
+                    <th className="px-5 py-4 text-left text-sm font-bold text-text-dark">
+                      Typical Australian range
+                    </th>
+                    <th className="px-5 py-4 text-left text-sm font-bold text-text-dark">
+                      What to know
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {guide.costTable.rows.map((row, index) => (
+                    <tr
+                      key={row.item}
+                      className={index % 2 === 0 ? "bg-surface" : "bg-background"}
+                    >
+                      <td className="border-t border-border px-5 py-4 align-top text-sm font-semibold text-primary">
+                        {row.item}
+                      </td>
+                      <td className="whitespace-nowrap border-t border-border px-5 py-4 align-top text-sm font-semibold text-text-dark">
+                        {row.range}
+                      </td>
+                      <td className="border-t border-border px-5 py-4 align-top text-sm leading-6 text-text-body">
+                        {row.note}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 max-w-3xl text-xs leading-5 text-text-muted">
+              {guide.costTable.footnote}
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="section-padding bg-background">
         <div className="container-narrow">

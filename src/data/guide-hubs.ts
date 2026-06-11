@@ -177,6 +177,7 @@ export const guideHubs: GuideHub[] = [
       "breast-augmentation-cost-australia",
       "breast-augmentation-payment-plans-australia",
       "fat-transfer-breast-augmentation-cost-australia",
+      "facelift-cost-australia",
       "cosmetic-surgery-loans-australia",
       "cosmetic-surgery-payment-plans-australia",
       "medical-loans-for-surgery-australia",

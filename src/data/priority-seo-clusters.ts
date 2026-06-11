@@ -98,6 +98,7 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
       "breast-augmentation-cost-australia",
       "breast-augmentation-payment-plans-australia",
       "fat-transfer-breast-augmentation-cost-australia",
+      "facelift-cost-australia",
       "cosmetic-surgery-loans-australia",
       "cosmetic-surgery-payment-plans-australia",
       "medical-loans-for-surgery-australia",
@@ -108,6 +109,7 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
       "MediPay, Wisr and TLC rank with explicit cosmetic surgery loan pages.",
       "The cosmetic surgery loans procedure page is the canonical commercial target for the cluster's loan queries.",
       "Breast augmentation cost and payment-plan pages catch procedure-specific searches before the broader finance page.",
+      "Facelift cost guide captures cost-research intent that supports the indexed Sunshine Coast facelift financing page.",
       "Cosmetic surgery payment-plan searches need a compliant comparison page that separates finance from medical suitability.",
       "Broader surgery-loan intent links cosmetic procedure searches to medical-loan comparison intent.",
     ],
@@ -131,6 +133,22 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
         href: "/guides/fat-transfer-breast-augmentation-cost-australia",
         label: "Fat transfer breast augmentation cost",
         description: "Niche cost page linking breast augmentation and liposuction finance intent.",
+      },
+      {
+        href: "/guides/facelift-cost-australia",
+        label: "Facelift cost Australia",
+        description:
+          "Cost-first facelift, mini facelift and neck lift guide for quote research before finance.",
+      },
+      {
+        href: "/procedures/facelift-financing",
+        label: "Facelift financing",
+        description: "Procedure page for full facelift, mini lift and neck lift finance enquiries.",
+      },
+      {
+        href: "/locations/sunshine-coast/facelift-financing",
+        label: "Facelift finance on the Sunshine Coast",
+        description: "Indexed local page supported by the facelift cost guide.",
       },
       {
         href: "/guides/cosmetic-surgery-loans-australia",
