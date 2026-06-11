@@ -22,6 +22,12 @@ export interface GuideSource {
   url: string;
 }
 
+export interface GuideHubCta {
+  href: string;
+  label: string;
+  description: string;
+}
+
 export interface HighIntentGuide {
   slug: string;
   category: string;
@@ -45,6 +51,7 @@ export interface HighIntentGuide {
   relatedProcedureSlugs: string[];
   relatedGuideSlugs: string[];
   sources: GuideSource[];
+  hubCta?: GuideHubCta;
 }
 
 const commonFinanceSources: GuideSource[] = [
@@ -1226,33 +1233,33 @@ export const highIntentGuides: HighIntentGuide[] = [
   {
     slug: "cosmetic-surgery-loans-australia",
     category: "Cosmetic surgery",
-    title: "Cosmetic Surgery Loans Australia",
-    h1: "Cosmetic Surgery Loans in Australia",
-    metaTitle: "Cosmetic Surgery Loans Australia | Compare Finance",
+    title: "How to Choose Cosmetic Surgery Financing in Australia",
+    h1: "How to Choose Cosmetic Surgery Financing in Australia",
+    metaTitle: "How to Choose Cosmetic Surgery Financing in Australia",
     metaDescription:
-      "Compare cosmetic surgery loans in Australia for breast augmentation, rhinoplasty, tummy tuck, facelift, hospital fees, recovery costs and soft checks.",
+      "Weigh up the ways to pay for cosmetic surgery in Australia: fixed-term loans, clinic plans and credit cards, plus the questions to ask before you borrow.",
     excerpt:
-      "A finance-first guide to cosmetic surgery loans, written for patients comparing surgeon quotes, credit cards, payment plans and fixed-term loans.",
-    lastReviewed: "2026-05-27",
+      "A decision-support guide for weighing up cosmetic surgery finance options against your written quote, with the questions worth asking before you borrow.",
+    lastReviewed: "2026-06-12",
     readTime: "8 min read",
-    primaryKeyword: "cosmetic surgery loans Australia",
+    primaryKeyword: "how to choose cosmetic surgery financing",
     searchIntent:
-      "Cosmetic surgery patients comparing loan options before paying a deposit or booking an operation date.",
+      "Patients deciding how to pay for cosmetic surgery and what to check before settling on one finance option.",
     heroImage: "/Images/Cosmetic & Plastic Surgery.png",
     formProcedure: "breast-augmentation",
     quickAnswer:
-      "Cosmetic surgery loans are usually fixed-term personal loans used to cover procedure costs such as surgeon, hospital, anaesthetist, implants, garments, medication, and follow-up appointments. They are different from a clinic payment plan because the borrower can compare lender options and may be able to use the funds with their chosen provider. The safest comparison uses the full written quote and keeps the medical decision separate from the finance decision.",
+      "Most people pay for cosmetic surgery through one of four paths: a fixed-term personal loan, a clinic payment plan, a credit card, or savings combined with one of these. A fixed-term loan can cover the full quote, including surgeon, hospital, anaesthetist, implants, garments, medication, and follow-up appointments, and is not tied to one clinic. The fairest way to choose is to compare total repayment over the full term against your written quote, and to keep the medical decision separate from the finance decision.",
     proofPoints: [
-      "Built for high-intent cosmetic surgery loan searches",
+      "Compares loans, clinic plans and credit cards on total cost",
       "Covers quote inclusions beyond the surgeon fee",
-      "Uses compliant language for cosmetic procedure finance",
+      "Lists the questions worth asking before any credit enquiry",
     ],
     targetQueries: [
-      "cosmetic surgery loans",
-      "cosmetic surgery loans Australia",
-      "cosmetic surgery financing",
-      "plastic surgery loans",
-      "loan for cosmetic surgery",
+      "how to finance cosmetic surgery",
+      "cosmetic surgery financing options",
+      "cosmetic surgery loan vs payment plan",
+      "questions to ask before a cosmetic surgery loan",
+      "best way to pay for cosmetic surgery",
     ],
     optionRows: [
       {
@@ -1314,10 +1321,25 @@ export const highIntentGuides: HighIntentGuide[] = [
         ],
       },
       {
-        heading: "Compliance matters for cosmetic finance",
+        heading: "Questions to ask before you borrow",
         body: [
-          "Cosmetic procedures are sensitive decisions. Finance content should not create urgency, imply guaranteed approval, or suggest that borrowing makes a procedure medically suitable.",
-          "A good cosmetic surgery finance page should help patients slow down, compare costs, read the risks, and understand repayment obligations before booking.",
+          "A short checklist asked before any application protects you from the most common surprises. Put these questions to the clinic, the lender or broker, and yourself, and get the answers in writing where you can.",
+        ],
+        bullets: [
+          "What is the total repayment over the full term, not just the weekly figure?",
+          "Does the application start with a soft check, and when does a hard enquiry occur?",
+          "Are there establishment, monthly, or early payout fees?",
+          "Does this option lock me to one clinic or surgeon?",
+          "If the procedure is postponed or cancelled, what happens to the loan?",
+          "Could I cover this from savings within a few months instead?",
+        ],
+      },
+      {
+        heading: "Traps to avoid with cosmetic surgery finance",
+        body: [
+          "Cosmetic procedures are sensitive decisions, and pressure tactics around payment are a warning sign. No reputable provider should create urgency around a deposit deadline, imply guaranteed approval, or suggest that the availability of finance makes a procedure medically suitable.",
+          "Be cautious about accessing super early to pay for cosmetic surgery. The eligibility rules are narrow, and the Australian Taxation Office has warned about schemes promoting it. Likewise, avoid lodging multiple full applications at once: each hard enquiry can affect your credit file, which is why a soft initial check is the safer starting point.",
+          "If a finance arrangement only works when everything goes perfectly, it is the wrong arrangement. Build in room for revision surgery, extra recovery time, or time off work before you sign.",
         ],
       },
     ],
@@ -1361,6 +1383,12 @@ export const highIntentGuides: HighIntentGuide[] = [
       "medical-loans-for-surgery-australia",
       "fat-transfer-breast-augmentation-cost-australia",
     ],
+    hubCta: {
+      href: "/procedures/cosmetic-surgery-loans",
+      label: "See loan options",
+      description:
+        "Once you have weighed up the options here, our cosmetic and plastic surgery loans page covers amounts, rates, terms and how the broker comparison works.",
+    },
     sources: [
       ...commonFinanceSources,
       {

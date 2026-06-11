@@ -295,6 +295,21 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
             </div>
             <div className="rounded-card border border-primary/20 bg-primary-wash p-6 md:p-8">
               <p className="text-lg leading-8 text-text-dark">{guide.quickAnswer}</p>
+              {guide.hubCta && (
+                <div className="mt-6 flex flex-col gap-4 rounded-card border border-primary/30 bg-surface p-5 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm leading-6 text-text-body">
+                    {guide.hubCta.description}
+                  </p>
+                  <Button
+                    as={Link}
+                    href={guide.hubCta.href}
+                    className="shrink-0 gap-2"
+                  >
+                    {guide.hubCta.label}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </div>

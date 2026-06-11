@@ -134,8 +134,9 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
       },
       {
         href: "/guides/cosmetic-surgery-loans-australia",
-        label: "Cosmetic surgery loans Australia",
-        description: "Primary new guide for cosmetic surgery loan search intent.",
+        label: "How to choose cosmetic surgery financing",
+        description:
+          "Decision-support guide comparing loans, clinic plans and credit cards before borrowing.",
       },
       {
         href: "/guides/cosmetic-surgery-payment-plans-australia",
