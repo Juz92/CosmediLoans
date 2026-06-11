@@ -27,7 +27,7 @@ const featuredSlugs = [
   "dental-loans",
   "ivf-financing",
   "breast-augmentation-loans",
-  "rhinoplasty-financing",
+  "cosmetic-surgery-loans",
   "hair-transplant-loans",
   "lasik-loans",
   "bariatric-surgery-loans",

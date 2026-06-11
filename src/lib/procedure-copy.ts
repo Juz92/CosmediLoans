@@ -106,6 +106,12 @@ const copyOverrides: Record<string, ProcedureCopyOverride> = {
     costSubject: "a Mummy Makeover",
     ctaSubject: "Your Mummy Makeover",
   },
+  "cosmetic-surgery-loans": {
+    treatment: "cosmetic or plastic surgery",
+    costSubject: "Cosmetic Surgery",
+    ctaSubject: "Your Cosmetic Surgery",
+    financingTitle: "Cosmetic Surgery Financing",
+  },
   "medical-loan": {
     treatment: "medical treatment",
     costSubject: "Medical Treatment",

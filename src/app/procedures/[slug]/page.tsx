@@ -111,6 +111,7 @@ export default function ProcedurePage({
     "orthopedic-surgery-loans": "orthopedic",
     "dermatology-financing": "dermatology",
     "mommy-makeover-financing": "mommy-makeover",
+    "cosmetic-surgery-loans": "other",
     "medical-loan": "other",
   };
   const defaultProcedure = procedureFormMap[procedure.slug] || "other";
@@ -400,6 +401,66 @@ export default function ProcedurePage({
           </div>
         </div>
       </section>
+
+      {/* ── 7b. In-Depth Content Sections (hub pages) ── */}
+      {procedure.contentSections && procedure.contentSections.length > 0 && (
+        <section className="section-padding bg-background">
+          <div className="container-narrow space-y-12">
+            {procedure.contentSections.map((section) => (
+              <article
+                key={section.heading}
+                className="border-b border-border pb-12 last:border-b-0 last:pb-0"
+              >
+                <h2 className="text-section-h2 text-text-dark">
+                  {section.heading}
+                </h2>
+                <div className="mt-4 space-y-4">
+                  {section.body.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="max-w-3xl text-body text-text-body"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                {section.bullets && (
+                  <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {section.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="flex items-start gap-3 rounded-card bg-surface p-4"
+                      >
+                        <CheckCircle
+                          className="mt-0.5 h-5 w-5 shrink-0 text-success"
+                          aria-hidden="true"
+                        />
+                        <span className="text-sm leading-6 text-text-body">
+                          {bullet}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {section.links && (
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {section.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="inline-flex items-center gap-2 rounded-full bg-primary-wash px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                      >
+                        {link.label}
+                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ── 8. Why Finance With Us ── */}
       <section className="section-padding bg-background">

@@ -13,6 +13,18 @@ export interface Benefit {
   description: string;
 }
 
+export interface ContentSectionLink {
+  href: string;
+  label: string;
+}
+
+export interface ContentSection {
+  heading: string;
+  body: string[];
+  bullets?: string[];
+  links?: ContentSectionLink[];
+}
+
 export interface Procedure {
   slug: string;
   title: string;
@@ -31,6 +43,7 @@ export interface Procedure {
   blogCategory: string;
   financingDescription: string;
   benefits: Benefit[];
+  contentSections?: ContentSection[];
   heroImage?: string;
 }
 
@@ -41,11 +54,11 @@ export const procedures: Procedure[] = [
     heroImage: "/Images/Dental.png",
     title: "Dental Loans",
     h1: "Dental Loan Financing Australia",
-    metaTitle: "Dental Loans Australia | Finance From 6.99%",
+    metaTitle: "Dental Loans & Dental Payment Plans Australia | 6.99%",
     metaDescription:
-      "Compare dental loan rates from 20+ lenders. Finance implants, veneers, crowns & more. Compare quotes in 60 seconds. No credit impact.",
+      "Compare dental loans and dental payment plans from 20+ lenders. Finance implants, veneers, crowns and more from 6.99% p.a. Get quotes in 60 seconds. No credit impact.",
     heroDescription:
-      "Dental work can be expensive, but it doesn't have to be out of reach. Whether you need implants, veneers, or a full restoration, our brokers compare 20+ lenders to find you the lowest dental loan rate in Australia.",
+      "Dental work can be expensive, but it doesn't have to be out of reach. Whether you need implants, veneers, or a full restoration, our brokers compare 20+ lenders for a low dental loan rate in Australia, a flexible dental payment plan you can use at any dentist.",
     icon: "🦷",
     avgCostRange: "$3,000 – $50,000",
     rateFrom: "6.99%",
@@ -79,6 +92,11 @@ export const procedures: Procedure[] = [
           "Some dental clinics offer interest-free payment plans for smaller amounts. For larger procedures, a broker-matched personal loan often provides better value with competitive rates from 6.99% p.a.",
       },
       {
+        question: "Are dental payment plans the same as a dental loan?",
+        answer:
+          "Not quite. A clinic dental payment plan splits the cost into instalments at one practice and is usually capped at smaller amounts. A dental loan is a broker-matched personal loan you can use at any dentist for $2,000 to $100,000, with a fixed rate from 6.99% p.a. and fixed repayments. For implants, veneers, or full-mouth work, it is typically the better-value dental payment plan.",
+      },
+      {
         question: "How long does dental loan approval take?",
         answer:
           "Most dental loan applications receive a decision within hours. Some lenders provide same-day approval, with funds disbursed within 1-3 business days.",
@@ -107,7 +125,7 @@ export const procedures: Procedure[] = [
     relatedSlugs: ["veneers-financing", "invisalign-financing", "medical-loan", "orthopedic-surgery-loans"],
     blogCategory: "dental",
     financingDescription:
-      "The most common way to finance dental work in Australia is through a personal loan matched by a broker. This gives you a fixed rate, fixed term, and predictable repayments, unlike credit cards or BNPL which can have hidden costs.",
+      "The most common way to finance dental work in Australia is a personal loan matched by a broker. It works as a dental payment plan you can use at any dentist, with a fixed rate, fixed term, and predictable repayments, unlike credit cards or clinic BNPL plans which can carry hidden costs.",
     benefits: [
       {
         title: "Specialist Dental Financing",
@@ -570,7 +588,7 @@ export const procedures: Procedure[] = [
           "A personal loan is almost always better. Credit card rates in Australia average 18-22% p.a., while our broker-matched loans start at 6.99% p.a. On a $12,000 procedure, the interest savings can be thousands of dollars.",
       },
     ],
-    relatedSlugs: ["tummy-tuck-loans", "mommy-makeover-financing", "liposuction-financing", "rhinoplasty-financing"],
+    relatedSlugs: ["tummy-tuck-loans", "mommy-makeover-financing", "liposuction-financing", "cosmetic-surgery-loans"],
     blogCategory: "cosmetic",
     financingDescription:
       "Breast augmentation is a significant investment in your confidence, and a broker-matched personal loan is the most affordable way to finance it. With fixed rates from 6.99%, you get predictable repayments and avoid the high interest traps of credit cards and BNPL.",
@@ -663,7 +681,7 @@ export const procedures: Procedure[] = [
           "Monthly repayments on a $15,000 rhinoplasty loan at 7.99% over 5 years are approximately $296. Over 3 years, they'd be around $470. Use our calculator to customise your estimate.",
       },
     ],
-    relatedSlugs: ["facelift-financing", "breast-augmentation-loans", "dermatology-financing", "medical-loan"],
+    relatedSlugs: ["facelift-financing", "breast-augmentation-loans", "dermatology-financing", "cosmetic-surgery-loans"],
     blogCategory: "cosmetic",
     financingDescription:
       "Whether your rhinoplasty is cosmetic or functional, a broker-matched personal loan gives you the funding you need with fixed repayments. Our brokers compare 20+ lenders to secure the most competitive rate for your nose surgery financing in Australia.",
@@ -942,7 +960,7 @@ export const procedures: Procedure[] = [
           "A $20,000 loan at 7.99% over 5 years has monthly repayments of approximately $395. Over 7 years, repayments are around $312. Use our calculator to customise your estimate.",
       },
     ],
-    relatedSlugs: ["rhinoplasty-financing", "dermatology-financing", "breast-augmentation-loans", "medical-loan"],
+    relatedSlugs: ["rhinoplasty-financing", "dermatology-financing", "breast-augmentation-loans", "cosmetic-surgery-loans"],
     blogCategory: "cosmetic",
     financingDescription:
       "Facelift surgery is one of the most transformative cosmetic procedures available, and a broker-matched personal loan makes it accessible. With fixed rates and terms up to 7 years, you can spread the cost of your facial rejuvenation into affordable repayments.",
@@ -1593,7 +1611,7 @@ export const procedures: Procedure[] = [
           "Yes. Some patients prefer to stage procedures (e.g., tummy tuck first, breast surgery later). You can take out separate loans for each stage, or finance the expected total upfront if you have a clear surgical plan.",
       },
     ],
-    relatedSlugs: ["tummy-tuck-loans", "breast-augmentation-loans", "liposuction-financing", "medical-loan"],
+    relatedSlugs: ["tummy-tuck-loans", "breast-augmentation-loans", "liposuction-financing", "cosmetic-surgery-loans"],
     blogCategory: "cosmetic",
     financingDescription:
       "A mummy makeover is a significant investment in reclaiming your body after pregnancy. Financing multiple procedures in one loan is the most cost-effective approach, saving on hospital and anaesthesia fees compared to separate surgeries. Our brokers find the best rate from 20+ lenders.",
@@ -1795,11 +1813,11 @@ export const procedures: Procedure[] = [
     slug: "vet-bill-loans",
     title: "Vet Bill Loans",
     h1: "Vet Bill Financing Australia",
-    metaTitle: "Vet Bill Loans Australia | Finance Pet Care From 6.99%",
+    metaTitle: "Vet Bill Loans & Pet Finance Australia | From 6.99%",
     metaDescription:
-      "Finance unexpected vet bills in Australia from 6.99%. Emergency surgery, cancer treatment, orthopaedic procedures & more. Compare 20+ lenders. No credit impact.",
+      "Finance vet bills and pet care in Australia from 6.99%. A flexible vet payment plan and Vet Pay alternative for emergency surgery, cancer treatment and more. Compare 20+ lenders. No credit impact.",
     heroDescription:
-      "Unexpected vet bills can reach tens of thousands of dollars, but your pet's health shouldn't depend on your savings account. CosmediLoans compares 20+ lenders to help you finance emergency surgery, specialist treatment, and ongoing pet care in one affordable loan.",
+      "Unexpected vet bills can reach tens of thousands of dollars, but your pet's health shouldn't depend on your savings account. CosmediLoans compares 20+ lenders to fund emergency surgery, specialist treatment, and ongoing pet care in one affordable loan, a flexible alternative to a Vet Pay or clinic payment plan that works at any vet.",
     icon: "🐾",
     avgCostRange: "$2,000 – $20,000",
     rateFrom: "6.99%",
@@ -1821,6 +1839,16 @@ export const procedures: Procedure[] = [
         question: "Can I get a loan to pay for vet bills in Australia?",
         answer:
           "Yes. A personal loan is one of the most cost-effective ways to cover unexpected vet bills. Rates through our broker network start from 6.99% p.a., far cheaper than credit cards at 18–22% p.a. You can borrow from $2,000 to $20,000 and repay over 1 to 5 years.",
+      },
+      {
+        question: "What is Vet Pay and is a personal loan a better option?",
+        answer:
+          "Vet Pay is a pet-specific payment plan that splits a vet bill into instalments at participating clinics. It can suit small, short-term bills, but account and transaction fees add up and you are limited to clinics that offer it. For larger or emergency bills, a broker-matched personal loan from 6.99% p.a. usually costs less overall and works at any vet in Australia.",
+      },
+      {
+        question: "Can I set up a payment plan for my vet bills?",
+        answer:
+          "Yes. A personal loan effectively becomes your own vet payment plan: you receive the funds, pay the clinic in full, then repay in fixed weekly, fortnightly, or monthly amounts over 1 to 5 years. Unlike a clinic plan or buy-now-pay-later, you are not tied to one vet and there are no late fees for missed instalments beyond your normal loan terms.",
       },
       {
         question: "What vet expenses can I finance?",
@@ -1856,7 +1884,7 @@ export const procedures: Procedure[] = [
     relatedSlugs: ["medical-loan", "debt-consolidation"],
     blogCategory: "vet",
     financingDescription:
-      "Vet bills can arrive without warning and quickly exceed what most families have in savings. A personal loan through our broker network gives you access to funds within days at rates starting from 6.99% p.a., so you can focus on your pet's recovery, not the bill.",
+      "Vet bills can arrive without warning and quickly exceed what most families have in savings. A personal loan through our broker network gives you access to funds within days at rates from 6.99% p.a., a lower-cost alternative to a Vet Pay or clinic payment plan, so you can focus on your pet's recovery, not the bill.",
     benefits: [
       {
         title: "Fast Access to Funds",
@@ -1873,6 +1901,150 @@ export const procedures: Procedure[] = [
       {
         title: "Flexible Repayment Terms",
         description: "Repay over 1 to 5 years with fixed monthly repayments that fit your family budget.",
+      },
+    ],
+  },
+  // ─── 21. COSMETIC & PLASTIC SURGERY LOANS (HUB) ────────────────────
+  {
+    slug: "cosmetic-surgery-loans",
+    heroImage: "/Images/Cosmetic & Plastic Surgery.png",
+    title: "Cosmetic Surgery Loans",
+    h1: "Cosmetic & Plastic Surgery Loans Australia",
+    metaTitle: "Cosmetic & Plastic Surgery Loans Australia | From 6.99%",
+    metaDescription:
+      "Compare cosmetic & plastic surgery loans from 20+ Australian lenders. Rates from 6.99% p.a., fixed repayments, soft credit check. Quote in 60 seconds.",
+    heroDescription:
+      "Cosmetic and plastic surgery is elective, so it is rarely covered by Medicare or private health and most Australians pay out of pocket. A cosmetic surgery loan spreads the cost over fixed monthly repayments while our brokers compare 20+ lenders for a competitive rate, whether you are planning a breast augmentation, rhinoplasty, liposuction, facelift, or a combined mummy makeover.",
+    icon: "✨",
+    avgCostRange: "$4,000 – $40,000",
+    rateFrom: "6.99%",
+    maxTerm: "7 years",
+    costTable: [
+      { subProcedure: "Liposuction (1–2 areas)", costRange: "$4,000 – $20,000" },
+      { subProcedure: "Breast Augmentation", costRange: "$8,000 – $20,000" },
+      { subProcedure: "Rhinoplasty (nose surgery)", costRange: "$8,000 – $25,000" },
+      { subProcedure: "Tummy Tuck (abdominoplasty)", costRange: "$9,000 – $25,000" },
+      { subProcedure: "Facelift", costRange: "$10,000 – $35,000" },
+      { subProcedure: "Mummy Makeover (combined)", costRange: "$15,000 – $40,000" },
+    ],
+    repaymentExamples: [
+      { amount: 8000, rate: 6.99, term: 3 },
+      { amount: 18000, rate: 7.99, term: 5 },
+      { amount: 30000, rate: 8.99, term: 7 },
+    ],
+    faqs: [
+      {
+        question: "Can I get a loan for cosmetic surgery in Australia?",
+        answer:
+          "Yes. Because cosmetic surgery is elective and rarely covered by Medicare or private health, most patients fund it with a personal loan. Through our broker network you can borrow from $2,000 to $100,000 for cosmetic or plastic surgery at rates from 6.99% p.a., repaid over 1 to 7 years.",
+      },
+      {
+        question: "How much does cosmetic surgery cost in Australia?",
+        answer:
+          "Costs vary by procedure: liposuction runs $4,000 to $20,000, breast augmentation $8,000 to $20,000, rhinoplasty $8,000 to $25,000, a facelift $10,000 to $35,000, and a combined mummy makeover $15,000 to $40,000. Surgeon fees, anaesthetic, hospital, and aftercare are usually quoted separately.",
+      },
+      {
+        question: "Is it better to finance plastic surgery with a loan or a clinic payment plan?",
+        answer:
+          "A broker-matched personal loan usually beats a clinic plan or buy-now-pay-later. You keep a fixed rate and fixed repayments, you can choose any accredited surgeon rather than being tied to one clinic, and you avoid the higher effective rates and late fees common with short-term instalment products.",
+      },
+      {
+        question: "Can I finance a mummy makeover or combined procedures?",
+        answer:
+          "Yes. You can bundle several procedures, for example a breast lift with a tummy tuck and liposuction, into a single loan with one repayment. This is often more cost-effective than financing each procedure separately.",
+      },
+      {
+        question: "Will comparing cosmetic surgery finance affect my credit score?",
+        answer:
+          "No. Getting matched and comparing your options is a soft enquiry with no impact on your credit score. A hard credit check only happens later, with your consent, if you choose to proceed with a specific lender.",
+      },
+      {
+        question: "Can I get cosmetic surgery finance with bad credit?",
+        answer:
+          "Often, yes. Our lender network includes options for a range of credit profiles. Rates may be higher with impaired credit, but many patients still qualify. Your broker will tell you upfront what is realistic before any hard credit check.",
+      },
+      {
+        question: "What do lenders look at when assessing plastic surgery finance?",
+        answer:
+          "Lenders weigh your income and employment stability, your existing debts and living expenses, and your credit history. There is no single income threshold across the panel; each lender assesses these factors differently, which is exactly why a broker compares several at once. Approval is never guaranteed, but the soft-check match shows you what is realistic before you commit to anything.",
+      },
+      {
+        question: "Can I use a cosmetic surgery loan for dental implants or veneers?",
+        answer:
+          "Yes. The same broker-matched personal loan covers cosmetic dentistry, including dental implants, All-on-4 treatment, and veneers. A single implant typically costs $3,000 to $6,500 in Australia, so many patients finance implants the same way they would finance surgery: one fixed repayment, usable at any dentist.",
+      },
+    ],
+    relatedSlugs: [
+      "breast-augmentation-loans",
+      "rhinoplasty-financing",
+      "liposuction-financing",
+      "facelift-financing",
+    ],
+    blogCategory: "cosmetic",
+    financingDescription:
+      "Most Australians pay for cosmetic and plastic surgery with a personal loan, because the work is elective and not covered by Medicare. A broker-matched loan gives you a fixed rate, predictable repayments, and the freedom to choose your own surgeon, instead of being locked into a single clinic's payment plan.",
+    benefits: [
+      {
+        title: "Choose Any Accredited Surgeon",
+        description:
+          "A personal loan is not tied to one clinic, so you can pick the FRACS-qualified specialist you trust and still finance the full cost.",
+      },
+      {
+        title: "Rates From 6.99% p.a.",
+        description:
+          "Our 20+ lender network competes for your loan, which keeps cosmetic surgery rates well below typical credit card interest.",
+      },
+      {
+        title: "Bundle Combined Procedures",
+        description:
+          "Finance a mummy makeover or several procedures in one loan with a single, predictable monthly repayment.",
+      },
+      {
+        title: "Soft-Check Quote in 60 Seconds",
+        description:
+          "Compare your options with no impact on your credit score and no obligation to proceed.",
+      },
+    ],
+    contentSections: [
+      {
+        heading: "Who Can Apply for Cosmetic Surgery Finance?",
+        body: [
+          "Every lender on our panel sets its own criteria, so there is no universal approval checklist and no broker can guarantee an outcome. As a general guide, lenders want to see that you are at least 18, an Australian citizen or permanent resident (some accept certain visa holders), and earning a regular income that comfortably covers a new repayment alongside your existing commitments.",
+          "Credit history matters, but it is not all-or-nothing. A clean file usually unlocks the sharpest rates, while a thin or imperfect history may still be matched with a lender at a higher rate. Because matching starts with a soft credit check, you can see what is realistic before anything is recorded on your credit file.",
+        ],
+        bullets: [
+          "Aged 18 or over with photo ID",
+          "Australian citizen, permanent resident, or eligible visa holder",
+          "Regular income from employment or self-employment",
+          "Room in your budget for the repayment after existing debts and expenses",
+        ],
+      },
+      {
+        heading: "Which Procedures Can You Finance?",
+        body: [
+          "A cosmetic surgery loan is not tied to one treatment or one clinic. The same broker-matched personal loan covers surgical procedures such as breast augmentation, rhinoplasty, liposuction, a tummy tuck, or a facelift, as well as combined plans like a mummy makeover, with everything from the surgeon's fee to anaesthetist, hospital, and aftercare costs bundled into one fixed repayment.",
+          "If you already know your procedure, the pages below break down typical costs, repayment examples, and the questions worth asking your surgeon before you settle on a loan amount.",
+        ],
+        links: [
+          { href: "/procedures/breast-augmentation-loans", label: "Breast augmentation loans" },
+          { href: "/procedures/rhinoplasty-financing", label: "Rhinoplasty financing" },
+          { href: "/procedures/tummy-tuck-loans", label: "Tummy tuck loans" },
+          { href: "/procedures/liposuction-financing", label: "Liposuction financing" },
+          { href: "/procedures/facelift-financing", label: "Facelift financing" },
+          { href: "/procedures/mommy-makeover-financing", label: "Mummy makeover financing" },
+        ],
+      },
+      {
+        heading: "Financing Dental Implants and Cosmetic Dentistry",
+        body: [
+          "Cosmetic treatment is not limited to surgery. Dental implants are among the most commonly financed elective procedures in Australia: a single implant typically costs $3,000 to $6,500, and full-arch All-on-4 treatment runs $20,000 to $50,000, which puts implants in the same financial territory as many surgical procedures. Because the work is elective, private health extras rarely cover much of it.",
+          "A loan for dental implants works the same way as cosmetic surgery finance. You borrow between $2,000 and $100,000, pay the dentist upfront like a cash patient, then repay over one to seven years. The loan is not tied to a clinic payment plan, so you can use it at any dentist and combine implants with veneers or other cosmetic dental work in a single application.",
+        ],
+        links: [
+          { href: "/procedures/dental-loans", label: "Dental loans & payment plans" },
+          { href: "/guides/dental-implants-cost-australia", label: "Dental implant costs guide" },
+          { href: "/procedures/veneers-financing", label: "Veneers financing" },
+        ],
       },
     ],
   },

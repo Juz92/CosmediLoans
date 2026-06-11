@@ -93,7 +93,7 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
   {
     id: "cosmetic-surgery-finance",
     name: "Cosmetic surgery finance",
-    procedureSlug: "breast-augmentation-loans",
+    procedureSlug: "cosmetic-surgery-loans",
     guideSlugs: [
       "breast-augmentation-cost-australia",
       "breast-augmentation-payment-plans-australia",
@@ -106,11 +106,17 @@ export const prioritySeoClusters: PrioritySeoCluster[] = [
     primaryQuery: "cosmetic surgery loans Australia",
     proof: [
       "MediPay, Wisr and TLC rank with explicit cosmetic surgery loan pages.",
+      "The cosmetic surgery loans procedure page is the canonical commercial target for the cluster's loan queries.",
       "Breast augmentation cost and payment-plan pages catch procedure-specific searches before the broader finance page.",
       "Cosmetic surgery payment-plan searches need a compliant comparison page that separates finance from medical suitability.",
       "Broader surgery-loan intent links cosmetic procedure searches to medical-loan comparison intent.",
     ],
     links: [
+      {
+        href: "/procedures/cosmetic-surgery-loans",
+        label: "Cosmetic & plastic surgery loans",
+        description: "Canonical commercial page for cosmetic and plastic surgery loan enquiries.",
+      },
       {
         href: "/guides/breast-augmentation-cost-australia",
         label: "Breast augmentation cost",

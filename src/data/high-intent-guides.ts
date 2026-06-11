@@ -481,10 +481,10 @@ export const highIntentGuides: HighIntentGuide[] = [
       },
     ],
     relatedProcedureSlugs: [
+      "cosmetic-surgery-loans",
       "breast-augmentation-loans",
       "rhinoplasty-financing",
       "tummy-tuck-loans",
-      "liposuction-financing",
     ],
     relatedGuideSlugs: [
       "breast-augmentation-cost-australia",
@@ -1349,9 +1349,9 @@ export const highIntentGuides: HighIntentGuide[] = [
       },
     ],
     relatedProcedureSlugs: [
+      "cosmetic-surgery-loans",
       "breast-augmentation-loans",
       "rhinoplasty-financing",
-      "tummy-tuck-loans",
       "facelift-financing",
     ],
     relatedGuideSlugs: [
@@ -2566,6 +2566,7 @@ export const highIntentGuides: HighIntentGuide[] = [
       },
     ],
     relatedProcedureSlugs: [
+      "cosmetic-surgery-loans",
       "breast-augmentation-loans",
       "mommy-makeover-financing",
       "medical-loan",

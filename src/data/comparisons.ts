@@ -900,7 +900,7 @@ export const comparisons: Comparison[] = [
       },
     ],
     lastReviewed: "2026-04-24",
-    relatedProcedureSlugs: ["dental-loans", "veneers-financing", "cosmetic-surgery-finance", "ivf-financing"],
+    relatedProcedureSlugs: ["dental-loans", "veneers-financing", "cosmetic-surgery-loans", "ivf-financing"],
   },
   {
     slug: "cosmediloans-vs-tlc",
@@ -966,7 +966,7 @@ export const comparisons: Comparison[] = [
       },
     ],
     lastReviewed: "2026-04-24",
-    relatedProcedureSlugs: ["bariatric-surgery-loans", "dental-loans", "liposuction-financing", "breast-augmentation-loans"],
+    relatedProcedureSlugs: ["cosmetic-surgery-loans", "bariatric-surgery-loans", "dental-loans", "breast-augmentation-loans"],
   },
   {
     slug: "cosmediloans-vs-ourmoneymarket",
@@ -1031,7 +1031,7 @@ export const comparisons: Comparison[] = [
       },
     ],
     lastReviewed: "2026-04-24",
-    relatedProcedureSlugs: ["ivf-financing", "cosmetic-surgery-finance", "dental-loans", "hair-transplant-loans"],
+    relatedProcedureSlugs: ["ivf-financing", "cosmetic-surgery-loans", "dental-loans", "hair-transplant-loans"],
   },
   {
     slug: "cosmediloans-vs-jacaranda-finance",
