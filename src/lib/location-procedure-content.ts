@@ -472,6 +472,108 @@ export function getLocationProcedureContent(
     schemaServiceType: procedureProfile.serviceType,
   };
 
+  if (location.slug === "sydney" && procedure.slug === "dental-loans") {
+    content.metaDescription =
+      "Compare dental loans in Sydney. Finance implants, orthodontics and major dental work at any Sydney clinic with broker-matched lenders and a soft credit check.";
+    content.heroDescription =
+      "A dental loan gives Sydney patients the funds upfront to pay any dentist like a cash patient, then repay a fixed amount over one to seven years. Most borrow between $2,000 and $50,000 for implants, orthodontics, or staged treatment, and the loan works at any clinic from the CBD to Parramatta, the North Shore, or the Inner West, with a soft credit check before anything touches your credit file.";
+    content.localNarrative = [
+      "Sydney quotes for major dental work often sit toward the upper end of national ranges. A single implant is commonly quoted between $3,000 and $6,500 across Australia and full-arch All-on-4 treatment between $20,000 and $50,000 per arch, with inner-city specialist fees frequently at the higher end of those ranges. Treat the ranges as orientation only and anchor any finance decision to an itemised written quote from the clinic you actually choose.",
+      "Many Sydney patients collect two or three quotes across inner-city and suburban practices before committing, and inclusions vary: imaging, lab fees, temporary teeth, and follow-up reviews may be itemised at one clinic and bundled at another. Because the loan funds are paid to you rather than the practice, you can finance treatment at whichever Sydney clinic you choose, including specialists and practices that do not offer an in-house payment plan.",
+      "CosmediLoans is not a lender or clinic. It connects patients with brokers who can compare rates, fees, loan terms and approval timing across 20+ lenders before a formal lender application.",
+    ];
+    content.localGuideItems = [
+      {
+        title: "Get an itemised Sydney quote first",
+        text: "Ask whether imaging, lab work, temporary teeth and follow-up appointments are included in the written quote. Sydney clinics present quotes differently, and the broker needs a complete figure to compare lenders properly.",
+      },
+      {
+        title: "Compare inner-city and suburban pricing",
+        text: "The same treatment can be quoted differently between CBD specialists and suburban practices around Parramatta, the Sutherland Shire or the Inner West. Compare like-for-like inclusions, not just the headline price.",
+      },
+      {
+        title: "Match the loan to the treatment stages",
+        text: "Implant and orthodontic plans often run across months, with lab fees and surgical stages paid before each appointment. Align the loan amount and settlement timing with the clinic's payment schedule.",
+      },
+      {
+        title: "Use a soft-credit comparison first",
+        text: "A soft initial comparison can help estimate likely lender options before you commit to a deposit that holds a treatment date, with no impact on your credit score at the quote stage.",
+      },
+    ];
+    content.quotePlanningCards = [
+      {
+        title: "Single implant range",
+        value: "$3,000 – $6,500",
+        text: "A common national range for a single implant. Sydney specialist fees often sit toward the upper end, so confirm the itemised quote before borrowing.",
+      },
+      {
+        title: "Full-arch (All-on-4) range",
+        value: "$20,000 – $50,000 per arch",
+        text: "Full-arch treatment is usually beyond clinic payment plan caps, which is why most Sydney patients fund it with a fixed-term loan.",
+      },
+      {
+        title: "Orthodontics range",
+        value: "$4,500 – $9,500",
+        text: "A common range for Invisalign treatment depending on complexity. Braces sit in similar territory. Confirm refinements and retainers are included.",
+      },
+      {
+        title: "Repayment planning anchor",
+        value: repaymentExample
+          ? `${formatAmount(repaymentExample.amount)} over ${repaymentExample.term} years`
+          : `Terms up to ${procedure.maxTerm}`,
+        text: "Use repayment examples only as planning anchors. Actual rates, fees and limits depend on lender assessment of your situation.",
+      },
+    ];
+    content.providerComparisonItems = [
+      {
+        title: "Sydney provider spread",
+        text: "Sydney has one of the widest spreads of dental providers in the country, from CBD prosthodontists to suburban family practices. More choice means quotes are worth comparing before finance is locked in.",
+      },
+      {
+        title: "Like-for-like dental quotes",
+        text: "Avoid comparing a single implant quote with an All-on-4 or full restoration quote unless the inclusions are identical. Scope differences, not clinic quality, explain most price gaps.",
+      },
+      {
+        title: "Borrowing guardrail",
+        text: "Borrow against the complete treatment plan, not the first appointment. If later stages may change after healing or imaging, ask the clinic for low and high scenarios before setting the amount.",
+      },
+    ];
+    content.applicationChecklist = [
+      "itemised dental treatment plan with stage-by-stage costs",
+      "provider quote with deposits and lab fees separated",
+      "private health extras estimate if available",
+      "deposit deadline and treatment date from your chosen clinic",
+      "income, expense and existing repayment details for lender assessment",
+    ];
+    content.localFaqs = [
+      {
+        question: "How much do dental implants cost in Sydney?",
+        answer:
+          "It depends on the clinic, the tooth, and whether bone grafting is needed first. Single implants are commonly quoted between $3,000 and $6,500 nationally, and Sydney specialist fees often sit toward the upper end. Ask for an itemised quote covering imaging, the implant, the crown, and follow-ups before comparing finance.",
+      },
+      {
+        question: "Can I use a dental loan at any dentist in Sydney?",
+        answer:
+          "Yes. The funds are paid to you rather than the clinic, so the loan works at any Sydney dentist, specialist, or orthodontist, from the CBD to Parramatta, the North Shore, or the Sutherland Shire, including practices that do not offer in-house payment plans.",
+      },
+      {
+        question: "Is a dental payment plan or a dental loan better in Sydney?",
+        answer:
+          "For a small bill at a practice with a genuine low-fee plan, the clinic plan can be the better tool. For implants, orthodontics, or staged treatment, a fixed-term loan usually costs less overall, is not capped at smaller amounts, and lets you choose any Sydney provider rather than only participating clinics.",
+      },
+      {
+        question: "Can I finance All-on-4 treatment in Sydney?",
+        answer:
+          "Potentially, yes. Full-arch treatment is commonly quoted between $20,000 and $50,000 per arch, and a broker can compare lender options for amounts in that range if you have a written quote and meet lender criteria. Approval is never guaranteed and depends on your income, expenses, and credit profile.",
+      },
+      {
+        question: "Can I check my options before paying a clinic deposit?",
+        answer:
+          "Yes. A soft-credit comparison shows likely lender options before you commit to a deposit that holds a treatment date. A hard credit check only happens later, with your consent, if you proceed with a specific lender.",
+      },
+    ];
+  }
+
   if (
     location.slug === "sunshine-coast" &&
     procedure.slug === "facelift-financing"

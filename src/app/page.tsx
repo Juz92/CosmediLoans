@@ -291,6 +291,56 @@ export default function Home() {
       {/* ── LOAN FEATURES ─────────────────────────────────────────── */}
       <LoanFeatures />
 
+      {/* ── MEDICAL LOANS OVERVIEW ────────────────────────────────── */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow max-w-3xl">
+          <h2 className="text-section-h2 text-text-dark mb-4 text-center">
+            Medical Loans for Dental, Cosmetic and Vet Care
+          </h2>
+          <div className="space-y-4 text-body text-text-body">
+            <p>
+              A medical loan is a personal loan used to pay for treatment, and
+              it is not limited to one kind of care. The same broker-matched
+              loan that covers{" "}
+              <Link
+                href="/procedures/dental-loans"
+                className="text-primary font-semibold hover:underline"
+              >
+                dental work and payment plan alternatives
+              </Link>{" "}
+              also funds{" "}
+              <Link
+                href="/procedures/cosmetic-surgery-loans"
+                className="text-primary font-semibold hover:underline"
+              >
+                cosmetic and plastic surgery
+              </Link>
+              , elective hospital procedures, and even{" "}
+              <Link
+                href="/procedures/vet-bill-loans"
+                className="text-primary font-semibold hover:underline"
+              >
+                vet bills
+              </Link>{" "}
+              when the patient has four legs.
+            </p>
+            <p>
+              Because the funds are paid to you rather than the provider, the
+              loan works at any clinic, hospital, dentist, or vet in Australia,
+              with one fixed repayment instead of a different payment plan at
+              every door. If your treatment doesn&apos;t fit a category, our{" "}
+              <Link
+                href="/procedures/medical-loan"
+                className="text-primary font-semibold hover:underline"
+              >
+                medical loans page
+              </Link>{" "}
+              covers how financing works for any procedure.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── LOAN EXAMPLES ─────────────────────────────────────────── */}
       <section className="section-padding bg-surface">
         <div className="container-narrow">

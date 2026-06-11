@@ -53,12 +53,12 @@ export const procedures: Procedure[] = [
     slug: "dental-loans",
     heroImage: "/Images/Dental.png",
     title: "Dental Loans",
-    h1: "Dental Loan Financing Australia",
-    metaTitle: "Dental Loans & Dental Payment Plans Australia | 6.99%",
+    h1: "Dental Loans & Payment Plans in Australia",
+    metaTitle: "Dental Loans & Dental Payment Plans Australia | From 6.99%",
     metaDescription:
-      "Compare dental loans and dental payment plans from 20+ lenders. Finance implants, veneers, crowns and more from 6.99% p.a. Get quotes in 60 seconds. No credit impact.",
+      "Compare dental loans and dental payment plans from 20+ lenders. Finance implants, orthodontics and staged work from 6.99% p.a. Soft check, no credit impact.",
     heroDescription:
-      "Dental work can be expensive, but it doesn't have to be out of reach. Whether you need implants, veneers, or a full restoration, our brokers compare 20+ lenders for a low dental loan rate in Australia, a flexible dental payment plan you can use at any dentist.",
+      "A dental loan gives you the funds upfront so you can pay any dentist like a cash patient, then repay a fixed amount over one to seven years. Most patients borrow between $2,000 and $50,000 for implants, orthodontics, crowns, or staged treatment plans. Our brokers compare 20+ lenders with a soft credit check first, so you see realistic rates from 6.99% p.a. before anything touches your credit file, and can weigh a fixed-term loan against any payment plan your clinic offers.",
     icon: "🦷",
     avgCostRange: "$3,000 – $50,000",
     rateFrom: "6.99%",
@@ -77,39 +77,44 @@ export const procedures: Procedure[] = [
     ],
     faqs: [
       {
-        question: "How much do dental implants cost in Australia?",
-        answer:
-          "A single dental implant in Australia costs between $3,000 and $6,500 depending on the dentist, location, and complexity. Full mouth implants (All-on-4) range from $20,000 to $50,000 per arch.",
-      },
-      {
-        question: "Can I finance dental work with bad credit?",
-        answer:
-          "Yes. Our broker network includes lenders who work with a range of credit profiles. While rates may be higher, many patients with imperfect credit still qualify for dental financing.",
-      },
-      {
-        question: "Is dental financing interest-free?",
-        answer:
-          "Some dental clinics offer interest-free payment plans for smaller amounts. For larger procedures, a broker-matched personal loan often provides better value with competitive rates from 6.99% p.a.",
-      },
-      {
         question: "Are dental payment plans the same as a dental loan?",
         answer:
           "Not quite. A clinic dental payment plan splits the cost into instalments at one practice and is usually capped at smaller amounts. A dental loan is a broker-matched personal loan you can use at any dentist for $2,000 to $100,000, with a fixed rate from 6.99% p.a. and fixed repayments. For implants, veneers, or full-mouth work, it is typically the better-value dental payment plan.",
       },
       {
+        question: "How do clinic dental payment plans work?",
+        answer:
+          "Most clinic plans, whether run by the practice itself or a third-party plan provider, split an agreed treatment cost into weekly or fortnightly instalments, usually after a deposit on the day. They can be quick to set up at the counter, but they only work at participating practices, often carry account or transaction fees, and tend to suit smaller treatment amounts. For implants, orthodontics, or staged plans, compare the plan's total cost against a fixed-term loan before signing anything.",
+      },
+      {
+        question: "Can I use a dental loan at any dentist in Australia?",
+        answer:
+          "Yes. The funds are paid to you rather than the clinic, so you can use any dentist, specialist, prosthodontist, or orthodontist, including practices that do not offer in-house payment plans. You simply pay the practice the way a cash patient would.",
+      },
+      {
+        question: "How do people finance All-on-4 or full-mouth implants?",
+        answer:
+          "Full-arch implant treatment is commonly quoted between $20,000 and $50,000 per arch in Australia, which puts it beyond what most clinic payment plans will cover. Patients typically use a broker-matched personal loan for amounts in this range, repaid over up to seven years, sometimes drawn in stages to match the treatment plan. Anchor the loan amount to an itemised written quote rather than a headline price.",
+      },
+      {
+        question: "Can I get dental finance with bad credit or past defaults?",
+        answer:
+          "Sometimes. Our network includes lenders that consider a range of credit profiles, although rates are typically higher with impaired credit and approval is never guaranteed. Because matching starts with a soft credit check, you can see whether a realistic option exists before any hard enquiry is recorded on your file.",
+      },
+      {
+        question: "What happens if my treatment plan changes partway through?",
+        answer:
+          "Dental work can change after healing or new imaging, so ask your dentist how the quote would move before settling on a loan amount. If you have already borrowed and the final cost comes in lower, many lenders allow extra repayments at no penalty; if it comes in higher, your broker can look at options for the difference. Financing the work in stages is another way to manage this risk.",
+      },
+      {
+        question: "Can I finance braces or Invisalign with a dental loan?",
+        answer:
+          "Yes. Orthodontic treatment such as braces or Invisalign, including treatment for a teenager paid for by a parent, can be financed the same way as other dental work. Invisalign is commonly quoted between $4,500 and $9,500 in Australia depending on case complexity, and a fixed-term loan keeps repayments steady across the whole course of treatment.",
+      },
+      {
         question: "How long does dental loan approval take?",
         answer:
           "Most dental loan applications receive a decision within hours. Some lenders provide same-day approval, with funds disbursed within 1-3 business days.",
-      },
-      {
-        question: "Can I finance multiple dental procedures at once?",
-        answer:
-          "Absolutely. You can bundle multiple procedures into a single loan, for example, combining implants with crowns or veneers into one financing plan.",
-      },
-      {
-        question: "What's the minimum loan amount for dental work?",
-        answer:
-          "Most lenders in our network offer dental loans starting from $2,000. For smaller amounts, a buy-now-pay-later option may be more suitable.",
       },
       {
         question: "Do I need a deposit for dental financing?",
@@ -122,7 +127,7 @@ export const procedures: Procedure[] = [
           "Most lenders allow early repayment with no penalty or reduced fees. Your broker will confirm the early repayment terms before you accept.",
       },
     ],
-    relatedSlugs: ["veneers-financing", "invisalign-financing", "medical-loan", "orthopedic-surgery-loans"],
+    relatedSlugs: ["veneers-financing", "invisalign-financing", "medical-loan", "cosmetic-surgery-loans"],
     blogCategory: "dental",
     financingDescription:
       "The most common way to finance dental work in Australia is a personal loan matched by a broker. It works as a dental payment plan you can use at any dentist, with a fixed rate, fixed term, and predictable repayments, unlike credit cards or clinic BNPL plans which can carry hidden costs.",
@@ -142,6 +147,63 @@ export const procedures: Procedure[] = [
       {
         title: "Same-Day Decisions",
         description: "Most patients hear back within hours so you can book your appointment sooner.",
+      },
+    ],
+    contentSections: [
+      {
+        heading: "Dental Payment Plans vs Dental Loans",
+        body: [
+          "A dental payment plan, whether run by the practice itself or through a third-party plan provider, splits an agreed treatment cost into weekly or fortnightly instalments. Plans can be quick to arrange at the counter, but they generally only work at participating practices, often require a deposit on the day, and carry account or transaction fees that add up on longer plans. Many also cap the amount they will cover, which rules out larger implant or full-mouth work, and some specialists do not offer a plan at all.",
+          "A dental loan flips the order: you receive the funds first, pay the dentist in full, then repay a fixed amount over one to seven years with a known end date. The trade-off is a formal lending assessment rather than an at-the-counter sign-up, in exchange for a fixed rate, a single repayment, and complete freedom over which dentist, specialist, or orthodontist treats you. For a small bill at a practice that already offers a genuine low-fee plan, the plan can be the better tool; for implants, orthodontics, or staged treatment plans, a fixed-term loan usually costs less overall and is not tied to one clinic.",
+        ],
+        links: [
+          { href: "/guides/dental-payment-plans-australia", label: "Dental payment plans guide" },
+          { href: "/compare/dental-loans-vs-buy-now-pay-later", label: "Dental loans vs BNPL" },
+          { href: "/guides/no-credit-check-dental-finance-australia", label: "No-credit-check dental finance" },
+        ],
+      },
+      {
+        heading: "Loans for Dental Implants and All-on-4 Treatment",
+        body: [
+          "Implants are among the largest dental bills an Australian patient is likely to face. A single implant is commonly quoted between $3,000 and $6,500 depending on the tooth, the implant system, and whether bone grafting is needed first, while full-arch All-on-4 treatment generally runs $20,000 to $50,000 per arch. Quotes vary noticeably between clinics and cities, so treat these ranges as orientation and anchor any borrowing decision to an itemised written quote. Private health extras typically cover only a small portion of implant work, if any, so check your policy before assuming a rebate.",
+          "A loan for dental implants works the same way as any broker-matched personal loan: you borrow between $2,000 and $100,000, pay the implant dentist or prosthodontist upfront like a cash patient, then repay over one to seven years. Because the funds are not tied to a clinic plan, you can choose any provider and bundle implants with crowns, veneers, or other restorative work in a single application. Patients planning implants alongside other elective treatment often compare options on our cosmetic surgery hub, since the same loan covers both.",
+        ],
+        links: [
+          { href: "/guides/dental-implants-cost-australia", label: "Dental implant costs guide" },
+          { href: "/guides/all-on-4-dental-implants-cost-australia", label: "All-on-4 costs guide" },
+          { href: "/procedures/cosmetic-surgery-loans", label: "Cosmetic surgery loans" },
+        ],
+      },
+      {
+        heading: "Financing Staged and Major Dental Treatment",
+        body: [
+          "Major dental work rarely arrives as one bill. An implant case can run from extraction through healing, implant placement, and final crowns across several months, and orthodontic treatment such as braces or Invisalign typically spans six months to two years with regular reviews. Before settling on a loan amount, ask for an itemised written treatment plan that shows stage-by-stage costs and when each payment falls due, since lab work and surgical stages are often paid before the appointment.",
+          "There are two sensible ways to structure finance around staged work. Borrowing the full treatment plan upfront gives you one fixed repayment and certainty that the later stages are funded; financing each stage as it is quoted avoids borrowing for work that may change after healing or a review. A broker can compare both approaches against your budget. For orthodontics specifically, Invisalign is commonly quoted between $4,500 and $9,500 and traditional braces sit in similar territory depending on complexity, which puts most courses comfortably within a shorter loan term.",
+        ],
+        bullets: [
+          "An itemised treatment plan with stage-by-stage costs",
+          "Deposit, lab-work, and surgical payment due dates",
+          "Whether imaging, temporary teeth, and follow-ups are included",
+          "How the quote changes if a stage is added or removed",
+        ],
+        links: [
+          { href: "/guides/dental-surgery-loans-australia", label: "Dental surgery loans guide" },
+          { href: "/procedures/invisalign-financing", label: "Invisalign financing" },
+          { href: "/procedures/veneers-financing", label: "Veneers financing" },
+        ],
+      },
+      {
+        heading: "Who Can Apply for Dental Finance?",
+        body: [
+          "Each lender on the panel sets its own criteria, so there is no universal checklist and no broker can guarantee approval. As a general guide, lenders look for applicants who are at least 18, an Australian citizen or permanent resident (some accept certain visa holders), and earning a regular income with room in the budget for the new repayment after existing commitments are met.",
+          "Credit history usually shapes the rate more than the outcome. A clean file tends to attract the sharpest offers, while a thin or imperfect history may still be matched with a lender at a higher rate. Because matching starts with a soft credit check, you can see where you stand before any hard enquiry is recorded, which matters when a deposit is holding a surgery date and there is no time for trial-and-error applications.",
+        ],
+        bullets: [
+          "Aged 18 or over with photo ID",
+          "Australian citizen, permanent resident, or eligible visa holder",
+          "Regular income from employment or self-employment",
+          "Repayments affordable alongside existing debts and expenses",
+        ],
       },
     ],
   },
