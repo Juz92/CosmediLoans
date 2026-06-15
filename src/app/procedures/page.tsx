@@ -50,8 +50,15 @@ export default function ProceduresHubPage() {
           </h2>
           <p className="text-body text-text-body mb-6">
             We finance virtually any medical procedure in Australia. If you don&apos;t
-            see your treatment listed, we can still help you find competitive rates
-            from our 20+ lender network.
+            see your treatment listed, our{" "}
+            <Link
+              href="/procedures/medical-loan"
+              className="text-primary font-semibold hover:underline"
+            >
+              general medical loan
+            </Link>{" "}
+            covers any procedure, or we can help you find competitive rates from our
+            20+ lender network.
           </p>
           <Link href="/apply">
             <Button size="lg">
