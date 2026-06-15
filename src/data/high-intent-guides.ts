@@ -115,8 +115,6 @@ export const highIntentGuides: HighIntentGuide[] = [
       "dental payment plans Australia",
       "dental implants payment plan",
       "personal loan for dental work",
-      "loans for dental work",
-      "dental loans Australia",
     ],
     optionRows: [
       {
