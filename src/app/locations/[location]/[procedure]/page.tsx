@@ -389,6 +389,17 @@ export default function LocationProcedurePage({
               </div>
             )}
           </div>
+
+          <div className="mt-8 rounded-card border border-border bg-surface p-5 text-sm leading-relaxed text-text-body">
+            For full national costs, rates, and lender comparison, see our{" "}
+            <Link
+              href={`/procedures/${proc.slug}`}
+              className="font-semibold text-primary underline underline-offset-2 hover:text-primary-deep"
+            >
+              {proc.title}
+            </Link>{" "}
+            guide. This page covers {copy.treatment} finance specific to {loc.name}.
+          </div>
         </div>
       </section>
 

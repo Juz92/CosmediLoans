@@ -5,14 +5,14 @@ import { ProcedureGrid } from "@/components/procedures/ProcedureGrid";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Medical Procedure Financing | All Procedures",
+  title: "Finance Options for Cosmetic, Dental, Medical & Vet Procedures",
   description:
-    "Explore financing options for dental, IVF, cosmetic surgery, and more. Compare 20+ lenders and find the lowest rate for your medical procedure.",
+    "Browse CosmediLoans finance options by procedure, from dental and cosmetic surgery to IVF, vet care, and more. Pick your treatment to see costs, rates, and how it works.",
   alternates: { canonical: "/procedures" },
   openGraph: {
-    title: "Medical Procedure Financing | All Procedures",
+    title: "Finance Options for Cosmetic, Dental, Medical & Vet Procedures",
     description:
-      "Explore financing options for dental, IVF, cosmetic surgery, and more. Compare 20+ lenders and find the lowest rate.",
+      "Browse CosmediLoans finance options by procedure, from dental and cosmetic surgery to IVF, vet care, and more.",
     url: "/procedures",
     type: "website",
   },
@@ -25,12 +25,12 @@ export default function ProceduresHubPage() {
       <section className="bg-gradient-to-br from-primary-wash to-primary-sky section-padding">
         <div className="container-narrow text-center">
           <h1 className="text-hero-h1 text-text-dark mb-4">
-            Medical Procedure Financing
+            Finance Options by Procedure
           </h1>
           <p className="text-body text-text-body max-w-2xl mx-auto">
-            Explore our full range of medical procedure financing options. From dental
-            to cosmetic surgery, our brokers compare 20+ lenders to find you the
-            lowest rate.
+            Pick your treatment to see typical costs, indicative rates, and how
+            financing works, from dental and cosmetic surgery to IVF and vet care.
+            Each guide is matched to brokers who compare 20+ lenders.
           </p>
         </div>
       </section>
