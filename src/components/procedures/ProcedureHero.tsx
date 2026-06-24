@@ -100,7 +100,7 @@ export function ProcedureHero({ procedure }: ProcedureHeroProps) {
           </div>
 
           {/* Right Column, Lead Form */}
-          <div className="lg:sticky lg:top-24">
+          <div id="get-quote" className="scroll-mt-24 lg:sticky lg:top-24">
             <HeroLeadForm defaultProcedure={defaultProcedure} />
           </div>
         </div>

@@ -8,6 +8,7 @@ import {
 } from "@/data/procedures";
 import { getGuidesForProcedure } from "@/data/high-intent-guides";
 import { getPriorityClusterForProcedure } from "@/data/priority-seo-clusters";
+import { getComparisonsForProcedure } from "@/data/comparisons";
 import { calculateRepayment } from "@/lib/calculator";
 import { getProcedureCopy } from "@/lib/procedure-copy";
 import { absoluteUrl, BRAND, LAST_REVIEWED } from "@/lib/site";
@@ -22,6 +23,7 @@ import { ProcedureCostTable } from "@/components/procedures/ProcedureCostTable";
 import { ProcedureFAQ } from "@/components/procedures/ProcedureFAQ";
 import { ProcedureCard } from "@/components/procedures/ProcedureCard";
 import { InlineLeadForm } from "@/components/lead-capture/InlineLeadForm";
+import { StickyMobileCTA } from "@/components/lead-capture/StickyMobileCTA";
 import { Card, Badge, Button } from "@/components/ui";
 import {
   ArrowRight,
@@ -91,6 +93,7 @@ export default function ProcedurePage({
     .slice(0, 4);
   const relatedGuides = getGuidesForProcedure(procedure.slug).slice(0, 3);
   const priorityCluster = getPriorityClusterForProcedure(procedure.slug);
+  const relatedComparisons = getComparisonsForProcedure(procedure.slug, 3);
 
   // Procedure form key for inline form
   const procedureFormMap: Record<string, string> = {
@@ -275,6 +278,13 @@ export default function ProcedurePage({
               </Link>
             </Card>
           </div>
+          <p className="mt-8 max-w-3xl mx-auto text-center text-xs leading-5 text-text-muted">
+            Rates from {procedure.rateFrom} p.a. are available to applicants with strong
+            credit profiles. Your actual rate depends on your credit history, income and
+            the lender, and all loans are subject to lender assessment and approval. Not
+            all applicants will qualify for the lowest rate shown. CosmediLoans is a
+            finance broker, not a lender.
+          </p>
         </div>
       </section>
 
@@ -568,6 +578,33 @@ export default function ProcedurePage({
         </section>
       )}
 
+      {/* ── 10b. Compare alternatives (internal links to high-intent /compare pages) ── */}
+      {relatedComparisons.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-narrow">
+            <h2 className="text-section-h2 text-text-dark mb-3 text-center">
+              Compare {copy.financingTitle}
+            </h2>
+            <p className="text-body text-text-body mb-8 text-center max-w-2xl mx-auto">
+              See how a broker-matched loan stacks up against the alternatives for{" "}
+              {copy.treatment}.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {relatedComparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary-wash px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                >
+                  {procedure.title} vs {c.competitorName}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── 11. Inline CTA ── */}
       <section className="bg-gradient-to-r from-primary to-primary-light section-padding">
         <div className="container-narrow text-center max-w-2xl">
@@ -584,8 +621,15 @@ export default function ProcedurePage({
               heading={`Get Your ${copy.financingTitle} Quote`}
             />
           </div>
+          <p className="mt-5 text-sm text-white/80">
+            A broker will be in touch within 1 business day. All applications are
+            subject to lender assessment and approval.
+          </p>
         </div>
       </section>
+
+      {/* ── Persistent mobile CTA → jumps to the pre-filled hero form ── */}
+      <StickyMobileCTA href="#get-quote" label="Get My Rate →" />
     </>
   );
 }

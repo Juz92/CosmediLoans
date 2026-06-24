@@ -59,9 +59,9 @@ const benefits = [
   },
   {
     icon: Clock,
-    title: "Approved in Minutes",
+    title: "Fast Decisions",
     description:
-      "Most patients receive a decision within hours. Same-day approvals are common, so you can book your procedure sooner.",
+      "Most patients receive a decision within hours, subject to lender assessment. Same-day approvals are common, so you can plan your procedure sooner.",
   },
 ];
 
@@ -120,7 +120,7 @@ const faqItems = [
   {
     question: "What interest rates can I expect?",
     answer:
-      "Rates start from 6.99% p.a. depending on your credit profile, loan amount, and term. Because we compare 20+ lenders, you are more likely to find a competitive rate than going to a single bank.",
+      "Rates start from 6.99% p.a. depending on your credit profile, loan amount, and term. Because we compare 20+ lenders, you are more likely to find a competitive rate than going to a single bank. Not all applicants will qualify for the lowest rate, and every offer is subject to lender assessment and approval.",
   },
   {
     question: "Do I need a good credit score to apply?",

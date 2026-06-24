@@ -35,6 +35,7 @@ google-*.json
 # pipeline
 /pipeline/node_modules
 /pipeline/.env
+/pipeline/degraded/
 /google-oauth-credentials.json
 /google-token.json
 

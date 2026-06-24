@@ -8,8 +8,10 @@ const footerColumns = [
     title: "Procedures",
     links: [
       { href: "/procedures/dental-loans", label: "Dental Loans" },
+      { href: "/procedures/cosmetic-surgery-loans", label: "Cosmetic Surgery" },
+      { href: "/procedures/medical-loan", label: "Medical Loans" },
       { href: "/procedures/ivf-financing", label: "IVF Financing" },
-      { href: "/procedures/breast-augmentation-loans", label: "Cosmetic Surgery" },
+      { href: "/procedures/breast-augmentation-loans", label: "Breast Augmentation" },
       { href: "/procedures/lasik-loans", label: "LASIK Loans" },
       { href: "/procedures/bariatric-surgery-loans", label: "Bariatric Surgery" },
       { href: "/procedures", label: "View all procedures" },
