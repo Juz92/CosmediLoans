@@ -22,6 +22,7 @@ import { ProcedureCostTable } from "@/components/procedures/ProcedureCostTable";
 import { ProcedureFAQ } from "@/components/procedures/ProcedureFAQ";
 import { ProcedureCard } from "@/components/procedures/ProcedureCard";
 import { InlineLeadForm } from "@/components/lead-capture/InlineLeadForm";
+import { StickyMobileCTA } from "@/components/lead-capture/StickyMobileCTA";
 import { Card, Badge, Button } from "@/components/ui";
 import {
   ArrowRight,
@@ -597,6 +598,9 @@ export default function ProcedurePage({
           </p>
         </div>
       </section>
+
+      {/* ── Persistent mobile CTA → jumps to the pre-filled hero form ── */}
+      <StickyMobileCTA href="#get-quote" label="Get My Rate →" />
     </>
   );
 }
