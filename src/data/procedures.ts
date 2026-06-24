@@ -1469,6 +1469,56 @@ export const procedures: Procedure[] = [
         description: "Finance 100% of your hair transplant with no upfront cost and fast approval.",
       },
     ],
+    contentSections: [
+      {
+        heading: "What a Hair Transplant Costs in Australia",
+        body: [
+          "Hair transplant pricing in Australia is driven mainly by the number of grafts you need and the technique used. A smaller FUE session of 1,500 to 2,000 grafts is commonly quoted between $6,000 and $12,000, while a large 2,500 to 4,000-graft session can run $12,000 to $22,000 or more. FUT strip procedures are often a little cheaper per graft. Most clinics quote either per graft or as a fixed package after a consultation assesses your hair loss pattern and donor area, so treat any headline figure as a starting point rather than a final price.",
+          "Hair transplants are classed as cosmetic in Australia, so there is no Medicare or private health rebate and the full cost is out of pocket. That is why most patients spread the cost with a fixed-rate personal loan rather than paying a large lump sum upfront. Anchor your borrowing to a written quote after consultation, not an online estimate.",
+        ],
+        links: [
+          { href: "/calculator", label: "Estimate your repayments" },
+          { href: "/procedures/dermatology-financing", label: "Dermatology & skin financing" },
+        ],
+      },
+      {
+        heading: "FUE vs FUT, and What Drives the Quote",
+        body: [
+          "The two main techniques shape both the result and the price. FUE (follicular unit extraction) harvests individual follicles and leaves minimal scarring, which makes it the most requested option but usually the more expensive per graft. FUT (follicular unit transplantation) removes a strip of scalp and can be more cost-effective for larger sessions, with a fine linear scar in the donor area. Your surgeon will recommend an approach based on your hair loss, donor density, and goals.",
+          "Because the graft count is the biggest cost lever, a clear consultation matters more than a low headline price. Ask whether the quote is per graft or a fixed package, what is included, and whether a second session may be needed for the result you want. Financing the realistic total in one loan avoids having to top up later.",
+        ],
+        bullets: [
+          "Whether the quote is per graft or a fixed package",
+          "The estimated graft count for your hair loss pattern",
+          "Whether consultation, medication and follow-ups are included",
+          "Whether a second session may be needed for full density",
+        ],
+      },
+      {
+        heading: "Financing Locally vs Paying Upfront or Going Overseas",
+        body: [
+          "A hair transplant is permanent, so it is worth getting right. Overseas packages can look cheaper upfront, but they carry real trade-offs: limited regulatory oversight, difficult follow-up care, and the cost of revision surgery if the result disappoints. Financing a procedure with a reputable Australian surgeon keeps your aftercare local and your consumer protections intact.",
+          "Against a credit card at 18 to 22 per cent p.a., or a lump-sum payment that strains your budget, a broker-matched personal loan from 6.99% p.a. usually costs less over the term and keeps repayments fixed. Compare the total cost of each option, including any fees, before deciding.",
+        ],
+        links: [
+          { href: "/compare", label: "Compare your finance options" },
+          { href: "/procedures/medical-loan", label: "General medical loans" },
+        ],
+      },
+      {
+        heading: "Who Can Apply for Hair Transplant Financing",
+        body: [
+          "Each lender sets its own criteria, so approval is never guaranteed, but as a general guide lenders look for applicants aged 18 or over, an Australian citizen or permanent resident (some accept eligible visa holders), with a regular income and room in the budget for the new repayment.",
+          "Because matching starts with a soft credit check, you can see realistic rate options before any hard enquiry is recorded on your file, and every offer remains subject to the lender's final assessment. That lets you plan your procedure budget with confidence before booking a consultation.",
+        ],
+        bullets: [
+          "Aged 18 or over with photo ID",
+          "Australian citizen, permanent resident, or eligible visa holder",
+          "Regular income, with repayments affordable alongside existing commitments",
+          "All offers subject to the lender's final assessment and approval",
+        ],
+      },
+    ],
   },
 
   // ─── 15. ORTHOPEDIC SURGERY LOANS ──────────────────────────────────
