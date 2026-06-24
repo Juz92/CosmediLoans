@@ -95,7 +95,8 @@ export function HeroLeadForm({ defaultProcedure }: HeroLeadFormProps) {
           You&apos;re All Set!
         </h2>
         <p className="text-text-body">
-          A broker will be in touch shortly with your personalised rate options.
+          A broker will be in touch within 1 business day with your personalised rate
+          options, subject to lender assessment and approval.
         </p>
       </div>
     );

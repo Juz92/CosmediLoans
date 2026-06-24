@@ -42,6 +42,38 @@ export default function ProceduresHubPage() {
         </div>
       </section>
 
+      {/* Popular finance categories — routes hub intent to dedicated money pages */}
+      <section className="section-padding bg-background pt-0">
+        <div className="container-narrow">
+          <h2 className="text-section-h2 text-text-dark mb-3 text-center">
+            Popular Finance Categories
+          </h2>
+          <p className="text-body text-text-body mb-8 text-center max-w-2xl mx-auto">
+            Most patients start with one of these. Each page covers typical Australian
+            costs, indicative rates, and how repayments work for that treatment.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { href: "/procedures/medical-loan", label: "Medical loans" },
+              { href: "/procedures/cosmetic-surgery-loans", label: "Cosmetic surgery loans" },
+              { href: "/procedures/dental-loans", label: "Dental loans" },
+              { href: "/procedures/ivf-financing", label: "IVF & fertility financing" },
+              { href: "/procedures/breast-augmentation-loans", label: "Breast augmentation loans" },
+              { href: "/procedures/vet-bill-loans", label: "Vet bill loans" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="inline-flex items-center gap-2 rounded-full bg-primary-wash px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                {item.label}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Don't See Your Procedure CTA */}
       <section className="section-padding bg-surface">
         <div className="container-narrow text-center max-w-2xl">

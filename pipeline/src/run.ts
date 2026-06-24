@@ -1,5 +1,65 @@
 import "dotenv/config";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { fileURLToPath } from "node:url";
 import type { CollectorResult } from "./collectors/types.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const DEGRADED_DIR = path.join(__dirname, "..", "degraded");
+
+const REAUTH_HINT =
+  "Google OAuth token is invalid (invalid_grant): the refresh token has expired or been revoked.\n" +
+  "  Fix: from the pipeline/ directory run `npm run auth:google` and approve access in the browser.\n" +
+  "  Full runbook (incl. the permanent fix — publishing the OAuth app): pipeline/REAUTH.md";
+
+// Detect Google auth failures so a dead token degrades gracefully instead of
+// aborting the whole run with a raw Gaxios dump.
+function isAuthError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  let responseData = "";
+  try {
+    responseData = JSON.stringify(
+      (err as { response?: { data?: unknown } })?.response?.data ?? ""
+    );
+  } catch {
+    responseData = "";
+  }
+  return /invalid_grant|invalid_token|no access, refresh token|unauthorized|\b401\b|\b403\b/i.test(
+    `${msg} ${responseData}`
+  );
+}
+
+// Degraded mode: when the Sheets write fails (typically a dead OAuth token),
+// persist the collected rows locally so a run still produces data to work from.
+function persistFallback(
+  result: CollectorResult,
+  tabName: string,
+  sheetId: string
+): string | null {
+  try {
+    fs.mkdirSync(DEGRADED_DIR, { recursive: true });
+    const safeStamp = result.timestamp.replace(/[:.]/g, "-");
+    const file = path.join(DEGRADED_DIR, `${result.source}-${safeStamp}.json`);
+    fs.writeFileSync(
+      file,
+      JSON.stringify(
+        {
+          source: result.source,
+          timestamp: result.timestamp,
+          tabName,
+          sheetId,
+          rows: result.rows,
+          metadata: result.metadata ?? null,
+        },
+        null,
+        2
+      )
+    );
+    return file;
+  } catch {
+    return null;
+  }
+}
 
 const args = process.argv.slice(2);
 const mode = args.find((a) => a.startsWith("--mode="))?.split("=")[1];
@@ -42,8 +102,28 @@ async function writeResultToSheets(result: CollectorResult): Promise<void> {
     ? config.alertsSheetId
     : config.sheetId;
   if (result.rows.length > 0) {
-    await appendRows(sheetId, tabName, result.rows);
-    console.log(`Wrote ${result.rows.length} row(s) to "${tabName}"`);
+    try {
+      await appendRows(sheetId, tabName, result.rows);
+      console.log(`Wrote ${result.rows.length} row(s) to "${tabName}"`);
+    } catch (err) {
+      const fallback = persistFallback(result, tabName, sheetId);
+      const detail = err instanceof Error ? err.message : String(err);
+      console.warn(
+        `[degraded] Failed to write ${result.rows.length} row(s) to "${tabName}": ${detail}`
+      );
+      if (fallback) {
+        console.warn(
+          `[degraded] Saved collected rows to ${fallback} so the data is not lost.`
+        );
+      }
+      // Auth failures are recoverable by re-authorizing — degrade and continue.
+      // Any other write failure is a genuine error and should still surface.
+      if (isAuthError(err)) {
+        console.warn(`[degraded] ${REAUTH_HINT}`);
+      } else {
+        throw err;
+      }
+    }
   } else {
     console.log(`No rows to write for "${result.source}"`);
   }
@@ -256,6 +336,10 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error("[run] Fatal error:", err);
+  if (isAuthError(err)) {
+    console.error(`[run] Fatal error: Google authorization failed.\n  ${REAUTH_HINT}`);
+  } else {
+    console.error("[run] Fatal error:", err);
+  }
   process.exit(1);
 });

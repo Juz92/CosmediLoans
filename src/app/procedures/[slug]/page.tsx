@@ -275,6 +275,13 @@ export default function ProcedurePage({
               </Link>
             </Card>
           </div>
+          <p className="mt-8 max-w-3xl mx-auto text-center text-xs leading-5 text-text-muted">
+            Rates from {procedure.rateFrom} p.a. are available to applicants with strong
+            credit profiles. Your actual rate depends on your credit history, income and
+            the lender, and all loans are subject to lender assessment and approval. Not
+            all applicants will qualify for the lowest rate shown. CosmediLoans is a
+            finance broker, not a lender.
+          </p>
         </div>
       </section>
 
@@ -584,6 +591,10 @@ export default function ProcedurePage({
               heading={`Get Your ${copy.financingTitle} Quote`}
             />
           </div>
+          <p className="mt-5 text-sm text-white/80">
+            A broker will be in touch within 1 business day. All applications are
+            subject to lender assessment and approval.
+          </p>
         </div>
       </section>
     </>

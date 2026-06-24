@@ -61,7 +61,7 @@ export function HomeHero() {
               Trusted by Australian Patients
             </div>
             <h1 className="hero-bold-command__title">
-              Finance any medical procedure. <span>Find your lowest rate.</span>
+              Finance any medical procedure. <span>Find your lowest eligible rate.</span>
             </h1>
             <p className="hero-bold-command__copy">
               Compare rates from 20+ lenders in 60 seconds. Expert brokers help you

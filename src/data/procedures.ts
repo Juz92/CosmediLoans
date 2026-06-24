@@ -486,6 +486,59 @@ export const procedures: Procedure[] = [
         description: "Same-day decisions with a process that respects the personal nature of fertility treatment.",
       },
     ],
+    contentSections: [
+      {
+        heading: "IVF Costs and What Medicare Actually Covers",
+        body: [
+          "A single stimulated IVF cycle in Australia is commonly quoted between $8,000 and $15,000 out of pocket once the Medicare and Extended Medicare Safety Net rebates are applied, and the gap is rarely the whole story. Initial consultations, ultrasounds, blood tests, the anaesthetic for egg collection, embryo freezing, and annual storage are often billed separately, and medication can add $1,500 to $5,000 per cycle depending on your protocol. Ask your clinic for an itemised quote that separates the rebatable items from the true out-of-pocket cost before you decide how much to finance.",
+          "Medicare contributes to each stimulated cycle rather than capping the number it will help with, but the upfront payment is still due before treatment. A fertility loan bridges that gap: you pay the clinic like a self-funded patient, claim your rebates as normal, and repay a fixed amount over one to seven years. If your lender allows penalty-free extra repayments, the rebate refunds can go straight onto the balance.",
+        ],
+        links: [
+          { href: "/guides/ivf-cost-australia", label: "IVF cost breakdown guide" },
+          { href: "/guides/ivf-payment-plans-australia", label: "IVF payment plans guide" },
+        ],
+      },
+      {
+        heading: "Financing One Cycle or Several",
+        body: [
+          "Many patients need more than one stimulated cycle, so the decision is rarely about a single bill. You can borrow per cycle as each one is quoted, which avoids paying interest on treatment you may not end up needing, or borrow once for two to three cycles upfront so the funding is settled and you are not reapplying between attempts during an already stressful time.",
+          "There is no single right answer. Borrowing per cycle keeps the balance lower if you succeed early; borrowing upfront locks in one fixed repayment and removes the risk of a changed rate or circumstances later. A broker can compare both structures against your budget, and our repayment calculator lets you model the monthly cost at different amounts and terms before you commit.",
+        ],
+        bullets: [
+          "Whether you are funding one cycle or planning for several",
+          "Medication, freezing, and storage your clinic bills separately",
+          "Whether your lender allows penalty-free extra repayments when rebates land",
+        ],
+        links: [
+          { href: "/procedures/fertility-treatment-loans", label: "Fertility treatment loans" },
+          { href: "/calculator", label: "Estimate your repayments" },
+        ],
+      },
+      {
+        heading: "Timing Finance Around Your Treatment Cycle",
+        body: [
+          "IVF rarely arrives as one payment. Stimulation medication is usually paid before egg collection, the collection and laboratory fees fall due around the procedure itself, and a frozen embryo transfer may be months later with its own thaw and transfer costs. Ask your clinic when each payment is due so the loan amount matches the real schedule rather than a headline cycle price.",
+          "If your plan includes egg or embryo freezing, factor in the annual storage fees, and if you are considering donor or ICSI add-ons, get these quoted up front. Patients combining fertility treatment with other planned care sometimes finance the whole plan with a single broader medical loan rather than several smaller ones.",
+        ],
+        links: [
+          { href: "/procedures/medical-loan", label: "General medical loans" },
+          { href: "/guides/topics/ivf-finance", label: "IVF finance hub" },
+        ],
+      },
+      {
+        heading: "Who Can Apply for IVF Financing",
+        body: [
+          "Each lender on the panel sets its own criteria, so no broker can promise approval. As a general guide, lenders look for applicants aged 18 or over, an Australian citizen or permanent resident (some accept eligible visa holders), with a regular income and room in the budget for the new repayment after existing commitments are met.",
+          "Fertility financing is commonly arranged as a joint application, which can improve borrowing power for couples funding treatment together. Because matching starts with a soft credit check, you and your partner can see realistic options before any hard enquiry touches your files, and any offer remains subject to the lender's final assessment.",
+        ],
+        bullets: [
+          "Aged 18 or over with photo ID",
+          "Australian citizen, permanent resident, or eligible visa holder",
+          "Regular income, with repayments affordable alongside existing commitments",
+          "Joint applications welcome for couples financing together",
+        ],
+      },
+    ],
   },
 
   // ─── 5. FERTILITY TREATMENT LOANS ──────────────────────────────────
@@ -1786,6 +1839,58 @@ export const procedures: Procedure[] = [
       {
         title: "60-Second Application",
         description: "Apply online in under a minute and receive personalised loan offers within hours.",
+      },
+    ],
+    contentSections: [
+      {
+        heading: "What a Medical Loan Can Pay For",
+        body: [
+          "A medical loan is simply a personal loan used for healthcare, so the funds are paid to you and you settle the provider directly like a self-funded patient. That makes it one of the most flexible ways to pay for treatment in Australia: there is no restriction on which clinic, surgeon, or specialist you use, and a single loan can bundle related costs such as the procedure, anaesthetist, hospital, follow-ups, and medication.",
+          "Patients use medical loans across the full range of elective and semi-elective care, from dental work and orthodontics to cosmetic and reconstructive surgery, fertility treatment, eye surgery, and hospital gap fees on a private admission. If your treatment fits a specific category, a dedicated page may answer more of your questions, but the underlying loan and process are the same.",
+        ],
+        links: [
+          { href: "/procedures/dental-loans", label: "Dental loans" },
+          { href: "/procedures/ivf-financing", label: "IVF financing" },
+          { href: "/procedures/cosmetic-surgery-loans", label: "Cosmetic surgery loans" },
+        ],
+      },
+      {
+        heading: "Medical Loan vs Payment Plan vs Credit Card",
+        body: [
+          "An in-clinic payment plan can be convenient for smaller bills, but it usually only works at one provider, often requires a deposit, and can carry account or transaction fees that add up. A credit card gives instant access to funds, but Australian card rates commonly sit between 18% and 22% p.a., which makes carrying a large medical balance expensive if it is not cleared quickly.",
+          "A broker-matched medical loan changes the trade-off: you complete a formal lending assessment once, then get a fixed rate, a fixed term, and a single predictable repayment you can use at any provider. For larger or staged treatment it is usually the lower-cost option, but compare the total cost of each path, including any fees, before you decide.",
+        ],
+        links: [
+          { href: "/compare", label: "Compare your finance options" },
+          { href: "/guides/medical-loans-for-surgery-australia", label: "Medical loans for surgery guide" },
+        ],
+      },
+      {
+        heading: "Financing Staged Treatment and Hospital Gap Fees",
+        body: [
+          "Major treatment rarely arrives as one bill. Surgical care can run from consultation and imaging through the procedure and follow-ups across several months, and a private hospital admission may leave a gap fee once Medicare and your health fund have paid their share. Ask for an itemised quote that shows what each stage costs and when it falls due before settling on a loan amount.",
+          "You can borrow the full treatment plan upfront for one fixed repayment and certainty that the later stages are funded, or finance each stage as it is quoted to avoid borrowing for care that may change. A broker can compare both approaches, and our calculator helps you see the monthly cost at different amounts and terms.",
+        ],
+        links: [
+          { href: "/calculator", label: "Estimate your repayments" },
+          { href: "/how-it-works", label: "How financing works" },
+        ],
+      },
+      {
+        heading: "Who Qualifies for a Medical Loan",
+        body: [
+          "Lenders each set their own criteria, so there is no universal checklist and approval is never guaranteed. As a general guide, they look for applicants aged 18 or over, an Australian citizen or permanent resident (some accept eligible visa holders), earning a regular income with affordability for the new repayment after existing commitments.",
+          "Credit history usually shapes the rate more than the outcome. A clean file attracts the sharpest offers, while a thinner or impaired history may still be matched with a lender at a higher rate. Because matching starts with a soft credit check, you can see where you stand before any hard enquiry is recorded, which matters when a deposit is holding a surgery date.",
+        ],
+        bullets: [
+          "Aged 18 or over with photo ID",
+          "Australian citizen, permanent resident, or eligible visa holder",
+          "Regular income, with repayments affordable alongside existing debts",
+          "All offers subject to the lender's final assessment and approval",
+        ],
+        links: [
+          { href: "/guides/medical-loans-bad-credit-australia", label: "Medical loans and bad credit" },
+        ],
       },
     ],
   },

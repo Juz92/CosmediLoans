@@ -59,7 +59,7 @@ const faqItems = [
   {
     question: "What interest rate should I use in the calculator?",
     answer:
-      "If you are unsure of your rate, start with 7.99% which is a typical broker-matched rate for borrowers with good credit. Rates through our network range from 5.99% to 9.99% for most applicants. Credit cards and direct bank loans are often higher at 12-24%.",
+      "If you are unsure of your rate, start with 7.99% which is a typical broker-matched rate for borrowers with good credit. Rates through our network range from 5.99% to 9.99% for most applicants, and credit cards and direct bank loans are often higher at 12-24%. Your actual rate and approval depend on your individual circumstances and lender assessment.",
   },
   {
     question: "Can I really get a rate as low as 5.99%?",
