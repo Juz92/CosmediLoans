@@ -1551,3 +1551,16 @@ export function getComparisonBySlug(slug: string): Comparison | undefined {
 export function getAllComparisonSlugs(): string[] {
   return comparisons.map((c) => c.slug);
 }
+
+/**
+ * Comparisons relevant to a procedure money page, for contextual internal
+ * links from /procedures/[slug] to high-intent /compare pages.
+ */
+export function getComparisonsForProcedure(
+  procedureSlug: string,
+  limit = 3
+): Comparison[] {
+  return comparisons
+    .filter((c) => c.relatedProcedureSlugs.includes(procedureSlug))
+    .slice(0, limit);
+}

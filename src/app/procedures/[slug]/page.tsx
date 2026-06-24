@@ -8,6 +8,7 @@ import {
 } from "@/data/procedures";
 import { getGuidesForProcedure } from "@/data/high-intent-guides";
 import { getPriorityClusterForProcedure } from "@/data/priority-seo-clusters";
+import { getComparisonsForProcedure } from "@/data/comparisons";
 import { calculateRepayment } from "@/lib/calculator";
 import { getProcedureCopy } from "@/lib/procedure-copy";
 import { absoluteUrl, BRAND, LAST_REVIEWED } from "@/lib/site";
@@ -92,6 +93,7 @@ export default function ProcedurePage({
     .slice(0, 4);
   const relatedGuides = getGuidesForProcedure(procedure.slug).slice(0, 3);
   const priorityCluster = getPriorityClusterForProcedure(procedure.slug);
+  const relatedComparisons = getComparisonsForProcedure(procedure.slug, 3);
 
   // Procedure form key for inline form
   const procedureFormMap: Record<string, string> = {
@@ -571,6 +573,33 @@ export default function ProcedurePage({
                     />
                   )
               )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── 10b. Compare alternatives (internal links to high-intent /compare pages) ── */}
+      {relatedComparisons.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-narrow">
+            <h2 className="text-section-h2 text-text-dark mb-3 text-center">
+              Compare {copy.financingTitle}
+            </h2>
+            <p className="text-body text-text-body mb-8 text-center max-w-2xl mx-auto">
+              See how a broker-matched loan stacks up against the alternatives for{" "}
+              {copy.treatment}.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {relatedComparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary-wash px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                >
+                  {procedure.title} vs {c.competitorName}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              ))}
             </div>
           </div>
         </section>
